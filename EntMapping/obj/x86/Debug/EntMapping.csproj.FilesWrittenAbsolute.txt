@@ -6,3 +6,11 @@
 /home/bonnie/WorkStation/EntityMapping/EntMapping/obj/x86/Debug/EntMapping.exe
 /home/bonnie/WorkStation/EntityMapping/EntMapping/obj/x86/Debug/EntMapping.exe.mdb
 /home/bonnie/WorkStation/EntityMapping/EntMapping/bin/Debug/Antlr3.Runtime.dll
+/home/satnam-sandhu/Workstation/EntityMapping/EntMapping/obj/x86/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs
+/home/satnam-sandhu/Workstation/EntityMapping/EntMapping/obj/x86/Debug/EntMapping.FormTest.resources
+/home/satnam-sandhu/Workstation/EntityMapping/EntMapping/obj/x86/Debug/EntMapping.Properties.Resources.resources
+/home/satnam-sandhu/Workstation/EntityMapping/EntMapping/bin/Debug/EntMapping.exe.mdb
+/home/satnam-sandhu/Workstation/EntityMapping/EntMapping/bin/Debug/EntMapping.exe
+/home/satnam-sandhu/Workstation/EntityMapping/EntMapping/obj/x86/Debug/EntMapping.exe
+/home/satnam-sandhu/Workstation/EntityMapping/EntMapping/obj/x86/Debug/EntMapping.exe.mdb
+/home/satnam-sandhu/Workstation/EntityMapping/EntMapping/bin/Debug/Antlr3.Runtime.dll
