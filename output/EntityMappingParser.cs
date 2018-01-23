@@ -8,85 +8,172 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g 2012-04-20 08:32:14
+// $ANTLR 3.4 EntityMapping.g 2018-01-23 19:10:01
 
 // The variable 'variable' is assigned but its value is never used.
-#pragma warning disable 219
+#pragma warning disable 168, 219
 // Unreachable code detected.
 #pragma warning disable 162
 // Missing XML comment for publicly visible type or member 'Type_or_Member'
 #pragma warning disable 1591
-// CLS compliance checking will not be performed on 'type' because it is not visible from outside this assembly.
-#pragma warning disable 3019
-
-
-   using System;
-   using System.Collections;
 
 
 using System.Collections.Generic;
 using Antlr.Runtime;
 using Antlr.Runtime.Misc;
+using ConditionalAttribute = System.Diagnostics.ConditionalAttribute;
 
-
-using Antlr.Runtime.Tree;
-using RewriteRuleITokenStream = Antlr.Runtime.Tree.RewriteRuleTokenStream;
-
-namespace  EntMapping 
-{
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "3.4")]
 [System.CLSCompliant(false)]
 public partial class EntityMappingParser : Antlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "ASSIGN", "CALL", "CHAR", "COMMENT", "COND", "DEC", "DIV", "ENTMAP", "EQUALS", "ESC_SEQ", "EXPONENT", "FLOAT", "GETMEMBER", "GT", "GTEQ", "HEX_DIGIT", "ID", "INC", "INT", "LT", "LTEQ", "MAPBODY", "MAPDCL", "MINUS", "MOD", "MULT", "NOT", "NOTEQUALS", "OCTAL_ESC", "OR", "PLUS", "STRING", "TFEXPR", "UNICODE_ESC", "WS", "'('", "')'", "','", "'.'", "';'", "'<-'", "'='", "'IF'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ABSTRACT", "AMP", "AMPAMP", "AMPEQ", "ASSERT", "BANG", "BANGEQ", "BAR", "BARBAR", "BAREQ", "BOOLEAN", "BREAK", "BYTE", "CARET", "CARETEQ", "CASE", "CATCH", "CHAR", "CHARLITERAL", "CLASS", "COLON", "COMMA", "COMMENT", "CONST", "CONTINUE", "DEFAULT", "DO", "DOT", "DOUBLE", "DOUBLELITERAL", "DoubleSuffix", "ELLIPSIS", "ELSE", "ENUM", "EQ", "EQEQ", "EXTENDS", "EscapeSequence", "Exponent", "FALSE", "FINAL", "FINALLY", "FLOAT", "FLOATLITERAL", "FOR", "FloatSuffix", "GOTO", "GT", "HexDigit", "HexPrefix", "IDENTIFIER", "IF", "IMPLEMENTS", "IMPORT", "INSTANCEOF", "INT", "INTERFACE", "INTLITERAL", "IdentifierPart", "IdentifierStart", "IntegerNumber", "LBRACE", "LBRACKET", "LINE_COMMENT", "LONG", "LONGLITERAL", "LPAREN", "LT", "LongSuffix", "MONKEYS_AT", "NATIVE", "NEW", "NULL", "NonIntegerNumber", "PACKAGE", "PERCENT", "PERCENTEQ", "PLUS", "PLUSEQ", "PLUSPLUS", "PRIVATE", "PROTECTED", "PUBLIC", "QUES", "RBRACE", "RBRACKET", "RETURN", "RPAREN", "SEMI", "SHORT", "SLASH", "SLASHEQ", "STAR", "STAREQ", "STATIC", "STRICTFP", "STRINGLITERAL", "SUB", "SUBEQ", "SUBSUB", "SUPER", "SWITCH", "SYNCHRONIZED", "SurrogateIdentifer", "THIS", "THROW", "THROWS", "TILDE", "TRANSIENT", "TRUE", "TRY", "VOID", "VOLATILE", "WHILE", "WS"
 	};
 	public const int EOF=-1;
-	public const int T__40=40;
-	public const int T__41=41;
-	public const int T__42=42;
-	public const int T__43=43;
-	public const int T__44=44;
-	public const int T__45=45;
-	public const int T__46=46;
-	public const int T__47=47;
-	public const int AND=4;
-	public const int ASSIGN=5;
-	public const int CALL=6;
-	public const int CHAR=7;
-	public const int COMMENT=8;
-	public const int COND=9;
-	public const int DEC=10;
-	public const int DIV=11;
-	public const int ENTMAP=12;
-	public const int EQUALS=13;
-	public const int ESC_SEQ=14;
-	public const int EXPONENT=15;
-	public const int FLOAT=16;
-	public const int GETMEMBER=17;
-	public const int GT=18;
-	public const int GTEQ=19;
-	public const int HEX_DIGIT=20;
-	public const int ID=21;
-	public const int INC=22;
-	public const int INT=23;
-	public const int LT=24;
-	public const int LTEQ=25;
-	public const int MAPBODY=26;
-	public const int MAPDCL=27;
-	public const int MINUS=28;
-	public const int MOD=29;
-	public const int MULT=30;
-	public const int NOT=31;
-	public const int NOTEQUALS=32;
-	public const int OCTAL_ESC=33;
-	public const int OR=34;
-	public const int PLUS=35;
-	public const int STRING=36;
-	public const int TFEXPR=37;
-	public const int UNICODE_ESC=38;
-	public const int WS=39;
+	public const int ABSTRACT=4;
+	public const int AMP=5;
+	public const int AMPAMP=6;
+	public const int AMPEQ=7;
+	public const int ASSERT=8;
+	public const int BANG=9;
+	public const int BANGEQ=10;
+	public const int BAR=11;
+	public const int BARBAR=12;
+	public const int BAREQ=13;
+	public const int BOOLEAN=14;
+	public const int BREAK=15;
+	public const int BYTE=16;
+	public const int CARET=17;
+	public const int CARETEQ=18;
+	public const int CASE=19;
+	public const int CATCH=20;
+	public const int CHAR=21;
+	public const int CHARLITERAL=22;
+	public const int CLASS=23;
+	public const int COLON=24;
+	public const int COMMA=25;
+	public const int COMMENT=26;
+	public const int CONST=27;
+	public const int CONTINUE=28;
+	public const int DEFAULT=29;
+	public const int DO=30;
+	public const int DOT=31;
+	public const int DOUBLE=32;
+	public const int DOUBLELITERAL=33;
+	public const int DoubleSuffix=34;
+	public const int ELLIPSIS=35;
+	public const int ELSE=36;
+	public const int ENUM=37;
+	public const int EQ=38;
+	public const int EQEQ=39;
+	public const int EXTENDS=40;
+	public const int EscapeSequence=41;
+	public const int Exponent=42;
+	public const int FALSE=43;
+	public const int FINAL=44;
+	public const int FINALLY=45;
+	public const int FLOAT=46;
+	public const int FLOATLITERAL=47;
+	public const int FOR=48;
+	public const int FloatSuffix=49;
+	public const int GOTO=50;
+	public const int GT=51;
+	public const int HexDigit=52;
+	public const int HexPrefix=53;
+	public const int IDENTIFIER=54;
+	public const int IF=55;
+	public const int IMPLEMENTS=56;
+	public const int IMPORT=57;
+	public const int INSTANCEOF=58;
+	public const int INT=59;
+	public const int INTERFACE=60;
+	public const int INTLITERAL=61;
+	public const int IdentifierPart=62;
+	public const int IdentifierStart=63;
+	public const int IntegerNumber=64;
+	public const int LBRACE=65;
+	public const int LBRACKET=66;
+	public const int LINE_COMMENT=67;
+	public const int LONG=68;
+	public const int LONGLITERAL=69;
+	public const int LPAREN=70;
+	public const int LT=71;
+	public const int LongSuffix=72;
+	public const int MONKEYS_AT=73;
+	public const int NATIVE=74;
+	public const int NEW=75;
+	public const int NULL=76;
+	public const int NonIntegerNumber=77;
+	public const int PACKAGE=78;
+	public const int PERCENT=79;
+	public const int PERCENTEQ=80;
+	public const int PLUS=81;
+	public const int PLUSEQ=82;
+	public const int PLUSPLUS=83;
+	public const int PRIVATE=84;
+	public const int PROTECTED=85;
+	public const int PUBLIC=86;
+	public const int QUES=87;
+	public const int RBRACE=88;
+	public const int RBRACKET=89;
+	public const int RETURN=90;
+	public const int RPAREN=91;
+	public const int SEMI=92;
+	public const int SHORT=93;
+	public const int SLASH=94;
+	public const int SLASHEQ=95;
+	public const int STAR=96;
+	public const int STAREQ=97;
+	public const int STATIC=98;
+	public const int STRICTFP=99;
+	public const int STRINGLITERAL=100;
+	public const int SUB=101;
+	public const int SUBEQ=102;
+	public const int SUBSUB=103;
+	public const int SUPER=104;
+	public const int SWITCH=105;
+	public const int SYNCHRONIZED=106;
+	public const int SurrogateIdentifer=107;
+	public const int THIS=108;
+	public const int THROW=109;
+	public const int THROWS=110;
+	public const int TILDE=111;
+	public const int TRANSIENT=112;
+	public const int TRUE=113;
+	public const int TRY=114;
+	public const int VOID=115;
+	public const int VOLATILE=116;
+	public const int WHILE=117;
+	public const int WS=118;
 
+	#if ANTLR_DEBUG
+		private static readonly bool[] decisionCanBacktrack =
+			new bool[]
+			{
+				false, // invalid decision
+				false, true, false, false, false, false, false, false, false, false, 
+				false, true, false, false, true, false, false, false, false, false, 
+				false, false, false, false, false, false, false, false, false, false, 
+				true, false, false, false, false, false, false, false, true, false, 
+				false, true, false, false, false, false, false, false, true, false, 
+				false, false, true, false, false, false, false, false, false, false, 
+				false, false, false, false, false, false, false, false, false, false, 
+				true, true, false, false, false, true, false, false, false, false, false, 
+				false, false, false, false, false, true, false, false, true, false, 
+				false, false, true, false, false, false, true, false, false, false, 
+				true, false, false, false, false, false, true, true, false, false, false, 
+				false, false, false, false, false, false, false, false, false, false, 
+				false, false, false, false, false, false, false, true, true, true, true, 
+				true, true, false, false, false, false, false, false, true, false, false, 
+				false, true, false, true, false, true, false, false, false, false, false, 
+				false, false, false, false, false, false, false, false, false, false, 
+				false, , , false, false, true, false, , , false, false, , , false, false, 
+				, , , , , , , , , , , , false, 
+			};
+	#else
+		private static readonly bool[] decisionCanBacktrack = new bool[0];
+	#endif
 	public EntityMappingParser(ITokenStream input)
 		: this(input, new RecognizerSharedState())
 	{
@@ -94,589 +181,129 @@ public partial class EntityMappingParser : Antlr.Runtime.Parser
 	public EntityMappingParser(ITokenStream input, RecognizerSharedState state)
 		: base(input, state)
 	{
-		ITreeAdaptor treeAdaptor = default(ITreeAdaptor);
-		CreateTreeAdaptor(ref treeAdaptor);
-		TreeAdaptor = treeAdaptor ?? new CommonTreeAdaptor();
+		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[381+1];
+
+
 		OnCreated();
-	}
-	// Implement this function in your helper file to use a custom tree adaptor
-	partial void CreateTreeAdaptor(ref ITreeAdaptor adaptor);
-
-	private ITreeAdaptor adaptor;
-
-	public ITreeAdaptor TreeAdaptor
-	{
-		get
-		{
-			return adaptor;
-		}
-
-		set
-		{
-			this.adaptor = value;
-		}
 	}
 
 	public override string[] TokenNames { get { return EntityMappingParser.tokenNames; } }
-	public override string GrammarFileName { get { return "E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g"; } }
+	public override string GrammarFileName { get { return "EntityMapping.g"; } }
 
 
-	partial void OnCreated();
-	partial void EnterRule(string ruleName, int ruleIndex);
-	partial void LeaveRule(string ruleName, int ruleIndex);
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void OnCreated() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule(string ruleName, int ruleIndex) {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule(string ruleName, int ruleIndex) {}
 
 	#region Rules
-	partial void EnterRule_prog();
-	partial void LeaveRule_prog();
 
-	// $ANTLR start "prog"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:28:8: public prog : mapDeclaration ( stat )* -> ^( ENTMAP mapDeclaration ^( MAPBODY ( stat )* ) ) ;
-	[GrammarRule("prog")]
-	public AstParserRuleReturnScope<CommonTree, IToken> prog()
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_compilationUnit() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_compilationUnit() {}
+
+	// $ANTLR start "compilationUnit"
+	// EntityMapping.g:14:1: compilationUnit : ( ( annotations )? packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* ;
+	[GrammarRule("compilationUnit")]
+	private void compilationUnit()
 	{
-		EnterRule_prog();
-		EnterRule("prog", 1);
-		TraceIn("prog", 1);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
+		EnterRule_compilationUnit();
+		EnterRule("compilationUnit", 1);
+		TraceIn("compilationUnit", 1);
+	    int compilationUnit_StartIndex = input.Index;
 
-		CommonTree root_0 = default(CommonTree);
-
-		AstParserRuleReturnScope<CommonTree, IToken> mapDeclaration1 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> stat2 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		RewriteRuleSubtreeStream stream_mapDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule mapDeclaration");
-		RewriteRuleSubtreeStream stream_stat=new RewriteRuleSubtreeStream(adaptor,"rule stat");
-		try { DebugEnterRule(GrammarFileName, "prog");
-		DebugLocation(28, 82);
+		try { DebugEnterRule(GrammarFileName, "compilationUnit");
+		DebugLocation(14, 4);
 		try
 		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:28:13: ( mapDeclaration ( stat )* -> ^( ENTMAP mapDeclaration ^( MAPBODY ( stat )* ) ) )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 1)) { return; }
+
+			// EntityMapping.g:15:5: ( ( ( annotations )? packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* )
 			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:28:15: mapDeclaration ( stat )*
+			// EntityMapping.g:15:9: ( ( annotations )? packageDeclaration )? ( importDeclaration )* ( typeDeclaration )*
 			{
-			DebugLocation(28, 15);
-			PushFollow(Follow._mapDeclaration_in_prog108);
-			mapDeclaration1=mapDeclaration();
-			PopFollow();
-
-			stream_mapDeclaration.Add(mapDeclaration1.Tree);
-			DebugLocation(28, 30);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:28:30: ( stat )*
-			try { DebugEnterSubRule(1);
-			while (true)
-			{
-				int alt1=2;
-				try { DebugEnterDecision(1, false);
-				int LA1_0 = input.LA(1);
-
-				if ((LA1_0==ID))
-				{
-					alt1 = 1;
-				}
-
-
-				} finally { DebugExitDecision(1); }
-				switch ( alt1 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:28:30: stat
-					{
-					DebugLocation(28, 30);
-					PushFollow(Follow._stat_in_prog110);
-					stat2=stat();
-					PopFollow();
-
-					stream_stat.Add(stat2.Tree);
-
-					}
-					break;
-
-				default:
-					goto loop1;
-				}
-			}
-
-			loop1:
-				;
-
-			} finally { DebugExitSubRule(1); }
-
-
-
-			{
-			// AST REWRITE
-			// elements: mapDeclaration, stat
-			// token labels: 
-			// rule labels: retval
-			// token list labels: 
-			// rule list labels: 
-			// wildcard labels: 
-			retval.Tree = root_0;
-			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
-			root_0 = (CommonTree)adaptor.Nil();
-			// 28:36: -> ^( ENTMAP mapDeclaration ^( MAPBODY ( stat )* ) )
-			{
-				DebugLocation(28, 39);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:28:39: ^( ENTMAP mapDeclaration ^( MAPBODY ( stat )* ) )
-				{
-				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(28, 41);
-				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(ENTMAP, "ENTMAP"), root_1);
-
-				DebugLocation(28, 48);
-				adaptor.AddChild(root_1, stream_mapDeclaration.NextTree());
-				DebugLocation(28, 63);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:28:63: ^( MAPBODY ( stat )* )
-				{
-				CommonTree root_2 = (CommonTree)adaptor.Nil();
-				DebugLocation(28, 65);
-				root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(MAPBODY, "MAPBODY"), root_2);
-
-				DebugLocation(28, 73);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:28:73: ( stat )*
-				while ( stream_stat.HasNext )
-				{
-					DebugLocation(28, 73);
-					adaptor.AddChild(root_2, stream_stat.NextTree());
-
-				}
-				stream_stat.Reset();
-
-				adaptor.AddChild(root_1, root_2);
-				}
-
-				adaptor.AddChild(root_0, root_1);
-				}
-
-			}
-
-			retval.Tree = root_0;
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("prog", 1);
-			LeaveRule("prog", 1);
-			LeaveRule_prog();
-		}
-		DebugLocation(28, 82);
-		} finally { DebugExitRule(GrammarFileName, "prog"); }
-		return retval;
-
-	}
-	// $ANTLR end "prog"
-
-	partial void EnterRule_mapDeclaration();
-	partial void LeaveRule_mapDeclaration();
-
-	// $ANTLR start "mapDeclaration"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:30:1: mapDeclaration : ID '<-' ID ';' -> ^( MAPDCL ID ID ) ;
-	[GrammarRule("mapDeclaration")]
-	private AstParserRuleReturnScope<CommonTree, IToken> mapDeclaration()
-	{
-		EnterRule_mapDeclaration();
-		EnterRule("mapDeclaration", 2);
-		TraceIn("mapDeclaration", 2);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken ID3 = default(IToken);
-		IToken string_literal4 = default(IToken);
-		IToken ID5 = default(IToken);
-		IToken char_literal6 = default(IToken);
-
-		CommonTree ID3_tree = default(CommonTree);
-		CommonTree string_literal4_tree = default(CommonTree);
-		CommonTree ID5_tree = default(CommonTree);
-		CommonTree char_literal6_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_45=new RewriteRuleITokenStream(adaptor,"token 45");
-		RewriteRuleITokenStream stream_44=new RewriteRuleITokenStream(adaptor,"token 44");
-		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		try { DebugEnterRule(GrammarFileName, "mapDeclaration");
-		DebugLocation(30, 51);
-		try
-		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:30:16: ( ID '<-' ID ';' -> ^( MAPDCL ID ID ) )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:30:18: ID '<-' ID ';'
-			{
-			DebugLocation(30, 18);
-			ID3=(IToken)Match(input,ID,Follow._ID_in_mapDeclaration137);  
-			stream_ID.Add(ID3);
-
-			DebugLocation(30, 21);
-			string_literal4=(IToken)Match(input,45,Follow._45_in_mapDeclaration139);  
-			stream_45.Add(string_literal4);
-
-			DebugLocation(30, 26);
-			ID5=(IToken)Match(input,ID,Follow._ID_in_mapDeclaration141);  
-			stream_ID.Add(ID5);
-
-			DebugLocation(30, 29);
-			char_literal6=(IToken)Match(input,44,Follow._44_in_mapDeclaration143);  
-			stream_44.Add(char_literal6);
-
-
-
-			{
-			// AST REWRITE
-			// elements: ID, ID
-			// token labels: 
-			// rule labels: retval
-			// token list labels: 
-			// rule list labels: 
-			// wildcard labels: 
-			retval.Tree = root_0;
-			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
-			root_0 = (CommonTree)adaptor.Nil();
-			// 30:33: -> ^( MAPDCL ID ID )
-			{
-				DebugLocation(30, 36);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:30:36: ^( MAPDCL ID ID )
-				{
-				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(30, 38);
-				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(MAPDCL, "MAPDCL"), root_1);
-
-				DebugLocation(30, 45);
-				adaptor.AddChild(root_1, stream_ID.NextNode());
-				DebugLocation(30, 48);
-				adaptor.AddChild(root_1, stream_ID.NextNode());
-
-				adaptor.AddChild(root_0, root_1);
-				}
-
-			}
-
-			retval.Tree = root_0;
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("mapDeclaration", 2);
-			LeaveRule("mapDeclaration", 2);
-			LeaveRule_mapDeclaration();
-		}
-		DebugLocation(30, 51);
-		} finally { DebugExitRule(GrammarFileName, "mapDeclaration"); }
-		return retval;
-
-	}
-	// $ANTLR end "mapDeclaration"
-
-	partial void EnterRule_stat();
-	partial void LeaveRule_stat();
-
-	// $ANTLR start "stat"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:32:1: stat : ID '=' expr ';' -> ^( ASSIGN ID expr ) ;
-	[GrammarRule("stat")]
-	private AstParserRuleReturnScope<CommonTree, IToken> stat()
-	{
-		EnterRule_stat();
-		EnterRule("stat", 3);
-		TraceIn("stat", 3);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken ID7 = default(IToken);
-		IToken char_literal8 = default(IToken);
-		IToken char_literal10 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> expr9 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree ID7_tree = default(CommonTree);
-		CommonTree char_literal8_tree = default(CommonTree);
-		CommonTree char_literal10_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_44=new RewriteRuleITokenStream(adaptor,"token 44");
-		RewriteRuleITokenStream stream_46=new RewriteRuleITokenStream(adaptor,"token 46");
-		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
-		try { DebugEnterRule(GrammarFileName, "stat");
-		DebugLocation(32, 43);
-		try
-		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:32:6: ( ID '=' expr ';' -> ^( ASSIGN ID expr ) )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:32:8: ID '=' expr ';'
-			{
-			DebugLocation(32, 8);
-			ID7=(IToken)Match(input,ID,Follow._ID_in_stat162);  
-			stream_ID.Add(ID7);
-
-			DebugLocation(32, 11);
-			char_literal8=(IToken)Match(input,46,Follow._46_in_stat164);  
-			stream_46.Add(char_literal8);
-
-			DebugLocation(32, 15);
-			PushFollow(Follow._expr_in_stat166);
-			expr9=expr();
-			PopFollow();
-
-			stream_expr.Add(expr9.Tree);
-			DebugLocation(32, 20);
-			char_literal10=(IToken)Match(input,44,Follow._44_in_stat168);  
-			stream_44.Add(char_literal10);
-
-
-
-			{
-			// AST REWRITE
-			// elements: expr, ID
-			// token labels: 
-			// rule labels: retval
-			// token list labels: 
-			// rule list labels: 
-			// wildcard labels: 
-			retval.Tree = root_0;
-			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
-			root_0 = (CommonTree)adaptor.Nil();
-			// 32:24: -> ^( ASSIGN ID expr )
-			{
-				DebugLocation(32, 27);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:32:27: ^( ASSIGN ID expr )
-				{
-				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(32, 29);
-				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(ASSIGN, "ASSIGN"), root_1);
-
-				DebugLocation(32, 36);
-				adaptor.AddChild(root_1, stream_ID.NextNode());
-				DebugLocation(32, 39);
-				adaptor.AddChild(root_1, stream_expr.NextTree());
-
-				adaptor.AddChild(root_0, root_1);
-				}
-
-			}
-
-			retval.Tree = root_0;
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("stat", 3);
-			LeaveRule("stat", 3);
-			LeaveRule_stat();
-		}
-		DebugLocation(32, 43);
-		} finally { DebugExitRule(GrammarFileName, "stat"); }
-		return retval;
-
-	}
-	// $ANTLR end "stat"
-
-	partial void EnterRule_expr();
-	partial void LeaveRule_expr();
-
-	// $ANTLR start "expr"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:34:1: expr : boolAndExpr ( OR ^ boolAndExpr )* ;
-	[GrammarRule("expr")]
-	private AstParserRuleReturnScope<CommonTree, IToken> expr()
-	{
-		EnterRule_expr();
-		EnterRule("expr", 4);
-		TraceIn("expr", 4);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken OR12 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> boolAndExpr11 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> boolAndExpr13 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree OR12_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "expr");
-		DebugLocation(34, 37);
-		try
-		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:34:6: ( boolAndExpr ( OR ^ boolAndExpr )* )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:34:8: boolAndExpr ( OR ^ boolAndExpr )*
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(34, 8);
-			PushFollow(Follow._boolAndExpr_in_expr186);
-			boolAndExpr11=boolAndExpr();
-			PopFollow();
-
-			adaptor.AddChild(root_0, boolAndExpr11.Tree);
-			DebugLocation(34, 20);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:34:20: ( OR ^ boolAndExpr )*
+			DebugLocation(15, 9);
+			// EntityMapping.g:15:9: ( ( annotations )? packageDeclaration )?
+			int alt2=2;
 			try { DebugEnterSubRule(2);
-			while (true)
-			{
-				int alt2=2;
-				try { DebugEnterDecision(2, false);
-				int LA2_0 = input.LA(1);
+			try { DebugEnterDecision(2, decisionCanBacktrack[2]);
+			int LA2_0 = input.LA(1);
 
-				if ((LA2_0==OR))
+			if ((LA2_0==MONKEYS_AT))
+			{
+				int LA2_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred2_EntityMapping_fragment)))
 				{
 					alt2 = 1;
 				}
+			}
+			else if ((LA2_0==PACKAGE))
+			{
+				alt2 = 1;
+			}
+			} finally { DebugExitDecision(2); }
+			switch (alt2)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:15:13: ( annotations )? packageDeclaration
+				{
+				DebugLocation(15, 13);
+				// EntityMapping.g:15:13: ( annotations )?
+				int alt1=2;
+				try { DebugEnterSubRule(1);
+				try { DebugEnterDecision(1, decisionCanBacktrack[1]);
+				int LA1_0 = input.LA(1);
 
-
-				} finally { DebugExitDecision(2); }
-				switch ( alt2 )
+				if ((LA1_0==MONKEYS_AT))
+				{
+					alt1 = 1;
+				}
+				} finally { DebugExitDecision(1); }
+				switch (alt1)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:34:21: OR ^ boolAndExpr
+					// EntityMapping.g:15:14: annotations
 					{
-					DebugLocation(34, 23);
-					OR12=(IToken)Match(input,OR,Follow._OR_in_expr189); 
-					OR12_tree = (CommonTree)adaptor.Create(OR12);
-					root_0 = (CommonTree)adaptor.BecomeRoot(OR12_tree, root_0);
-					DebugLocation(34, 25);
-					PushFollow(Follow._boolAndExpr_in_expr192);
-					boolAndExpr13=boolAndExpr();
+					DebugLocation(15, 14);
+					PushFollow(Follow._annotations_in_compilationUnit69);
+					annotations();
 					PopFollow();
-
-					adaptor.AddChild(root_0, boolAndExpr13.Tree);
+					if (state.failed) return;
 
 					}
 					break;
 
-				default:
-					goto loop2;
 				}
+				} finally { DebugExitSubRule(1); }
+
+				DebugLocation(17, 13);
+				PushFollow(Follow._packageDeclaration_in_compilationUnit98);
+				packageDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
 			}
-
-			loop2:
-				;
-
 			} finally { DebugExitSubRule(2); }
 
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("expr", 4);
-			LeaveRule("expr", 4);
-			LeaveRule_expr();
-		}
-		DebugLocation(34, 37);
-		} finally { DebugExitRule(GrammarFileName, "expr"); }
-		return retval;
-
-	}
-	// $ANTLR end "expr"
-
-	partial void EnterRule_boolAndExpr();
-	partial void LeaveRule_boolAndExpr();
-
-	// $ANTLR start "boolAndExpr"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:36:1: boolAndExpr : equalityExpr ( AND ^ equalityExpr )* ;
-	[GrammarRule("boolAndExpr")]
-	private AstParserRuleReturnScope<CommonTree, IToken> boolAndExpr()
-	{
-		EnterRule_boolAndExpr();
-		EnterRule("boolAndExpr", 5);
-		TraceIn("boolAndExpr", 5);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken AND15 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> equalityExpr14 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> equalityExpr16 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree AND15_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "boolAndExpr");
-		DebugLocation(36, 47);
-		try
-		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:36:13: ( equalityExpr ( AND ^ equalityExpr )* )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:36:15: equalityExpr ( AND ^ equalityExpr )*
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(36, 15);
-			PushFollow(Follow._equalityExpr_in_boolAndExpr202);
-			equalityExpr14=equalityExpr();
-			PopFollow();
-
-			adaptor.AddChild(root_0, equalityExpr14.Tree);
-			DebugLocation(36, 28);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:36:28: ( AND ^ equalityExpr )*
+			DebugLocation(19, 9);
+			// EntityMapping.g:19:9: ( importDeclaration )*
 			try { DebugEnterSubRule(3);
 			while (true)
 			{
 				int alt3=2;
-				try { DebugEnterDecision(3, false);
+				try { DebugEnterDecision(3, decisionCanBacktrack[3]);
 				int LA3_0 = input.LA(1);
 
-				if ((LA3_0==AND))
+				if ((LA3_0==IMPORT))
 				{
 					alt3 = 1;
 				}
@@ -687,18 +314,13 @@ public partial class EntityMappingParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:36:29: AND ^ equalityExpr
+					// EntityMapping.g:19:10: importDeclaration
 					{
-					DebugLocation(36, 32);
-					AND15=(IToken)Match(input,AND,Follow._AND_in_boolAndExpr205); 
-					AND15_tree = (CommonTree)adaptor.Create(AND15);
-					root_0 = (CommonTree)adaptor.BecomeRoot(AND15_tree, root_0);
-					DebugLocation(36, 34);
-					PushFollow(Follow._equalityExpr_in_boolAndExpr208);
-					equalityExpr16=equalityExpr();
+					DebugLocation(19, 10);
+					PushFollow(Follow._importDeclaration_in_compilationUnit120);
+					importDeclaration();
 					PopFollow();
-
-					adaptor.AddChild(root_0, equalityExpr16.Tree);
+					if (state.failed) return;
 
 					}
 					break;
@@ -713,806 +335,919 @@ public partial class EntityMappingParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(3); }
 
+			DebugLocation(21, 9);
+			// EntityMapping.g:21:9: ( typeDeclaration )*
+			try { DebugEnterSubRule(4);
+			while (true)
+			{
+				int alt4=2;
+				try { DebugEnterDecision(4, decisionCanBacktrack[4]);
+				int LA4_0 = input.LA(1);
 
+				if ((LA4_0==ABSTRACT||LA4_0==BOOLEAN||LA4_0==BYTE||LA4_0==CHAR||LA4_0==CLASS||LA4_0==DOUBLE||LA4_0==ENUM||LA4_0==FINAL||LA4_0==FLOAT||LA4_0==IDENTIFIER||(LA4_0>=INT && LA4_0<=INTERFACE)||LA4_0==LONG||LA4_0==LT||(LA4_0>=MONKEYS_AT && LA4_0<=NATIVE)||(LA4_0>=PRIVATE && LA4_0<=PUBLIC)||(LA4_0>=SEMI && LA4_0<=SHORT)||(LA4_0>=STATIC && LA4_0<=STRICTFP)||LA4_0==SYNCHRONIZED||LA4_0==TRANSIENT||(LA4_0>=VOID && LA4_0<=VOLATILE)))
+				{
+					alt4 = 1;
+				}
+
+
+				} finally { DebugExitDecision(4); }
+				switch ( alt4 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:21:10: typeDeclaration
+					{
+					DebugLocation(21, 10);
+					PushFollow(Follow._typeDeclaration_in_compilationUnit142);
+					typeDeclaration();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop4;
+				}
 			}
 
-			retval.Stop = (IToken)input.LT(-1);
+			loop4:
+				;
 
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			} finally { DebugExitSubRule(4); }
+
+
+			}
 
 		}
 		catch (RecognitionException re)
 		{
 			ReportError(re);
 			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
 		}
 		finally
 		{
-			TraceOut("boolAndExpr", 5);
-			LeaveRule("boolAndExpr", 5);
-			LeaveRule_boolAndExpr();
-		}
-		DebugLocation(36, 47);
-		} finally { DebugExitRule(GrammarFileName, "boolAndExpr"); }
-		return retval;
+			TraceOut("compilationUnit", 1);
+			LeaveRule("compilationUnit", 1);
+			LeaveRule_compilationUnit();
+	        if (state.backtracking > 0) { Memoize(input, 1, compilationUnit_StartIndex); }
+
+	    }
+	 	DebugLocation(23, 4);
+		} finally { DebugExitRule(GrammarFileName, "compilationUnit"); }
+		return;
 
 	}
-	// $ANTLR end "boolAndExpr"
+	// $ANTLR end "compilationUnit"
 
-	partial void EnterRule_equalityExpr();
-	partial void LeaveRule_equalityExpr();
 
-	// $ANTLR start "equalityExpr"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:38:1: equalityExpr : relationalExpr ( ( EQUALS ^| NOTEQUALS ^) relationalExpr )* ;
-	[GrammarRule("equalityExpr")]
-	private AstParserRuleReturnScope<CommonTree, IToken> equalityExpr()
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_packageDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_packageDeclaration() {}
+
+	// $ANTLR start "packageDeclaration"
+	// EntityMapping.g:25:1: packageDeclaration : 'package' qualifiedName ';' ;
+	[GrammarRule("packageDeclaration")]
+	private void packageDeclaration()
 	{
-		EnterRule_equalityExpr();
-		EnterRule("equalityExpr", 6);
-		TraceIn("equalityExpr", 6);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
+		EnterRule_packageDeclaration();
+		EnterRule("packageDeclaration", 2);
+		TraceIn("packageDeclaration", 2);
+	    int packageDeclaration_StartIndex = input.Index;
 
-		CommonTree root_0 = default(CommonTree);
-
-		IToken EQUALS18 = default(IToken);
-		IToken NOTEQUALS19 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> relationalExpr17 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> relationalExpr20 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree EQUALS18_tree = default(CommonTree);
-		CommonTree NOTEQUALS19_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "equalityExpr");
-		DebugLocation(38, 67);
+		try { DebugEnterRule(GrammarFileName, "packageDeclaration");
+		DebugLocation(25, 4);
 		try
 		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:38:14: ( relationalExpr ( ( EQUALS ^| NOTEQUALS ^) relationalExpr )* )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 2)) { return; }
+
+			// EntityMapping.g:26:5: ( 'package' qualifiedName ';' )
 			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:38:16: relationalExpr ( ( EQUALS ^| NOTEQUALS ^) relationalExpr )*
+			// EntityMapping.g:26:9: 'package' qualifiedName ';'
 			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(38, 16);
-			PushFollow(Follow._relationalExpr_in_equalityExpr218);
-			relationalExpr17=relationalExpr();
+			DebugLocation(26, 9);
+			Match(input,PACKAGE,Follow._PACKAGE_in_packageDeclaration173); if (state.failed) return;
+			DebugLocation(26, 19);
+			PushFollow(Follow._qualifiedName_in_packageDeclaration175);
+			qualifiedName();
 			PopFollow();
+			if (state.failed) return;
+			DebugLocation(27, 9);
+			Match(input,SEMI,Follow._SEMI_in_packageDeclaration185); if (state.failed) return;
 
-			adaptor.AddChild(root_0, relationalExpr17.Tree);
-			DebugLocation(38, 31);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:38:31: ( ( EQUALS ^| NOTEQUALS ^) relationalExpr )*
-			try { DebugEnterSubRule(5);
-			while (true)
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("packageDeclaration", 2);
+			LeaveRule("packageDeclaration", 2);
+			LeaveRule_packageDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 2, packageDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(28, 4);
+		} finally { DebugExitRule(GrammarFileName, "packageDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "packageDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_importDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_importDeclaration() {}
+
+	// $ANTLR start "importDeclaration"
+	// EntityMapping.g:30:1: importDeclaration : ( 'import' ( 'static' )? IDENTIFIER '.' '*' ';' | 'import' ( 'static' )? IDENTIFIER ( '.' IDENTIFIER )+ ( '.' '*' )? ';' );
+	[GrammarRule("importDeclaration")]
+	private void importDeclaration()
+	{
+		EnterRule_importDeclaration();
+		EnterRule("importDeclaration", 3);
+		TraceIn("importDeclaration", 3);
+	    int importDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "importDeclaration");
+		DebugLocation(30, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 3)) { return; }
+
+			// EntityMapping.g:31:5: ( 'import' ( 'static' )? IDENTIFIER '.' '*' ';' | 'import' ( 'static' )? IDENTIFIER ( '.' IDENTIFIER )+ ( '.' '*' )? ';' )
+			int alt9=2;
+			try { DebugEnterDecision(9, decisionCanBacktrack[9]);
+			int LA9_0 = input.LA(1);
+
+			if ((LA9_0==IMPORT))
 			{
+				int LA9_1 = input.LA(2);
+
+				if ((LA9_1==STATIC))
+				{
+					int LA9_2 = input.LA(3);
+
+					if ((LA9_2==IDENTIFIER))
+					{
+						int LA9_3 = input.LA(4);
+
+						if ((LA9_3==DOT))
+						{
+							int LA9_4 = input.LA(5);
+
+							if ((LA9_4==STAR))
+							{
+								alt9 = 1;
+							}
+							else if ((LA9_4==IDENTIFIER))
+							{
+								alt9 = 2;
+							}
+							else
+							{
+								if (state.backtracking>0) {state.failed=true; return;}
+								NoViableAltException nvae = new NoViableAltException("", 9, 4, input);
+								DebugRecognitionException(nvae);
+								throw nvae;
+							}
+						}
+						else
+						{
+							if (state.backtracking>0) {state.failed=true; return;}
+							NoViableAltException nvae = new NoViableAltException("", 9, 3, input);
+							DebugRecognitionException(nvae);
+							throw nvae;
+						}
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						NoViableAltException nvae = new NoViableAltException("", 9, 2, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+				}
+				else if ((LA9_1==IDENTIFIER))
+				{
+					int LA9_3 = input.LA(3);
+
+					if ((LA9_3==DOT))
+					{
+						int LA9_4 = input.LA(4);
+
+						if ((LA9_4==STAR))
+						{
+							alt9 = 1;
+						}
+						else if ((LA9_4==IDENTIFIER))
+						{
+							alt9 = 2;
+						}
+						else
+						{
+							if (state.backtracking>0) {state.failed=true; return;}
+							NoViableAltException nvae = new NoViableAltException("", 9, 4, input);
+							DebugRecognitionException(nvae);
+							throw nvae;
+						}
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						NoViableAltException nvae = new NoViableAltException("", 9, 3, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 9, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 9, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(9); }
+			switch (alt9)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:31:9: 'import' ( 'static' )? IDENTIFIER '.' '*' ';'
+				{
+				DebugLocation(31, 9);
+				Match(input,IMPORT,Follow._IMPORT_in_importDeclaration206); if (state.failed) return;
+				DebugLocation(32, 9);
+				// EntityMapping.g:32:9: ( 'static' )?
 				int alt5=2;
-				try { DebugEnterDecision(5, false);
+				try { DebugEnterSubRule(5);
+				try { DebugEnterDecision(5, decisionCanBacktrack[5]);
 				int LA5_0 = input.LA(1);
 
-				if ((LA5_0==EQUALS||LA5_0==NOTEQUALS))
+				if ((LA5_0==STATIC))
 				{
 					alt5 = 1;
 				}
-
-
 				} finally { DebugExitDecision(5); }
-				switch ( alt5 )
+				switch (alt5)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:38:32: ( EQUALS ^| NOTEQUALS ^) relationalExpr
+					// EntityMapping.g:32:10: 'static'
 					{
-					DebugLocation(38, 32);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:38:32: ( EQUALS ^| NOTEQUALS ^)
-					int alt4=2;
-					try { DebugEnterSubRule(4);
-					try { DebugEnterDecision(4, false);
-					int LA4_0 = input.LA(1);
-
-					if ((LA4_0==EQUALS))
-					{
-						alt4 = 1;
-					}
-					else if ((LA4_0==NOTEQUALS))
-					{
-						alt4 = 2;
-					}
-					else
-					{
-						NoViableAltException nvae = new NoViableAltException("", 4, 0, input);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
-					} finally { DebugExitDecision(4); }
-					switch (alt4)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:38:33: EQUALS ^
-						{
-						DebugLocation(38, 39);
-						EQUALS18=(IToken)Match(input,EQUALS,Follow._EQUALS_in_equalityExpr222); 
-						EQUALS18_tree = (CommonTree)adaptor.Create(EQUALS18);
-						root_0 = (CommonTree)adaptor.BecomeRoot(EQUALS18_tree, root_0);
-
-						}
-						break;
-					case 2:
-						DebugEnterAlt(2);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:38:41: NOTEQUALS ^
-						{
-						DebugLocation(38, 50);
-						NOTEQUALS19=(IToken)Match(input,NOTEQUALS,Follow._NOTEQUALS_in_equalityExpr225); 
-						NOTEQUALS19_tree = (CommonTree)adaptor.Create(NOTEQUALS19);
-						root_0 = (CommonTree)adaptor.BecomeRoot(NOTEQUALS19_tree, root_0);
-
-						}
-						break;
-
-					}
-					} finally { DebugExitSubRule(4); }
-
-					DebugLocation(38, 52);
-					PushFollow(Follow._relationalExpr_in_equalityExpr228);
-					relationalExpr20=relationalExpr();
-					PopFollow();
-
-					adaptor.AddChild(root_0, relationalExpr20.Tree);
+					DebugLocation(32, 10);
+					Match(input,STATIC,Follow._STATIC_in_importDeclaration218); if (state.failed) return;
 
 					}
 					break;
 
-				default:
-					goto loop5;
 				}
-			}
+				} finally { DebugExitSubRule(5); }
 
-			loop5:
-				;
+				DebugLocation(34, 9);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_importDeclaration239); if (state.failed) return;
+				DebugLocation(34, 20);
+				Match(input,DOT,Follow._DOT_in_importDeclaration241); if (state.failed) return;
+				DebugLocation(34, 24);
+				Match(input,STAR,Follow._STAR_in_importDeclaration243); if (state.failed) return;
+				DebugLocation(35, 9);
+				Match(input,SEMI,Follow._SEMI_in_importDeclaration253); if (state.failed) return;
 
-			} finally { DebugExitSubRule(5); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("equalityExpr", 6);
-			LeaveRule("equalityExpr", 6);
-			LeaveRule_equalityExpr();
-		}
-		DebugLocation(38, 67);
-		} finally { DebugExitRule(GrammarFileName, "equalityExpr"); }
-		return retval;
-
-	}
-	// $ANTLR end "equalityExpr"
-
-	partial void EnterRule_relationalExpr();
-	partial void LeaveRule_relationalExpr();
-
-	// $ANTLR start "relationalExpr"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:1: relationalExpr : additiveExpr ( ( LT ^| LTEQ ^| GT ^| GTEQ ^) additiveExpr )* ;
-	[GrammarRule("relationalExpr")]
-	private AstParserRuleReturnScope<CommonTree, IToken> relationalExpr()
-	{
-		EnterRule_relationalExpr();
-		EnterRule("relationalExpr", 7);
-		TraceIn("relationalExpr", 7);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken LT22 = default(IToken);
-		IToken LTEQ23 = default(IToken);
-		IToken GT24 = default(IToken);
-		IToken GTEQ25 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> additiveExpr21 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> additiveExpr26 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree LT22_tree = default(CommonTree);
-		CommonTree LTEQ23_tree = default(CommonTree);
-		CommonTree GT24_tree = default(CommonTree);
-		CommonTree GTEQ25_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "relationalExpr");
-		DebugLocation(40, 67);
-		try
-		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:16: ( additiveExpr ( ( LT ^| LTEQ ^| GT ^| GTEQ ^) additiveExpr )* )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:18: additiveExpr ( ( LT ^| LTEQ ^| GT ^| GTEQ ^) additiveExpr )*
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(40, 18);
-			PushFollow(Follow._additiveExpr_in_relationalExpr238);
-			additiveExpr21=additiveExpr();
-			PopFollow();
-
-			adaptor.AddChild(root_0, additiveExpr21.Tree);
-			DebugLocation(40, 31);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:31: ( ( LT ^| LTEQ ^| GT ^| GTEQ ^) additiveExpr )*
-			try { DebugEnterSubRule(7);
-			while (true)
-			{
-				int alt7=2;
-				try { DebugEnterDecision(7, false);
-				int LA7_0 = input.LA(1);
-
-				if (((LA7_0>=GT && LA7_0<=GTEQ)||(LA7_0>=LT && LA7_0<=LTEQ)))
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:36:9: 'import' ( 'static' )? IDENTIFIER ( '.' IDENTIFIER )+ ( '.' '*' )? ';'
 				{
-					alt7 = 1;
+				DebugLocation(36, 9);
+				Match(input,IMPORT,Follow._IMPORT_in_importDeclaration270); if (state.failed) return;
+				DebugLocation(37, 9);
+				// EntityMapping.g:37:9: ( 'static' )?
+				int alt6=2;
+				try { DebugEnterSubRule(6);
+				try { DebugEnterDecision(6, decisionCanBacktrack[6]);
+				int LA6_0 = input.LA(1);
+
+				if ((LA6_0==STATIC))
+				{
+					alt6 = 1;
 				}
-
-
-				} finally { DebugExitDecision(7); }
-				switch ( alt7 )
+				} finally { DebugExitDecision(6); }
+				switch (alt6)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:32: ( LT ^| LTEQ ^| GT ^| GTEQ ^) additiveExpr
+					// EntityMapping.g:37:10: 'static'
 					{
-					DebugLocation(40, 32);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:32: ( LT ^| LTEQ ^| GT ^| GTEQ ^)
-					int alt6=4;
-					try { DebugEnterSubRule(6);
-					try { DebugEnterDecision(6, false);
-					switch (input.LA(1))
+					DebugLocation(37, 10);
+					Match(input,STATIC,Follow._STATIC_in_importDeclaration282); if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(6); }
+
+				DebugLocation(39, 9);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_importDeclaration303); if (state.failed) return;
+				DebugLocation(40, 9);
+				// EntityMapping.g:40:9: ( '.' IDENTIFIER )+
+				int cnt7=0;
+				try { DebugEnterSubRule(7);
+				while (true)
+				{
+					int alt7=2;
+					try { DebugEnterDecision(7, decisionCanBacktrack[7]);
+					int LA7_0 = input.LA(1);
+
+					if ((LA7_0==DOT))
 					{
-					case LT:
+						int LA7_1 = input.LA(2);
+
+						if ((LA7_1==IDENTIFIER))
 						{
-						alt6 = 1;
+							alt7 = 1;
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(7); }
+					switch (alt7)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:40:10: '.' IDENTIFIER
+						{
+						DebugLocation(40, 10);
+						Match(input,DOT,Follow._DOT_in_importDeclaration314); if (state.failed) return;
+						DebugLocation(40, 14);
+						Match(input,IDENTIFIER,Follow._IDENTIFIER_in_importDeclaration316); if (state.failed) return;
+
 						}
 						break;
-					case LTEQ:
-						{
-						alt6 = 2;
-						}
-						break;
-					case GT:
-						{
-						alt6 = 3;
-						}
-						break;
-					case GTEQ:
-						{
-						alt6 = 4;
-						}
-						break;
+
 					default:
-						{
-							NoViableAltException nvae = new NoViableAltException("", 6, 0, input);
-							DebugRecognitionException(nvae);
-							throw nvae;
-						}
+						if (cnt7 >= 1)
+							goto loop7;
+
+						if (state.backtracking>0) {state.failed=true; return;}
+						EarlyExitException eee7 = new EarlyExitException( 7, input );
+						DebugRecognitionException(eee7);
+						throw eee7;
 					}
-
-					} finally { DebugExitDecision(6); }
-					switch (alt6)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:33: LT ^
-						{
-						DebugLocation(40, 35);
-						LT22=(IToken)Match(input,LT,Follow._LT_in_relationalExpr242); 
-						LT22_tree = (CommonTree)adaptor.Create(LT22);
-						root_0 = (CommonTree)adaptor.BecomeRoot(LT22_tree, root_0);
-
-						}
-						break;
-					case 2:
-						DebugEnterAlt(2);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:37: LTEQ ^
-						{
-						DebugLocation(40, 41);
-						LTEQ23=(IToken)Match(input,LTEQ,Follow._LTEQ_in_relationalExpr245); 
-						LTEQ23_tree = (CommonTree)adaptor.Create(LTEQ23);
-						root_0 = (CommonTree)adaptor.BecomeRoot(LTEQ23_tree, root_0);
-
-						}
-						break;
-					case 3:
-						DebugEnterAlt(3);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:43: GT ^
-						{
-						DebugLocation(40, 45);
-						GT24=(IToken)Match(input,GT,Follow._GT_in_relationalExpr248); 
-						GT24_tree = (CommonTree)adaptor.Create(GT24);
-						root_0 = (CommonTree)adaptor.BecomeRoot(GT24_tree, root_0);
-
-						}
-						break;
-					case 4:
-						DebugEnterAlt(4);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:40:47: GTEQ ^
-						{
-						DebugLocation(40, 51);
-						GTEQ25=(IToken)Match(input,GTEQ,Follow._GTEQ_in_relationalExpr251); 
-						GTEQ25_tree = (CommonTree)adaptor.Create(GTEQ25);
-						root_0 = (CommonTree)adaptor.BecomeRoot(GTEQ25_tree, root_0);
-
-						}
-						break;
-
-					}
-					} finally { DebugExitSubRule(6); }
-
-					DebugLocation(40, 53);
-					PushFollow(Follow._additiveExpr_in_relationalExpr254);
-					additiveExpr26=additiveExpr();
-					PopFollow();
-
-					adaptor.AddChild(root_0, additiveExpr26.Tree);
-
-					}
-					break;
-
-				default:
-					goto loop7;
+					cnt7++;
 				}
-			}
+				loop7:
+					;
 
-			loop7:
-				;
+				} finally { DebugExitSubRule(7); }
 
-			} finally { DebugExitSubRule(7); }
+				DebugLocation(42, 9);
+				// EntityMapping.g:42:9: ( '.' '*' )?
+				int alt8=2;
+				try { DebugEnterSubRule(8);
+				try { DebugEnterDecision(8, decisionCanBacktrack[8]);
+				int LA8_0 = input.LA(1);
 
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("relationalExpr", 7);
-			LeaveRule("relationalExpr", 7);
-			LeaveRule_relationalExpr();
-		}
-		DebugLocation(40, 67);
-		} finally { DebugExitRule(GrammarFileName, "relationalExpr"); }
-		return retval;
-
-	}
-	// $ANTLR end "relationalExpr"
-
-	partial void EnterRule_additiveExpr();
-	partial void LeaveRule_additiveExpr();
-
-	// $ANTLR start "additiveExpr"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:42:1: additiveExpr : multiExpr ( ( PLUS ^| MINUS ^) multiExpr )* ;
-	[GrammarRule("additiveExpr")]
-	private AstParserRuleReturnScope<CommonTree, IToken> additiveExpr()
-	{
-		EnterRule_additiveExpr();
-		EnterRule("additiveExpr", 8);
-		TraceIn("additiveExpr", 8);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken PLUS28 = default(IToken);
-		IToken MINUS29 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> multiExpr27 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> multiExpr30 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree PLUS28_tree = default(CommonTree);
-		CommonTree MINUS29_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "additiveExpr");
-		DebugLocation(42, 54);
-		try
-		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:42:14: ( multiExpr ( ( PLUS ^| MINUS ^) multiExpr )* )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:42:16: multiExpr ( ( PLUS ^| MINUS ^) multiExpr )*
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(42, 16);
-			PushFollow(Follow._multiExpr_in_additiveExpr265);
-			multiExpr27=multiExpr();
-			PopFollow();
-
-			adaptor.AddChild(root_0, multiExpr27.Tree);
-			DebugLocation(42, 26);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:42:26: ( ( PLUS ^| MINUS ^) multiExpr )*
-			try { DebugEnterSubRule(9);
-			while (true)
-			{
-				int alt9=2;
-				try { DebugEnterDecision(9, false);
-				int LA9_0 = input.LA(1);
-
-				if ((LA9_0==MINUS||LA9_0==PLUS))
+				if ((LA8_0==DOT))
 				{
-					alt9 = 1;
+					alt8 = 1;
 				}
-
-
-				} finally { DebugExitDecision(9); }
-				switch ( alt9 )
+				} finally { DebugExitDecision(8); }
+				switch (alt8)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:42:28: ( PLUS ^| MINUS ^) multiExpr
+					// EntityMapping.g:42:10: '.' '*'
 					{
-					DebugLocation(42, 28);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:42:28: ( PLUS ^| MINUS ^)
-					int alt8=2;
-					try { DebugEnterSubRule(8);
-					try { DebugEnterDecision(8, false);
-					int LA8_0 = input.LA(1);
-
-					if ((LA8_0==PLUS))
-					{
-						alt8 = 1;
-					}
-					else if ((LA8_0==MINUS))
-					{
-						alt8 = 2;
-					}
-					else
-					{
-						NoViableAltException nvae = new NoViableAltException("", 8, 0, input);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
-					} finally { DebugExitDecision(8); }
-					switch (alt8)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:42:29: PLUS ^
-						{
-						DebugLocation(42, 33);
-						PLUS28=(IToken)Match(input,PLUS,Follow._PLUS_in_additiveExpr270); 
-						PLUS28_tree = (CommonTree)adaptor.Create(PLUS28);
-						root_0 = (CommonTree)adaptor.BecomeRoot(PLUS28_tree, root_0);
-
-						}
-						break;
-					case 2:
-						DebugEnterAlt(2);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:42:35: MINUS ^
-						{
-						DebugLocation(42, 40);
-						MINUS29=(IToken)Match(input,MINUS,Follow._MINUS_in_additiveExpr273); 
-						MINUS29_tree = (CommonTree)adaptor.Create(MINUS29);
-						root_0 = (CommonTree)adaptor.BecomeRoot(MINUS29_tree, root_0);
-
-						}
-						break;
-
-					}
-					} finally { DebugExitSubRule(8); }
-
-					DebugLocation(42, 43);
-					PushFollow(Follow._multiExpr_in_additiveExpr277);
-					multiExpr30=multiExpr();
-					PopFollow();
-
-					adaptor.AddChild(root_0, multiExpr30.Tree);
+					DebugLocation(42, 10);
+					Match(input,DOT,Follow._DOT_in_importDeclaration338); if (state.failed) return;
+					DebugLocation(42, 14);
+					Match(input,STAR,Follow._STAR_in_importDeclaration340); if (state.failed) return;
 
 					}
 					break;
 
-				default:
-					goto loop9;
 				}
+				} finally { DebugExitSubRule(8); }
+
+				DebugLocation(44, 9);
+				Match(input,SEMI,Follow._SEMI_in_importDeclaration361); if (state.failed) return;
+
+				}
+				break;
+
 			}
-
-			loop9:
-				;
-
-			} finally { DebugExitSubRule(9); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
 		}
 		catch (RecognitionException re)
 		{
 			ReportError(re);
 			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
 		}
 		finally
 		{
-			TraceOut("additiveExpr", 8);
-			LeaveRule("additiveExpr", 8);
-			LeaveRule_additiveExpr();
-		}
-		DebugLocation(42, 54);
-		} finally { DebugExitRule(GrammarFileName, "additiveExpr"); }
-		return retval;
+			TraceOut("importDeclaration", 3);
+			LeaveRule("importDeclaration", 3);
+			LeaveRule_importDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 3, importDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(45, 4);
+		} finally { DebugExitRule(GrammarFileName, "importDeclaration"); }
+		return;
 
 	}
-	// $ANTLR end "additiveExpr"
+	// $ANTLR end "importDeclaration"
 
-	partial void EnterRule_multiExpr();
-	partial void LeaveRule_multiExpr();
 
-	// $ANTLR start "multiExpr"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:44:1: multiExpr : unaryExpr ( ( MULT ^| DIV ^| MOD ^) unaryExpr )* ;
-	[GrammarRule("multiExpr")]
-	private AstParserRuleReturnScope<CommonTree, IToken> multiExpr()
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_qualifiedImportName() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_qualifiedImportName() {}
+
+	// $ANTLR start "qualifiedImportName"
+	// EntityMapping.g:47:1: qualifiedImportName : IDENTIFIER ( '.' IDENTIFIER )* ;
+	[GrammarRule("qualifiedImportName")]
+	private void qualifiedImportName()
 	{
-		EnterRule_multiExpr();
-		EnterRule("multiExpr", 9);
-		TraceIn("multiExpr", 9);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
+		EnterRule_qualifiedImportName();
+		EnterRule("qualifiedImportName", 4);
+		TraceIn("qualifiedImportName", 4);
+	    int qualifiedImportName_StartIndex = input.Index;
 
-		CommonTree root_0 = default(CommonTree);
-
-		IToken MULT32 = default(IToken);
-		IToken DIV33 = default(IToken);
-		IToken MOD34 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> unaryExpr31 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> unaryExpr35 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree MULT32_tree = default(CommonTree);
-		CommonTree DIV33_tree = default(CommonTree);
-		CommonTree MOD34_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "multiExpr");
-		DebugLocation(44, 53);
+		try { DebugEnterRule(GrammarFileName, "qualifiedImportName");
+		DebugLocation(47, 4);
 		try
 		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:44:11: ( unaryExpr ( ( MULT ^| DIV ^| MOD ^) unaryExpr )* )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 4)) { return; }
+
+			// EntityMapping.g:48:5: ( IDENTIFIER ( '.' IDENTIFIER )* )
 			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:44:13: unaryExpr ( ( MULT ^| DIV ^| MOD ^) unaryExpr )*
+			// EntityMapping.g:48:9: IDENTIFIER ( '.' IDENTIFIER )*
 			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(44, 13);
-			PushFollow(Follow._unaryExpr_in_multiExpr288);
-			unaryExpr31=unaryExpr();
-			PopFollow();
-
-			adaptor.AddChild(root_0, unaryExpr31.Tree);
-			DebugLocation(44, 23);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:44:23: ( ( MULT ^| DIV ^| MOD ^) unaryExpr )*
-			try { DebugEnterSubRule(11);
+			DebugLocation(48, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_qualifiedImportName381); if (state.failed) return;
+			DebugLocation(49, 9);
+			// EntityMapping.g:49:9: ( '.' IDENTIFIER )*
+			try { DebugEnterSubRule(10);
 			while (true)
 			{
-				int alt11=2;
-				try { DebugEnterDecision(11, false);
-				int LA11_0 = input.LA(1);
+				int alt10=2;
+				try { DebugEnterDecision(10, decisionCanBacktrack[10]);
+				int LA10_0 = input.LA(1);
 
-				if ((LA11_0==DIV||(LA11_0>=MOD && LA11_0<=MULT)))
+				if ((LA10_0==DOT))
 				{
-					alt11 = 1;
+					alt10 = 1;
 				}
 
 
-				} finally { DebugExitDecision(11); }
-				switch ( alt11 )
+				} finally { DebugExitDecision(10); }
+				switch ( alt10 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:44:25: ( MULT ^| DIV ^| MOD ^) unaryExpr
+					// EntityMapping.g:49:10: '.' IDENTIFIER
 					{
-					DebugLocation(44, 25);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:44:25: ( MULT ^| DIV ^| MOD ^)
-					int alt10=3;
-					try { DebugEnterSubRule(10);
-					try { DebugEnterDecision(10, false);
-					switch (input.LA(1))
-					{
-					case MULT:
-						{
-						alt10 = 1;
-						}
-						break;
-					case DIV:
-						{
-						alt10 = 2;
-						}
-						break;
-					case MOD:
-						{
-						alt10 = 3;
-						}
-						break;
-					default:
-						{
-							NoViableAltException nvae = new NoViableAltException("", 10, 0, input);
-							DebugRecognitionException(nvae);
-							throw nvae;
-						}
-					}
-
-					} finally { DebugExitDecision(10); }
-					switch (alt10)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:44:26: MULT ^
-						{
-						DebugLocation(44, 30);
-						MULT32=(IToken)Match(input,MULT,Follow._MULT_in_multiExpr293); 
-						MULT32_tree = (CommonTree)adaptor.Create(MULT32);
-						root_0 = (CommonTree)adaptor.BecomeRoot(MULT32_tree, root_0);
-
-						}
-						break;
-					case 2:
-						DebugEnterAlt(2);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:44:32: DIV ^
-						{
-						DebugLocation(44, 35);
-						DIV33=(IToken)Match(input,DIV,Follow._DIV_in_multiExpr296); 
-						DIV33_tree = (CommonTree)adaptor.Create(DIV33);
-						root_0 = (CommonTree)adaptor.BecomeRoot(DIV33_tree, root_0);
-
-						}
-						break;
-					case 3:
-						DebugEnterAlt(3);
-						// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:44:37: MOD ^
-						{
-						DebugLocation(44, 40);
-						MOD34=(IToken)Match(input,MOD,Follow._MOD_in_multiExpr299); 
-						MOD34_tree = (CommonTree)adaptor.Create(MOD34);
-						root_0 = (CommonTree)adaptor.BecomeRoot(MOD34_tree, root_0);
-
-						}
-						break;
-
-					}
-					} finally { DebugExitSubRule(10); }
-
-					DebugLocation(44, 43);
-					PushFollow(Follow._unaryExpr_in_multiExpr303);
-					unaryExpr35=unaryExpr();
-					PopFollow();
-
-					adaptor.AddChild(root_0, unaryExpr35.Tree);
+					DebugLocation(49, 10);
+					Match(input,DOT,Follow._DOT_in_qualifiedImportName392); if (state.failed) return;
+					DebugLocation(49, 14);
+					Match(input,IDENTIFIER,Follow._IDENTIFIER_in_qualifiedImportName394); if (state.failed) return;
 
 					}
 					break;
 
 				default:
-					goto loop11;
+					goto loop10;
 				}
 			}
 
-			loop11:
+			loop10:
 				;
 
-			} finally { DebugExitSubRule(11); }
+			} finally { DebugExitSubRule(10); }
 
 
 			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
 
 		}
 		catch (RecognitionException re)
 		{
 			ReportError(re);
 			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
 		}
 		finally
 		{
-			TraceOut("multiExpr", 9);
-			LeaveRule("multiExpr", 9);
-			LeaveRule_multiExpr();
-		}
-		DebugLocation(44, 53);
-		} finally { DebugExitRule(GrammarFileName, "multiExpr"); }
-		return retval;
+			TraceOut("qualifiedImportName", 4);
+			LeaveRule("qualifiedImportName", 4);
+			LeaveRule_qualifiedImportName();
+	        if (state.backtracking > 0) { Memoize(input, 4, qualifiedImportName_StartIndex); }
+
+	    }
+	 	DebugLocation(51, 4);
+		} finally { DebugExitRule(GrammarFileName, "qualifiedImportName"); }
+		return;
 
 	}
-	// $ANTLR end "multiExpr"
+	// $ANTLR end "qualifiedImportName"
 
-	partial void EnterRule_unaryExpr();
-	partial void LeaveRule_unaryExpr();
 
-	// $ANTLR start "unaryExpr"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:46:1: unaryExpr : ( NOT ^| INC ^| DEC ^|) atom ;
-	[GrammarRule("unaryExpr")]
-	private AstParserRuleReturnScope<CommonTree, IToken> unaryExpr()
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_typeDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_typeDeclaration() {}
+
+	// $ANTLR start "typeDeclaration"
+	// EntityMapping.g:53:1: typeDeclaration : ( classOrInterfaceDeclaration | ';' );
+	[GrammarRule("typeDeclaration")]
+	private void typeDeclaration()
 	{
-		EnterRule_unaryExpr();
-		EnterRule("unaryExpr", 10);
-		TraceIn("unaryExpr", 10);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
+		EnterRule_typeDeclaration();
+		EnterRule("typeDeclaration", 5);
+		TraceIn("typeDeclaration", 5);
+	    int typeDeclaration_StartIndex = input.Index;
 
-		CommonTree root_0 = default(CommonTree);
-
-		IToken NOT36 = default(IToken);
-		IToken INC37 = default(IToken);
-		IToken DEC38 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> atom39 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree NOT36_tree = default(CommonTree);
-		CommonTree INC37_tree = default(CommonTree);
-		CommonTree DEC38_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "unaryExpr");
-		DebugLocation(46, 34);
+		try { DebugEnterRule(GrammarFileName, "typeDeclaration");
+		DebugLocation(53, 4);
 		try
 		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:46:11: ( ( NOT ^| INC ^| DEC ^|) atom )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:46:13: ( NOT ^| INC ^| DEC ^|) atom
-			{
-			root_0 = (CommonTree)adaptor.Nil();
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 5)) { return; }
 
-			DebugLocation(46, 13);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:46:13: ( NOT ^| INC ^| DEC ^|)
-			int alt12=4;
-			try { DebugEnterSubRule(12);
-			try { DebugEnterDecision(12, false);
+			// EntityMapping.g:54:5: ( classOrInterfaceDeclaration | ';' )
+			int alt11=2;
+			try { DebugEnterDecision(11, decisionCanBacktrack[11]);
+			int LA11_0 = input.LA(1);
+
+			if ((LA11_0==ABSTRACT||LA11_0==BOOLEAN||LA11_0==BYTE||LA11_0==CHAR||LA11_0==CLASS||LA11_0==DOUBLE||LA11_0==ENUM||LA11_0==FINAL||LA11_0==FLOAT||LA11_0==IDENTIFIER||(LA11_0>=INT && LA11_0<=INTERFACE)||LA11_0==LONG||LA11_0==LT||(LA11_0>=MONKEYS_AT && LA11_0<=NATIVE)||(LA11_0>=PRIVATE && LA11_0<=PUBLIC)||LA11_0==SHORT||(LA11_0>=STATIC && LA11_0<=STRICTFP)||LA11_0==SYNCHRONIZED||LA11_0==TRANSIENT||(LA11_0>=VOID && LA11_0<=VOLATILE)))
+			{
+				alt11 = 1;
+			}
+			else if ((LA11_0==SEMI))
+			{
+				alt11 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 11, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(11); }
+			switch (alt11)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:54:9: classOrInterfaceDeclaration
+				{
+				DebugLocation(54, 9);
+				PushFollow(Follow._classOrInterfaceDeclaration_in_typeDeclaration425);
+				classOrInterfaceDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:55:9: ';'
+				{
+				DebugLocation(55, 9);
+				Match(input,SEMI,Follow._SEMI_in_typeDeclaration435); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("typeDeclaration", 5);
+			LeaveRule("typeDeclaration", 5);
+			LeaveRule_typeDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 5, typeDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(56, 4);
+		} finally { DebugExitRule(GrammarFileName, "typeDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "typeDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_classOrInterfaceDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_classOrInterfaceDeclaration() {}
+
+	// $ANTLR start "classOrInterfaceDeclaration"
+	// EntityMapping.g:58:1: classOrInterfaceDeclaration : ( classDeclaration | interfaceDeclaration );
+	[GrammarRule("classOrInterfaceDeclaration")]
+	private void classOrInterfaceDeclaration()
+	{
+		EnterRule_classOrInterfaceDeclaration();
+		EnterRule("classOrInterfaceDeclaration", 6);
+		TraceIn("classOrInterfaceDeclaration", 6);
+	    int classOrInterfaceDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "classOrInterfaceDeclaration");
+		DebugLocation(58, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 6)) { return; }
+
+			// EntityMapping.g:59:5: ( classDeclaration | interfaceDeclaration )
+			int alt12=2;
+			try { DebugEnterDecision(12, decisionCanBacktrack[12]);
 			switch (input.LA(1))
 			{
-			case NOT:
+			case MONKEYS_AT:
+				{
+				int LA12_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PUBLIC:
+				{
+				int LA12_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PROTECTED:
+				{
+				int LA12_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PRIVATE:
+				{
+				int LA12_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STATIC:
+				{
+				int LA12_5 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 5, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ABSTRACT:
+				{
+				int LA12_6 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 6, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case FINAL:
+				{
+				int LA12_7 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 7, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case NATIVE:
+				{
+				int LA12_8 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 8, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				int LA12_9 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 9, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case TRANSIENT:
+				{
+				int LA12_10 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 10, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case VOLATILE:
+				{
+				int LA12_11 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 11, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STRICTFP:
+				{
+				int LA12_12 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred12_EntityMapping_fragment)))
+				{
+					alt12 = 1;
+				}
+				else if ((true))
+				{
+					alt12 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 12, 12, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case CLASS:
+			case ENUM:
 				{
 				alt12 = 1;
 				}
 				break;
-			case INC:
+			case INTERFACE:
 				{
 				alt12 = 2;
 				}
 				break;
-			case DEC:
-				{
-				alt12 = 3;
-				}
-				break;
-			case CHAR:
-			case FLOAT:
-			case ID:
-			case INT:
-			case STRING:
-			case 40:
-			case 47:
-				{
-				alt12 = 4;
-				}
-				break;
 			default:
 				{
+					if (state.backtracking>0) {state.failed=true; return;}
 					NoViableAltException nvae = new NoViableAltException("", 12, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
@@ -1524,356 +1259,5557 @@ public partial class EntityMappingParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:46:14: NOT ^
+				// EntityMapping.g:59:10: classDeclaration
 				{
-				DebugLocation(46, 17);
-				NOT36=(IToken)Match(input,NOT,Follow._NOT_in_unaryExpr314); 
-				NOT36_tree = (CommonTree)adaptor.Create(NOT36);
-				root_0 = (CommonTree)adaptor.BecomeRoot(NOT36_tree, root_0);
+				DebugLocation(59, 10);
+				PushFollow(Follow._classDeclaration_in_classOrInterfaceDeclaration456);
+				classDeclaration();
+				PopFollow();
+				if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:46:19: INC ^
+				// EntityMapping.g:60:9: interfaceDeclaration
 				{
-				DebugLocation(46, 22);
-				INC37=(IToken)Match(input,INC,Follow._INC_in_unaryExpr317); 
-				INC37_tree = (CommonTree)adaptor.Create(INC37);
-				root_0 = (CommonTree)adaptor.BecomeRoot(INC37_tree, root_0);
+				DebugLocation(60, 9);
+				PushFollow(Follow._interfaceDeclaration_in_classOrInterfaceDeclaration466);
+				interfaceDeclaration();
+				PopFollow();
+				if (state.failed) return;
 
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:46:24: DEC ^
-				{
-				DebugLocation(46, 27);
-				DEC38=(IToken)Match(input,DEC,Follow._DEC_in_unaryExpr320); 
-				DEC38_tree = (CommonTree)adaptor.Create(DEC38);
-				root_0 = (CommonTree)adaptor.BecomeRoot(DEC38_tree, root_0);
-
-				}
-				break;
-			case 4:
-				DebugEnterAlt(4);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:46:29: 
-				{
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(12); }
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("classOrInterfaceDeclaration", 6);
+			LeaveRule("classOrInterfaceDeclaration", 6);
+			LeaveRule_classOrInterfaceDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 6, classOrInterfaceDeclaration_StartIndex); }
 
-			DebugLocation(46, 31);
-			PushFollow(Follow._atom_in_unaryExpr325);
-			atom39=atom();
-			PopFollow();
+	    }
+	 	DebugLocation(61, 4);
+		} finally { DebugExitRule(GrammarFileName, "classOrInterfaceDeclaration"); }
+		return;
 
-			adaptor.AddChild(root_0, atom39.Tree);
+	}
+	// $ANTLR end "classOrInterfaceDeclaration"
 
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_modifiers() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_modifiers() {}
+
+	// $ANTLR start "modifiers"
+	// EntityMapping.g:64:1: modifiers : ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )* ;
+	[GrammarRule("modifiers")]
+	private void modifiers()
+	{
+		EnterRule_modifiers();
+		EnterRule("modifiers", 7);
+		TraceIn("modifiers", 7);
+	    int modifiers_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "modifiers");
+		DebugLocation(64, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 7)) { return; }
+
+			// EntityMapping.g:65:5: ( ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:66:5: ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )*
+			{
+			DebugLocation(66, 5);
+			// EntityMapping.g:66:5: ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )*
+			try { DebugEnterSubRule(13);
+			while (true)
+			{
+				int alt13=13;
+				try { DebugEnterDecision(13, decisionCanBacktrack[13]);
+				switch (input.LA(1))
+				{
+				case MONKEYS_AT:
+					{
+					int LA13_2 = input.LA(2);
+
+					if ((LA13_2==IDENTIFIER))
+					{
+						alt13 = 1;
+					}
+
+
+					}
+					break;
+				case PUBLIC:
+					{
+					alt13 = 2;
+					}
+					break;
+				case PROTECTED:
+					{
+					alt13 = 3;
+					}
+					break;
+				case PRIVATE:
+					{
+					alt13 = 4;
+					}
+					break;
+				case STATIC:
+					{
+					alt13 = 5;
+					}
+					break;
+				case ABSTRACT:
+					{
+					alt13 = 6;
+					}
+					break;
+				case FINAL:
+					{
+					alt13 = 7;
+					}
+					break;
+				case NATIVE:
+					{
+					alt13 = 8;
+					}
+					break;
+				case SYNCHRONIZED:
+					{
+					alt13 = 9;
+					}
+					break;
+				case TRANSIENT:
+					{
+					alt13 = 10;
+					}
+					break;
+				case VOLATILE:
+					{
+					alt13 = 11;
+					}
+					break;
+				case STRICTFP:
+					{
+					alt13 = 12;
+					}
+					break;
+				}
+
+				} finally { DebugExitDecision(13); }
+				switch ( alt13 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:66:10: annotation
+					{
+					DebugLocation(66, 10);
+					PushFollow(Follow._annotation_in_modifiers501);
+					annotation();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// EntityMapping.g:67:9: 'public'
+					{
+					DebugLocation(67, 9);
+					Match(input,PUBLIC,Follow._PUBLIC_in_modifiers511); if (state.failed) return;
+
+					}
+					break;
+				case 3:
+					DebugEnterAlt(3);
+					// EntityMapping.g:68:9: 'protected'
+					{
+					DebugLocation(68, 9);
+					Match(input,PROTECTED,Follow._PROTECTED_in_modifiers521); if (state.failed) return;
+
+					}
+					break;
+				case 4:
+					DebugEnterAlt(4);
+					// EntityMapping.g:69:9: 'private'
+					{
+					DebugLocation(69, 9);
+					Match(input,PRIVATE,Follow._PRIVATE_in_modifiers531); if (state.failed) return;
+
+					}
+					break;
+				case 5:
+					DebugEnterAlt(5);
+					// EntityMapping.g:70:9: 'static'
+					{
+					DebugLocation(70, 9);
+					Match(input,STATIC,Follow._STATIC_in_modifiers541); if (state.failed) return;
+
+					}
+					break;
+				case 6:
+					DebugEnterAlt(6);
+					// EntityMapping.g:71:9: 'abstract'
+					{
+					DebugLocation(71, 9);
+					Match(input,ABSTRACT,Follow._ABSTRACT_in_modifiers551); if (state.failed) return;
+
+					}
+					break;
+				case 7:
+					DebugEnterAlt(7);
+					// EntityMapping.g:72:9: 'final'
+					{
+					DebugLocation(72, 9);
+					Match(input,FINAL,Follow._FINAL_in_modifiers561); if (state.failed) return;
+
+					}
+					break;
+				case 8:
+					DebugEnterAlt(8);
+					// EntityMapping.g:73:9: 'native'
+					{
+					DebugLocation(73, 9);
+					Match(input,NATIVE,Follow._NATIVE_in_modifiers571); if (state.failed) return;
+
+					}
+					break;
+				case 9:
+					DebugEnterAlt(9);
+					// EntityMapping.g:74:9: 'synchronized'
+					{
+					DebugLocation(74, 9);
+					Match(input,SYNCHRONIZED,Follow._SYNCHRONIZED_in_modifiers581); if (state.failed) return;
+
+					}
+					break;
+				case 10:
+					DebugEnterAlt(10);
+					// EntityMapping.g:75:9: 'transient'
+					{
+					DebugLocation(75, 9);
+					Match(input,TRANSIENT,Follow._TRANSIENT_in_modifiers591); if (state.failed) return;
+
+					}
+					break;
+				case 11:
+					DebugEnterAlt(11);
+					// EntityMapping.g:76:9: 'volatile'
+					{
+					DebugLocation(76, 9);
+					Match(input,VOLATILE,Follow._VOLATILE_in_modifiers601); if (state.failed) return;
+
+					}
+					break;
+				case 12:
+					DebugEnterAlt(12);
+					// EntityMapping.g:77:9: 'strictfp'
+					{
+					DebugLocation(77, 9);
+					Match(input,STRICTFP,Follow._STRICTFP_in_modifiers611); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop13;
+				}
 			}
 
-			retval.Stop = (IToken)input.LT(-1);
+			loop13:
+				;
 
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			} finally { DebugExitSubRule(13); }
+
+
+			}
 
 		}
 		catch (RecognitionException re)
 		{
 			ReportError(re);
 			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
 		}
 		finally
 		{
-			TraceOut("unaryExpr", 10);
-			LeaveRule("unaryExpr", 10);
-			LeaveRule_unaryExpr();
-		}
-		DebugLocation(46, 34);
-		} finally { DebugExitRule(GrammarFileName, "unaryExpr"); }
-		return retval;
+			TraceOut("modifiers", 7);
+			LeaveRule("modifiers", 7);
+			LeaveRule_modifiers();
+	        if (state.backtracking > 0) { Memoize(input, 7, modifiers_StartIndex); }
+
+	    }
+	 	DebugLocation(79, 4);
+		} finally { DebugExitRule(GrammarFileName, "modifiers"); }
+		return;
 
 	}
-	// $ANTLR end "unaryExpr"
+	// $ANTLR end "modifiers"
 
-	partial void EnterRule_atom();
-	partial void LeaveRule_atom();
 
-	// $ANTLR start "atom"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:48:1: atom : ( value | ID | functionCall | ifExpr | memberAccess | '(' expr ')' );
-	[GrammarRule("atom")]
-	private AstParserRuleReturnScope<CommonTree, IToken> atom()
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_variableModifiers() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_variableModifiers() {}
+
+	// $ANTLR start "variableModifiers"
+	// EntityMapping.g:82:1: variableModifiers : ( 'final' | annotation )* ;
+	[GrammarRule("variableModifiers")]
+	private void variableModifiers()
 	{
-		EnterRule_atom();
-		EnterRule("atom", 11);
-		TraceIn("atom", 11);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
+		EnterRule_variableModifiers();
+		EnterRule("variableModifiers", 8);
+		TraceIn("variableModifiers", 8);
+	    int variableModifiers_StartIndex = input.Index;
 
-		CommonTree root_0 = default(CommonTree);
-
-		IToken ID41 = default(IToken);
-		IToken char_literal45 = default(IToken);
-		IToken char_literal47 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> value40 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> functionCall42 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> ifExpr43 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> memberAccess44 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> expr46 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree ID41_tree = default(CommonTree);
-		CommonTree char_literal45_tree = default(CommonTree);
-		CommonTree char_literal47_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "atom");
-		DebugLocation(48, 16);
+		try { DebugEnterRule(GrammarFileName, "variableModifiers");
+		DebugLocation(82, 4);
 		try
 		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:48:6: ( value | ID | functionCall | ifExpr | memberAccess | '(' expr ')' )
-			int alt13=6;
-			try { DebugEnterDecision(13, false);
-			switch (input.LA(1))
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 8)) { return; }
+
+			// EntityMapping.g:83:5: ( ( 'final' | annotation )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:83:9: ( 'final' | annotation )*
 			{
-			case CHAR:
-			case FLOAT:
-			case INT:
-			case STRING:
+			DebugLocation(83, 9);
+			// EntityMapping.g:83:9: ( 'final' | annotation )*
+			try { DebugEnterSubRule(14);
+			while (true)
+			{
+				int alt14=3;
+				try { DebugEnterDecision(14, decisionCanBacktrack[14]);
+				int LA14_0 = input.LA(1);
+
+				if ((LA14_0==FINAL))
 				{
-				alt13 = 1;
+					alt14 = 1;
 				}
-				break;
-			case ID:
+				else if ((LA14_0==MONKEYS_AT))
 				{
-				switch (input.LA(2))
-				{
-				case 40:
-					{
-					alt13 = 3;
-					}
-					break;
-				case 43:
-					{
-					alt13 = 5;
-					}
-					break;
-				case AND:
-				case DIV:
-				case EQUALS:
-				case GT:
-				case GTEQ:
-				case LT:
-				case LTEQ:
-				case MINUS:
-				case MOD:
-				case MULT:
-				case NOTEQUALS:
-				case OR:
-				case PLUS:
-				case 41:
-				case 42:
-				case 44:
-					{
-					alt13 = 2;
-					}
-					break;
-				default:
-					{
-						NoViableAltException nvae = new NoViableAltException("", 13, 2, input);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
+					alt14 = 2;
 				}
 
+
+				} finally { DebugExitDecision(14); }
+				switch ( alt14 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:83:13: 'final'
+					{
+					DebugLocation(83, 13);
+					Match(input,FINAL,Follow._FINAL_in_variableModifiers643); if (state.failed) return;
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// EntityMapping.g:84:13: annotation
+					{
+					DebugLocation(84, 13);
+					PushFollow(Follow._annotation_in_variableModifiers657);
+					annotation();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop14;
+				}
+			}
+
+			loop14:
+				;
+
+			} finally { DebugExitSubRule(14); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("variableModifiers", 8);
+			LeaveRule("variableModifiers", 8);
+			LeaveRule_variableModifiers();
+	        if (state.backtracking > 0) { Memoize(input, 8, variableModifiers_StartIndex); }
+
+	    }
+	 	DebugLocation(86, 4);
+		} finally { DebugExitRule(GrammarFileName, "variableModifiers"); }
+		return;
+
+	}
+	// $ANTLR end "variableModifiers"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_classDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_classDeclaration() {}
+
+	// $ANTLR start "classDeclaration"
+	// EntityMapping.g:89:1: classDeclaration : ( normalClassDeclaration | enumDeclaration );
+	[GrammarRule("classDeclaration")]
+	private void classDeclaration()
+	{
+		EnterRule_classDeclaration();
+		EnterRule("classDeclaration", 9);
+		TraceIn("classDeclaration", 9);
+	    int classDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "classDeclaration");
+		DebugLocation(89, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 9)) { return; }
+
+			// EntityMapping.g:90:5: ( normalClassDeclaration | enumDeclaration )
+			int alt15=2;
+			try { DebugEnterDecision(15, decisionCanBacktrack[15]);
+			switch (input.LA(1))
+			{
+			case MONKEYS_AT:
+				{
+				int LA15_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 				}
 				break;
-			case 47:
+			case PUBLIC:
 				{
-				alt13 = 4;
+				int LA15_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 				}
 				break;
-			case 40:
+			case PROTECTED:
 				{
-				alt13 = 6;
+				int LA15_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PRIVATE:
+				{
+				int LA15_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STATIC:
+				{
+				int LA15_5 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 5, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ABSTRACT:
+				{
+				int LA15_6 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 6, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case FINAL:
+				{
+				int LA15_7 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 7, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case NATIVE:
+				{
+				int LA15_8 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 8, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				int LA15_9 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 9, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case TRANSIENT:
+				{
+				int LA15_10 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 10, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case VOLATILE:
+				{
+				int LA15_11 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 11, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STRICTFP:
+				{
+				int LA15_12 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred27_EntityMapping_fragment)))
+				{
+					alt15 = 1;
+				}
+				else if ((true))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 12, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case CLASS:
+				{
+				alt15 = 1;
+				}
+				break;
+			case ENUM:
+				{
+				alt15 = 2;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 13, 0, input);
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(13); }
-			switch (alt13)
+			} finally { DebugExitDecision(15); }
+			switch (alt15)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:48:9: value
+				// EntityMapping.g:90:9: normalClassDeclaration
 				{
-				root_0 = (CommonTree)adaptor.Nil();
-
-				DebugLocation(48, 9);
-				PushFollow(Follow._value_in_atom334);
-				value40=value();
+				DebugLocation(90, 9);
+				PushFollow(Follow._normalClassDeclaration_in_classDeclaration693);
+				normalClassDeclaration();
 				PopFollow();
-
-				adaptor.AddChild(root_0, value40.Tree);
+				if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:49:4: ID
+				// EntityMapping.g:91:9: enumDeclaration
 				{
-				root_0 = (CommonTree)adaptor.Nil();
-
-				DebugLocation(49, 4);
-				ID41=(IToken)Match(input,ID,Follow._ID_in_atom339); 
-				ID41_tree = (CommonTree)adaptor.Create(ID41);
-				adaptor.AddChild(root_0, ID41_tree);
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:50:4: functionCall
-				{
-				root_0 = (CommonTree)adaptor.Nil();
-
-				DebugLocation(50, 4);
-				PushFollow(Follow._functionCall_in_atom344);
-				functionCall42=functionCall();
+				DebugLocation(91, 9);
+				PushFollow(Follow._enumDeclaration_in_classDeclaration703);
+				enumDeclaration();
 				PopFollow();
-
-				adaptor.AddChild(root_0, functionCall42.Tree);
-
-				}
-				break;
-			case 4:
-				DebugEnterAlt(4);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:51:4: ifExpr
-				{
-				root_0 = (CommonTree)adaptor.Nil();
-
-				DebugLocation(51, 4);
-				PushFollow(Follow._ifExpr_in_atom349);
-				ifExpr43=ifExpr();
-				PopFollow();
-
-				adaptor.AddChild(root_0, ifExpr43.Tree);
-
-				}
-				break;
-			case 5:
-				DebugEnterAlt(5);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:52:4: memberAccess
-				{
-				root_0 = (CommonTree)adaptor.Nil();
-
-				DebugLocation(52, 4);
-				PushFollow(Follow._memberAccess_in_atom355);
-				memberAccess44=memberAccess();
-				PopFollow();
-
-				adaptor.AddChild(root_0, memberAccess44.Tree);
-
-				}
-				break;
-			case 6:
-				DebugEnterAlt(6);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:53:4: '(' expr ')'
-				{
-				root_0 = (CommonTree)adaptor.Nil();
-
-				DebugLocation(53, 4);
-				char_literal45=(IToken)Match(input,40,Follow._40_in_atom361); 
-				char_literal45_tree = (CommonTree)adaptor.Create(char_literal45);
-				adaptor.AddChild(root_0, char_literal45_tree);
-				DebugLocation(53, 8);
-				PushFollow(Follow._expr_in_atom363);
-				expr46=expr();
-				PopFollow();
-
-				adaptor.AddChild(root_0, expr46.Tree);
-				DebugLocation(53, 13);
-				char_literal47=(IToken)Match(input,41,Follow._41_in_atom365); 
-				char_literal47_tree = (CommonTree)adaptor.Create(char_literal47);
-				adaptor.AddChild(root_0, char_literal47_tree);
+				if (state.failed) return;
 
 				}
 				break;
 
 			}
-			retval.Stop = (IToken)input.LT(-1);
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("classDeclaration", 9);
+			LeaveRule("classDeclaration", 9);
+			LeaveRule_classDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 9, classDeclaration_StartIndex); }
 
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+	    }
+	 	DebugLocation(92, 4);
+		} finally { DebugExitRule(GrammarFileName, "classDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "classDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_normalClassDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_normalClassDeclaration() {}
+
+	// $ANTLR start "normalClassDeclaration"
+	// EntityMapping.g:94:1: normalClassDeclaration : modifiers 'class' IDENTIFIER ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody ;
+	[GrammarRule("normalClassDeclaration")]
+	private void normalClassDeclaration()
+	{
+		EnterRule_normalClassDeclaration();
+		EnterRule("normalClassDeclaration", 10);
+		TraceIn("normalClassDeclaration", 10);
+	    int normalClassDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "normalClassDeclaration");
+		DebugLocation(94, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 10)) { return; }
+
+			// EntityMapping.g:95:5: ( modifiers 'class' IDENTIFIER ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody )
+			DebugEnterAlt(1);
+			// EntityMapping.g:95:9: modifiers 'class' IDENTIFIER ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody
+			{
+			DebugLocation(95, 9);
+			PushFollow(Follow._modifiers_in_normalClassDeclaration723);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(95, 20);
+			Match(input,CLASS,Follow._CLASS_in_normalClassDeclaration726); if (state.failed) return;
+			DebugLocation(95, 28);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_normalClassDeclaration728); if (state.failed) return;
+			DebugLocation(96, 9);
+			// EntityMapping.g:96:9: ( typeParameters )?
+			int alt16=2;
+			try { DebugEnterSubRule(16);
+			try { DebugEnterDecision(16, decisionCanBacktrack[16]);
+			int LA16_0 = input.LA(1);
+
+			if ((LA16_0==LT))
+			{
+				alt16 = 1;
+			}
+			} finally { DebugExitDecision(16); }
+			switch (alt16)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:96:10: typeParameters
+				{
+				DebugLocation(96, 10);
+				PushFollow(Follow._typeParameters_in_normalClassDeclaration739);
+				typeParameters();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(16); }
+
+			DebugLocation(98, 9);
+			// EntityMapping.g:98:9: ( 'extends' type )?
+			int alt17=2;
+			try { DebugEnterSubRule(17);
+			try { DebugEnterDecision(17, decisionCanBacktrack[17]);
+			int LA17_0 = input.LA(1);
+
+			if ((LA17_0==EXTENDS))
+			{
+				alt17 = 1;
+			}
+			} finally { DebugExitDecision(17); }
+			switch (alt17)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:98:10: 'extends' type
+				{
+				DebugLocation(98, 10);
+				Match(input,EXTENDS,Follow._EXTENDS_in_normalClassDeclaration761); if (state.failed) return;
+				DebugLocation(98, 20);
+				PushFollow(Follow._type_in_normalClassDeclaration763);
+				type();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(17); }
+
+			DebugLocation(100, 9);
+			// EntityMapping.g:100:9: ( 'implements' typeList )?
+			int alt18=2;
+			try { DebugEnterSubRule(18);
+			try { DebugEnterDecision(18, decisionCanBacktrack[18]);
+			int LA18_0 = input.LA(1);
+
+			if ((LA18_0==IMPLEMENTS))
+			{
+				alt18 = 1;
+			}
+			} finally { DebugExitDecision(18); }
+			switch (alt18)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:100:10: 'implements' typeList
+				{
+				DebugLocation(100, 10);
+				Match(input,IMPLEMENTS,Follow._IMPLEMENTS_in_normalClassDeclaration785); if (state.failed) return;
+				DebugLocation(100, 23);
+				PushFollow(Follow._typeList_in_normalClassDeclaration787);
+				typeList();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(18); }
+
+			DebugLocation(102, 9);
+			PushFollow(Follow._classBody_in_normalClassDeclaration820);
+			classBody();
+			PopFollow();
+			if (state.failed) return;
+
+			}
 
 		}
 		catch (RecognitionException re)
 		{
 			ReportError(re);
 			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
 		}
 		finally
 		{
-			TraceOut("atom", 11);
-			LeaveRule("atom", 11);
-			LeaveRule_atom();
-		}
-		DebugLocation(53, 16);
-		} finally { DebugExitRule(GrammarFileName, "atom"); }
-		return retval;
+			TraceOut("normalClassDeclaration", 10);
+			LeaveRule("normalClassDeclaration", 10);
+			LeaveRule_normalClassDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 10, normalClassDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(103, 4);
+		} finally { DebugExitRule(GrammarFileName, "normalClassDeclaration"); }
+		return;
 
 	}
-	// $ANTLR end "atom"
+	// $ANTLR end "normalClassDeclaration"
 
-	partial void EnterRule_value();
-	partial void LeaveRule_value();
 
-	// $ANTLR start "value"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:55:1: value : ( INT | FLOAT | STRING | CHAR );
-	[GrammarRule("value")]
-	private AstParserRuleReturnScope<CommonTree, IToken> value()
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_typeParameters() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_typeParameters() {}
+
+	// $ANTLR start "typeParameters"
+	// EntityMapping.g:106:1: typeParameters : '<' typeParameter ( ',' typeParameter )* '>' ;
+	[GrammarRule("typeParameters")]
+	private void typeParameters()
 	{
-		EnterRule_value();
-		EnterRule("value", 12);
-		TraceIn("value", 12);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
+		EnterRule_typeParameters();
+		EnterRule("typeParameters", 11);
+		TraceIn("typeParameters", 11);
+	    int typeParameters_StartIndex = input.Index;
 
-		CommonTree root_0 = default(CommonTree);
-
-		IToken set48 = default(IToken);
-
-		CommonTree set48_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "value");
-		DebugLocation(55, 34);
+		try { DebugEnterRule(GrammarFileName, "typeParameters");
+		DebugLocation(106, 4);
 		try
 		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:55:7: ( INT | FLOAT | STRING | CHAR )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 11)) { return; }
+
+			// EntityMapping.g:107:5: ( '<' typeParameter ( ',' typeParameter )* '>' )
 			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:
+			// EntityMapping.g:107:9: '<' typeParameter ( ',' typeParameter )* '>'
 			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(55, 7);
-
-			set48=(IToken)input.LT(1);
-			if (input.LA(1)==CHAR||input.LA(1)==FLOAT||input.LA(1)==INT||input.LA(1)==STRING)
+			DebugLocation(107, 9);
+			Match(input,LT,Follow._LT_in_typeParameters841); if (state.failed) return;
+			DebugLocation(108, 13);
+			PushFollow(Follow._typeParameter_in_typeParameters855);
+			typeParameter();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(109, 13);
+			// EntityMapping.g:109:13: ( ',' typeParameter )*
+			try { DebugEnterSubRule(19);
+			while (true)
 			{
-				input.Consume();
-				adaptor.AddChild(root_0, (CommonTree)adaptor.Create(set48));
-				state.errorRecovery=false;
+				int alt19=2;
+				try { DebugEnterDecision(19, decisionCanBacktrack[19]);
+				int LA19_0 = input.LA(1);
+
+				if ((LA19_0==COMMA))
+				{
+					alt19 = 1;
+				}
+
+
+				} finally { DebugExitDecision(19); }
+				switch ( alt19 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:109:14: ',' typeParameter
+					{
+					DebugLocation(109, 14);
+					Match(input,COMMA,Follow._COMMA_in_typeParameters870); if (state.failed) return;
+					DebugLocation(109, 18);
+					PushFollow(Follow._typeParameter_in_typeParameters872);
+					typeParameter();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop19;
+				}
+			}
+
+			loop19:
+				;
+
+			} finally { DebugExitSubRule(19); }
+
+			DebugLocation(111, 9);
+			Match(input,GT,Follow._GT_in_typeParameters897); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("typeParameters", 11);
+			LeaveRule("typeParameters", 11);
+			LeaveRule_typeParameters();
+	        if (state.backtracking > 0) { Memoize(input, 11, typeParameters_StartIndex); }
+
+	    }
+	 	DebugLocation(112, 4);
+		} finally { DebugExitRule(GrammarFileName, "typeParameters"); }
+		return;
+
+	}
+	// $ANTLR end "typeParameters"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_typeParameter() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_typeParameter() {}
+
+	// $ANTLR start "typeParameter"
+	// EntityMapping.g:114:1: typeParameter : IDENTIFIER ( 'extends' typeBound )? ;
+	[GrammarRule("typeParameter")]
+	private void typeParameter()
+	{
+		EnterRule_typeParameter();
+		EnterRule("typeParameter", 12);
+		TraceIn("typeParameter", 12);
+	    int typeParameter_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "typeParameter");
+		DebugLocation(114, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 12)) { return; }
+
+			// EntityMapping.g:115:5: ( IDENTIFIER ( 'extends' typeBound )? )
+			DebugEnterAlt(1);
+			// EntityMapping.g:115:9: IDENTIFIER ( 'extends' typeBound )?
+			{
+			DebugLocation(115, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_typeParameter917); if (state.failed) return;
+			DebugLocation(116, 9);
+			// EntityMapping.g:116:9: ( 'extends' typeBound )?
+			int alt20=2;
+			try { DebugEnterSubRule(20);
+			try { DebugEnterDecision(20, decisionCanBacktrack[20]);
+			int LA20_0 = input.LA(1);
+
+			if ((LA20_0==EXTENDS))
+			{
+				alt20 = 1;
+			}
+			} finally { DebugExitDecision(20); }
+			switch (alt20)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:116:10: 'extends' typeBound
+				{
+				DebugLocation(116, 10);
+				Match(input,EXTENDS,Follow._EXTENDS_in_typeParameter928); if (state.failed) return;
+				DebugLocation(116, 20);
+				PushFollow(Follow._typeBound_in_typeParameter930);
+				typeBound();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(20); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("typeParameter", 12);
+			LeaveRule("typeParameter", 12);
+			LeaveRule_typeParameter();
+	        if (state.backtracking > 0) { Memoize(input, 12, typeParameter_StartIndex); }
+
+	    }
+	 	DebugLocation(118, 4);
+		} finally { DebugExitRule(GrammarFileName, "typeParameter"); }
+		return;
+
+	}
+	// $ANTLR end "typeParameter"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_typeBound() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_typeBound() {}
+
+	// $ANTLR start "typeBound"
+	// EntityMapping.g:121:1: typeBound : type ( '&' type )* ;
+	[GrammarRule("typeBound")]
+	private void typeBound()
+	{
+		EnterRule_typeBound();
+		EnterRule("typeBound", 13);
+		TraceIn("typeBound", 13);
+	    int typeBound_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "typeBound");
+		DebugLocation(121, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 13)) { return; }
+
+			// EntityMapping.g:122:5: ( type ( '&' type )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:122:9: type ( '&' type )*
+			{
+			DebugLocation(122, 9);
+			PushFollow(Follow._type_in_typeBound962);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(123, 9);
+			// EntityMapping.g:123:9: ( '&' type )*
+			try { DebugEnterSubRule(21);
+			while (true)
+			{
+				int alt21=2;
+				try { DebugEnterDecision(21, decisionCanBacktrack[21]);
+				int LA21_0 = input.LA(1);
+
+				if ((LA21_0==AMP))
+				{
+					alt21 = 1;
+				}
+
+
+				} finally { DebugExitDecision(21); }
+				switch ( alt21 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:123:10: '&' type
+					{
+					DebugLocation(123, 10);
+					Match(input,AMP,Follow._AMP_in_typeBound973); if (state.failed) return;
+					DebugLocation(123, 14);
+					PushFollow(Follow._type_in_typeBound975);
+					type();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop21;
+				}
+			}
+
+			loop21:
+				;
+
+			} finally { DebugExitSubRule(21); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("typeBound", 13);
+			LeaveRule("typeBound", 13);
+			LeaveRule_typeBound();
+	        if (state.backtracking > 0) { Memoize(input, 13, typeBound_StartIndex); }
+
+	    }
+	 	DebugLocation(125, 4);
+		} finally { DebugExitRule(GrammarFileName, "typeBound"); }
+		return;
+
+	}
+	// $ANTLR end "typeBound"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_enumDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_enumDeclaration() {}
+
+	// $ANTLR start "enumDeclaration"
+	// EntityMapping.g:128:1: enumDeclaration : modifiers ( 'enum' ) IDENTIFIER ( 'implements' typeList )? enumBody ;
+	[GrammarRule("enumDeclaration")]
+	private void enumDeclaration()
+	{
+		EnterRule_enumDeclaration();
+		EnterRule("enumDeclaration", 14);
+		TraceIn("enumDeclaration", 14);
+	    int enumDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "enumDeclaration");
+		DebugLocation(128, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 14)) { return; }
+
+			// EntityMapping.g:129:5: ( modifiers ( 'enum' ) IDENTIFIER ( 'implements' typeList )? enumBody )
+			DebugEnterAlt(1);
+			// EntityMapping.g:129:9: modifiers ( 'enum' ) IDENTIFIER ( 'implements' typeList )? enumBody
+			{
+			DebugLocation(129, 9);
+			PushFollow(Follow._modifiers_in_enumDeclaration1007);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(130, 9);
+			// EntityMapping.g:130:9: ( 'enum' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:130:10: 'enum'
+			{
+			DebugLocation(130, 10);
+			Match(input,ENUM,Follow._ENUM_in_enumDeclaration1019); if (state.failed) return;
+
+			}
+
+			DebugLocation(132, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enumDeclaration1040); if (state.failed) return;
+			DebugLocation(133, 9);
+			// EntityMapping.g:133:9: ( 'implements' typeList )?
+			int alt22=2;
+			try { DebugEnterSubRule(22);
+			try { DebugEnterDecision(22, decisionCanBacktrack[22]);
+			int LA22_0 = input.LA(1);
+
+			if ((LA22_0==IMPLEMENTS))
+			{
+				alt22 = 1;
+			}
+			} finally { DebugExitDecision(22); }
+			switch (alt22)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:133:10: 'implements' typeList
+				{
+				DebugLocation(133, 10);
+				Match(input,IMPLEMENTS,Follow._IMPLEMENTS_in_enumDeclaration1051); if (state.failed) return;
+				DebugLocation(133, 23);
+				PushFollow(Follow._typeList_in_enumDeclaration1053);
+				typeList();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(22); }
+
+			DebugLocation(135, 9);
+			PushFollow(Follow._enumBody_in_enumDeclaration1074);
+			enumBody();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("enumDeclaration", 14);
+			LeaveRule("enumDeclaration", 14);
+			LeaveRule_enumDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 14, enumDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(136, 4);
+		} finally { DebugExitRule(GrammarFileName, "enumDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "enumDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_enumBody() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_enumBody() {}
+
+	// $ANTLR start "enumBody"
+	// EntityMapping.g:139:1: enumBody : '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' ;
+	[GrammarRule("enumBody")]
+	private void enumBody()
+	{
+		EnterRule_enumBody();
+		EnterRule("enumBody", 15);
+		TraceIn("enumBody", 15);
+	    int enumBody_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "enumBody");
+		DebugLocation(139, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 15)) { return; }
+
+			// EntityMapping.g:140:5: ( '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:140:9: '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}'
+			{
+			DebugLocation(140, 9);
+			Match(input,LBRACE,Follow._LBRACE_in_enumBody1099); if (state.failed) return;
+			DebugLocation(141, 9);
+			// EntityMapping.g:141:9: ( enumConstants )?
+			int alt23=2;
+			try { DebugEnterSubRule(23);
+			try { DebugEnterDecision(23, decisionCanBacktrack[23]);
+			int LA23_0 = input.LA(1);
+
+			if ((LA23_0==IDENTIFIER||LA23_0==MONKEYS_AT))
+			{
+				alt23 = 1;
+			}
+			} finally { DebugExitDecision(23); }
+			switch (alt23)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:141:10: enumConstants
+				{
+				DebugLocation(141, 10);
+				PushFollow(Follow._enumConstants_in_enumBody1110);
+				enumConstants();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(23); }
+
+			DebugLocation(143, 9);
+			// EntityMapping.g:143:9: ( ',' )?
+			int alt24=2;
+			try { DebugEnterSubRule(24);
+			try { DebugEnterDecision(24, decisionCanBacktrack[24]);
+			int LA24_0 = input.LA(1);
+
+			if ((LA24_0==COMMA))
+			{
+				alt24 = 1;
+			}
+			} finally { DebugExitDecision(24); }
+			switch (alt24)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:143:9: ','
+				{
+				DebugLocation(143, 9);
+				Match(input,COMMA,Follow._COMMA_in_enumBody1132); if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(24); }
+
+			DebugLocation(144, 9);
+			// EntityMapping.g:144:9: ( enumBodyDeclarations )?
+			int alt25=2;
+			try { DebugEnterSubRule(25);
+			try { DebugEnterDecision(25, decisionCanBacktrack[25]);
+			int LA25_0 = input.LA(1);
+
+			if ((LA25_0==SEMI))
+			{
+				alt25 = 1;
+			}
+			} finally { DebugExitDecision(25); }
+			switch (alt25)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:144:10: enumBodyDeclarations
+				{
+				DebugLocation(144, 10);
+				PushFollow(Follow._enumBodyDeclarations_in_enumBody1145);
+				enumBodyDeclarations();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(25); }
+
+			DebugLocation(146, 9);
+			Match(input,RBRACE,Follow._RBRACE_in_enumBody1167); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("enumBody", 15);
+			LeaveRule("enumBody", 15);
+			LeaveRule_enumBody();
+	        if (state.backtracking > 0) { Memoize(input, 15, enumBody_StartIndex); }
+
+	    }
+	 	DebugLocation(147, 4);
+		} finally { DebugExitRule(GrammarFileName, "enumBody"); }
+		return;
+
+	}
+	// $ANTLR end "enumBody"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_enumConstants() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_enumConstants() {}
+
+	// $ANTLR start "enumConstants"
+	// EntityMapping.g:149:1: enumConstants : enumConstant ( ',' enumConstant )* ;
+	[GrammarRule("enumConstants")]
+	private void enumConstants()
+	{
+		EnterRule_enumConstants();
+		EnterRule("enumConstants", 16);
+		TraceIn("enumConstants", 16);
+	    int enumConstants_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "enumConstants");
+		DebugLocation(149, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 16)) { return; }
+
+			// EntityMapping.g:150:5: ( enumConstant ( ',' enumConstant )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:150:9: enumConstant ( ',' enumConstant )*
+			{
+			DebugLocation(150, 9);
+			PushFollow(Follow._enumConstant_in_enumConstants1187);
+			enumConstant();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(151, 9);
+			// EntityMapping.g:151:9: ( ',' enumConstant )*
+			try { DebugEnterSubRule(26);
+			while (true)
+			{
+				int alt26=2;
+				try { DebugEnterDecision(26, decisionCanBacktrack[26]);
+				int LA26_0 = input.LA(1);
+
+				if ((LA26_0==COMMA))
+				{
+					int LA26_1 = input.LA(2);
+
+					if ((LA26_1==IDENTIFIER||LA26_1==MONKEYS_AT))
+					{
+						alt26 = 1;
+					}
+
+
+				}
+
+
+				} finally { DebugExitDecision(26); }
+				switch ( alt26 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:151:10: ',' enumConstant
+					{
+					DebugLocation(151, 10);
+					Match(input,COMMA,Follow._COMMA_in_enumConstants1198); if (state.failed) return;
+					DebugLocation(151, 14);
+					PushFollow(Follow._enumConstant_in_enumConstants1200);
+					enumConstant();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop26;
+				}
+			}
+
+			loop26:
+				;
+
+			} finally { DebugExitSubRule(26); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("enumConstants", 16);
+			LeaveRule("enumConstants", 16);
+			LeaveRule_enumConstants();
+	        if (state.backtracking > 0) { Memoize(input, 16, enumConstants_StartIndex); }
+
+	    }
+	 	DebugLocation(153, 4);
+		} finally { DebugExitRule(GrammarFileName, "enumConstants"); }
+		return;
+
+	}
+	// $ANTLR end "enumConstants"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_enumConstant() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_enumConstant() {}
+
+	// $ANTLR start "enumConstant"
+	// EntityMapping.g:159:1: enumConstant : ( annotations )? IDENTIFIER ( arguments )? ( classBody )? ;
+	[GrammarRule("enumConstant")]
+	private void enumConstant()
+	{
+		EnterRule_enumConstant();
+		EnterRule("enumConstant", 17);
+		TraceIn("enumConstant", 17);
+	    int enumConstant_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "enumConstant");
+		DebugLocation(159, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 17)) { return; }
+
+			// EntityMapping.g:160:5: ( ( annotations )? IDENTIFIER ( arguments )? ( classBody )? )
+			DebugEnterAlt(1);
+			// EntityMapping.g:160:9: ( annotations )? IDENTIFIER ( arguments )? ( classBody )?
+			{
+			DebugLocation(160, 9);
+			// EntityMapping.g:160:9: ( annotations )?
+			int alt27=2;
+			try { DebugEnterSubRule(27);
+			try { DebugEnterDecision(27, decisionCanBacktrack[27]);
+			int LA27_0 = input.LA(1);
+
+			if ((LA27_0==MONKEYS_AT))
+			{
+				alt27 = 1;
+			}
+			} finally { DebugExitDecision(27); }
+			switch (alt27)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:160:10: annotations
+				{
+				DebugLocation(160, 10);
+				PushFollow(Follow._annotations_in_enumConstant1234);
+				annotations();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(27); }
+
+			DebugLocation(162, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enumConstant1255); if (state.failed) return;
+			DebugLocation(163, 9);
+			// EntityMapping.g:163:9: ( arguments )?
+			int alt28=2;
+			try { DebugEnterSubRule(28);
+			try { DebugEnterDecision(28, decisionCanBacktrack[28]);
+			int LA28_0 = input.LA(1);
+
+			if ((LA28_0==LPAREN))
+			{
+				alt28 = 1;
+			}
+			} finally { DebugExitDecision(28); }
+			switch (alt28)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:163:10: arguments
+				{
+				DebugLocation(163, 10);
+				PushFollow(Follow._arguments_in_enumConstant1266);
+				arguments();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(28); }
+
+			DebugLocation(165, 9);
+			// EntityMapping.g:165:9: ( classBody )?
+			int alt29=2;
+			try { DebugEnterSubRule(29);
+			try { DebugEnterDecision(29, decisionCanBacktrack[29]);
+			int LA29_0 = input.LA(1);
+
+			if ((LA29_0==LBRACE))
+			{
+				alt29 = 1;
+			}
+			} finally { DebugExitDecision(29); }
+			switch (alt29)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:165:10: classBody
+				{
+				DebugLocation(165, 10);
+				PushFollow(Follow._classBody_in_enumConstant1288);
+				classBody();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(29); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("enumConstant", 17);
+			LeaveRule("enumConstant", 17);
+			LeaveRule_enumConstant();
+	        if (state.backtracking > 0) { Memoize(input, 17, enumConstant_StartIndex); }
+
+	    }
+	 	DebugLocation(169, 4);
+		} finally { DebugExitRule(GrammarFileName, "enumConstant"); }
+		return;
+
+	}
+	// $ANTLR end "enumConstant"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_enumBodyDeclarations() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_enumBodyDeclarations() {}
+
+	// $ANTLR start "enumBodyDeclarations"
+	// EntityMapping.g:171:1: enumBodyDeclarations : ';' ( classBodyDeclaration )* ;
+	[GrammarRule("enumBodyDeclarations")]
+	private void enumBodyDeclarations()
+	{
+		EnterRule_enumBodyDeclarations();
+		EnterRule("enumBodyDeclarations", 18);
+		TraceIn("enumBodyDeclarations", 18);
+	    int enumBodyDeclarations_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "enumBodyDeclarations");
+		DebugLocation(171, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 18)) { return; }
+
+			// EntityMapping.g:172:5: ( ';' ( classBodyDeclaration )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:172:9: ';' ( classBodyDeclaration )*
+			{
+			DebugLocation(172, 9);
+			Match(input,SEMI,Follow._SEMI_in_enumBodyDeclarations1329); if (state.failed) return;
+			DebugLocation(173, 9);
+			// EntityMapping.g:173:9: ( classBodyDeclaration )*
+			try { DebugEnterSubRule(30);
+			while (true)
+			{
+				int alt30=2;
+				try { DebugEnterDecision(30, decisionCanBacktrack[30]);
+				int LA30_0 = input.LA(1);
+
+				if ((LA30_0==ABSTRACT||LA30_0==BOOLEAN||LA30_0==BYTE||LA30_0==CHAR||LA30_0==CLASS||LA30_0==DOUBLE||LA30_0==ENUM||LA30_0==FINAL||LA30_0==FLOAT||LA30_0==IDENTIFIER||(LA30_0>=INT && LA30_0<=INTERFACE)||LA30_0==LBRACE||LA30_0==LONG||LA30_0==LT||(LA30_0>=MONKEYS_AT && LA30_0<=NATIVE)||(LA30_0>=PRIVATE && LA30_0<=PUBLIC)||(LA30_0>=SEMI && LA30_0<=SHORT)||(LA30_0>=STATIC && LA30_0<=STRICTFP)||LA30_0==SYNCHRONIZED||LA30_0==TRANSIENT||(LA30_0>=VOID && LA30_0<=VOLATILE)))
+				{
+					alt30 = 1;
+				}
+
+
+				} finally { DebugExitDecision(30); }
+				switch ( alt30 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:173:10: classBodyDeclaration
+					{
+					DebugLocation(173, 10);
+					PushFollow(Follow._classBodyDeclaration_in_enumBodyDeclarations1341);
+					classBodyDeclaration();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop30;
+				}
+			}
+
+			loop30:
+				;
+
+			} finally { DebugExitSubRule(30); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("enumBodyDeclarations", 18);
+			LeaveRule("enumBodyDeclarations", 18);
+			LeaveRule_enumBodyDeclarations();
+	        if (state.backtracking > 0) { Memoize(input, 18, enumBodyDeclarations_StartIndex); }
+
+	    }
+	 	DebugLocation(175, 4);
+		} finally { DebugExitRule(GrammarFileName, "enumBodyDeclarations"); }
+		return;
+
+	}
+	// $ANTLR end "enumBodyDeclarations"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_interfaceDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_interfaceDeclaration() {}
+
+	// $ANTLR start "interfaceDeclaration"
+	// EntityMapping.g:177:1: interfaceDeclaration : ( normalInterfaceDeclaration | annotationTypeDeclaration );
+	[GrammarRule("interfaceDeclaration")]
+	private void interfaceDeclaration()
+	{
+		EnterRule_interfaceDeclaration();
+		EnterRule("interfaceDeclaration", 19);
+		TraceIn("interfaceDeclaration", 19);
+	    int interfaceDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "interfaceDeclaration");
+		DebugLocation(177, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 19)) { return; }
+
+			// EntityMapping.g:178:5: ( normalInterfaceDeclaration | annotationTypeDeclaration )
+			int alt31=2;
+			try { DebugEnterDecision(31, decisionCanBacktrack[31]);
+			switch (input.LA(1))
+			{
+			case MONKEYS_AT:
+				{
+				int LA31_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PUBLIC:
+				{
+				int LA31_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PROTECTED:
+				{
+				int LA31_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PRIVATE:
+				{
+				int LA31_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STATIC:
+				{
+				int LA31_5 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 5, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ABSTRACT:
+				{
+				int LA31_6 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 6, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case FINAL:
+				{
+				int LA31_7 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 7, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case NATIVE:
+				{
+				int LA31_8 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 8, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				int LA31_9 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 9, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case TRANSIENT:
+				{
+				int LA31_10 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 10, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case VOLATILE:
+				{
+				int LA31_11 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 11, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STRICTFP:
+				{
+				int LA31_12 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred43_EntityMapping_fragment)))
+				{
+					alt31 = 1;
+				}
+				else if ((true))
+				{
+					alt31 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 12, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case INTERFACE:
+				{
+				alt31 = 1;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 31, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(31); }
+			switch (alt31)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:178:9: normalInterfaceDeclaration
+				{
+				DebugLocation(178, 9);
+				PushFollow(Follow._normalInterfaceDeclaration_in_interfaceDeclaration1372);
+				normalInterfaceDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:179:9: annotationTypeDeclaration
+				{
+				DebugLocation(179, 9);
+				PushFollow(Follow._annotationTypeDeclaration_in_interfaceDeclaration1382);
+				annotationTypeDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("interfaceDeclaration", 19);
+			LeaveRule("interfaceDeclaration", 19);
+			LeaveRule_interfaceDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 19, interfaceDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(180, 4);
+		} finally { DebugExitRule(GrammarFileName, "interfaceDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "interfaceDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_normalInterfaceDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_normalInterfaceDeclaration() {}
+
+	// $ANTLR start "normalInterfaceDeclaration"
+	// EntityMapping.g:182:1: normalInterfaceDeclaration : modifiers 'interface' IDENTIFIER ( typeParameters )? ( 'extends' typeList )? interfaceBody ;
+	[GrammarRule("normalInterfaceDeclaration")]
+	private void normalInterfaceDeclaration()
+	{
+		EnterRule_normalInterfaceDeclaration();
+		EnterRule("normalInterfaceDeclaration", 20);
+		TraceIn("normalInterfaceDeclaration", 20);
+	    int normalInterfaceDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "normalInterfaceDeclaration");
+		DebugLocation(182, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 20)) { return; }
+
+			// EntityMapping.g:183:5: ( modifiers 'interface' IDENTIFIER ( typeParameters )? ( 'extends' typeList )? interfaceBody )
+			DebugEnterAlt(1);
+			// EntityMapping.g:183:9: modifiers 'interface' IDENTIFIER ( typeParameters )? ( 'extends' typeList )? interfaceBody
+			{
+			DebugLocation(183, 9);
+			PushFollow(Follow._modifiers_in_normalInterfaceDeclaration1406);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(183, 19);
+			Match(input,INTERFACE,Follow._INTERFACE_in_normalInterfaceDeclaration1408); if (state.failed) return;
+			DebugLocation(183, 31);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_normalInterfaceDeclaration1410); if (state.failed) return;
+			DebugLocation(184, 9);
+			// EntityMapping.g:184:9: ( typeParameters )?
+			int alt32=2;
+			try { DebugEnterSubRule(32);
+			try { DebugEnterDecision(32, decisionCanBacktrack[32]);
+			int LA32_0 = input.LA(1);
+
+			if ((LA32_0==LT))
+			{
+				alt32 = 1;
+			}
+			} finally { DebugExitDecision(32); }
+			switch (alt32)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:184:10: typeParameters
+				{
+				DebugLocation(184, 10);
+				PushFollow(Follow._typeParameters_in_normalInterfaceDeclaration1421);
+				typeParameters();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(32); }
+
+			DebugLocation(186, 9);
+			// EntityMapping.g:186:9: ( 'extends' typeList )?
+			int alt33=2;
+			try { DebugEnterSubRule(33);
+			try { DebugEnterDecision(33, decisionCanBacktrack[33]);
+			int LA33_0 = input.LA(1);
+
+			if ((LA33_0==EXTENDS))
+			{
+				alt33 = 1;
+			}
+			} finally { DebugExitDecision(33); }
+			switch (alt33)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:186:10: 'extends' typeList
+				{
+				DebugLocation(186, 10);
+				Match(input,EXTENDS,Follow._EXTENDS_in_normalInterfaceDeclaration1443); if (state.failed) return;
+				DebugLocation(186, 20);
+				PushFollow(Follow._typeList_in_normalInterfaceDeclaration1445);
+				typeList();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(33); }
+
+			DebugLocation(188, 9);
+			PushFollow(Follow._interfaceBody_in_normalInterfaceDeclaration1466);
+			interfaceBody();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("normalInterfaceDeclaration", 20);
+			LeaveRule("normalInterfaceDeclaration", 20);
+			LeaveRule_normalInterfaceDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 20, normalInterfaceDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(189, 4);
+		} finally { DebugExitRule(GrammarFileName, "normalInterfaceDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "normalInterfaceDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_typeList() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_typeList() {}
+
+	// $ANTLR start "typeList"
+	// EntityMapping.g:191:1: typeList : type ( ',' type )* ;
+	[GrammarRule("typeList")]
+	private void typeList()
+	{
+		EnterRule_typeList();
+		EnterRule("typeList", 21);
+		TraceIn("typeList", 21);
+	    int typeList_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "typeList");
+		DebugLocation(191, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 21)) { return; }
+
+			// EntityMapping.g:192:5: ( type ( ',' type )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:192:9: type ( ',' type )*
+			{
+			DebugLocation(192, 9);
+			PushFollow(Follow._type_in_typeList1486);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(193, 9);
+			// EntityMapping.g:193:9: ( ',' type )*
+			try { DebugEnterSubRule(34);
+			while (true)
+			{
+				int alt34=2;
+				try { DebugEnterDecision(34, decisionCanBacktrack[34]);
+				int LA34_0 = input.LA(1);
+
+				if ((LA34_0==COMMA))
+				{
+					alt34 = 1;
+				}
+
+
+				} finally { DebugExitDecision(34); }
+				switch ( alt34 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:193:10: ',' type
+					{
+					DebugLocation(193, 10);
+					Match(input,COMMA,Follow._COMMA_in_typeList1497); if (state.failed) return;
+					DebugLocation(193, 14);
+					PushFollow(Follow._type_in_typeList1499);
+					type();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop34;
+				}
+			}
+
+			loop34:
+				;
+
+			} finally { DebugExitSubRule(34); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("typeList", 21);
+			LeaveRule("typeList", 21);
+			LeaveRule_typeList();
+	        if (state.backtracking > 0) { Memoize(input, 21, typeList_StartIndex); }
+
+	    }
+	 	DebugLocation(195, 4);
+		} finally { DebugExitRule(GrammarFileName, "typeList"); }
+		return;
+
+	}
+	// $ANTLR end "typeList"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_classBody() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_classBody() {}
+
+	// $ANTLR start "classBody"
+	// EntityMapping.g:197:1: classBody : '{' ( classBodyDeclaration )* '}' ;
+	[GrammarRule("classBody")]
+	private void classBody()
+	{
+		EnterRule_classBody();
+		EnterRule("classBody", 22);
+		TraceIn("classBody", 22);
+	    int classBody_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "classBody");
+		DebugLocation(197, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 22)) { return; }
+
+			// EntityMapping.g:198:5: ( '{' ( classBodyDeclaration )* '}' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:198:9: '{' ( classBodyDeclaration )* '}'
+			{
+			DebugLocation(198, 9);
+			Match(input,LBRACE,Follow._LBRACE_in_classBody1530); if (state.failed) return;
+			DebugLocation(199, 9);
+			// EntityMapping.g:199:9: ( classBodyDeclaration )*
+			try { DebugEnterSubRule(35);
+			while (true)
+			{
+				int alt35=2;
+				try { DebugEnterDecision(35, decisionCanBacktrack[35]);
+				int LA35_0 = input.LA(1);
+
+				if ((LA35_0==ABSTRACT||LA35_0==BOOLEAN||LA35_0==BYTE||LA35_0==CHAR||LA35_0==CLASS||LA35_0==DOUBLE||LA35_0==ENUM||LA35_0==FINAL||LA35_0==FLOAT||LA35_0==IDENTIFIER||(LA35_0>=INT && LA35_0<=INTERFACE)||LA35_0==LBRACE||LA35_0==LONG||LA35_0==LT||(LA35_0>=MONKEYS_AT && LA35_0<=NATIVE)||(LA35_0>=PRIVATE && LA35_0<=PUBLIC)||(LA35_0>=SEMI && LA35_0<=SHORT)||(LA35_0>=STATIC && LA35_0<=STRICTFP)||LA35_0==SYNCHRONIZED||LA35_0==TRANSIENT||(LA35_0>=VOID && LA35_0<=VOLATILE)))
+				{
+					alt35 = 1;
+				}
+
+
+				} finally { DebugExitDecision(35); }
+				switch ( alt35 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:199:10: classBodyDeclaration
+					{
+					DebugLocation(199, 10);
+					PushFollow(Follow._classBodyDeclaration_in_classBody1542);
+					classBodyDeclaration();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop35;
+				}
+			}
+
+			loop35:
+				;
+
+			} finally { DebugExitSubRule(35); }
+
+			DebugLocation(201, 9);
+			Match(input,RBRACE,Follow._RBRACE_in_classBody1564); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("classBody", 22);
+			LeaveRule("classBody", 22);
+			LeaveRule_classBody();
+	        if (state.backtracking > 0) { Memoize(input, 22, classBody_StartIndex); }
+
+	    }
+	 	DebugLocation(202, 4);
+		} finally { DebugExitRule(GrammarFileName, "classBody"); }
+		return;
+
+	}
+	// $ANTLR end "classBody"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_interfaceBody() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_interfaceBody() {}
+
+	// $ANTLR start "interfaceBody"
+	// EntityMapping.g:204:1: interfaceBody : '{' ( interfaceBodyDeclaration )* '}' ;
+	[GrammarRule("interfaceBody")]
+	private void interfaceBody()
+	{
+		EnterRule_interfaceBody();
+		EnterRule("interfaceBody", 23);
+		TraceIn("interfaceBody", 23);
+	    int interfaceBody_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "interfaceBody");
+		DebugLocation(204, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 23)) { return; }
+
+			// EntityMapping.g:205:5: ( '{' ( interfaceBodyDeclaration )* '}' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:205:9: '{' ( interfaceBodyDeclaration )* '}'
+			{
+			DebugLocation(205, 9);
+			Match(input,LBRACE,Follow._LBRACE_in_interfaceBody1584); if (state.failed) return;
+			DebugLocation(206, 9);
+			// EntityMapping.g:206:9: ( interfaceBodyDeclaration )*
+			try { DebugEnterSubRule(36);
+			while (true)
+			{
+				int alt36=2;
+				try { DebugEnterDecision(36, decisionCanBacktrack[36]);
+				int LA36_0 = input.LA(1);
+
+				if ((LA36_0==ABSTRACT||LA36_0==BOOLEAN||LA36_0==BYTE||LA36_0==CHAR||LA36_0==CLASS||LA36_0==DOUBLE||LA36_0==ENUM||LA36_0==FINAL||LA36_0==FLOAT||LA36_0==IDENTIFIER||(LA36_0>=INT && LA36_0<=INTERFACE)||LA36_0==LONG||LA36_0==LT||(LA36_0>=MONKEYS_AT && LA36_0<=NATIVE)||(LA36_0>=PRIVATE && LA36_0<=PUBLIC)||(LA36_0>=SEMI && LA36_0<=SHORT)||(LA36_0>=STATIC && LA36_0<=STRICTFP)||LA36_0==SYNCHRONIZED||LA36_0==TRANSIENT||(LA36_0>=VOID && LA36_0<=VOLATILE)))
+				{
+					alt36 = 1;
+				}
+
+
+				} finally { DebugExitDecision(36); }
+				switch ( alt36 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:206:10: interfaceBodyDeclaration
+					{
+					DebugLocation(206, 10);
+					PushFollow(Follow._interfaceBodyDeclaration_in_interfaceBody1596);
+					interfaceBodyDeclaration();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop36;
+				}
+			}
+
+			loop36:
+				;
+
+			} finally { DebugExitSubRule(36); }
+
+			DebugLocation(208, 9);
+			Match(input,RBRACE,Follow._RBRACE_in_interfaceBody1618); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("interfaceBody", 23);
+			LeaveRule("interfaceBody", 23);
+			LeaveRule_interfaceBody();
+	        if (state.backtracking > 0) { Memoize(input, 23, interfaceBody_StartIndex); }
+
+	    }
+	 	DebugLocation(209, 4);
+		} finally { DebugExitRule(GrammarFileName, "interfaceBody"); }
+		return;
+
+	}
+	// $ANTLR end "interfaceBody"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_classBodyDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_classBodyDeclaration() {}
+
+	// $ANTLR start "classBodyDeclaration"
+	// EntityMapping.g:211:1: classBodyDeclaration : ( ';' | ( 'static' )? block | memberDecl );
+	[GrammarRule("classBodyDeclaration")]
+	private void classBodyDeclaration()
+	{
+		EnterRule_classBodyDeclaration();
+		EnterRule("classBodyDeclaration", 24);
+		TraceIn("classBodyDeclaration", 24);
+	    int classBodyDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "classBodyDeclaration");
+		DebugLocation(211, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 24)) { return; }
+
+			// EntityMapping.g:212:5: ( ';' | ( 'static' )? block | memberDecl )
+			int alt38=3;
+			try { DebugEnterDecision(38, decisionCanBacktrack[38]);
+			switch (input.LA(1))
+			{
+			case SEMI:
+				{
+				alt38 = 1;
+				}
+				break;
+			case STATIC:
+				{
+				int LA38_2 = input.LA(2);
+
+				if ((LA38_2==LBRACE))
+				{
+					alt38 = 2;
+				}
+				else if ((LA38_2==ABSTRACT||LA38_2==BOOLEAN||LA38_2==BYTE||LA38_2==CHAR||LA38_2==CLASS||LA38_2==DOUBLE||LA38_2==ENUM||LA38_2==FINAL||LA38_2==FLOAT||LA38_2==IDENTIFIER||(LA38_2>=INT && LA38_2<=INTERFACE)||LA38_2==LONG||LA38_2==LT||(LA38_2>=MONKEYS_AT && LA38_2<=NATIVE)||(LA38_2>=PRIVATE && LA38_2<=PUBLIC)||LA38_2==SHORT||(LA38_2>=STATIC && LA38_2<=STRICTFP)||LA38_2==SYNCHRONIZED||LA38_2==TRANSIENT||(LA38_2>=VOID && LA38_2<=VOLATILE)))
+				{
+					alt38 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 38, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case LBRACE:
+				{
+				alt38 = 2;
+				}
+				break;
+			case ABSTRACT:
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case CLASS:
+			case DOUBLE:
+			case ENUM:
+			case FINAL:
+			case FLOAT:
+			case IDENTIFIER:
+			case INT:
+			case INTERFACE:
+			case LONG:
+			case LT:
+			case MONKEYS_AT:
+			case NATIVE:
+			case PRIVATE:
+			case PROTECTED:
+			case PUBLIC:
+			case SHORT:
+			case STRICTFP:
+			case SYNCHRONIZED:
+			case TRANSIENT:
+			case VOID:
+			case VOLATILE:
+				{
+				alt38 = 3;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 38, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(38); }
+			switch (alt38)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:212:9: ';'
+				{
+				DebugLocation(212, 9);
+				Match(input,SEMI,Follow._SEMI_in_classBodyDeclaration1638); if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:213:9: ( 'static' )? block
+				{
+				DebugLocation(213, 9);
+				// EntityMapping.g:213:9: ( 'static' )?
+				int alt37=2;
+				try { DebugEnterSubRule(37);
+				try { DebugEnterDecision(37, decisionCanBacktrack[37]);
+				int LA37_0 = input.LA(1);
+
+				if ((LA37_0==STATIC))
+				{
+					alt37 = 1;
+				}
+				} finally { DebugExitDecision(37); }
+				switch (alt37)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:213:10: 'static'
+					{
+					DebugLocation(213, 10);
+					Match(input,STATIC,Follow._STATIC_in_classBodyDeclaration1649); if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(37); }
+
+				DebugLocation(215, 9);
+				PushFollow(Follow._block_in_classBodyDeclaration1671);
+				block();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:216:9: memberDecl
+				{
+				DebugLocation(216, 9);
+				PushFollow(Follow._memberDecl_in_classBodyDeclaration1681);
+				memberDecl();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("classBodyDeclaration", 24);
+			LeaveRule("classBodyDeclaration", 24);
+			LeaveRule_classBodyDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 24, classBodyDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(217, 4);
+		} finally { DebugExitRule(GrammarFileName, "classBodyDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "classBodyDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_memberDecl() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_memberDecl() {}
+
+	// $ANTLR start "memberDecl"
+	// EntityMapping.g:219:1: memberDecl : ( fieldDeclaration | methodDeclaration | classDeclaration | interfaceDeclaration );
+	[GrammarRule("memberDecl")]
+	private void memberDecl()
+	{
+		EnterRule_memberDecl();
+		EnterRule("memberDecl", 25);
+		TraceIn("memberDecl", 25);
+	    int memberDecl_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "memberDecl");
+		DebugLocation(219, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 25)) { return; }
+
+			// EntityMapping.g:220:5: ( fieldDeclaration | methodDeclaration | classDeclaration | interfaceDeclaration )
+			int alt39=4;
+			try { DebugEnterDecision(39, decisionCanBacktrack[39]);
+			switch (input.LA(1))
+			{
+			case MONKEYS_AT:
+				{
+				int LA39_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PUBLIC:
+				{
+				int LA39_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PROTECTED:
+				{
+				int LA39_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PRIVATE:
+				{
+				int LA39_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STATIC:
+				{
+				int LA39_5 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 5, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ABSTRACT:
+				{
+				int LA39_6 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 6, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case FINAL:
+				{
+				int LA39_7 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 7, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case NATIVE:
+				{
+				int LA39_8 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 8, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				int LA39_9 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 9, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case TRANSIENT:
+				{
+				int LA39_10 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 10, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case VOLATILE:
+				{
+				int LA39_11 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 11, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STRICTFP:
+				{
+				int LA39_12 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else if ((EvaluatePredicate(synpred54_EntityMapping_fragment)))
+				{
+					alt39 = 3;
+				}
+				else if ((true))
+				{
+					alt39 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 12, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case IDENTIFIER:
+				{
+				int LA39_13 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 13, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+				{
+				int LA39_14 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred52_EntityMapping_fragment)))
+				{
+					alt39 = 1;
+				}
+				else if ((EvaluatePredicate(synpred53_EntityMapping_fragment)))
+				{
+					alt39 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 14, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case LT:
+			case VOID:
+				{
+				alt39 = 2;
+				}
+				break;
+			case CLASS:
+			case ENUM:
+				{
+				alt39 = 3;
+				}
+				break;
+			case INTERFACE:
+				{
+				alt39 = 4;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 39, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(39); }
+			switch (alt39)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:220:10: fieldDeclaration
+				{
+				DebugLocation(220, 10);
+				PushFollow(Follow._fieldDeclaration_in_memberDecl1702);
+				fieldDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:221:10: methodDeclaration
+				{
+				DebugLocation(221, 10);
+				PushFollow(Follow._methodDeclaration_in_memberDecl1713);
+				methodDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:222:10: classDeclaration
+				{
+				DebugLocation(222, 10);
+				PushFollow(Follow._classDeclaration_in_memberDecl1724);
+				classDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:223:10: interfaceDeclaration
+				{
+				DebugLocation(223, 10);
+				PushFollow(Follow._interfaceDeclaration_in_memberDecl1735);
+				interfaceDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("memberDecl", 25);
+			LeaveRule("memberDecl", 25);
+			LeaveRule_memberDecl();
+	        if (state.backtracking > 0) { Memoize(input, 25, memberDecl_StartIndex); }
+
+	    }
+	 	DebugLocation(224, 4);
+		} finally { DebugExitRule(GrammarFileName, "memberDecl"); }
+		return;
+
+	}
+	// $ANTLR end "memberDecl"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_methodDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_methodDeclaration() {}
+
+	// $ANTLR start "methodDeclaration"
+	// EntityMapping.g:227:1: methodDeclaration : ( modifiers ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' | modifiers ( typeParameters )? ( type | 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) );
+	[GrammarRule("methodDeclaration")]
+	private void methodDeclaration()
+	{
+		EnterRule_methodDeclaration();
+		EnterRule("methodDeclaration", 26);
+		TraceIn("methodDeclaration", 26);
+	    int methodDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "methodDeclaration");
+		DebugLocation(227, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 26)) { return; }
+
+			// EntityMapping.g:228:5: ( modifiers ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' | modifiers ( typeParameters )? ( type | 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' ) )
+			int alt49=2;
+			try { DebugEnterDecision(49, decisionCanBacktrack[49]);
+			switch (input.LA(1))
+			{
+			case MONKEYS_AT:
+				{
+				int LA49_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PUBLIC:
+				{
+				int LA49_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PROTECTED:
+				{
+				int LA49_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PRIVATE:
+				{
+				int LA49_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STATIC:
+				{
+				int LA49_5 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 5, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ABSTRACT:
+				{
+				int LA49_6 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 6, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case FINAL:
+				{
+				int LA49_7 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 7, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case NATIVE:
+				{
+				int LA49_8 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 8, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				int LA49_9 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 9, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case TRANSIENT:
+				{
+				int LA49_10 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 10, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case VOLATILE:
+				{
+				int LA49_11 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 11, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STRICTFP:
+				{
+				int LA49_12 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 12, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case LT:
+				{
+				int LA49_13 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 13, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case IDENTIFIER:
+				{
+				int LA49_14 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred59_EntityMapping_fragment)))
+				{
+					alt49 = 1;
+				}
+				else if ((true))
+				{
+					alt49 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 14, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+			case VOID:
+				{
+				alt49 = 2;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 49, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(49); }
+			switch (alt49)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:230:10: modifiers ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
+				{
+				DebugLocation(230, 10);
+				PushFollow(Follow._modifiers_in_methodDeclaration1773);
+				modifiers();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(231, 9);
+				// EntityMapping.g:231:9: ( typeParameters )?
+				int alt40=2;
+				try { DebugEnterSubRule(40);
+				try { DebugEnterDecision(40, decisionCanBacktrack[40]);
+				int LA40_0 = input.LA(1);
+
+				if ((LA40_0==LT))
+				{
+					alt40 = 1;
+				}
+				} finally { DebugExitDecision(40); }
+				switch (alt40)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:231:10: typeParameters
+					{
+					DebugLocation(231, 10);
+					PushFollow(Follow._typeParameters_in_methodDeclaration1784);
+					typeParameters();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(40); }
+
+				DebugLocation(233, 9);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_methodDeclaration1805); if (state.failed) return;
+				DebugLocation(234, 9);
+				PushFollow(Follow._formalParameters_in_methodDeclaration1815);
+				formalParameters();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(235, 9);
+				// EntityMapping.g:235:9: ( 'throws' qualifiedNameList )?
+				int alt41=2;
+				try { DebugEnterSubRule(41);
+				try { DebugEnterDecision(41, decisionCanBacktrack[41]);
+				int LA41_0 = input.LA(1);
+
+				if ((LA41_0==THROWS))
+				{
+					alt41 = 1;
+				}
+				} finally { DebugExitDecision(41); }
+				switch (alt41)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:235:10: 'throws' qualifiedNameList
+					{
+					DebugLocation(235, 10);
+					Match(input,THROWS,Follow._THROWS_in_methodDeclaration1826); if (state.failed) return;
+					DebugLocation(235, 19);
+					PushFollow(Follow._qualifiedNameList_in_methodDeclaration1828);
+					qualifiedNameList();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(41); }
+
+				DebugLocation(237, 9);
+				Match(input,LBRACE,Follow._LBRACE_in_methodDeclaration1849); if (state.failed) return;
+				DebugLocation(238, 9);
+				// EntityMapping.g:238:9: ( explicitConstructorInvocation )?
+				int alt42=2;
+				try { DebugEnterSubRule(42);
+				try { DebugEnterDecision(42, decisionCanBacktrack[42]);
+				switch (input.LA(1))
+				{
+				case LT:
+					{
+					alt42 = 1;
+					}
+					break;
+				case THIS:
+					{
+					int LA42_2 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+					{
+						alt42 = 1;
+					}
+					}
+					break;
+				case LPAREN:
+					{
+					int LA42_3 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+					{
+						alt42 = 1;
+					}
+					}
+					break;
+				case SUPER:
+					{
+					int LA42_4 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+					{
+						alt42 = 1;
+					}
+					}
+					break;
+				case IDENTIFIER:
+					{
+					int LA42_5 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+					{
+						alt42 = 1;
+					}
+					}
+					break;
+				case CHARLITERAL:
+				case DOUBLELITERAL:
+				case FALSE:
+				case FLOATLITERAL:
+				case INTLITERAL:
+				case LONGLITERAL:
+				case NULL:
+				case STRINGLITERAL:
+				case TRUE:
+					{
+					int LA42_6 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+					{
+						alt42 = 1;
+					}
+					}
+					break;
+				case NEW:
+					{
+					int LA42_7 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+					{
+						alt42 = 1;
+					}
+					}
+					break;
+				case BOOLEAN:
+				case BYTE:
+				case CHAR:
+				case DOUBLE:
+				case FLOAT:
+				case INT:
+				case LONG:
+				case SHORT:
+					{
+					int LA42_8 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+					{
+						alt42 = 1;
+					}
+					}
+					break;
+				case VOID:
+					{
+					int LA42_9 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+					{
+						alt42 = 1;
+					}
+					}
+					break;
+				}
+
+				} finally { DebugExitDecision(42); }
+				switch (alt42)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:238:10: explicitConstructorInvocation
+					{
+					DebugLocation(238, 10);
+					PushFollow(Follow._explicitConstructorInvocation_in_methodDeclaration1861);
+					explicitConstructorInvocation();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(42); }
+
+				DebugLocation(240, 9);
+				// EntityMapping.g:240:9: ( blockStatement )*
+				try { DebugEnterSubRule(43);
+				while (true)
+				{
+					int alt43=2;
+					try { DebugEnterDecision(43, decisionCanBacktrack[43]);
+					int LA43_0 = input.LA(1);
+
+					if ((LA43_0==ABSTRACT||(LA43_0>=ASSERT && LA43_0<=BANG)||(LA43_0>=BOOLEAN && LA43_0<=BYTE)||(LA43_0>=CHAR && LA43_0<=CLASS)||LA43_0==CONTINUE||LA43_0==DO||(LA43_0>=DOUBLE && LA43_0<=DOUBLELITERAL)||LA43_0==ENUM||(LA43_0>=FALSE && LA43_0<=FINAL)||(LA43_0>=FLOAT && LA43_0<=FOR)||(LA43_0>=IDENTIFIER && LA43_0<=IF)||(LA43_0>=INT && LA43_0<=INTLITERAL)||LA43_0==LBRACE||(LA43_0>=LONG && LA43_0<=LT)||(LA43_0>=MONKEYS_AT && LA43_0<=NULL)||LA43_0==PLUS||(LA43_0>=PLUSPLUS && LA43_0<=PUBLIC)||LA43_0==RETURN||(LA43_0>=SEMI && LA43_0<=SHORT)||(LA43_0>=STATIC && LA43_0<=SUB)||(LA43_0>=SUBSUB && LA43_0<=SYNCHRONIZED)||(LA43_0>=THIS && LA43_0<=THROW)||(LA43_0>=TILDE && LA43_0<=WHILE)))
+					{
+						alt43 = 1;
+					}
+
+
+					} finally { DebugExitDecision(43); }
+					switch ( alt43 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:240:10: blockStatement
+						{
+						DebugLocation(240, 10);
+						PushFollow(Follow._blockStatement_in_methodDeclaration1883);
+						blockStatement();
+						PopFollow();
+						if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop43;
+					}
+				}
+
+				loop43:
+					;
+
+				} finally { DebugExitSubRule(43); }
+
+				DebugLocation(242, 9);
+				Match(input,RBRACE,Follow._RBRACE_in_methodDeclaration1904); if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:243:9: modifiers ( typeParameters )? ( type | 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( block | ';' )
+				{
+				DebugLocation(243, 9);
+				PushFollow(Follow._modifiers_in_methodDeclaration1914);
+				modifiers();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(244, 9);
+				// EntityMapping.g:244:9: ( typeParameters )?
+				int alt44=2;
+				try { DebugEnterSubRule(44);
+				try { DebugEnterDecision(44, decisionCanBacktrack[44]);
+				int LA44_0 = input.LA(1);
+
+				if ((LA44_0==LT))
+				{
+					alt44 = 1;
+				}
+				} finally { DebugExitDecision(44); }
+				switch (alt44)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:244:10: typeParameters
+					{
+					DebugLocation(244, 10);
+					PushFollow(Follow._typeParameters_in_methodDeclaration1925);
+					typeParameters();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(44); }
+
+				DebugLocation(246, 9);
+				// EntityMapping.g:246:9: ( type | 'void' )
+				int alt45=2;
+				try { DebugEnterSubRule(45);
+				try { DebugEnterDecision(45, decisionCanBacktrack[45]);
+				int LA45_0 = input.LA(1);
+
+				if ((LA45_0==BOOLEAN||LA45_0==BYTE||LA45_0==CHAR||LA45_0==DOUBLE||LA45_0==FLOAT||LA45_0==IDENTIFIER||LA45_0==INT||LA45_0==LONG||LA45_0==SHORT))
+				{
+					alt45 = 1;
+				}
+				else if ((LA45_0==VOID))
+				{
+					alt45 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 45, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				} finally { DebugExitDecision(45); }
+				switch (alt45)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:246:10: type
+					{
+					DebugLocation(246, 10);
+					PushFollow(Follow._type_in_methodDeclaration1947);
+					type();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// EntityMapping.g:247:13: 'void'
+					{
+					DebugLocation(247, 13);
+					Match(input,VOID,Follow._VOID_in_methodDeclaration1961); if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(45); }
+
+				DebugLocation(249, 9);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_methodDeclaration1981); if (state.failed) return;
+				DebugLocation(250, 9);
+				PushFollow(Follow._formalParameters_in_methodDeclaration1991);
+				formalParameters();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(251, 9);
+				// EntityMapping.g:251:9: ( '[' ']' )*
+				try { DebugEnterSubRule(46);
+				while (true)
+				{
+					int alt46=2;
+					try { DebugEnterDecision(46, decisionCanBacktrack[46]);
+					int LA46_0 = input.LA(1);
+
+					if ((LA46_0==LBRACKET))
+					{
+						alt46 = 1;
+					}
+
+
+					} finally { DebugExitDecision(46); }
+					switch ( alt46 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:251:10: '[' ']'
+						{
+						DebugLocation(251, 10);
+						Match(input,LBRACKET,Follow._LBRACKET_in_methodDeclaration2002); if (state.failed) return;
+						DebugLocation(251, 14);
+						Match(input,RBRACKET,Follow._RBRACKET_in_methodDeclaration2004); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop46;
+					}
+				}
+
+				loop46:
+					;
+
+				} finally { DebugExitSubRule(46); }
+
+				DebugLocation(253, 9);
+				// EntityMapping.g:253:9: ( 'throws' qualifiedNameList )?
+				int alt47=2;
+				try { DebugEnterSubRule(47);
+				try { DebugEnterDecision(47, decisionCanBacktrack[47]);
+				int LA47_0 = input.LA(1);
+
+				if ((LA47_0==THROWS))
+				{
+					alt47 = 1;
+				}
+				} finally { DebugExitDecision(47); }
+				switch (alt47)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:253:10: 'throws' qualifiedNameList
+					{
+					DebugLocation(253, 10);
+					Match(input,THROWS,Follow._THROWS_in_methodDeclaration2026); if (state.failed) return;
+					DebugLocation(253, 19);
+					PushFollow(Follow._qualifiedNameList_in_methodDeclaration2028);
+					qualifiedNameList();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(47); }
+
+				DebugLocation(255, 9);
+				// EntityMapping.g:255:9: ( block | ';' )
+				int alt48=2;
+				try { DebugEnterSubRule(48);
+				try { DebugEnterDecision(48, decisionCanBacktrack[48]);
+				int LA48_0 = input.LA(1);
+
+				if ((LA48_0==LBRACE))
+				{
+					alt48 = 1;
+				}
+				else if ((LA48_0==SEMI))
+				{
+					alt48 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 48, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				} finally { DebugExitDecision(48); }
+				switch (alt48)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:256:13: block
+					{
+					DebugLocation(256, 13);
+					PushFollow(Follow._block_in_methodDeclaration2083);
+					block();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// EntityMapping.g:257:13: ';'
+					{
+					DebugLocation(257, 13);
+					Match(input,SEMI,Follow._SEMI_in_methodDeclaration2097); if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(48); }
+
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("methodDeclaration", 26);
+			LeaveRule("methodDeclaration", 26);
+			LeaveRule_methodDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 26, methodDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(259, 4);
+		} finally { DebugExitRule(GrammarFileName, "methodDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "methodDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_fieldDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_fieldDeclaration() {}
+
+	// $ANTLR start "fieldDeclaration"
+	// EntityMapping.g:262:1: fieldDeclaration : modifiers type variableDeclarator ( ',' variableDeclarator )* ';' ;
+	[GrammarRule("fieldDeclaration")]
+	private void fieldDeclaration()
+	{
+		EnterRule_fieldDeclaration();
+		EnterRule("fieldDeclaration", 27);
+		TraceIn("fieldDeclaration", 27);
+	    int fieldDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "fieldDeclaration");
+		DebugLocation(262, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 27)) { return; }
+
+			// EntityMapping.g:263:5: ( modifiers type variableDeclarator ( ',' variableDeclarator )* ';' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:263:9: modifiers type variableDeclarator ( ',' variableDeclarator )* ';'
+			{
+			DebugLocation(263, 9);
+			PushFollow(Follow._modifiers_in_fieldDeclaration2129);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(264, 9);
+			PushFollow(Follow._type_in_fieldDeclaration2139);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(265, 9);
+			PushFollow(Follow._variableDeclarator_in_fieldDeclaration2149);
+			variableDeclarator();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(266, 9);
+			// EntityMapping.g:266:9: ( ',' variableDeclarator )*
+			try { DebugEnterSubRule(50);
+			while (true)
+			{
+				int alt50=2;
+				try { DebugEnterDecision(50, decisionCanBacktrack[50]);
+				int LA50_0 = input.LA(1);
+
+				if ((LA50_0==COMMA))
+				{
+					alt50 = 1;
+				}
+
+
+				} finally { DebugExitDecision(50); }
+				switch ( alt50 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:266:10: ',' variableDeclarator
+					{
+					DebugLocation(266, 10);
+					Match(input,COMMA,Follow._COMMA_in_fieldDeclaration2160); if (state.failed) return;
+					DebugLocation(266, 14);
+					PushFollow(Follow._variableDeclarator_in_fieldDeclaration2162);
+					variableDeclarator();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop50;
+				}
+			}
+
+			loop50:
+				;
+
+			} finally { DebugExitSubRule(50); }
+
+			DebugLocation(268, 9);
+			Match(input,SEMI,Follow._SEMI_in_fieldDeclaration2183); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("fieldDeclaration", 27);
+			LeaveRule("fieldDeclaration", 27);
+			LeaveRule_fieldDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 27, fieldDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(269, 4);
+		} finally { DebugExitRule(GrammarFileName, "fieldDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "fieldDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_variableDeclarator() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_variableDeclarator() {}
+
+	// $ANTLR start "variableDeclarator"
+	// EntityMapping.g:271:1: variableDeclarator : IDENTIFIER ( '[' ']' )* ( '=' variableInitializer )? ;
+	[GrammarRule("variableDeclarator")]
+	private void variableDeclarator()
+	{
+		EnterRule_variableDeclarator();
+		EnterRule("variableDeclarator", 28);
+		TraceIn("variableDeclarator", 28);
+	    int variableDeclarator_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "variableDeclarator");
+		DebugLocation(271, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 28)) { return; }
+
+			// EntityMapping.g:272:5: ( IDENTIFIER ( '[' ']' )* ( '=' variableInitializer )? )
+			DebugEnterAlt(1);
+			// EntityMapping.g:272:9: IDENTIFIER ( '[' ']' )* ( '=' variableInitializer )?
+			{
+			DebugLocation(272, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_variableDeclarator2203); if (state.failed) return;
+			DebugLocation(273, 9);
+			// EntityMapping.g:273:9: ( '[' ']' )*
+			try { DebugEnterSubRule(51);
+			while (true)
+			{
+				int alt51=2;
+				try { DebugEnterDecision(51, decisionCanBacktrack[51]);
+				int LA51_0 = input.LA(1);
+
+				if ((LA51_0==LBRACKET))
+				{
+					alt51 = 1;
+				}
+
+
+				} finally { DebugExitDecision(51); }
+				switch ( alt51 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:273:10: '[' ']'
+					{
+					DebugLocation(273, 10);
+					Match(input,LBRACKET,Follow._LBRACKET_in_variableDeclarator2214); if (state.failed) return;
+					DebugLocation(273, 14);
+					Match(input,RBRACKET,Follow._RBRACKET_in_variableDeclarator2216); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop51;
+				}
+			}
+
+			loop51:
+				;
+
+			} finally { DebugExitSubRule(51); }
+
+			DebugLocation(275, 9);
+			// EntityMapping.g:275:9: ( '=' variableInitializer )?
+			int alt52=2;
+			try { DebugEnterSubRule(52);
+			try { DebugEnterDecision(52, decisionCanBacktrack[52]);
+			int LA52_0 = input.LA(1);
+
+			if ((LA52_0==EQ))
+			{
+				alt52 = 1;
+			}
+			} finally { DebugExitDecision(52); }
+			switch (alt52)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:275:10: '=' variableInitializer
+				{
+				DebugLocation(275, 10);
+				Match(input,EQ,Follow._EQ_in_variableDeclarator2238); if (state.failed) return;
+				DebugLocation(275, 14);
+				PushFollow(Follow._variableInitializer_in_variableDeclarator2240);
+				variableInitializer();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(52); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("variableDeclarator", 28);
+			LeaveRule("variableDeclarator", 28);
+			LeaveRule_variableDeclarator();
+	        if (state.backtracking > 0) { Memoize(input, 28, variableDeclarator_StartIndex); }
+
+	    }
+	 	DebugLocation(277, 4);
+		} finally { DebugExitRule(GrammarFileName, "variableDeclarator"); }
+		return;
+
+	}
+	// $ANTLR end "variableDeclarator"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_interfaceBodyDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_interfaceBodyDeclaration() {}
+
+	// $ANTLR start "interfaceBodyDeclaration"
+	// EntityMapping.g:282:1: interfaceBodyDeclaration : ( interfaceFieldDeclaration | interfaceMethodDeclaration | interfaceDeclaration | classDeclaration | ';' );
+	[GrammarRule("interfaceBodyDeclaration")]
+	private void interfaceBodyDeclaration()
+	{
+		EnterRule_interfaceBodyDeclaration();
+		EnterRule("interfaceBodyDeclaration", 29);
+		TraceIn("interfaceBodyDeclaration", 29);
+	    int interfaceBodyDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "interfaceBodyDeclaration");
+		DebugLocation(282, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 29)) { return; }
+
+			// EntityMapping.g:283:5: ( interfaceFieldDeclaration | interfaceMethodDeclaration | interfaceDeclaration | classDeclaration | ';' )
+			int alt53=5;
+			try { DebugEnterDecision(53, decisionCanBacktrack[53]);
+			switch (input.LA(1))
+			{
+			case MONKEYS_AT:
+				{
+				int LA53_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PUBLIC:
+				{
+				int LA53_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PROTECTED:
+				{
+				int LA53_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PRIVATE:
+				{
+				int LA53_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STATIC:
+				{
+				int LA53_5 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 5, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ABSTRACT:
+				{
+				int LA53_6 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 6, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case FINAL:
+				{
+				int LA53_7 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 7, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case NATIVE:
+				{
+				int LA53_8 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 8, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				int LA53_9 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 9, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case TRANSIENT:
+				{
+				int LA53_10 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 10, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case VOLATILE:
+				{
+				int LA53_11 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 11, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STRICTFP:
+				{
+				int LA53_12 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else if ((EvaluatePredicate(synpred70_EntityMapping_fragment)))
+				{
+					alt53 = 3;
+				}
+				else if ((EvaluatePredicate(synpred71_EntityMapping_fragment)))
+				{
+					alt53 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 12, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case IDENTIFIER:
+				{
+				int LA53_13 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 13, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+				{
+				int LA53_14 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred68_EntityMapping_fragment)))
+				{
+					alt53 = 1;
+				}
+				else if ((EvaluatePredicate(synpred69_EntityMapping_fragment)))
+				{
+					alt53 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 14, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case LT:
+			case VOID:
+				{
+				alt53 = 2;
+				}
+				break;
+			case INTERFACE:
+				{
+				alt53 = 3;
+				}
+				break;
+			case CLASS:
+			case ENUM:
+				{
+				alt53 = 4;
+				}
+				break;
+			case SEMI:
+				{
+				alt53 = 5;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(53); }
+			switch (alt53)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:284:9: interfaceFieldDeclaration
+				{
+				DebugLocation(284, 9);
+				PushFollow(Follow._interfaceFieldDeclaration_in_interfaceBodyDeclaration2279);
+				interfaceFieldDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:285:9: interfaceMethodDeclaration
+				{
+				DebugLocation(285, 9);
+				PushFollow(Follow._interfaceMethodDeclaration_in_interfaceBodyDeclaration2289);
+				interfaceMethodDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:286:9: interfaceDeclaration
+				{
+				DebugLocation(286, 9);
+				PushFollow(Follow._interfaceDeclaration_in_interfaceBodyDeclaration2299);
+				interfaceDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:287:9: classDeclaration
+				{
+				DebugLocation(287, 9);
+				PushFollow(Follow._classDeclaration_in_interfaceBodyDeclaration2309);
+				classDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// EntityMapping.g:288:9: ';'
+				{
+				DebugLocation(288, 9);
+				Match(input,SEMI,Follow._SEMI_in_interfaceBodyDeclaration2319); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("interfaceBodyDeclaration", 29);
+			LeaveRule("interfaceBodyDeclaration", 29);
+			LeaveRule_interfaceBodyDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 29, interfaceBodyDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(289, 4);
+		} finally { DebugExitRule(GrammarFileName, "interfaceBodyDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "interfaceBodyDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_interfaceMethodDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_interfaceMethodDeclaration() {}
+
+	// $ANTLR start "interfaceMethodDeclaration"
+	// EntityMapping.g:291:1: interfaceMethodDeclaration : modifiers ( typeParameters )? ( type | 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' ;
+	[GrammarRule("interfaceMethodDeclaration")]
+	private void interfaceMethodDeclaration()
+	{
+		EnterRule_interfaceMethodDeclaration();
+		EnterRule("interfaceMethodDeclaration", 30);
+		TraceIn("interfaceMethodDeclaration", 30);
+	    int interfaceMethodDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "interfaceMethodDeclaration");
+		DebugLocation(291, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 30)) { return; }
+
+			// EntityMapping.g:292:5: ( modifiers ( typeParameters )? ( type | 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:292:9: modifiers ( typeParameters )? ( type | 'void' ) IDENTIFIER formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';'
+			{
+			DebugLocation(292, 9);
+			PushFollow(Follow._modifiers_in_interfaceMethodDeclaration2339);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(293, 9);
+			// EntityMapping.g:293:9: ( typeParameters )?
+			int alt54=2;
+			try { DebugEnterSubRule(54);
+			try { DebugEnterDecision(54, decisionCanBacktrack[54]);
+			int LA54_0 = input.LA(1);
+
+			if ((LA54_0==LT))
+			{
+				alt54 = 1;
+			}
+			} finally { DebugExitDecision(54); }
+			switch (alt54)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:293:10: typeParameters
+				{
+				DebugLocation(293, 10);
+				PushFollow(Follow._typeParameters_in_interfaceMethodDeclaration2350);
+				typeParameters();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(54); }
+
+			DebugLocation(295, 9);
+			// EntityMapping.g:295:9: ( type | 'void' )
+			int alt55=2;
+			try { DebugEnterSubRule(55);
+			try { DebugEnterDecision(55, decisionCanBacktrack[55]);
+			int LA55_0 = input.LA(1);
+
+			if ((LA55_0==BOOLEAN||LA55_0==BYTE||LA55_0==CHAR||LA55_0==DOUBLE||LA55_0==FLOAT||LA55_0==IDENTIFIER||LA55_0==INT||LA55_0==LONG||LA55_0==SHORT))
+			{
+				alt55 = 1;
+			}
+			else if ((LA55_0==VOID))
+			{
+				alt55 = 2;
 			}
 			else
 			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 55, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(55); }
+			switch (alt55)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:295:10: type
+				{
+				DebugLocation(295, 10);
+				PushFollow(Follow._type_in_interfaceMethodDeclaration2372);
+				type();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:296:10: 'void'
+				{
+				DebugLocation(296, 10);
+				Match(input,VOID,Follow._VOID_in_interfaceMethodDeclaration2383); if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(55); }
+
+			DebugLocation(298, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_interfaceMethodDeclaration2403); if (state.failed) return;
+			DebugLocation(299, 9);
+			PushFollow(Follow._formalParameters_in_interfaceMethodDeclaration2413);
+			formalParameters();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(300, 9);
+			// EntityMapping.g:300:9: ( '[' ']' )*
+			try { DebugEnterSubRule(56);
+			while (true)
+			{
+				int alt56=2;
+				try { DebugEnterDecision(56, decisionCanBacktrack[56]);
+				int LA56_0 = input.LA(1);
+
+				if ((LA56_0==LBRACKET))
+				{
+					alt56 = 1;
+				}
+
+
+				} finally { DebugExitDecision(56); }
+				switch ( alt56 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:300:10: '[' ']'
+					{
+					DebugLocation(300, 10);
+					Match(input,LBRACKET,Follow._LBRACKET_in_interfaceMethodDeclaration2424); if (state.failed) return;
+					DebugLocation(300, 14);
+					Match(input,RBRACKET,Follow._RBRACKET_in_interfaceMethodDeclaration2426); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop56;
+				}
+			}
+
+			loop56:
+				;
+
+			} finally { DebugExitSubRule(56); }
+
+			DebugLocation(302, 9);
+			// EntityMapping.g:302:9: ( 'throws' qualifiedNameList )?
+			int alt57=2;
+			try { DebugEnterSubRule(57);
+			try { DebugEnterDecision(57, decisionCanBacktrack[57]);
+			int LA57_0 = input.LA(1);
+
+			if ((LA57_0==THROWS))
+			{
+				alt57 = 1;
+			}
+			} finally { DebugExitDecision(57); }
+			switch (alt57)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:302:10: 'throws' qualifiedNameList
+				{
+				DebugLocation(302, 10);
+				Match(input,THROWS,Follow._THROWS_in_interfaceMethodDeclaration2448); if (state.failed) return;
+				DebugLocation(302, 19);
+				PushFollow(Follow._qualifiedNameList_in_interfaceMethodDeclaration2450);
+				qualifiedNameList();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(57); }
+
+			DebugLocation(303, 12);
+			Match(input,SEMI,Follow._SEMI_in_interfaceMethodDeclaration2463); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("interfaceMethodDeclaration", 30);
+			LeaveRule("interfaceMethodDeclaration", 30);
+			LeaveRule_interfaceMethodDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 30, interfaceMethodDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(304, 4);
+		} finally { DebugExitRule(GrammarFileName, "interfaceMethodDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "interfaceMethodDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_interfaceFieldDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_interfaceFieldDeclaration() {}
+
+	// $ANTLR start "interfaceFieldDeclaration"
+	// EntityMapping.g:311:1: interfaceFieldDeclaration : modifiers type variableDeclarator ( ',' variableDeclarator )* ';' ;
+	[GrammarRule("interfaceFieldDeclaration")]
+	private void interfaceFieldDeclaration()
+	{
+		EnterRule_interfaceFieldDeclaration();
+		EnterRule("interfaceFieldDeclaration", 31);
+		TraceIn("interfaceFieldDeclaration", 31);
+	    int interfaceFieldDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "interfaceFieldDeclaration");
+		DebugLocation(311, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 31)) { return; }
+
+			// EntityMapping.g:312:5: ( modifiers type variableDeclarator ( ',' variableDeclarator )* ';' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:312:9: modifiers type variableDeclarator ( ',' variableDeclarator )* ';'
+			{
+			DebugLocation(312, 9);
+			PushFollow(Follow._modifiers_in_interfaceFieldDeclaration2485);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(312, 19);
+			PushFollow(Follow._type_in_interfaceFieldDeclaration2487);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(312, 24);
+			PushFollow(Follow._variableDeclarator_in_interfaceFieldDeclaration2489);
+			variableDeclarator();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(313, 9);
+			// EntityMapping.g:313:9: ( ',' variableDeclarator )*
+			try { DebugEnterSubRule(58);
+			while (true)
+			{
+				int alt58=2;
+				try { DebugEnterDecision(58, decisionCanBacktrack[58]);
+				int LA58_0 = input.LA(1);
+
+				if ((LA58_0==COMMA))
+				{
+					alt58 = 1;
+				}
+
+
+				} finally { DebugExitDecision(58); }
+				switch ( alt58 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:313:10: ',' variableDeclarator
+					{
+					DebugLocation(313, 10);
+					Match(input,COMMA,Follow._COMMA_in_interfaceFieldDeclaration2500); if (state.failed) return;
+					DebugLocation(313, 14);
+					PushFollow(Follow._variableDeclarator_in_interfaceFieldDeclaration2502);
+					variableDeclarator();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop58;
+				}
+			}
+
+			loop58:
+				;
+
+			} finally { DebugExitSubRule(58); }
+
+			DebugLocation(315, 9);
+			Match(input,SEMI,Follow._SEMI_in_interfaceFieldDeclaration2523); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("interfaceFieldDeclaration", 31);
+			LeaveRule("interfaceFieldDeclaration", 31);
+			LeaveRule_interfaceFieldDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 31, interfaceFieldDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(316, 4);
+		} finally { DebugExitRule(GrammarFileName, "interfaceFieldDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "interfaceFieldDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_type() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_type() {}
+
+	// $ANTLR start "type"
+	// EntityMapping.g:319:1: type : ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* );
+	[GrammarRule("type")]
+	private void type()
+	{
+		EnterRule_type();
+		EnterRule("type", 32);
+		TraceIn("type", 32);
+	    int type_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "type");
+		DebugLocation(319, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 32)) { return; }
+
+			// EntityMapping.g:320:5: ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* )
+			int alt61=2;
+			try { DebugEnterDecision(61, decisionCanBacktrack[61]);
+			int LA61_0 = input.LA(1);
+
+			if ((LA61_0==IDENTIFIER))
+			{
+				alt61 = 1;
+			}
+			else if ((LA61_0==BOOLEAN||LA61_0==BYTE||LA61_0==CHAR||LA61_0==DOUBLE||LA61_0==FLOAT||LA61_0==INT||LA61_0==LONG||LA61_0==SHORT))
+			{
+				alt61 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 61, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(61); }
+			switch (alt61)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:320:9: classOrInterfaceType ( '[' ']' )*
+				{
+				DebugLocation(320, 9);
+				PushFollow(Follow._classOrInterfaceType_in_type2544);
+				classOrInterfaceType();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(321, 9);
+				// EntityMapping.g:321:9: ( '[' ']' )*
+				try { DebugEnterSubRule(59);
+				while (true)
+				{
+					int alt59=2;
+					try { DebugEnterDecision(59, decisionCanBacktrack[59]);
+					int LA59_0 = input.LA(1);
+
+					if ((LA59_0==LBRACKET))
+					{
+						alt59 = 1;
+					}
+
+
+					} finally { DebugExitDecision(59); }
+					switch ( alt59 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:321:10: '[' ']'
+						{
+						DebugLocation(321, 10);
+						Match(input,LBRACKET,Follow._LBRACKET_in_type2555); if (state.failed) return;
+						DebugLocation(321, 14);
+						Match(input,RBRACKET,Follow._RBRACKET_in_type2557); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop59;
+					}
+				}
+
+				loop59:
+					;
+
+				} finally { DebugExitSubRule(59); }
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:323:9: primitiveType ( '[' ']' )*
+				{
+				DebugLocation(323, 9);
+				PushFollow(Follow._primitiveType_in_type2578);
+				primitiveType();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(324, 9);
+				// EntityMapping.g:324:9: ( '[' ']' )*
+				try { DebugEnterSubRule(60);
+				while (true)
+				{
+					int alt60=2;
+					try { DebugEnterDecision(60, decisionCanBacktrack[60]);
+					int LA60_0 = input.LA(1);
+
+					if ((LA60_0==LBRACKET))
+					{
+						alt60 = 1;
+					}
+
+
+					} finally { DebugExitDecision(60); }
+					switch ( alt60 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:324:10: '[' ']'
+						{
+						DebugLocation(324, 10);
+						Match(input,LBRACKET,Follow._LBRACKET_in_type2589); if (state.failed) return;
+						DebugLocation(324, 14);
+						Match(input,RBRACKET,Follow._RBRACKET_in_type2591); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop60;
+					}
+				}
+
+				loop60:
+					;
+
+				} finally { DebugExitSubRule(60); }
+
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("type", 32);
+			LeaveRule("type", 32);
+			LeaveRule_type();
+	        if (state.backtracking > 0) { Memoize(input, 32, type_StartIndex); }
+
+	    }
+	 	DebugLocation(326, 4);
+		} finally { DebugExitRule(GrammarFileName, "type"); }
+		return;
+
+	}
+	// $ANTLR end "type"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_classOrInterfaceType() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_classOrInterfaceType() {}
+
+	// $ANTLR start "classOrInterfaceType"
+	// EntityMapping.g:329:1: classOrInterfaceType : IDENTIFIER ( typeArguments )? ( '.' IDENTIFIER ( typeArguments )? )* ;
+	[GrammarRule("classOrInterfaceType")]
+	private void classOrInterfaceType()
+	{
+		EnterRule_classOrInterfaceType();
+		EnterRule("classOrInterfaceType", 33);
+		TraceIn("classOrInterfaceType", 33);
+	    int classOrInterfaceType_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "classOrInterfaceType");
+		DebugLocation(329, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 33)) { return; }
+
+			// EntityMapping.g:330:5: ( IDENTIFIER ( typeArguments )? ( '.' IDENTIFIER ( typeArguments )? )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:330:9: IDENTIFIER ( typeArguments )? ( '.' IDENTIFIER ( typeArguments )? )*
+			{
+			DebugLocation(330, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_classOrInterfaceType2623); if (state.failed) return;
+			DebugLocation(331, 9);
+			// EntityMapping.g:331:9: ( typeArguments )?
+			int alt62=2;
+			try { DebugEnterSubRule(62);
+			try { DebugEnterDecision(62, decisionCanBacktrack[62]);
+			int LA62_0 = input.LA(1);
+
+			if ((LA62_0==LT))
+			{
+				int LA62_1 = input.LA(2);
+
+				if ((LA62_1==BOOLEAN||LA62_1==BYTE||LA62_1==CHAR||LA62_1==DOUBLE||LA62_1==FLOAT||LA62_1==IDENTIFIER||LA62_1==INT||LA62_1==LONG||LA62_1==QUES||LA62_1==SHORT))
+				{
+					alt62 = 1;
+				}
+			}
+			} finally { DebugExitDecision(62); }
+			switch (alt62)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:331:10: typeArguments
+				{
+				DebugLocation(331, 10);
+				PushFollow(Follow._typeArguments_in_classOrInterfaceType2634);
+				typeArguments();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(62); }
+
+			DebugLocation(333, 9);
+			// EntityMapping.g:333:9: ( '.' IDENTIFIER ( typeArguments )? )*
+			try { DebugEnterSubRule(64);
+			while (true)
+			{
+				int alt64=2;
+				try { DebugEnterDecision(64, decisionCanBacktrack[64]);
+				int LA64_0 = input.LA(1);
+
+				if ((LA64_0==DOT))
+				{
+					alt64 = 1;
+				}
+
+
+				} finally { DebugExitDecision(64); }
+				switch ( alt64 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:333:10: '.' IDENTIFIER ( typeArguments )?
+					{
+					DebugLocation(333, 10);
+					Match(input,DOT,Follow._DOT_in_classOrInterfaceType2656); if (state.failed) return;
+					DebugLocation(333, 14);
+					Match(input,IDENTIFIER,Follow._IDENTIFIER_in_classOrInterfaceType2658); if (state.failed) return;
+					DebugLocation(334, 13);
+					// EntityMapping.g:334:13: ( typeArguments )?
+					int alt63=2;
+					try { DebugEnterSubRule(63);
+					try { DebugEnterDecision(63, decisionCanBacktrack[63]);
+					int LA63_0 = input.LA(1);
+
+					if ((LA63_0==LT))
+					{
+						int LA63_1 = input.LA(2);
+
+						if ((LA63_1==BOOLEAN||LA63_1==BYTE||LA63_1==CHAR||LA63_1==DOUBLE||LA63_1==FLOAT||LA63_1==IDENTIFIER||LA63_1==INT||LA63_1==LONG||LA63_1==QUES||LA63_1==SHORT))
+						{
+							alt63 = 1;
+						}
+					}
+					} finally { DebugExitDecision(63); }
+					switch (alt63)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:334:14: typeArguments
+						{
+						DebugLocation(334, 14);
+						PushFollow(Follow._typeArguments_in_classOrInterfaceType2673);
+						typeArguments();
+						PopFollow();
+						if (state.failed) return;
+
+						}
+						break;
+
+					}
+					} finally { DebugExitSubRule(63); }
+
+
+					}
+					break;
+
+				default:
+					goto loop64;
+				}
+			}
+
+			loop64:
+				;
+
+			} finally { DebugExitSubRule(64); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("classOrInterfaceType", 33);
+			LeaveRule("classOrInterfaceType", 33);
+			LeaveRule_classOrInterfaceType();
+	        if (state.backtracking > 0) { Memoize(input, 33, classOrInterfaceType_StartIndex); }
+
+	    }
+	 	DebugLocation(337, 4);
+		} finally { DebugExitRule(GrammarFileName, "classOrInterfaceType"); }
+		return;
+
+	}
+	// $ANTLR end "classOrInterfaceType"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_primitiveType() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_primitiveType() {}
+
+	// $ANTLR start "primitiveType"
+	// EntityMapping.g:339:1: primitiveType : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' );
+	[GrammarRule("primitiveType")]
+	private void primitiveType()
+	{
+		EnterRule_primitiveType();
+		EnterRule("primitiveType", 34);
+		TraceIn("primitiveType", 34);
+	    int primitiveType_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "primitiveType");
+		DebugLocation(339, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 34)) { return; }
+
+			// EntityMapping.g:340:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:
+			{
+			DebugLocation(340, 5);
+			if (input.LA(1)==BOOLEAN||input.LA(1)==BYTE||input.LA(1)==CHAR||input.LA(1)==DOUBLE||input.LA(1)==FLOAT||input.LA(1)==INT||input.LA(1)==LONG||input.LA(1)==SHORT)
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
 				MismatchedSetException mse = new MismatchedSetException(null,input);
 				DebugRecognitionException(mse);
 				throw mse;
@@ -1882,645 +6818,13733 @@ public partial class EntityMappingParser : Antlr.Runtime.Parser
 
 			}
 
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
 		}
 		catch (RecognitionException re)
 		{
 			ReportError(re);
 			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
 		}
 		finally
 		{
-			TraceOut("value", 12);
-			LeaveRule("value", 12);
-			LeaveRule_value();
-		}
-		DebugLocation(55, 34);
-		} finally { DebugExitRule(GrammarFileName, "value"); }
-		return retval;
+			TraceOut("primitiveType", 34);
+			LeaveRule("primitiveType", 34);
+			LeaveRule_primitiveType();
+	        if (state.backtracking > 0) { Memoize(input, 34, primitiveType_StartIndex); }
+
+	    }
+	 	DebugLocation(348, 4);
+		} finally { DebugExitRule(GrammarFileName, "primitiveType"); }
+		return;
 
 	}
-	// $ANTLR end "value"
+	// $ANTLR end "primitiveType"
 
-	partial void EnterRule_memberAccess();
-	partial void LeaveRule_memberAccess();
 
-	// $ANTLR start "memberAccess"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:57:1: memberAccess : ID '.' ID -> ^( GETMEMBER ID ID ) ;
-	[GrammarRule("memberAccess")]
-	private AstParserRuleReturnScope<CommonTree, IToken> memberAccess()
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_typeArguments() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_typeArguments() {}
+
+	// $ANTLR start "typeArguments"
+	// EntityMapping.g:350:1: typeArguments : '<' typeArgument ( ',' typeArgument )* '>' ;
+	[GrammarRule("typeArguments")]
+	private void typeArguments()
 	{
-		EnterRule_memberAccess();
-		EnterRule("memberAccess", 13);
-		TraceIn("memberAccess", 13);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
+		EnterRule_typeArguments();
+		EnterRule("typeArguments", 35);
+		TraceIn("typeArguments", 35);
+	    int typeArguments_StartIndex = input.Index;
 
-		CommonTree root_0 = default(CommonTree);
-
-		IToken ID49 = default(IToken);
-		IToken char_literal50 = default(IToken);
-		IToken ID51 = default(IToken);
-
-		CommonTree ID49_tree = default(CommonTree);
-		CommonTree char_literal50_tree = default(CommonTree);
-		CommonTree ID51_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_43=new RewriteRuleITokenStream(adaptor,"token 43");
-		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		try { DebugEnterRule(GrammarFileName, "memberAccess");
-		DebugLocation(57, 46);
+		try { DebugEnterRule(GrammarFileName, "typeArguments");
+		DebugLocation(350, 4);
 		try
 		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:57:14: ( ID '.' ID -> ^( GETMEMBER ID ID ) )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 35)) { return; }
+
+			// EntityMapping.g:351:5: ( '<' typeArgument ( ',' typeArgument )* '>' )
 			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:57:16: ID '.' ID
+			// EntityMapping.g:351:9: '<' typeArgument ( ',' typeArgument )* '>'
 			{
-			DebugLocation(57, 16);
-			ID49=(IToken)Match(input,ID,Follow._ID_in_memberAccess393);  
-			stream_ID.Add(ID49);
-
-			DebugLocation(57, 19);
-			char_literal50=(IToken)Match(input,43,Follow._43_in_memberAccess395);  
-			stream_43.Add(char_literal50);
-
-			DebugLocation(57, 23);
-			ID51=(IToken)Match(input,ID,Follow._ID_in_memberAccess397);  
-			stream_ID.Add(ID51);
-
-
-
-			{
-			// AST REWRITE
-			// elements: ID, ID
-			// token labels: 
-			// rule labels: retval
-			// token list labels: 
-			// rule list labels: 
-			// wildcard labels: 
-			retval.Tree = root_0;
-			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
-			root_0 = (CommonTree)adaptor.Nil();
-			// 57:26: -> ^( GETMEMBER ID ID )
-			{
-				DebugLocation(57, 29);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:57:29: ^( GETMEMBER ID ID )
-				{
-				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(57, 31);
-				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(GETMEMBER, "GETMEMBER"), root_1);
-
-				DebugLocation(57, 41);
-				adaptor.AddChild(root_1, stream_ID.NextNode());
-				DebugLocation(57, 44);
-				adaptor.AddChild(root_1, stream_ID.NextNode());
-
-				adaptor.AddChild(root_0, root_1);
-				}
-
-			}
-
-			retval.Tree = root_0;
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("memberAccess", 13);
-			LeaveRule("memberAccess", 13);
-			LeaveRule_memberAccess();
-		}
-		DebugLocation(57, 46);
-		} finally { DebugExitRule(GrammarFileName, "memberAccess"); }
-		return retval;
-
-	}
-	// $ANTLR end "memberAccess"
-
-	partial void EnterRule_ifExpr();
-	partial void LeaveRule_ifExpr();
-
-	// $ANTLR start "ifExpr"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:59:1: ifExpr : 'IF' '(' ce= expr ',' e1= expr ',' e2= expr ')' -> ^( 'IF' ^( COND $ce) ^( TFEXPR $e1 $e2) ) ;
-	[GrammarRule("ifExpr")]
-	private AstParserRuleReturnScope<CommonTree, IToken> ifExpr()
-	{
-		EnterRule_ifExpr();
-		EnterRule("ifExpr", 14);
-		TraceIn("ifExpr", 14);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken string_literal52 = default(IToken);
-		IToken char_literal53 = default(IToken);
-		IToken char_literal54 = default(IToken);
-		IToken char_literal55 = default(IToken);
-		IToken char_literal56 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> ce = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> e1 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> e2 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree string_literal52_tree = default(CommonTree);
-		CommonTree char_literal53_tree = default(CommonTree);
-		CommonTree char_literal54_tree = default(CommonTree);
-		CommonTree char_literal55_tree = default(CommonTree);
-		CommonTree char_literal56_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_42=new RewriteRuleITokenStream(adaptor,"token 42");
-		RewriteRuleITokenStream stream_41=new RewriteRuleITokenStream(adaptor,"token 41");
-		RewriteRuleITokenStream stream_47=new RewriteRuleITokenStream(adaptor,"token 47");
-		RewriteRuleITokenStream stream_40=new RewriteRuleITokenStream(adaptor,"token 40");
-		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
-		try { DebugEnterRule(GrammarFileName, "ifExpr");
-		DebugLocation(59, 94);
-		try
-		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:59:9: ( 'IF' '(' ce= expr ',' e1= expr ',' e2= expr ')' -> ^( 'IF' ^( COND $ce) ^( TFEXPR $e1 $e2) ) )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:59:11: 'IF' '(' ce= expr ',' e1= expr ',' e2= expr ')'
-			{
-			DebugLocation(59, 11);
-			string_literal52=(IToken)Match(input,47,Follow._47_in_ifExpr416);  
-			stream_47.Add(string_literal52);
-
-			DebugLocation(59, 15);
-			char_literal53=(IToken)Match(input,40,Follow._40_in_ifExpr417);  
-			stream_40.Add(char_literal53);
-
-			DebugLocation(59, 21);
-			PushFollow(Follow._expr_in_ifExpr421);
-			ce=expr();
+			DebugLocation(351, 9);
+			Match(input,LT,Follow._LT_in_typeArguments2810); if (state.failed) return;
+			DebugLocation(351, 13);
+			PushFollow(Follow._typeArgument_in_typeArguments2812);
+			typeArgument();
 			PopFollow();
-
-			stream_expr.Add(ce.Tree);
-			DebugLocation(59, 27);
-			char_literal54=(IToken)Match(input,42,Follow._42_in_ifExpr423);  
-			stream_42.Add(char_literal54);
-
-			DebugLocation(59, 33);
-			PushFollow(Follow._expr_in_ifExpr427);
-			e1=expr();
-			PopFollow();
-
-			stream_expr.Add(e1.Tree);
-			DebugLocation(59, 39);
-			char_literal55=(IToken)Match(input,42,Follow._42_in_ifExpr429);  
-			stream_42.Add(char_literal55);
-
-			DebugLocation(59, 45);
-			PushFollow(Follow._expr_in_ifExpr433);
-			e2=expr();
-			PopFollow();
-
-			stream_expr.Add(e2.Tree);
-			DebugLocation(59, 51);
-			char_literal56=(IToken)Match(input,41,Follow._41_in_ifExpr435);  
-			stream_41.Add(char_literal56);
-
-
-
-			{
-			// AST REWRITE
-			// elements: e1, ce, 47, e2
-			// token labels: 
-			// rule labels: retval, e1, e2, ce
-			// token list labels: 
-			// rule list labels: 
-			// wildcard labels: 
-			retval.Tree = root_0;
-			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-			RewriteRuleSubtreeStream stream_e1=new RewriteRuleSubtreeStream(adaptor,"rule e1",e1!=null?e1.Tree:null);
-			RewriteRuleSubtreeStream stream_e2=new RewriteRuleSubtreeStream(adaptor,"rule e2",e2!=null?e2.Tree:null);
-			RewriteRuleSubtreeStream stream_ce=new RewriteRuleSubtreeStream(adaptor,"rule ce",ce!=null?ce.Tree:null);
-
-			root_0 = (CommonTree)adaptor.Nil();
-			// 59:55: -> ^( 'IF' ^( COND $ce) ^( TFEXPR $e1 $e2) )
-			{
-				DebugLocation(59, 58);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:59:58: ^( 'IF' ^( COND $ce) ^( TFEXPR $e1 $e2) )
-				{
-				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(59, 60);
-				root_1 = (CommonTree)adaptor.BecomeRoot(stream_47.NextNode(), root_1);
-
-				DebugLocation(59, 65);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:59:65: ^( COND $ce)
-				{
-				CommonTree root_2 = (CommonTree)adaptor.Nil();
-				DebugLocation(59, 67);
-				root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(COND, "COND"), root_2);
-
-				DebugLocation(59, 73);
-				adaptor.AddChild(root_2, stream_ce.NextTree());
-
-				adaptor.AddChild(root_1, root_2);
-				}
-				DebugLocation(59, 77);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:59:77: ^( TFEXPR $e1 $e2)
-				{
-				CommonTree root_2 = (CommonTree)adaptor.Nil();
-				DebugLocation(59, 79);
-				root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(TFEXPR, "TFEXPR"), root_2);
-
-				DebugLocation(59, 87);
-				adaptor.AddChild(root_2, stream_e1.NextTree());
-				DebugLocation(59, 91);
-				adaptor.AddChild(root_2, stream_e2.NextTree());
-
-				adaptor.AddChild(root_1, root_2);
-				}
-
-				adaptor.AddChild(root_0, root_1);
-				}
-
-			}
-
-			retval.Tree = root_0;
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("ifExpr", 14);
-			LeaveRule("ifExpr", 14);
-			LeaveRule_ifExpr();
-		}
-		DebugLocation(59, 94);
-		} finally { DebugExitRule(GrammarFileName, "ifExpr"); }
-		return retval;
-
-	}
-	// $ANTLR end "ifExpr"
-
-	partial void EnterRule_functionCall();
-	partial void LeaveRule_functionCall();
-
-	// $ANTLR start "functionCall"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:61:1: functionCall : ID '(' ( params )? ')' -> ^( CALL ID ( params )* ) ;
-	[GrammarRule("functionCall")]
-	private AstParserRuleReturnScope<CommonTree, IToken> functionCall()
-	{
-		EnterRule_functionCall();
-		EnterRule("functionCall", 15);
-		TraceIn("functionCall", 15);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken ID57 = default(IToken);
-		IToken char_literal58 = default(IToken);
-		IToken char_literal60 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> params59 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree ID57_tree = default(CommonTree);
-		CommonTree char_literal58_tree = default(CommonTree);
-		CommonTree char_literal60_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_41=new RewriteRuleITokenStream(adaptor,"token 41");
-		RewriteRuleITokenStream stream_40=new RewriteRuleITokenStream(adaptor,"token 40");
-		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleSubtreeStream stream_params=new RewriteRuleSubtreeStream(adaptor,"rule params");
-		try { DebugEnterRule(GrammarFileName, "functionCall");
-		DebugLocation(61, 58);
-		try
-		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:61:14: ( ID '(' ( params )? ')' -> ^( CALL ID ( params )* ) )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:61:16: ID '(' ( params )? ')'
-			{
-			DebugLocation(61, 16);
-			ID57=(IToken)Match(input,ID,Follow._ID_in_functionCall466);  
-			stream_ID.Add(ID57);
-
-			DebugLocation(61, 19);
-			char_literal58=(IToken)Match(input,40,Follow._40_in_functionCall468);  
-			stream_40.Add(char_literal58);
-
-			DebugLocation(61, 23);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:61:23: ( params )?
-			int alt14=2;
-			try { DebugEnterSubRule(14);
-			try { DebugEnterDecision(14, false);
-			int LA14_0 = input.LA(1);
-
-			if ((LA14_0==CHAR||LA14_0==DEC||LA14_0==FLOAT||(LA14_0>=ID && LA14_0<=INT)||LA14_0==NOT||LA14_0==STRING||LA14_0==40||LA14_0==47))
-			{
-				alt14 = 1;
-			}
-			} finally { DebugExitDecision(14); }
-			switch (alt14)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:61:24: params
-				{
-				DebugLocation(61, 24);
-				PushFollow(Follow._params_in_functionCall471);
-				params59=@params();
-				PopFollow();
-
-				stream_params.Add(params59.Tree);
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(14); }
-
-			DebugLocation(61, 33);
-			char_literal60=(IToken)Match(input,41,Follow._41_in_functionCall475);  
-			stream_41.Add(char_literal60);
-
-
-
-			{
-			// AST REWRITE
-			// elements: params, ID
-			// token labels: 
-			// rule labels: retval
-			// token list labels: 
-			// rule list labels: 
-			// wildcard labels: 
-			retval.Tree = root_0;
-			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
-			root_0 = (CommonTree)adaptor.Nil();
-			// 61:37: -> ^( CALL ID ( params )* )
-			{
-				DebugLocation(61, 40);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:61:40: ^( CALL ID ( params )* )
-				{
-				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(61, 42);
-				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(CALL, "CALL"), root_1);
-
-				DebugLocation(61, 47);
-				adaptor.AddChild(root_1, stream_ID.NextNode());
-				DebugLocation(61, 50);
-				// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:61:50: ( params )*
-				while ( stream_params.HasNext )
-				{
-					DebugLocation(61, 50);
-					adaptor.AddChild(root_1, stream_params.NextTree());
-
-				}
-				stream_params.Reset();
-
-				adaptor.AddChild(root_0, root_1);
-				}
-
-			}
-
-			retval.Tree = root_0;
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("functionCall", 15);
-			LeaveRule("functionCall", 15);
-			LeaveRule_functionCall();
-		}
-		DebugLocation(61, 58);
-		} finally { DebugExitRule(GrammarFileName, "functionCall"); }
-		return retval;
-
-	}
-	// $ANTLR end "functionCall"
-
-	partial void EnterRule_params();
-	partial void LeaveRule_params();
-
-	// $ANTLR start "params"
-	// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:63:1: params : expr ( ',' expr )* ;
-	[GrammarRule("params")]
-	private AstParserRuleReturnScope<CommonTree, IToken> @params()
-	{
-		EnterRule_params();
-		EnterRule("params", 16);
-		TraceIn("params", 16);
-		AstParserRuleReturnScope<CommonTree, IToken> retval = new AstParserRuleReturnScope<CommonTree, IToken>();
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken char_literal62 = default(IToken);
-		AstParserRuleReturnScope<CommonTree, IToken> expr61 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-		AstParserRuleReturnScope<CommonTree, IToken> expr63 = default(AstParserRuleReturnScope<CommonTree, IToken>);
-
-		CommonTree char_literal62_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "params");
-		DebugLocation(63, 27);
-		try
-		{
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:63:9: ( expr ( ',' expr )* )
-			DebugEnterAlt(1);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:63:11: expr ( ',' expr )*
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(63, 11);
-			PushFollow(Follow._expr_in_params496);
-			expr61=expr();
-			PopFollow();
-
-			adaptor.AddChild(root_0, expr61.Tree);
-			DebugLocation(63, 16);
-			// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:63:16: ( ',' expr )*
-			try { DebugEnterSubRule(15);
+			if (state.failed) return;
+			DebugLocation(352, 9);
+			// EntityMapping.g:352:9: ( ',' typeArgument )*
+			try { DebugEnterSubRule(65);
 			while (true)
 			{
-				int alt15=2;
-				try { DebugEnterDecision(15, false);
-				int LA15_0 = input.LA(1);
+				int alt65=2;
+				try { DebugEnterDecision(65, decisionCanBacktrack[65]);
+				int LA65_0 = input.LA(1);
 
-				if ((LA15_0==42))
+				if ((LA65_0==COMMA))
 				{
-					alt15 = 1;
+					alt65 = 1;
 				}
 
 
-				} finally { DebugExitDecision(15); }
-				switch ( alt15 )
+				} finally { DebugExitDecision(65); }
+				switch ( alt65 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Software\\ANTLR3\\projects\\EntityMapping\\EntityMapping.g:63:17: ',' expr
+					// EntityMapping.g:352:10: ',' typeArgument
 					{
-					DebugLocation(63, 17);
-					char_literal62=(IToken)Match(input,42,Follow._42_in_params499); 
-					char_literal62_tree = (CommonTree)adaptor.Create(char_literal62);
-					adaptor.AddChild(root_0, char_literal62_tree);
-					DebugLocation(63, 21);
-					PushFollow(Follow._expr_in_params501);
-					expr63=expr();
+					DebugLocation(352, 10);
+					Match(input,COMMA,Follow._COMMA_in_typeArguments2823); if (state.failed) return;
+					DebugLocation(352, 14);
+					PushFollow(Follow._typeArgument_in_typeArguments2825);
+					typeArgument();
 					PopFollow();
-
-					adaptor.AddChild(root_0, expr63.Tree);
+					if (state.failed) return;
 
 					}
 					break;
 
 				default:
-					goto loop15;
+					goto loop65;
 				}
 			}
 
-			loop15:
+			loop65:
 				;
 
-			} finally { DebugExitSubRule(15); }
+			} finally { DebugExitSubRule(65); }
 
+			DebugLocation(354, 9);
+			Match(input,GT,Follow._GT_in_typeArguments2847); if (state.failed) return;
 
 			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
 
 		}
 		catch (RecognitionException re)
 		{
 			ReportError(re);
 			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+		}
+		finally
+		{
+			TraceOut("typeArguments", 35);
+			LeaveRule("typeArguments", 35);
+			LeaveRule_typeArguments();
+	        if (state.backtracking > 0) { Memoize(input, 35, typeArguments_StartIndex); }
+
+	    }
+	 	DebugLocation(355, 4);
+		} finally { DebugExitRule(GrammarFileName, "typeArguments"); }
+		return;
+
+	}
+	// $ANTLR end "typeArguments"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_typeArgument() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_typeArgument() {}
+
+	// $ANTLR start "typeArgument"
+	// EntityMapping.g:357:1: typeArgument : ( type | '?' ( ( 'extends' | 'super' ) type )? );
+	[GrammarRule("typeArgument")]
+	private void typeArgument()
+	{
+		EnterRule_typeArgument();
+		EnterRule("typeArgument", 36);
+		TraceIn("typeArgument", 36);
+	    int typeArgument_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "typeArgument");
+		DebugLocation(357, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 36)) { return; }
+
+			// EntityMapping.g:358:5: ( type | '?' ( ( 'extends' | 'super' ) type )? )
+			int alt67=2;
+			try { DebugEnterDecision(67, decisionCanBacktrack[67]);
+			int LA67_0 = input.LA(1);
+
+			if ((LA67_0==BOOLEAN||LA67_0==BYTE||LA67_0==CHAR||LA67_0==DOUBLE||LA67_0==FLOAT||LA67_0==IDENTIFIER||LA67_0==INT||LA67_0==LONG||LA67_0==SHORT))
+			{
+				alt67 = 1;
+			}
+			else if ((LA67_0==QUES))
+			{
+				alt67 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 67, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(67); }
+			switch (alt67)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:358:9: type
+				{
+				DebugLocation(358, 9);
+				PushFollow(Follow._type_in_typeArgument2867);
+				type();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:359:9: '?' ( ( 'extends' | 'super' ) type )?
+				{
+				DebugLocation(359, 9);
+				Match(input,QUES,Follow._QUES_in_typeArgument2877); if (state.failed) return;
+				DebugLocation(360, 9);
+				// EntityMapping.g:360:9: ( ( 'extends' | 'super' ) type )?
+				int alt66=2;
+				try { DebugEnterSubRule(66);
+				try { DebugEnterDecision(66, decisionCanBacktrack[66]);
+				int LA66_0 = input.LA(1);
+
+				if ((LA66_0==EXTENDS||LA66_0==SUPER))
+				{
+					alt66 = 1;
+				}
+				} finally { DebugExitDecision(66); }
+				switch (alt66)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:361:13: ( 'extends' | 'super' ) type
+					{
+					DebugLocation(361, 13);
+					if (input.LA(1)==EXTENDS||input.LA(1)==SUPER)
+					{
+						input.Consume();
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(364, 13);
+					PushFollow(Follow._type_in_typeArgument2945);
+					type();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(66); }
+
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("typeArgument", 36);
+			LeaveRule("typeArgument", 36);
+			LeaveRule_typeArgument();
+	        if (state.backtracking > 0) { Memoize(input, 36, typeArgument_StartIndex); }
+
+	    }
+	 	DebugLocation(366, 4);
+		} finally { DebugExitRule(GrammarFileName, "typeArgument"); }
+		return;
+
+	}
+	// $ANTLR end "typeArgument"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_qualifiedNameList() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_qualifiedNameList() {}
+
+	// $ANTLR start "qualifiedNameList"
+	// EntityMapping.g:368:1: qualifiedNameList : qualifiedName ( ',' qualifiedName )* ;
+	[GrammarRule("qualifiedNameList")]
+	private void qualifiedNameList()
+	{
+		EnterRule_qualifiedNameList();
+		EnterRule("qualifiedNameList", 37);
+		TraceIn("qualifiedNameList", 37);
+	    int qualifiedNameList_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "qualifiedNameList");
+		DebugLocation(368, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 37)) { return; }
+
+			// EntityMapping.g:369:5: ( qualifiedName ( ',' qualifiedName )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:369:9: qualifiedName ( ',' qualifiedName )*
+			{
+			DebugLocation(369, 9);
+			PushFollow(Follow._qualifiedName_in_qualifiedNameList2976);
+			qualifiedName();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(370, 9);
+			// EntityMapping.g:370:9: ( ',' qualifiedName )*
+			try { DebugEnterSubRule(68);
+			while (true)
+			{
+				int alt68=2;
+				try { DebugEnterDecision(68, decisionCanBacktrack[68]);
+				int LA68_0 = input.LA(1);
+
+				if ((LA68_0==COMMA))
+				{
+					alt68 = 1;
+				}
+
+
+				} finally { DebugExitDecision(68); }
+				switch ( alt68 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:370:10: ',' qualifiedName
+					{
+					DebugLocation(370, 10);
+					Match(input,COMMA,Follow._COMMA_in_qualifiedNameList2987); if (state.failed) return;
+					DebugLocation(370, 14);
+					PushFollow(Follow._qualifiedName_in_qualifiedNameList2989);
+					qualifiedName();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop68;
+				}
+			}
+
+			loop68:
+				;
+
+			} finally { DebugExitSubRule(68); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("qualifiedNameList", 37);
+			LeaveRule("qualifiedNameList", 37);
+			LeaveRule_qualifiedNameList();
+	        if (state.backtracking > 0) { Memoize(input, 37, qualifiedNameList_StartIndex); }
+
+	    }
+	 	DebugLocation(372, 4);
+		} finally { DebugExitRule(GrammarFileName, "qualifiedNameList"); }
+		return;
+
+	}
+	// $ANTLR end "qualifiedNameList"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_formalParameters() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_formalParameters() {}
+
+	// $ANTLR start "formalParameters"
+	// EntityMapping.g:374:1: formalParameters : '(' ( formalParameterDecls )? ')' ;
+	[GrammarRule("formalParameters")]
+	private void formalParameters()
+	{
+		EnterRule_formalParameters();
+		EnterRule("formalParameters", 38);
+		TraceIn("formalParameters", 38);
+	    int formalParameters_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "formalParameters");
+		DebugLocation(374, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 38)) { return; }
+
+			// EntityMapping.g:375:5: ( '(' ( formalParameterDecls )? ')' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:375:9: '(' ( formalParameterDecls )? ')'
+			{
+			DebugLocation(375, 9);
+			Match(input,LPAREN,Follow._LPAREN_in_formalParameters3020); if (state.failed) return;
+			DebugLocation(376, 9);
+			// EntityMapping.g:376:9: ( formalParameterDecls )?
+			int alt69=2;
+			try { DebugEnterSubRule(69);
+			try { DebugEnterDecision(69, decisionCanBacktrack[69]);
+			int LA69_0 = input.LA(1);
+
+			if ((LA69_0==BOOLEAN||LA69_0==BYTE||LA69_0==CHAR||LA69_0==DOUBLE||LA69_0==FINAL||LA69_0==FLOAT||LA69_0==IDENTIFIER||LA69_0==INT||LA69_0==LONG||LA69_0==MONKEYS_AT||LA69_0==SHORT))
+			{
+				alt69 = 1;
+			}
+			} finally { DebugExitDecision(69); }
+			switch (alt69)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:376:10: formalParameterDecls
+				{
+				DebugLocation(376, 10);
+				PushFollow(Follow._formalParameterDecls_in_formalParameters3031);
+				formalParameterDecls();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(69); }
+
+			DebugLocation(378, 9);
+			Match(input,RPAREN,Follow._RPAREN_in_formalParameters3053); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("formalParameters", 38);
+			LeaveRule("formalParameters", 38);
+			LeaveRule_formalParameters();
+	        if (state.backtracking > 0) { Memoize(input, 38, formalParameters_StartIndex); }
+
+	    }
+	 	DebugLocation(379, 4);
+		} finally { DebugExitRule(GrammarFileName, "formalParameters"); }
+		return;
+
+	}
+	// $ANTLR end "formalParameters"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_formalParameterDecls() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_formalParameterDecls() {}
+
+	// $ANTLR start "formalParameterDecls"
+	// EntityMapping.g:381:1: formalParameterDecls : ( ellipsisParameterDecl | normalParameterDecl ( ',' normalParameterDecl )* | ( normalParameterDecl ',' )+ ellipsisParameterDecl );
+	[GrammarRule("formalParameterDecls")]
+	private void formalParameterDecls()
+	{
+		EnterRule_formalParameterDecls();
+		EnterRule("formalParameterDecls", 39);
+		TraceIn("formalParameterDecls", 39);
+	    int formalParameterDecls_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "formalParameterDecls");
+		DebugLocation(381, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 39)) { return; }
+
+			// EntityMapping.g:382:5: ( ellipsisParameterDecl | normalParameterDecl ( ',' normalParameterDecl )* | ( normalParameterDecl ',' )+ ellipsisParameterDecl )
+			int alt72=3;
+			try { DebugEnterDecision(72, decisionCanBacktrack[72]);
+			switch (input.LA(1))
+			{
+			case FINAL:
+				{
+				int LA72_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred96_EntityMapping_fragment)))
+				{
+					alt72 = 1;
+				}
+				else if ((EvaluatePredicate(synpred98_EntityMapping_fragment)))
+				{
+					alt72 = 2;
+				}
+				else if ((true))
+				{
+					alt72 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 72, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case MONKEYS_AT:
+				{
+				int LA72_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred96_EntityMapping_fragment)))
+				{
+					alt72 = 1;
+				}
+				else if ((EvaluatePredicate(synpred98_EntityMapping_fragment)))
+				{
+					alt72 = 2;
+				}
+				else if ((true))
+				{
+					alt72 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 72, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case IDENTIFIER:
+				{
+				int LA72_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred96_EntityMapping_fragment)))
+				{
+					alt72 = 1;
+				}
+				else if ((EvaluatePredicate(synpred98_EntityMapping_fragment)))
+				{
+					alt72 = 2;
+				}
+				else if ((true))
+				{
+					alt72 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 72, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+				{
+				int LA72_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred96_EntityMapping_fragment)))
+				{
+					alt72 = 1;
+				}
+				else if ((EvaluatePredicate(synpred98_EntityMapping_fragment)))
+				{
+					alt72 = 2;
+				}
+				else if ((true))
+				{
+					alt72 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 72, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 72, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(72); }
+			switch (alt72)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:382:9: ellipsisParameterDecl
+				{
+				DebugLocation(382, 9);
+				PushFollow(Follow._ellipsisParameterDecl_in_formalParameterDecls3073);
+				ellipsisParameterDecl();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:383:9: normalParameterDecl ( ',' normalParameterDecl )*
+				{
+				DebugLocation(383, 9);
+				PushFollow(Follow._normalParameterDecl_in_formalParameterDecls3083);
+				normalParameterDecl();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(384, 9);
+				// EntityMapping.g:384:9: ( ',' normalParameterDecl )*
+				try { DebugEnterSubRule(70);
+				while (true)
+				{
+					int alt70=2;
+					try { DebugEnterDecision(70, decisionCanBacktrack[70]);
+					int LA70_0 = input.LA(1);
+
+					if ((LA70_0==COMMA))
+					{
+						alt70 = 1;
+					}
+
+
+					} finally { DebugExitDecision(70); }
+					switch ( alt70 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:384:10: ',' normalParameterDecl
+						{
+						DebugLocation(384, 10);
+						Match(input,COMMA,Follow._COMMA_in_formalParameterDecls3094); if (state.failed) return;
+						DebugLocation(384, 14);
+						PushFollow(Follow._normalParameterDecl_in_formalParameterDecls3096);
+						normalParameterDecl();
+						PopFollow();
+						if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop70;
+					}
+				}
+
+				loop70:
+					;
+
+				} finally { DebugExitSubRule(70); }
+
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:386:9: ( normalParameterDecl ',' )+ ellipsisParameterDecl
+				{
+				DebugLocation(386, 9);
+				// EntityMapping.g:386:9: ( normalParameterDecl ',' )+
+				int cnt71=0;
+				try { DebugEnterSubRule(71);
+				while (true)
+				{
+					int alt71=2;
+					try { DebugEnterDecision(71, decisionCanBacktrack[71]);
+					switch (input.LA(1))
+					{
+					case FINAL:
+						{
+						int LA71_1 = input.LA(2);
+
+						if ((EvaluatePredicate(synpred99_EntityMapping_fragment)))
+						{
+							alt71 = 1;
+						}
+
+
+						}
+						break;
+					case MONKEYS_AT:
+						{
+						int LA71_2 = input.LA(2);
+
+						if ((EvaluatePredicate(synpred99_EntityMapping_fragment)))
+						{
+							alt71 = 1;
+						}
+
+
+						}
+						break;
+					case IDENTIFIER:
+						{
+						int LA71_3 = input.LA(2);
+
+						if ((EvaluatePredicate(synpred99_EntityMapping_fragment)))
+						{
+							alt71 = 1;
+						}
+
+
+						}
+						break;
+					case BOOLEAN:
+					case BYTE:
+					case CHAR:
+					case DOUBLE:
+					case FLOAT:
+					case INT:
+					case LONG:
+					case SHORT:
+						{
+						int LA71_4 = input.LA(2);
+
+						if ((EvaluatePredicate(synpred99_EntityMapping_fragment)))
+						{
+							alt71 = 1;
+						}
+
+
+						}
+						break;
+					}
+
+					} finally { DebugExitDecision(71); }
+					switch (alt71)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:386:10: normalParameterDecl ','
+						{
+						DebugLocation(386, 10);
+						PushFollow(Follow._normalParameterDecl_in_formalParameterDecls3118);
+						normalParameterDecl();
+						PopFollow();
+						if (state.failed) return;
+						DebugLocation(387, 9);
+						Match(input,COMMA,Follow._COMMA_in_formalParameterDecls3128); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						if (cnt71 >= 1)
+							goto loop71;
+
+						if (state.backtracking>0) {state.failed=true; return;}
+						EarlyExitException eee71 = new EarlyExitException( 71, input );
+						DebugRecognitionException(eee71);
+						throw eee71;
+					}
+					cnt71++;
+				}
+				loop71:
+					;
+
+				} finally { DebugExitSubRule(71); }
+
+				DebugLocation(389, 9);
+				PushFollow(Follow._ellipsisParameterDecl_in_formalParameterDecls3150);
+				ellipsisParameterDecl();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("formalParameterDecls", 39);
+			LeaveRule("formalParameterDecls", 39);
+			LeaveRule_formalParameterDecls();
+	        if (state.backtracking > 0) { Memoize(input, 39, formalParameterDecls_StartIndex); }
+
+	    }
+	 	DebugLocation(390, 4);
+		} finally { DebugExitRule(GrammarFileName, "formalParameterDecls"); }
+		return;
+
+	}
+	// $ANTLR end "formalParameterDecls"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_normalParameterDecl() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_normalParameterDecl() {}
+
+	// $ANTLR start "normalParameterDecl"
+	// EntityMapping.g:392:1: normalParameterDecl : variableModifiers type IDENTIFIER ( '[' ']' )* ;
+	[GrammarRule("normalParameterDecl")]
+	private void normalParameterDecl()
+	{
+		EnterRule_normalParameterDecl();
+		EnterRule("normalParameterDecl", 40);
+		TraceIn("normalParameterDecl", 40);
+	    int normalParameterDecl_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "normalParameterDecl");
+		DebugLocation(392, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 40)) { return; }
+
+			// EntityMapping.g:393:5: ( variableModifiers type IDENTIFIER ( '[' ']' )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:393:9: variableModifiers type IDENTIFIER ( '[' ']' )*
+			{
+			DebugLocation(393, 9);
+			PushFollow(Follow._variableModifiers_in_normalParameterDecl3170);
+			variableModifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(393, 27);
+			PushFollow(Follow._type_in_normalParameterDecl3172);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(393, 32);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_normalParameterDecl3174); if (state.failed) return;
+			DebugLocation(394, 9);
+			// EntityMapping.g:394:9: ( '[' ']' )*
+			try { DebugEnterSubRule(73);
+			while (true)
+			{
+				int alt73=2;
+				try { DebugEnterDecision(73, decisionCanBacktrack[73]);
+				int LA73_0 = input.LA(1);
+
+				if ((LA73_0==LBRACKET))
+				{
+					alt73 = 1;
+				}
+
+
+				} finally { DebugExitDecision(73); }
+				switch ( alt73 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:394:10: '[' ']'
+					{
+					DebugLocation(394, 10);
+					Match(input,LBRACKET,Follow._LBRACKET_in_normalParameterDecl3185); if (state.failed) return;
+					DebugLocation(394, 14);
+					Match(input,RBRACKET,Follow._RBRACKET_in_normalParameterDecl3187); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop73;
+				}
+			}
+
+			loop73:
+				;
+
+			} finally { DebugExitSubRule(73); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("normalParameterDecl", 40);
+			LeaveRule("normalParameterDecl", 40);
+			LeaveRule_normalParameterDecl();
+	        if (state.backtracking > 0) { Memoize(input, 40, normalParameterDecl_StartIndex); }
+
+	    }
+	 	DebugLocation(396, 4);
+		} finally { DebugExitRule(GrammarFileName, "normalParameterDecl"); }
+		return;
+
+	}
+	// $ANTLR end "normalParameterDecl"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_ellipsisParameterDecl() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_ellipsisParameterDecl() {}
+
+	// $ANTLR start "ellipsisParameterDecl"
+	// EntityMapping.g:398:1: ellipsisParameterDecl : variableModifiers type '...' IDENTIFIER ;
+	[GrammarRule("ellipsisParameterDecl")]
+	private void ellipsisParameterDecl()
+	{
+		EnterRule_ellipsisParameterDecl();
+		EnterRule("ellipsisParameterDecl", 41);
+		TraceIn("ellipsisParameterDecl", 41);
+	    int ellipsisParameterDecl_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "ellipsisParameterDecl");
+		DebugLocation(398, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 41)) { return; }
+
+			// EntityMapping.g:399:5: ( variableModifiers type '...' IDENTIFIER )
+			DebugEnterAlt(1);
+			// EntityMapping.g:399:9: variableModifiers type '...' IDENTIFIER
+			{
+			DebugLocation(399, 9);
+			PushFollow(Follow._variableModifiers_in_ellipsisParameterDecl3218);
+			variableModifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(400, 9);
+			PushFollow(Follow._type_in_ellipsisParameterDecl3228);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(400, 15);
+			Match(input,ELLIPSIS,Follow._ELLIPSIS_in_ellipsisParameterDecl3231); if (state.failed) return;
+			DebugLocation(401, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_ellipsisParameterDecl3241); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("ellipsisParameterDecl", 41);
+			LeaveRule("ellipsisParameterDecl", 41);
+			LeaveRule_ellipsisParameterDecl();
+	        if (state.backtracking > 0) { Memoize(input, 41, ellipsisParameterDecl_StartIndex); }
+
+	    }
+	 	DebugLocation(402, 4);
+		} finally { DebugExitRule(GrammarFileName, "ellipsisParameterDecl"); }
+		return;
+
+	}
+	// $ANTLR end "ellipsisParameterDecl"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_explicitConstructorInvocation() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_explicitConstructorInvocation() {}
+
+	// $ANTLR start "explicitConstructorInvocation"
+	// EntityMapping.g:405:1: explicitConstructorInvocation : ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' );
+	[GrammarRule("explicitConstructorInvocation")]
+	private void explicitConstructorInvocation()
+	{
+		EnterRule_explicitConstructorInvocation();
+		EnterRule("explicitConstructorInvocation", 42);
+		TraceIn("explicitConstructorInvocation", 42);
+	    int explicitConstructorInvocation_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "explicitConstructorInvocation");
+		DebugLocation(405, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 42)) { return; }
+
+			// EntityMapping.g:406:5: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' )
+			int alt76=2;
+			try { DebugEnterDecision(76, decisionCanBacktrack[76]);
+			switch (input.LA(1))
+			{
+			case LT:
+				{
+				alt76 = 1;
+				}
+				break;
+			case THIS:
+				{
+				int LA76_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred103_EntityMapping_fragment)))
+				{
+					alt76 = 1;
+				}
+				else if ((true))
+				{
+					alt76 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 76, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case CHARLITERAL:
+			case DOUBLE:
+			case DOUBLELITERAL:
+			case FALSE:
+			case FLOAT:
+			case FLOATLITERAL:
+			case IDENTIFIER:
+			case INT:
+			case INTLITERAL:
+			case LONG:
+			case LONGLITERAL:
+			case LPAREN:
+			case NEW:
+			case NULL:
+			case SHORT:
+			case STRINGLITERAL:
+			case TRUE:
+			case VOID:
+				{
+				alt76 = 2;
+				}
+				break;
+			case SUPER:
+				{
+				int LA76_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred103_EntityMapping_fragment)))
+				{
+					alt76 = 1;
+				}
+				else if ((true))
+				{
+					alt76 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 76, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 76, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(76); }
+			switch (alt76)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:406:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
+				{
+				DebugLocation(406, 9);
+				// EntityMapping.g:406:9: ( nonWildcardTypeArguments )?
+				int alt74=2;
+				try { DebugEnterSubRule(74);
+				try { DebugEnterDecision(74, decisionCanBacktrack[74]);
+				int LA74_0 = input.LA(1);
+
+				if ((LA74_0==LT))
+				{
+					alt74 = 1;
+				}
+				} finally { DebugExitDecision(74); }
+				switch (alt74)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:406:10: nonWildcardTypeArguments
+					{
+					DebugLocation(406, 10);
+					PushFollow(Follow._nonWildcardTypeArguments_in_explicitConstructorInvocation3263);
+					nonWildcardTypeArguments();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(74); }
+
+				DebugLocation(408, 9);
+				if (input.LA(1)==SUPER||input.LA(1)==THIS)
+				{
+					input.Consume();
+					state.errorRecovery=false;state.failed=false;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					MismatchedSetException mse = new MismatchedSetException(null,input);
+					DebugRecognitionException(mse);
+					throw mse;
+				}
+
+				DebugLocation(411, 9);
+				PushFollow(Follow._arguments_in_explicitConstructorInvocation3321);
+				arguments();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(411, 19);
+				Match(input,SEMI,Follow._SEMI_in_explicitConstructorInvocation3323); if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:413:9: primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';'
+				{
+				DebugLocation(413, 9);
+				PushFollow(Follow._primary_in_explicitConstructorInvocation3334);
+				primary();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(414, 9);
+				Match(input,DOT,Follow._DOT_in_explicitConstructorInvocation3344); if (state.failed) return;
+				DebugLocation(415, 9);
+				// EntityMapping.g:415:9: ( nonWildcardTypeArguments )?
+				int alt75=2;
+				try { DebugEnterSubRule(75);
+				try { DebugEnterDecision(75, decisionCanBacktrack[75]);
+				int LA75_0 = input.LA(1);
+
+				if ((LA75_0==LT))
+				{
+					alt75 = 1;
+				}
+				} finally { DebugExitDecision(75); }
+				switch (alt75)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:415:10: nonWildcardTypeArguments
+					{
+					DebugLocation(415, 10);
+					PushFollow(Follow._nonWildcardTypeArguments_in_explicitConstructorInvocation3355);
+					nonWildcardTypeArguments();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(75); }
+
+				DebugLocation(417, 9);
+				Match(input,SUPER,Follow._SUPER_in_explicitConstructorInvocation3376); if (state.failed) return;
+				DebugLocation(418, 9);
+				PushFollow(Follow._arguments_in_explicitConstructorInvocation3386);
+				arguments();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(418, 19);
+				Match(input,SEMI,Follow._SEMI_in_explicitConstructorInvocation3388); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("explicitConstructorInvocation", 42);
+			LeaveRule("explicitConstructorInvocation", 42);
+			LeaveRule_explicitConstructorInvocation();
+	        if (state.backtracking > 0) { Memoize(input, 42, explicitConstructorInvocation_StartIndex); }
+
+	    }
+	 	DebugLocation(419, 4);
+		} finally { DebugExitRule(GrammarFileName, "explicitConstructorInvocation"); }
+		return;
+
+	}
+	// $ANTLR end "explicitConstructorInvocation"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_qualifiedName() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_qualifiedName() {}
+
+	// $ANTLR start "qualifiedName"
+	// EntityMapping.g:421:1: qualifiedName : IDENTIFIER ( '.' IDENTIFIER )* ;
+	[GrammarRule("qualifiedName")]
+	private void qualifiedName()
+	{
+		EnterRule_qualifiedName();
+		EnterRule("qualifiedName", 43);
+		TraceIn("qualifiedName", 43);
+	    int qualifiedName_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "qualifiedName");
+		DebugLocation(421, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 43)) { return; }
+
+			// EntityMapping.g:422:5: ( IDENTIFIER ( '.' IDENTIFIER )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:422:9: IDENTIFIER ( '.' IDENTIFIER )*
+			{
+			DebugLocation(422, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_qualifiedName3408); if (state.failed) return;
+			DebugLocation(423, 9);
+			// EntityMapping.g:423:9: ( '.' IDENTIFIER )*
+			try { DebugEnterSubRule(77);
+			while (true)
+			{
+				int alt77=2;
+				try { DebugEnterDecision(77, decisionCanBacktrack[77]);
+				int LA77_0 = input.LA(1);
+
+				if ((LA77_0==DOT))
+				{
+					alt77 = 1;
+				}
+
+
+				} finally { DebugExitDecision(77); }
+				switch ( alt77 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:423:10: '.' IDENTIFIER
+					{
+					DebugLocation(423, 10);
+					Match(input,DOT,Follow._DOT_in_qualifiedName3419); if (state.failed) return;
+					DebugLocation(423, 14);
+					Match(input,IDENTIFIER,Follow._IDENTIFIER_in_qualifiedName3421); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop77;
+				}
+			}
+
+			loop77:
+				;
+
+			} finally { DebugExitSubRule(77); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("qualifiedName", 43);
+			LeaveRule("qualifiedName", 43);
+			LeaveRule_qualifiedName();
+	        if (state.backtracking > 0) { Memoize(input, 43, qualifiedName_StartIndex); }
+
+	    }
+	 	DebugLocation(425, 4);
+		} finally { DebugExitRule(GrammarFileName, "qualifiedName"); }
+		return;
+
+	}
+	// $ANTLR end "qualifiedName"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_annotations() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_annotations() {}
+
+	// $ANTLR start "annotations"
+	// EntityMapping.g:427:1: annotations : ( annotation )+ ;
+	[GrammarRule("annotations")]
+	private void annotations()
+	{
+		EnterRule_annotations();
+		EnterRule("annotations", 44);
+		TraceIn("annotations", 44);
+	    int annotations_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "annotations");
+		DebugLocation(427, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 44)) { return; }
+
+			// EntityMapping.g:428:5: ( ( annotation )+ )
+			DebugEnterAlt(1);
+			// EntityMapping.g:428:9: ( annotation )+
+			{
+			DebugLocation(428, 9);
+			// EntityMapping.g:428:9: ( annotation )+
+			int cnt78=0;
+			try { DebugEnterSubRule(78);
+			while (true)
+			{
+				int alt78=2;
+				try { DebugEnterDecision(78, decisionCanBacktrack[78]);
+				int LA78_0 = input.LA(1);
+
+				if ((LA78_0==MONKEYS_AT))
+				{
+					alt78 = 1;
+				}
+
+
+				} finally { DebugExitDecision(78); }
+				switch (alt78)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:428:10: annotation
+					{
+					DebugLocation(428, 10);
+					PushFollow(Follow._annotation_in_annotations3453);
+					annotation();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					if (cnt78 >= 1)
+						goto loop78;
+
+					if (state.backtracking>0) {state.failed=true; return;}
+					EarlyExitException eee78 = new EarlyExitException( 78, input );
+					DebugRecognitionException(eee78);
+					throw eee78;
+				}
+				cnt78++;
+			}
+			loop78:
+				;
+
+			} finally { DebugExitSubRule(78); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("annotations", 44);
+			LeaveRule("annotations", 44);
+			LeaveRule_annotations();
+	        if (state.backtracking > 0) { Memoize(input, 44, annotations_StartIndex); }
+
+	    }
+	 	DebugLocation(430, 4);
+		} finally { DebugExitRule(GrammarFileName, "annotations"); }
+		return;
+
+	}
+	// $ANTLR end "annotations"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_annotation() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_annotation() {}
+
+	// $ANTLR start "annotation"
+	// EntityMapping.g:436:1: annotation : '@' qualifiedName ( '(' ( elementValuePairs | elementValue )? ')' )? ;
+	[GrammarRule("annotation")]
+	private void annotation()
+	{
+		EnterRule_annotation();
+		EnterRule("annotation", 45);
+		TraceIn("annotation", 45);
+	    int annotation_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "annotation");
+		DebugLocation(436, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 45)) { return; }
+
+			// EntityMapping.g:437:5: ( '@' qualifiedName ( '(' ( elementValuePairs | elementValue )? ')' )? )
+			DebugEnterAlt(1);
+			// EntityMapping.g:437:9: '@' qualifiedName ( '(' ( elementValuePairs | elementValue )? ')' )?
+			{
+			DebugLocation(437, 9);
+			Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_annotation3486); if (state.failed) return;
+			DebugLocation(437, 13);
+			PushFollow(Follow._qualifiedName_in_annotation3488);
+			qualifiedName();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(438, 9);
+			// EntityMapping.g:438:9: ( '(' ( elementValuePairs | elementValue )? ')' )?
+			int alt80=2;
+			try { DebugEnterSubRule(80);
+			try { DebugEnterDecision(80, decisionCanBacktrack[80]);
+			int LA80_0 = input.LA(1);
+
+			if ((LA80_0==LPAREN))
+			{
+				alt80 = 1;
+			}
+			} finally { DebugExitDecision(80); }
+			switch (alt80)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:438:13: '(' ( elementValuePairs | elementValue )? ')'
+				{
+				DebugLocation(438, 13);
+				Match(input,LPAREN,Follow._LPAREN_in_annotation3502); if (state.failed) return;
+				DebugLocation(439, 19);
+				// EntityMapping.g:439:19: ( elementValuePairs | elementValue )?
+				int alt79=3;
+				try { DebugEnterSubRule(79);
+				try { DebugEnterDecision(79, decisionCanBacktrack[79]);
+				int LA79_0 = input.LA(1);
+
+				if ((LA79_0==IDENTIFIER))
+				{
+					int LA79_1 = input.LA(2);
+
+					if ((LA79_1==EQ))
+					{
+						alt79 = 1;
+					}
+					else if (((LA79_1>=AMP && LA79_1<=AMPAMP)||(LA79_1>=BANGEQ && LA79_1<=BARBAR)||LA79_1==CARET||LA79_1==DOT||LA79_1==EQEQ||LA79_1==GT||LA79_1==INSTANCEOF||LA79_1==LBRACKET||(LA79_1>=LPAREN && LA79_1<=LT)||LA79_1==PERCENT||LA79_1==PLUS||LA79_1==PLUSPLUS||LA79_1==QUES||LA79_1==RPAREN||LA79_1==SLASH||LA79_1==STAR||LA79_1==SUB||LA79_1==SUBSUB))
+					{
+						alt79 = 2;
+					}
+				}
+				else if ((LA79_0==BANG||LA79_0==BOOLEAN||LA79_0==BYTE||(LA79_0>=CHAR && LA79_0<=CHARLITERAL)||(LA79_0>=DOUBLE && LA79_0<=DOUBLELITERAL)||LA79_0==FALSE||(LA79_0>=FLOAT && LA79_0<=FLOATLITERAL)||LA79_0==INT||LA79_0==INTLITERAL||LA79_0==LBRACE||(LA79_0>=LONG && LA79_0<=LPAREN)||LA79_0==MONKEYS_AT||(LA79_0>=NEW && LA79_0<=NULL)||LA79_0==PLUS||LA79_0==PLUSPLUS||LA79_0==SHORT||(LA79_0>=STRINGLITERAL && LA79_0<=SUB)||(LA79_0>=SUBSUB && LA79_0<=SUPER)||LA79_0==THIS||LA79_0==TILDE||LA79_0==TRUE||LA79_0==VOID))
+				{
+					alt79 = 2;
+				}
+				} finally { DebugExitDecision(79); }
+				switch (alt79)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:439:23: elementValuePairs
+					{
+					DebugLocation(439, 23);
+					PushFollow(Follow._elementValuePairs_in_annotation3529);
+					elementValuePairs();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// EntityMapping.g:440:23: elementValue
+					{
+					DebugLocation(440, 23);
+					PushFollow(Follow._elementValue_in_annotation3553);
+					elementValue();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(79); }
+
+				DebugLocation(442, 13);
+				Match(input,RPAREN,Follow._RPAREN_in_annotation3589); if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(80); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("annotation", 45);
+			LeaveRule("annotation", 45);
+			LeaveRule_annotation();
+	        if (state.backtracking > 0) { Memoize(input, 45, annotation_StartIndex); }
+
+	    }
+	 	DebugLocation(444, 4);
+		} finally { DebugExitRule(GrammarFileName, "annotation"); }
+		return;
+
+	}
+	// $ANTLR end "annotation"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_elementValuePairs() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_elementValuePairs() {}
+
+	// $ANTLR start "elementValuePairs"
+	// EntityMapping.g:446:1: elementValuePairs : elementValuePair ( ',' elementValuePair )* ;
+	[GrammarRule("elementValuePairs")]
+	private void elementValuePairs()
+	{
+		EnterRule_elementValuePairs();
+		EnterRule("elementValuePairs", 46);
+		TraceIn("elementValuePairs", 46);
+	    int elementValuePairs_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "elementValuePairs");
+		DebugLocation(446, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 46)) { return; }
+
+			// EntityMapping.g:447:5: ( elementValuePair ( ',' elementValuePair )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:447:9: elementValuePair ( ',' elementValuePair )*
+			{
+			DebugLocation(447, 9);
+			PushFollow(Follow._elementValuePair_in_elementValuePairs3621);
+			elementValuePair();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(448, 9);
+			// EntityMapping.g:448:9: ( ',' elementValuePair )*
+			try { DebugEnterSubRule(81);
+			while (true)
+			{
+				int alt81=2;
+				try { DebugEnterDecision(81, decisionCanBacktrack[81]);
+				int LA81_0 = input.LA(1);
+
+				if ((LA81_0==COMMA))
+				{
+					alt81 = 1;
+				}
+
+
+				} finally { DebugExitDecision(81); }
+				switch ( alt81 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:448:10: ',' elementValuePair
+					{
+					DebugLocation(448, 10);
+					Match(input,COMMA,Follow._COMMA_in_elementValuePairs3632); if (state.failed) return;
+					DebugLocation(448, 14);
+					PushFollow(Follow._elementValuePair_in_elementValuePairs3634);
+					elementValuePair();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop81;
+				}
+			}
+
+			loop81:
+				;
+
+			} finally { DebugExitSubRule(81); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("elementValuePairs", 46);
+			LeaveRule("elementValuePairs", 46);
+			LeaveRule_elementValuePairs();
+	        if (state.backtracking > 0) { Memoize(input, 46, elementValuePairs_StartIndex); }
+
+	    }
+	 	DebugLocation(450, 4);
+		} finally { DebugExitRule(GrammarFileName, "elementValuePairs"); }
+		return;
+
+	}
+	// $ANTLR end "elementValuePairs"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_elementValuePair() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_elementValuePair() {}
+
+	// $ANTLR start "elementValuePair"
+	// EntityMapping.g:452:1: elementValuePair : IDENTIFIER '=' elementValue ;
+	[GrammarRule("elementValuePair")]
+	private void elementValuePair()
+	{
+		EnterRule_elementValuePair();
+		EnterRule("elementValuePair", 47);
+		TraceIn("elementValuePair", 47);
+	    int elementValuePair_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "elementValuePair");
+		DebugLocation(452, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 47)) { return; }
+
+			// EntityMapping.g:453:5: ( IDENTIFIER '=' elementValue )
+			DebugEnterAlt(1);
+			// EntityMapping.g:453:9: IDENTIFIER '=' elementValue
+			{
+			DebugLocation(453, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_elementValuePair3665); if (state.failed) return;
+			DebugLocation(453, 20);
+			Match(input,EQ,Follow._EQ_in_elementValuePair3667); if (state.failed) return;
+			DebugLocation(453, 24);
+			PushFollow(Follow._elementValue_in_elementValuePair3669);
+			elementValue();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("elementValuePair", 47);
+			LeaveRule("elementValuePair", 47);
+			LeaveRule_elementValuePair();
+	        if (state.backtracking > 0) { Memoize(input, 47, elementValuePair_StartIndex); }
+
+	    }
+	 	DebugLocation(454, 4);
+		} finally { DebugExitRule(GrammarFileName, "elementValuePair"); }
+		return;
+
+	}
+	// $ANTLR end "elementValuePair"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_elementValue() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_elementValue() {}
+
+	// $ANTLR start "elementValue"
+	// EntityMapping.g:456:1: elementValue : ( conditionalExpression | annotation | elementValueArrayInitializer );
+	[GrammarRule("elementValue")]
+	private void elementValue()
+	{
+		EnterRule_elementValue();
+		EnterRule("elementValue", 48);
+		TraceIn("elementValue", 48);
+	    int elementValue_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "elementValue");
+		DebugLocation(456, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 48)) { return; }
+
+			// EntityMapping.g:457:5: ( conditionalExpression | annotation | elementValueArrayInitializer )
+			int alt82=3;
+			try { DebugEnterDecision(82, decisionCanBacktrack[82]);
+			switch (input.LA(1))
+			{
+			case BANG:
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case CHARLITERAL:
+			case DOUBLE:
+			case DOUBLELITERAL:
+			case FALSE:
+			case FLOAT:
+			case FLOATLITERAL:
+			case IDENTIFIER:
+			case INT:
+			case INTLITERAL:
+			case LONG:
+			case LONGLITERAL:
+			case LPAREN:
+			case NEW:
+			case NULL:
+			case PLUS:
+			case PLUSPLUS:
+			case SHORT:
+			case STRINGLITERAL:
+			case SUB:
+			case SUBSUB:
+			case SUPER:
+			case THIS:
+			case TILDE:
+			case TRUE:
+			case VOID:
+				{
+				alt82 = 1;
+				}
+				break;
+			case MONKEYS_AT:
+				{
+				alt82 = 2;
+				}
+				break;
+			case LBRACE:
+				{
+				alt82 = 3;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 82, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(82); }
+			switch (alt82)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:457:9: conditionalExpression
+				{
+				DebugLocation(457, 9);
+				PushFollow(Follow._conditionalExpression_in_elementValue3689);
+				conditionalExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:458:9: annotation
+				{
+				DebugLocation(458, 9);
+				PushFollow(Follow._annotation_in_elementValue3699);
+				annotation();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:459:9: elementValueArrayInitializer
+				{
+				DebugLocation(459, 9);
+				PushFollow(Follow._elementValueArrayInitializer_in_elementValue3709);
+				elementValueArrayInitializer();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("elementValue", 48);
+			LeaveRule("elementValue", 48);
+			LeaveRule_elementValue();
+	        if (state.backtracking > 0) { Memoize(input, 48, elementValue_StartIndex); }
+
+	    }
+	 	DebugLocation(460, 4);
+		} finally { DebugExitRule(GrammarFileName, "elementValue"); }
+		return;
+
+	}
+	// $ANTLR end "elementValue"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_elementValueArrayInitializer() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_elementValueArrayInitializer() {}
+
+	// $ANTLR start "elementValueArrayInitializer"
+	// EntityMapping.g:462:1: elementValueArrayInitializer : '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' ;
+	[GrammarRule("elementValueArrayInitializer")]
+	private void elementValueArrayInitializer()
+	{
+		EnterRule_elementValueArrayInitializer();
+		EnterRule("elementValueArrayInitializer", 49);
+		TraceIn("elementValueArrayInitializer", 49);
+	    int elementValueArrayInitializer_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "elementValueArrayInitializer");
+		DebugLocation(462, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 49)) { return; }
+
+			// EntityMapping.g:463:5: ( '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:463:9: '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}'
+			{
+			DebugLocation(463, 9);
+			Match(input,LBRACE,Follow._LBRACE_in_elementValueArrayInitializer3729); if (state.failed) return;
+			DebugLocation(464, 9);
+			// EntityMapping.g:464:9: ( elementValue ( ',' elementValue )* )?
+			int alt84=2;
+			try { DebugEnterSubRule(84);
+			try { DebugEnterDecision(84, decisionCanBacktrack[84]);
+			int LA84_0 = input.LA(1);
+
+			if ((LA84_0==BANG||LA84_0==BOOLEAN||LA84_0==BYTE||(LA84_0>=CHAR && LA84_0<=CHARLITERAL)||(LA84_0>=DOUBLE && LA84_0<=DOUBLELITERAL)||LA84_0==FALSE||(LA84_0>=FLOAT && LA84_0<=FLOATLITERAL)||LA84_0==IDENTIFIER||LA84_0==INT||LA84_0==INTLITERAL||LA84_0==LBRACE||(LA84_0>=LONG && LA84_0<=LPAREN)||LA84_0==MONKEYS_AT||(LA84_0>=NEW && LA84_0<=NULL)||LA84_0==PLUS||LA84_0==PLUSPLUS||LA84_0==SHORT||(LA84_0>=STRINGLITERAL && LA84_0<=SUB)||(LA84_0>=SUBSUB && LA84_0<=SUPER)||LA84_0==THIS||LA84_0==TILDE||LA84_0==TRUE||LA84_0==VOID))
+			{
+				alt84 = 1;
+			}
+			} finally { DebugExitDecision(84); }
+			switch (alt84)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:464:10: elementValue ( ',' elementValue )*
+				{
+				DebugLocation(464, 10);
+				PushFollow(Follow._elementValue_in_elementValueArrayInitializer3740);
+				elementValue();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(465, 13);
+				// EntityMapping.g:465:13: ( ',' elementValue )*
+				try { DebugEnterSubRule(83);
+				while (true)
+				{
+					int alt83=2;
+					try { DebugEnterDecision(83, decisionCanBacktrack[83]);
+					int LA83_0 = input.LA(1);
+
+					if ((LA83_0==COMMA))
+					{
+						int LA83_1 = input.LA(2);
+
+						if ((LA83_1==BANG||LA83_1==BOOLEAN||LA83_1==BYTE||(LA83_1>=CHAR && LA83_1<=CHARLITERAL)||(LA83_1>=DOUBLE && LA83_1<=DOUBLELITERAL)||LA83_1==FALSE||(LA83_1>=FLOAT && LA83_1<=FLOATLITERAL)||LA83_1==IDENTIFIER||LA83_1==INT||LA83_1==INTLITERAL||LA83_1==LBRACE||(LA83_1>=LONG && LA83_1<=LPAREN)||LA83_1==MONKEYS_AT||(LA83_1>=NEW && LA83_1<=NULL)||LA83_1==PLUS||LA83_1==PLUSPLUS||LA83_1==SHORT||(LA83_1>=STRINGLITERAL && LA83_1<=SUB)||(LA83_1>=SUBSUB && LA83_1<=SUPER)||LA83_1==THIS||LA83_1==TILDE||LA83_1==TRUE||LA83_1==VOID))
+						{
+							alt83 = 1;
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(83); }
+					switch ( alt83 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:465:14: ',' elementValue
+						{
+						DebugLocation(465, 14);
+						Match(input,COMMA,Follow._COMMA_in_elementValueArrayInitializer3755); if (state.failed) return;
+						DebugLocation(465, 18);
+						PushFollow(Follow._elementValue_in_elementValueArrayInitializer3757);
+						elementValue();
+						PopFollow();
+						if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop83;
+					}
+				}
+
+				loop83:
+					;
+
+				} finally { DebugExitSubRule(83); }
+
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(84); }
+
+			DebugLocation(467, 12);
+			// EntityMapping.g:467:12: ( ',' )?
+			int alt85=2;
+			try { DebugEnterSubRule(85);
+			try { DebugEnterDecision(85, decisionCanBacktrack[85]);
+			int LA85_0 = input.LA(1);
+
+			if ((LA85_0==COMMA))
+			{
+				alt85 = 1;
+			}
+			} finally { DebugExitDecision(85); }
+			switch (alt85)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:467:13: ','
+				{
+				DebugLocation(467, 13);
+				Match(input,COMMA,Follow._COMMA_in_elementValueArrayInitializer3786); if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(85); }
+
+			DebugLocation(467, 19);
+			Match(input,RBRACE,Follow._RBRACE_in_elementValueArrayInitializer3790); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("elementValueArrayInitializer", 49);
+			LeaveRule("elementValueArrayInitializer", 49);
+			LeaveRule_elementValueArrayInitializer();
+	        if (state.backtracking > 0) { Memoize(input, 49, elementValueArrayInitializer_StartIndex); }
+
+	    }
+	 	DebugLocation(468, 4);
+		} finally { DebugExitRule(GrammarFileName, "elementValueArrayInitializer"); }
+		return;
+
+	}
+	// $ANTLR end "elementValueArrayInitializer"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_annotationTypeDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_annotationTypeDeclaration() {}
+
+	// $ANTLR start "annotationTypeDeclaration"
+	// EntityMapping.g:474:1: annotationTypeDeclaration : modifiers '@' 'interface' IDENTIFIER annotationTypeBody ;
+	[GrammarRule("annotationTypeDeclaration")]
+	private void annotationTypeDeclaration()
+	{
+		EnterRule_annotationTypeDeclaration();
+		EnterRule("annotationTypeDeclaration", 50);
+		TraceIn("annotationTypeDeclaration", 50);
+	    int annotationTypeDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "annotationTypeDeclaration");
+		DebugLocation(474, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 50)) { return; }
+
+			// EntityMapping.g:475:5: ( modifiers '@' 'interface' IDENTIFIER annotationTypeBody )
+			DebugEnterAlt(1);
+			// EntityMapping.g:475:9: modifiers '@' 'interface' IDENTIFIER annotationTypeBody
+			{
+			DebugLocation(475, 9);
+			PushFollow(Follow._modifiers_in_annotationTypeDeclaration3813);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(475, 19);
+			Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_annotationTypeDeclaration3815); if (state.failed) return;
+			DebugLocation(476, 9);
+			Match(input,INTERFACE,Follow._INTERFACE_in_annotationTypeDeclaration3825); if (state.failed) return;
+			DebugLocation(477, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_annotationTypeDeclaration3835); if (state.failed) return;
+			DebugLocation(478, 9);
+			PushFollow(Follow._annotationTypeBody_in_annotationTypeDeclaration3845);
+			annotationTypeBody();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("annotationTypeDeclaration", 50);
+			LeaveRule("annotationTypeDeclaration", 50);
+			LeaveRule_annotationTypeDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 50, annotationTypeDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(479, 4);
+		} finally { DebugExitRule(GrammarFileName, "annotationTypeDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "annotationTypeDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_annotationTypeBody() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_annotationTypeBody() {}
+
+	// $ANTLR start "annotationTypeBody"
+	// EntityMapping.g:482:1: annotationTypeBody : '{' ( annotationTypeElementDeclaration )* '}' ;
+	[GrammarRule("annotationTypeBody")]
+	private void annotationTypeBody()
+	{
+		EnterRule_annotationTypeBody();
+		EnterRule("annotationTypeBody", 51);
+		TraceIn("annotationTypeBody", 51);
+	    int annotationTypeBody_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "annotationTypeBody");
+		DebugLocation(482, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 51)) { return; }
+
+			// EntityMapping.g:483:5: ( '{' ( annotationTypeElementDeclaration )* '}' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:483:9: '{' ( annotationTypeElementDeclaration )* '}'
+			{
+			DebugLocation(483, 9);
+			Match(input,LBRACE,Follow._LBRACE_in_annotationTypeBody3866); if (state.failed) return;
+			DebugLocation(484, 9);
+			// EntityMapping.g:484:9: ( annotationTypeElementDeclaration )*
+			try { DebugEnterSubRule(86);
+			while (true)
+			{
+				int alt86=2;
+				try { DebugEnterDecision(86, decisionCanBacktrack[86]);
+				int LA86_0 = input.LA(1);
+
+				if ((LA86_0==ABSTRACT||LA86_0==BOOLEAN||LA86_0==BYTE||LA86_0==CHAR||LA86_0==CLASS||LA86_0==DOUBLE||LA86_0==ENUM||LA86_0==FINAL||LA86_0==FLOAT||LA86_0==IDENTIFIER||(LA86_0>=INT && LA86_0<=INTERFACE)||LA86_0==LONG||LA86_0==LT||(LA86_0>=MONKEYS_AT && LA86_0<=NATIVE)||(LA86_0>=PRIVATE && LA86_0<=PUBLIC)||(LA86_0>=SEMI && LA86_0<=SHORT)||(LA86_0>=STATIC && LA86_0<=STRICTFP)||LA86_0==SYNCHRONIZED||LA86_0==TRANSIENT||(LA86_0>=VOID && LA86_0<=VOLATILE)))
+				{
+					alt86 = 1;
+				}
+
+
+				} finally { DebugExitDecision(86); }
+				switch ( alt86 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:484:10: annotationTypeElementDeclaration
+					{
+					DebugLocation(484, 10);
+					PushFollow(Follow._annotationTypeElementDeclaration_in_annotationTypeBody3878);
+					annotationTypeElementDeclaration();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop86;
+				}
+			}
+
+			loop86:
+				;
+
+			} finally { DebugExitSubRule(86); }
+
+			DebugLocation(486, 9);
+			Match(input,RBRACE,Follow._RBRACE_in_annotationTypeBody3900); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("annotationTypeBody", 51);
+			LeaveRule("annotationTypeBody", 51);
+			LeaveRule_annotationTypeBody();
+	        if (state.backtracking > 0) { Memoize(input, 51, annotationTypeBody_StartIndex); }
+
+	    }
+	 	DebugLocation(487, 4);
+		} finally { DebugExitRule(GrammarFileName, "annotationTypeBody"); }
+		return;
+
+	}
+	// $ANTLR end "annotationTypeBody"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_annotationTypeElementDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_annotationTypeElementDeclaration() {}
+
+	// $ANTLR start "annotationTypeElementDeclaration"
+	// EntityMapping.g:492:1: annotationTypeElementDeclaration : ( annotationMethodDeclaration | interfaceFieldDeclaration | normalClassDeclaration | normalInterfaceDeclaration | enumDeclaration | annotationTypeDeclaration | ';' );
+	[GrammarRule("annotationTypeElementDeclaration")]
+	private void annotationTypeElementDeclaration()
+	{
+		EnterRule_annotationTypeElementDeclaration();
+		EnterRule("annotationTypeElementDeclaration", 52);
+		TraceIn("annotationTypeElementDeclaration", 52);
+	    int annotationTypeElementDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "annotationTypeElementDeclaration");
+		DebugLocation(492, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 52)) { return; }
+
+			// EntityMapping.g:493:5: ( annotationMethodDeclaration | interfaceFieldDeclaration | normalClassDeclaration | normalInterfaceDeclaration | enumDeclaration | annotationTypeDeclaration | ';' )
+			int alt87=7;
+			try { DebugEnterDecision(87, decisionCanBacktrack[87]);
+			switch (input.LA(1))
+			{
+			case MONKEYS_AT:
+				{
+				int LA87_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PUBLIC:
+				{
+				int LA87_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PROTECTED:
+				{
+				int LA87_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case PRIVATE:
+				{
+				int LA87_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STATIC:
+				{
+				int LA87_5 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 5, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ABSTRACT:
+				{
+				int LA87_6 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 6, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case FINAL:
+				{
+				int LA87_7 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 7, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case NATIVE:
+				{
+				int LA87_8 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 8, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				int LA87_9 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 9, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case TRANSIENT:
+				{
+				int LA87_10 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 10, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case VOLATILE:
+				{
+				int LA87_11 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 11, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STRICTFP:
+				{
+				int LA87_12 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else if ((EvaluatePredicate(synpred119_EntityMapping_fragment)))
+				{
+					alt87 = 3;
+				}
+				else if ((EvaluatePredicate(synpred120_EntityMapping_fragment)))
+				{
+					alt87 = 4;
+				}
+				else if ((EvaluatePredicate(synpred121_EntityMapping_fragment)))
+				{
+					alt87 = 5;
+				}
+				else if ((EvaluatePredicate(synpred122_EntityMapping_fragment)))
+				{
+					alt87 = 6;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 12, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case IDENTIFIER:
+				{
+				int LA87_13 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 13, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+				{
+				int LA87_14 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred117_EntityMapping_fragment)))
+				{
+					alt87 = 1;
+				}
+				else if ((EvaluatePredicate(synpred118_EntityMapping_fragment)))
+				{
+					alt87 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 14, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case CLASS:
+				{
+				alt87 = 3;
+				}
+				break;
+			case INTERFACE:
+				{
+				alt87 = 4;
+				}
+				break;
+			case ENUM:
+				{
+				alt87 = 5;
+				}
+				break;
+			case SEMI:
+				{
+				alt87 = 7;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 87, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(87); }
+			switch (alt87)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:493:9: annotationMethodDeclaration
+				{
+				DebugLocation(493, 9);
+				PushFollow(Follow._annotationMethodDeclaration_in_annotationTypeElementDeclaration3922);
+				annotationMethodDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:494:9: interfaceFieldDeclaration
+				{
+				DebugLocation(494, 9);
+				PushFollow(Follow._interfaceFieldDeclaration_in_annotationTypeElementDeclaration3932);
+				interfaceFieldDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:495:9: normalClassDeclaration
+				{
+				DebugLocation(495, 9);
+				PushFollow(Follow._normalClassDeclaration_in_annotationTypeElementDeclaration3942);
+				normalClassDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:496:9: normalInterfaceDeclaration
+				{
+				DebugLocation(496, 9);
+				PushFollow(Follow._normalInterfaceDeclaration_in_annotationTypeElementDeclaration3952);
+				normalInterfaceDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// EntityMapping.g:497:9: enumDeclaration
+				{
+				DebugLocation(497, 9);
+				PushFollow(Follow._enumDeclaration_in_annotationTypeElementDeclaration3962);
+				enumDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// EntityMapping.g:498:9: annotationTypeDeclaration
+				{
+				DebugLocation(498, 9);
+				PushFollow(Follow._annotationTypeDeclaration_in_annotationTypeElementDeclaration3972);
+				annotationTypeDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// EntityMapping.g:499:9: ';'
+				{
+				DebugLocation(499, 9);
+				Match(input,SEMI,Follow._SEMI_in_annotationTypeElementDeclaration3982); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("annotationTypeElementDeclaration", 52);
+			LeaveRule("annotationTypeElementDeclaration", 52);
+			LeaveRule_annotationTypeElementDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 52, annotationTypeElementDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(500, 4);
+		} finally { DebugExitRule(GrammarFileName, "annotationTypeElementDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "annotationTypeElementDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_annotationMethodDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_annotationMethodDeclaration() {}
+
+	// $ANTLR start "annotationMethodDeclaration"
+	// EntityMapping.g:502:1: annotationMethodDeclaration : modifiers type IDENTIFIER '(' ')' ( 'default' elementValue )? ';' ;
+	[GrammarRule("annotationMethodDeclaration")]
+	private void annotationMethodDeclaration()
+	{
+		EnterRule_annotationMethodDeclaration();
+		EnterRule("annotationMethodDeclaration", 53);
+		TraceIn("annotationMethodDeclaration", 53);
+	    int annotationMethodDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "annotationMethodDeclaration");
+		DebugLocation(502, 8);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 53)) { return; }
+
+			// EntityMapping.g:503:5: ( modifiers type IDENTIFIER '(' ')' ( 'default' elementValue )? ';' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:503:9: modifiers type IDENTIFIER '(' ')' ( 'default' elementValue )? ';'
+			{
+			DebugLocation(503, 9);
+			PushFollow(Follow._modifiers_in_annotationMethodDeclaration4002);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(503, 19);
+			PushFollow(Follow._type_in_annotationMethodDeclaration4004);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(503, 24);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_annotationMethodDeclaration4006); if (state.failed) return;
+			DebugLocation(504, 9);
+			Match(input,LPAREN,Follow._LPAREN_in_annotationMethodDeclaration4016); if (state.failed) return;
+			DebugLocation(504, 13);
+			Match(input,RPAREN,Follow._RPAREN_in_annotationMethodDeclaration4018); if (state.failed) return;
+			DebugLocation(504, 17);
+			// EntityMapping.g:504:17: ( 'default' elementValue )?
+			int alt88=2;
+			try { DebugEnterSubRule(88);
+			try { DebugEnterDecision(88, decisionCanBacktrack[88]);
+			int LA88_0 = input.LA(1);
+
+			if ((LA88_0==DEFAULT))
+			{
+				alt88 = 1;
+			}
+			} finally { DebugExitDecision(88); }
+			switch (alt88)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:504:18: 'default' elementValue
+				{
+				DebugLocation(504, 18);
+				Match(input,DEFAULT,Follow._DEFAULT_in_annotationMethodDeclaration4021); if (state.failed) return;
+				DebugLocation(504, 28);
+				PushFollow(Follow._elementValue_in_annotationMethodDeclaration4023);
+				elementValue();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(88); }
+
+			DebugLocation(506, 9);
+			Match(input,SEMI,Follow._SEMI_in_annotationMethodDeclaration4052); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("annotationMethodDeclaration", 53);
+			LeaveRule("annotationMethodDeclaration", 53);
+			LeaveRule_annotationMethodDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 53, annotationMethodDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(507, 8);
+		} finally { DebugExitRule(GrammarFileName, "annotationMethodDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "annotationMethodDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_block() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_block() {}
+
+	// $ANTLR start "block"
+	// EntityMapping.g:509:1: block : '{' ( blockStatement )* '}' ;
+	[GrammarRule("block")]
+	private void block()
+	{
+		EnterRule_block();
+		EnterRule("block", 54);
+		TraceIn("block", 54);
+	    int block_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "block");
+		DebugLocation(509, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 54)) { return; }
+
+			// EntityMapping.g:510:5: ( '{' ( blockStatement )* '}' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:510:9: '{' ( blockStatement )* '}'
+			{
+			DebugLocation(510, 9);
+			Match(input,LBRACE,Follow._LBRACE_in_block4076); if (state.failed) return;
+			DebugLocation(511, 9);
+			// EntityMapping.g:511:9: ( blockStatement )*
+			try { DebugEnterSubRule(89);
+			while (true)
+			{
+				int alt89=2;
+				try { DebugEnterDecision(89, decisionCanBacktrack[89]);
+				int LA89_0 = input.LA(1);
+
+				if ((LA89_0==ABSTRACT||(LA89_0>=ASSERT && LA89_0<=BANG)||(LA89_0>=BOOLEAN && LA89_0<=BYTE)||(LA89_0>=CHAR && LA89_0<=CLASS)||LA89_0==CONTINUE||LA89_0==DO||(LA89_0>=DOUBLE && LA89_0<=DOUBLELITERAL)||LA89_0==ENUM||(LA89_0>=FALSE && LA89_0<=FINAL)||(LA89_0>=FLOAT && LA89_0<=FOR)||(LA89_0>=IDENTIFIER && LA89_0<=IF)||(LA89_0>=INT && LA89_0<=INTLITERAL)||LA89_0==LBRACE||(LA89_0>=LONG && LA89_0<=LT)||(LA89_0>=MONKEYS_AT && LA89_0<=NULL)||LA89_0==PLUS||(LA89_0>=PLUSPLUS && LA89_0<=PUBLIC)||LA89_0==RETURN||(LA89_0>=SEMI && LA89_0<=SHORT)||(LA89_0>=STATIC && LA89_0<=SUB)||(LA89_0>=SUBSUB && LA89_0<=SYNCHRONIZED)||(LA89_0>=THIS && LA89_0<=THROW)||(LA89_0>=TILDE && LA89_0<=WHILE)))
+				{
+					alt89 = 1;
+				}
+
+
+				} finally { DebugExitDecision(89); }
+				switch ( alt89 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:511:10: blockStatement
+					{
+					DebugLocation(511, 10);
+					PushFollow(Follow._blockStatement_in_block4087);
+					blockStatement();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop89;
+				}
+			}
+
+			loop89:
+				;
+
+			} finally { DebugExitSubRule(89); }
+
+			DebugLocation(513, 9);
+			Match(input,RBRACE,Follow._RBRACE_in_block4108); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("block", 54);
+			LeaveRule("block", 54);
+			LeaveRule_block();
+	        if (state.backtracking > 0) { Memoize(input, 54, block_StartIndex); }
+
+	    }
+	 	DebugLocation(514, 4);
+		} finally { DebugExitRule(GrammarFileName, "block"); }
+		return;
+
+	}
+	// $ANTLR end "block"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_blockStatement() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_blockStatement() {}
+
+	// $ANTLR start "blockStatement"
+	// EntityMapping.g:540:1: blockStatement : ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement );
+	[GrammarRule("blockStatement")]
+	private void blockStatement()
+	{
+		EnterRule_blockStatement();
+		EnterRule("blockStatement", 55);
+		TraceIn("blockStatement", 55);
+	    int blockStatement_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "blockStatement");
+		DebugLocation(540, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 55)) { return; }
+
+			// EntityMapping.g:541:5: ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement )
+			int alt90=3;
+			try { DebugEnterDecision(90, decisionCanBacktrack[90]);
+			switch (input.LA(1))
+			{
+			case FINAL:
+				{
+				int LA90_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred125_EntityMapping_fragment)))
+				{
+					alt90 = 1;
+				}
+				else if ((EvaluatePredicate(synpred126_EntityMapping_fragment)))
+				{
+					alt90 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 90, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case MONKEYS_AT:
+				{
+				int LA90_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred125_EntityMapping_fragment)))
+				{
+					alt90 = 1;
+				}
+				else if ((EvaluatePredicate(synpred126_EntityMapping_fragment)))
+				{
+					alt90 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 90, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case IDENTIFIER:
+				{
+				int LA90_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred125_EntityMapping_fragment)))
+				{
+					alt90 = 1;
+				}
+				else if ((true))
+				{
+					alt90 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 90, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+				{
+				int LA90_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred125_EntityMapping_fragment)))
+				{
+					alt90 = 1;
+				}
+				else if ((true))
+				{
+					alt90 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 90, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ABSTRACT:
+			case CLASS:
+			case ENUM:
+			case INTERFACE:
+			case NATIVE:
+			case PRIVATE:
+			case PROTECTED:
+			case PUBLIC:
+			case STATIC:
+			case STRICTFP:
+			case TRANSIENT:
+			case VOLATILE:
+				{
+				alt90 = 2;
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				int LA90_11 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred126_EntityMapping_fragment)))
+				{
+					alt90 = 2;
+				}
+				else if ((true))
+				{
+					alt90 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 90, 11, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ASSERT:
+			case BANG:
+			case BREAK:
+			case CHARLITERAL:
+			case CONTINUE:
+			case DO:
+			case DOUBLELITERAL:
+			case FALSE:
+			case FLOATLITERAL:
+			case FOR:
+			case IF:
+			case INTLITERAL:
+			case LBRACE:
+			case LONGLITERAL:
+			case LPAREN:
+			case NEW:
+			case NULL:
+			case PLUS:
+			case PLUSPLUS:
+			case RETURN:
+			case SEMI:
+			case STRINGLITERAL:
+			case SUB:
+			case SUBSUB:
+			case SUPER:
+			case SWITCH:
+			case THIS:
+			case THROW:
+			case TILDE:
+			case TRUE:
+			case TRY:
+			case VOID:
+			case WHILE:
+				{
+				alt90 = 3;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 90, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(90); }
+			switch (alt90)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:541:9: localVariableDeclarationStatement
+				{
+				DebugLocation(541, 9);
+				PushFollow(Follow._localVariableDeclarationStatement_in_blockStatement4130);
+				localVariableDeclarationStatement();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:542:9: classOrInterfaceDeclaration
+				{
+				DebugLocation(542, 9);
+				PushFollow(Follow._classOrInterfaceDeclaration_in_blockStatement4140);
+				classOrInterfaceDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:543:9: statement
+				{
+				DebugLocation(543, 9);
+				PushFollow(Follow._statement_in_blockStatement4150);
+				statement();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("blockStatement", 55);
+			LeaveRule("blockStatement", 55);
+			LeaveRule_blockStatement();
+	        if (state.backtracking > 0) { Memoize(input, 55, blockStatement_StartIndex); }
+
+	    }
+	 	DebugLocation(544, 4);
+		} finally { DebugExitRule(GrammarFileName, "blockStatement"); }
+		return;
+
+	}
+	// $ANTLR end "blockStatement"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_localVariableDeclarationStatement() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_localVariableDeclarationStatement() {}
+
+	// $ANTLR start "localVariableDeclarationStatement"
+	// EntityMapping.g:547:1: localVariableDeclarationStatement : localVariableDeclaration ';' ;
+	[GrammarRule("localVariableDeclarationStatement")]
+	private void localVariableDeclarationStatement()
+	{
+		EnterRule_localVariableDeclarationStatement();
+		EnterRule("localVariableDeclarationStatement", 56);
+		TraceIn("localVariableDeclarationStatement", 56);
+	    int localVariableDeclarationStatement_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "localVariableDeclarationStatement");
+		DebugLocation(547, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 56)) { return; }
+
+			// EntityMapping.g:548:5: ( localVariableDeclaration ';' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:548:9: localVariableDeclaration ';'
+			{
+			DebugLocation(548, 9);
+			PushFollow(Follow._localVariableDeclaration_in_localVariableDeclarationStatement4171);
+			localVariableDeclaration();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(549, 9);
+			Match(input,SEMI,Follow._SEMI_in_localVariableDeclarationStatement4181); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("localVariableDeclarationStatement", 56);
+			LeaveRule("localVariableDeclarationStatement", 56);
+			LeaveRule_localVariableDeclarationStatement();
+	        if (state.backtracking > 0) { Memoize(input, 56, localVariableDeclarationStatement_StartIndex); }
+
+	    }
+	 	DebugLocation(550, 4);
+		} finally { DebugExitRule(GrammarFileName, "localVariableDeclarationStatement"); }
+		return;
+
+	}
+	// $ANTLR end "localVariableDeclarationStatement"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_localVariableDeclaration() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_localVariableDeclaration() {}
+
+	// $ANTLR start "localVariableDeclaration"
+	// EntityMapping.g:552:1: localVariableDeclaration : variableModifiers type variableDeclarator ( ',' variableDeclarator )* ;
+	[GrammarRule("localVariableDeclaration")]
+	private void localVariableDeclaration()
+	{
+		EnterRule_localVariableDeclaration();
+		EnterRule("localVariableDeclaration", 57);
+		TraceIn("localVariableDeclaration", 57);
+	    int localVariableDeclaration_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "localVariableDeclaration");
+		DebugLocation(552, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 57)) { return; }
+
+			// EntityMapping.g:553:5: ( variableModifiers type variableDeclarator ( ',' variableDeclarator )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:553:9: variableModifiers type variableDeclarator ( ',' variableDeclarator )*
+			{
+			DebugLocation(553, 9);
+			PushFollow(Follow._variableModifiers_in_localVariableDeclaration4201);
+			variableModifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(553, 27);
+			PushFollow(Follow._type_in_localVariableDeclaration4203);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(554, 9);
+			PushFollow(Follow._variableDeclarator_in_localVariableDeclaration4213);
+			variableDeclarator();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(555, 9);
+			// EntityMapping.g:555:9: ( ',' variableDeclarator )*
+			try { DebugEnterSubRule(91);
+			while (true)
+			{
+				int alt91=2;
+				try { DebugEnterDecision(91, decisionCanBacktrack[91]);
+				int LA91_0 = input.LA(1);
+
+				if ((LA91_0==COMMA))
+				{
+					alt91 = 1;
+				}
+
+
+				} finally { DebugExitDecision(91); }
+				switch ( alt91 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:555:10: ',' variableDeclarator
+					{
+					DebugLocation(555, 10);
+					Match(input,COMMA,Follow._COMMA_in_localVariableDeclaration4224); if (state.failed) return;
+					DebugLocation(555, 14);
+					PushFollow(Follow._variableDeclarator_in_localVariableDeclaration4226);
+					variableDeclarator();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop91;
+				}
+			}
+
+			loop91:
+				;
+
+			} finally { DebugExitSubRule(91); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("localVariableDeclaration", 57);
+			LeaveRule("localVariableDeclaration", 57);
+			LeaveRule_localVariableDeclaration();
+	        if (state.backtracking > 0) { Memoize(input, 57, localVariableDeclaration_StartIndex); }
+
+	    }
+	 	DebugLocation(557, 4);
+		} finally { DebugExitRule(GrammarFileName, "localVariableDeclaration"); }
+		return;
+
+	}
+	// $ANTLR end "localVariableDeclaration"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_statement() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_statement() {}
+
+	// $ANTLR start "statement"
+	// EntityMapping.g:559:1: statement : ( block | ( 'assert' ) expression ( ':' expression )? ';' | 'assert' expression ( ':' expression )? ';' | 'if' parExpression statement ( 'else' statement )? | forstatement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | trystatement | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( IDENTIFIER )? ';' | 'continue' ( IDENTIFIER )? ';' | expression ';' | IDENTIFIER ':' statement | ';' );
+	[GrammarRule("statement")]
+	private void statement()
+	{
+		EnterRule_statement();
+		EnterRule("statement", 58);
+		TraceIn("statement", 58);
+	    int statement_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "statement");
+		DebugLocation(559, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 58)) { return; }
+
+			// EntityMapping.g:560:5: ( block | ( 'assert' ) expression ( ':' expression )? ';' | 'assert' expression ( ':' expression )? ';' | 'if' parExpression statement ( 'else' statement )? | forstatement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | trystatement | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( IDENTIFIER )? ';' | 'continue' ( IDENTIFIER )? ';' | expression ';' | IDENTIFIER ':' statement | ';' )
+			int alt98=17;
+			try { DebugEnterDecision(98, decisionCanBacktrack[98]);
+			switch (input.LA(1))
+			{
+			case LBRACE:
+				{
+				alt98 = 1;
+				}
+				break;
+			case ASSERT:
+				{
+				int LA98_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred130_EntityMapping_fragment)))
+				{
+					alt98 = 2;
+				}
+				else if ((EvaluatePredicate(synpred132_EntityMapping_fragment)))
+				{
+					alt98 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 98, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case IF:
+				{
+				alt98 = 4;
+				}
+				break;
+			case FOR:
+				{
+				alt98 = 5;
+				}
+				break;
+			case WHILE:
+				{
+				alt98 = 6;
+				}
+				break;
+			case DO:
+				{
+				alt98 = 7;
+				}
+				break;
+			case TRY:
+				{
+				alt98 = 8;
+				}
+				break;
+			case SWITCH:
+				{
+				alt98 = 9;
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				alt98 = 10;
+				}
+				break;
+			case RETURN:
+				{
+				alt98 = 11;
+				}
+				break;
+			case THROW:
+				{
+				alt98 = 12;
+				}
+				break;
+			case BREAK:
+				{
+				alt98 = 13;
+				}
+				break;
+			case CONTINUE:
+				{
+				alt98 = 14;
+				}
+				break;
+			case BANG:
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case CHARLITERAL:
+			case DOUBLE:
+			case DOUBLELITERAL:
+			case FALSE:
+			case FLOAT:
+			case FLOATLITERAL:
+			case INT:
+			case INTLITERAL:
+			case LONG:
+			case LONGLITERAL:
+			case LPAREN:
+			case NEW:
+			case NULL:
+			case PLUS:
+			case PLUSPLUS:
+			case SHORT:
+			case STRINGLITERAL:
+			case SUB:
+			case SUBSUB:
+			case SUPER:
+			case THIS:
+			case TILDE:
+			case TRUE:
+			case VOID:
+				{
+				alt98 = 15;
+				}
+				break;
+			case IDENTIFIER:
+				{
+				int LA98_22 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred148_EntityMapping_fragment)))
+				{
+					alt98 = 15;
+				}
+				else if ((EvaluatePredicate(synpred149_EntityMapping_fragment)))
+				{
+					alt98 = 16;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 98, 22, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case SEMI:
+				{
+				alt98 = 17;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 98, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(98); }
+			switch (alt98)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:560:9: block
+				{
+				DebugLocation(560, 9);
+				PushFollow(Follow._block_in_statement4257);
+				block();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:562:9: ( 'assert' ) expression ( ':' expression )? ';'
+				{
+				DebugLocation(562, 9);
+				// EntityMapping.g:562:9: ( 'assert' )
+				DebugEnterAlt(1);
+				// EntityMapping.g:562:10: 'assert'
+				{
+				DebugLocation(562, 10);
+				Match(input,ASSERT,Follow._ASSERT_in_statement4281); if (state.failed) return;
+
+				}
+
+				DebugLocation(564, 9);
+				PushFollow(Follow._expression_in_statement4301);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(564, 20);
+				// EntityMapping.g:564:20: ( ':' expression )?
+				int alt92=2;
+				try { DebugEnterSubRule(92);
+				try { DebugEnterDecision(92, decisionCanBacktrack[92]);
+				int LA92_0 = input.LA(1);
+
+				if ((LA92_0==COLON))
+				{
+					alt92 = 1;
+				}
+				} finally { DebugExitDecision(92); }
+				switch (alt92)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:564:21: ':' expression
+					{
+					DebugLocation(564, 21);
+					Match(input,COLON,Follow._COLON_in_statement4304); if (state.failed) return;
+					DebugLocation(564, 25);
+					PushFollow(Follow._expression_in_statement4306);
+					expression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(92); }
+
+				DebugLocation(564, 38);
+				Match(input,SEMI,Follow._SEMI_in_statement4310); if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:565:9: 'assert' expression ( ':' expression )? ';'
+				{
+				DebugLocation(565, 9);
+				Match(input,ASSERT,Follow._ASSERT_in_statement4320); if (state.failed) return;
+				DebugLocation(565, 19);
+				PushFollow(Follow._expression_in_statement4323);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(565, 30);
+				// EntityMapping.g:565:30: ( ':' expression )?
+				int alt93=2;
+				try { DebugEnterSubRule(93);
+				try { DebugEnterDecision(93, decisionCanBacktrack[93]);
+				int LA93_0 = input.LA(1);
+
+				if ((LA93_0==COLON))
+				{
+					alt93 = 1;
+				}
+				} finally { DebugExitDecision(93); }
+				switch (alt93)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:565:31: ':' expression
+					{
+					DebugLocation(565, 31);
+					Match(input,COLON,Follow._COLON_in_statement4326); if (state.failed) return;
+					DebugLocation(565, 35);
+					PushFollow(Follow._expression_in_statement4328);
+					expression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(93); }
+
+				DebugLocation(565, 48);
+				Match(input,SEMI,Follow._SEMI_in_statement4332); if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:566:9: 'if' parExpression statement ( 'else' statement )?
+				{
+				DebugLocation(566, 9);
+				Match(input,IF,Follow._IF_in_statement4354); if (state.failed) return;
+				DebugLocation(566, 14);
+				PushFollow(Follow._parExpression_in_statement4356);
+				parExpression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(566, 28);
+				PushFollow(Follow._statement_in_statement4358);
+				statement();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(566, 38);
+				// EntityMapping.g:566:38: ( 'else' statement )?
+				int alt94=2;
+				try { DebugEnterSubRule(94);
+				try { DebugEnterDecision(94, decisionCanBacktrack[94]);
+				int LA94_0 = input.LA(1);
+
+				if ((LA94_0==ELSE))
+				{
+					int LA94_1 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred133_EntityMapping_fragment)))
+					{
+						alt94 = 1;
+					}
+				}
+				} finally { DebugExitDecision(94); }
+				switch (alt94)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:566:39: 'else' statement
+					{
+					DebugLocation(566, 39);
+					Match(input,ELSE,Follow._ELSE_in_statement4361); if (state.failed) return;
+					DebugLocation(566, 46);
+					PushFollow(Follow._statement_in_statement4363);
+					statement();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(94); }
+
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// EntityMapping.g:567:9: forstatement
+				{
+				DebugLocation(567, 9);
+				PushFollow(Follow._forstatement_in_statement4385);
+				forstatement();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// EntityMapping.g:568:9: 'while' parExpression statement
+				{
+				DebugLocation(568, 9);
+				Match(input,WHILE,Follow._WHILE_in_statement4395); if (state.failed) return;
+				DebugLocation(568, 17);
+				PushFollow(Follow._parExpression_in_statement4397);
+				parExpression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(568, 31);
+				PushFollow(Follow._statement_in_statement4399);
+				statement();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// EntityMapping.g:569:9: 'do' statement 'while' parExpression ';'
+				{
+				DebugLocation(569, 9);
+				Match(input,DO,Follow._DO_in_statement4409); if (state.failed) return;
+				DebugLocation(569, 14);
+				PushFollow(Follow._statement_in_statement4411);
+				statement();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(569, 24);
+				Match(input,WHILE,Follow._WHILE_in_statement4413); if (state.failed) return;
+				DebugLocation(569, 32);
+				PushFollow(Follow._parExpression_in_statement4415);
+				parExpression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(569, 46);
+				Match(input,SEMI,Follow._SEMI_in_statement4417); if (state.failed) return;
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// EntityMapping.g:570:9: trystatement
+				{
+				DebugLocation(570, 9);
+				PushFollow(Follow._trystatement_in_statement4427);
+				trystatement();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 9:
+				DebugEnterAlt(9);
+				// EntityMapping.g:571:9: 'switch' parExpression '{' switchBlockStatementGroups '}'
+				{
+				DebugLocation(571, 9);
+				Match(input,SWITCH,Follow._SWITCH_in_statement4437); if (state.failed) return;
+				DebugLocation(571, 18);
+				PushFollow(Follow._parExpression_in_statement4439);
+				parExpression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(571, 32);
+				Match(input,LBRACE,Follow._LBRACE_in_statement4441); if (state.failed) return;
+				DebugLocation(571, 36);
+				PushFollow(Follow._switchBlockStatementGroups_in_statement4443);
+				switchBlockStatementGroups();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(571, 63);
+				Match(input,RBRACE,Follow._RBRACE_in_statement4445); if (state.failed) return;
+
+				}
+				break;
+			case 10:
+				DebugEnterAlt(10);
+				// EntityMapping.g:572:9: 'synchronized' parExpression block
+				{
+				DebugLocation(572, 9);
+				Match(input,SYNCHRONIZED,Follow._SYNCHRONIZED_in_statement4455); if (state.failed) return;
+				DebugLocation(572, 24);
+				PushFollow(Follow._parExpression_in_statement4457);
+				parExpression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(572, 38);
+				PushFollow(Follow._block_in_statement4459);
+				block();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 11:
+				DebugEnterAlt(11);
+				// EntityMapping.g:573:9: 'return' ( expression )? ';'
+				{
+				DebugLocation(573, 9);
+				Match(input,RETURN,Follow._RETURN_in_statement4469); if (state.failed) return;
+				DebugLocation(573, 18);
+				// EntityMapping.g:573:18: ( expression )?
+				int alt95=2;
+				try { DebugEnterSubRule(95);
+				try { DebugEnterDecision(95, decisionCanBacktrack[95]);
+				int LA95_0 = input.LA(1);
+
+				if ((LA95_0==BANG||LA95_0==BOOLEAN||LA95_0==BYTE||(LA95_0>=CHAR && LA95_0<=CHARLITERAL)||(LA95_0>=DOUBLE && LA95_0<=DOUBLELITERAL)||LA95_0==FALSE||(LA95_0>=FLOAT && LA95_0<=FLOATLITERAL)||LA95_0==IDENTIFIER||LA95_0==INT||LA95_0==INTLITERAL||(LA95_0>=LONG && LA95_0<=LPAREN)||(LA95_0>=NEW && LA95_0<=NULL)||LA95_0==PLUS||LA95_0==PLUSPLUS||LA95_0==SHORT||(LA95_0>=STRINGLITERAL && LA95_0<=SUB)||(LA95_0>=SUBSUB && LA95_0<=SUPER)||LA95_0==THIS||LA95_0==TILDE||LA95_0==TRUE||LA95_0==VOID))
+				{
+					alt95 = 1;
+				}
+				} finally { DebugExitDecision(95); }
+				switch (alt95)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:573:19: expression
+					{
+					DebugLocation(573, 19);
+					PushFollow(Follow._expression_in_statement4472);
+					expression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(95); }
+
+				DebugLocation(573, 33);
+				Match(input,SEMI,Follow._SEMI_in_statement4477); if (state.failed) return;
+
+				}
+				break;
+			case 12:
+				DebugEnterAlt(12);
+				// EntityMapping.g:574:9: 'throw' expression ';'
+				{
+				DebugLocation(574, 9);
+				Match(input,THROW,Follow._THROW_in_statement4487); if (state.failed) return;
+				DebugLocation(574, 17);
+				PushFollow(Follow._expression_in_statement4489);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(574, 28);
+				Match(input,SEMI,Follow._SEMI_in_statement4491); if (state.failed) return;
+
+				}
+				break;
+			case 13:
+				DebugEnterAlt(13);
+				// EntityMapping.g:575:9: 'break' ( IDENTIFIER )? ';'
+				{
+				DebugLocation(575, 9);
+				Match(input,BREAK,Follow._BREAK_in_statement4501); if (state.failed) return;
+				DebugLocation(576, 13);
+				// EntityMapping.g:576:13: ( IDENTIFIER )?
+				int alt96=2;
+				try { DebugEnterSubRule(96);
+				try { DebugEnterDecision(96, decisionCanBacktrack[96]);
+				int LA96_0 = input.LA(1);
+
+				if ((LA96_0==IDENTIFIER))
+				{
+					alt96 = 1;
+				}
+				} finally { DebugExitDecision(96); }
+				switch (alt96)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:576:14: IDENTIFIER
+					{
+					DebugLocation(576, 14);
+					Match(input,IDENTIFIER,Follow._IDENTIFIER_in_statement4516); if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(96); }
+
+				DebugLocation(577, 16);
+				Match(input,SEMI,Follow._SEMI_in_statement4533); if (state.failed) return;
+
+				}
+				break;
+			case 14:
+				DebugEnterAlt(14);
+				// EntityMapping.g:578:9: 'continue' ( IDENTIFIER )? ';'
+				{
+				DebugLocation(578, 9);
+				Match(input,CONTINUE,Follow._CONTINUE_in_statement4543); if (state.failed) return;
+				DebugLocation(579, 13);
+				// EntityMapping.g:579:13: ( IDENTIFIER )?
+				int alt97=2;
+				try { DebugEnterSubRule(97);
+				try { DebugEnterDecision(97, decisionCanBacktrack[97]);
+				int LA97_0 = input.LA(1);
+
+				if ((LA97_0==IDENTIFIER))
+				{
+					alt97 = 1;
+				}
+				} finally { DebugExitDecision(97); }
+				switch (alt97)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:579:14: IDENTIFIER
+					{
+					DebugLocation(579, 14);
+					Match(input,IDENTIFIER,Follow._IDENTIFIER_in_statement4558); if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(97); }
+
+				DebugLocation(580, 16);
+				Match(input,SEMI,Follow._SEMI_in_statement4575); if (state.failed) return;
+
+				}
+				break;
+			case 15:
+				DebugEnterAlt(15);
+				// EntityMapping.g:581:9: expression ';'
+				{
+				DebugLocation(581, 9);
+				PushFollow(Follow._expression_in_statement4585);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(581, 21);
+				Match(input,SEMI,Follow._SEMI_in_statement4588); if (state.failed) return;
+
+				}
+				break;
+			case 16:
+				DebugEnterAlt(16);
+				// EntityMapping.g:582:9: IDENTIFIER ':' statement
+				{
+				DebugLocation(582, 9);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_statement4603); if (state.failed) return;
+				DebugLocation(582, 20);
+				Match(input,COLON,Follow._COLON_in_statement4605); if (state.failed) return;
+				DebugLocation(582, 24);
+				PushFollow(Follow._statement_in_statement4607);
+				statement();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 17:
+				DebugEnterAlt(17);
+				// EntityMapping.g:583:9: ';'
+				{
+				DebugLocation(583, 9);
+				Match(input,SEMI,Follow._SEMI_in_statement4617); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("statement", 58);
+			LeaveRule("statement", 58);
+			LeaveRule_statement();
+	        if (state.backtracking > 0) { Memoize(input, 58, statement_StartIndex); }
+
+	    }
+	 	DebugLocation(585, 4);
+		} finally { DebugExitRule(GrammarFileName, "statement"); }
+		return;
+
+	}
+	// $ANTLR end "statement"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_switchBlockStatementGroups() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_switchBlockStatementGroups() {}
+
+	// $ANTLR start "switchBlockStatementGroups"
+	// EntityMapping.g:587:1: switchBlockStatementGroups : ( switchBlockStatementGroup )* ;
+	[GrammarRule("switchBlockStatementGroups")]
+	private void switchBlockStatementGroups()
+	{
+		EnterRule_switchBlockStatementGroups();
+		EnterRule("switchBlockStatementGroups", 59);
+		TraceIn("switchBlockStatementGroups", 59);
+	    int switchBlockStatementGroups_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "switchBlockStatementGroups");
+		DebugLocation(587, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 59)) { return; }
+
+			// EntityMapping.g:588:5: ( ( switchBlockStatementGroup )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:588:9: ( switchBlockStatementGroup )*
+			{
+			DebugLocation(588, 9);
+			// EntityMapping.g:588:9: ( switchBlockStatementGroup )*
+			try { DebugEnterSubRule(99);
+			while (true)
+			{
+				int alt99=2;
+				try { DebugEnterDecision(99, decisionCanBacktrack[99]);
+				int LA99_0 = input.LA(1);
+
+				if ((LA99_0==CASE||LA99_0==DEFAULT))
+				{
+					alt99 = 1;
+				}
+
+
+				} finally { DebugExitDecision(99); }
+				switch ( alt99 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:588:10: switchBlockStatementGroup
+					{
+					DebugLocation(588, 10);
+					PushFollow(Follow._switchBlockStatementGroup_in_switchBlockStatementGroups4639);
+					switchBlockStatementGroup();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop99;
+				}
+			}
+
+			loop99:
+				;
+
+			} finally { DebugExitSubRule(99); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("switchBlockStatementGroups", 59);
+			LeaveRule("switchBlockStatementGroups", 59);
+			LeaveRule_switchBlockStatementGroups();
+	        if (state.backtracking > 0) { Memoize(input, 59, switchBlockStatementGroups_StartIndex); }
+
+	    }
+	 	DebugLocation(589, 4);
+		} finally { DebugExitRule(GrammarFileName, "switchBlockStatementGroups"); }
+		return;
+
+	}
+	// $ANTLR end "switchBlockStatementGroups"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_switchBlockStatementGroup() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_switchBlockStatementGroup() {}
+
+	// $ANTLR start "switchBlockStatementGroup"
+	// EntityMapping.g:591:1: switchBlockStatementGroup : switchLabel ( blockStatement )* ;
+	[GrammarRule("switchBlockStatementGroup")]
+	private void switchBlockStatementGroup()
+	{
+		EnterRule_switchBlockStatementGroup();
+		EnterRule("switchBlockStatementGroup", 60);
+		TraceIn("switchBlockStatementGroup", 60);
+	    int switchBlockStatementGroup_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "switchBlockStatementGroup");
+		DebugLocation(591, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 60)) { return; }
+
+			// EntityMapping.g:592:5: ( switchLabel ( blockStatement )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:593:9: switchLabel ( blockStatement )*
+			{
+			DebugLocation(593, 9);
+			PushFollow(Follow._switchLabel_in_switchBlockStatementGroup4668);
+			switchLabel();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(594, 9);
+			// EntityMapping.g:594:9: ( blockStatement )*
+			try { DebugEnterSubRule(100);
+			while (true)
+			{
+				int alt100=2;
+				try { DebugEnterDecision(100, decisionCanBacktrack[100]);
+				int LA100_0 = input.LA(1);
+
+				if ((LA100_0==ABSTRACT||(LA100_0>=ASSERT && LA100_0<=BANG)||(LA100_0>=BOOLEAN && LA100_0<=BYTE)||(LA100_0>=CHAR && LA100_0<=CLASS)||LA100_0==CONTINUE||LA100_0==DO||(LA100_0>=DOUBLE && LA100_0<=DOUBLELITERAL)||LA100_0==ENUM||(LA100_0>=FALSE && LA100_0<=FINAL)||(LA100_0>=FLOAT && LA100_0<=FOR)||(LA100_0>=IDENTIFIER && LA100_0<=IF)||(LA100_0>=INT && LA100_0<=INTLITERAL)||LA100_0==LBRACE||(LA100_0>=LONG && LA100_0<=LT)||(LA100_0>=MONKEYS_AT && LA100_0<=NULL)||LA100_0==PLUS||(LA100_0>=PLUSPLUS && LA100_0<=PUBLIC)||LA100_0==RETURN||(LA100_0>=SEMI && LA100_0<=SHORT)||(LA100_0>=STATIC && LA100_0<=SUB)||(LA100_0>=SUBSUB && LA100_0<=SYNCHRONIZED)||(LA100_0>=THIS && LA100_0<=THROW)||(LA100_0>=TILDE && LA100_0<=WHILE)))
+				{
+					alt100 = 1;
+				}
+
+
+				} finally { DebugExitDecision(100); }
+				switch ( alt100 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:594:10: blockStatement
+					{
+					DebugLocation(594, 10);
+					PushFollow(Follow._blockStatement_in_switchBlockStatementGroup4679);
+					blockStatement();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop100;
+				}
+			}
+
+			loop100:
+				;
+
+			} finally { DebugExitSubRule(100); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("switchBlockStatementGroup", 60);
+			LeaveRule("switchBlockStatementGroup", 60);
+			LeaveRule_switchBlockStatementGroup();
+	        if (state.backtracking > 0) { Memoize(input, 60, switchBlockStatementGroup_StartIndex); }
+
+	    }
+	 	DebugLocation(596, 4);
+		} finally { DebugExitRule(GrammarFileName, "switchBlockStatementGroup"); }
+		return;
+
+	}
+	// $ANTLR end "switchBlockStatementGroup"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_switchLabel() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_switchLabel() {}
+
+	// $ANTLR start "switchLabel"
+	// EntityMapping.g:598:1: switchLabel : ( 'case' expression ':' | 'default' ':' );
+	[GrammarRule("switchLabel")]
+	private void switchLabel()
+	{
+		EnterRule_switchLabel();
+		EnterRule("switchLabel", 61);
+		TraceIn("switchLabel", 61);
+	    int switchLabel_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "switchLabel");
+		DebugLocation(598, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 61)) { return; }
+
+			// EntityMapping.g:599:5: ( 'case' expression ':' | 'default' ':' )
+			int alt101=2;
+			try { DebugEnterDecision(101, decisionCanBacktrack[101]);
+			int LA101_0 = input.LA(1);
+
+			if ((LA101_0==CASE))
+			{
+				alt101 = 1;
+			}
+			else if ((LA101_0==DEFAULT))
+			{
+				alt101 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 101, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(101); }
+			switch (alt101)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:599:9: 'case' expression ':'
+				{
+				DebugLocation(599, 9);
+				Match(input,CASE,Follow._CASE_in_switchLabel4710); if (state.failed) return;
+				DebugLocation(599, 16);
+				PushFollow(Follow._expression_in_switchLabel4712);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(599, 27);
+				Match(input,COLON,Follow._COLON_in_switchLabel4714); if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:600:9: 'default' ':'
+				{
+				DebugLocation(600, 9);
+				Match(input,DEFAULT,Follow._DEFAULT_in_switchLabel4724); if (state.failed) return;
+				DebugLocation(600, 19);
+				Match(input,COLON,Follow._COLON_in_switchLabel4726); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("switchLabel", 61);
+			LeaveRule("switchLabel", 61);
+			LeaveRule_switchLabel();
+	        if (state.backtracking > 0) { Memoize(input, 61, switchLabel_StartIndex); }
+
+	    }
+	 	DebugLocation(601, 4);
+		} finally { DebugExitRule(GrammarFileName, "switchLabel"); }
+		return;
+
+	}
+	// $ANTLR end "switchLabel"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_trystatement() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_trystatement() {}
+
+	// $ANTLR start "trystatement"
+	// EntityMapping.g:604:1: trystatement : 'try' block ( catches 'finally' block | catches | 'finally' block ) ;
+	[GrammarRule("trystatement")]
+	private void trystatement()
+	{
+		EnterRule_trystatement();
+		EnterRule("trystatement", 62);
+		TraceIn("trystatement", 62);
+	    int trystatement_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "trystatement");
+		DebugLocation(604, 5);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 62)) { return; }
+
+			// EntityMapping.g:605:5: ( 'try' block ( catches 'finally' block | catches | 'finally' block ) )
+			DebugEnterAlt(1);
+			// EntityMapping.g:605:9: 'try' block ( catches 'finally' block | catches | 'finally' block )
+			{
+			DebugLocation(605, 9);
+			Match(input,TRY,Follow._TRY_in_trystatement4747); if (state.failed) return;
+			DebugLocation(605, 15);
+			PushFollow(Follow._block_in_trystatement4749);
+			block();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(606, 9);
+			// EntityMapping.g:606:9: ( catches 'finally' block | catches | 'finally' block )
+			int alt102=3;
+			try { DebugEnterSubRule(102);
+			try { DebugEnterDecision(102, decisionCanBacktrack[102]);
+			int LA102_0 = input.LA(1);
+
+			if ((LA102_0==CATCH))
+			{
+				int LA102_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred153_EntityMapping_fragment)))
+				{
+					alt102 = 1;
+				}
+				else if ((EvaluatePredicate(synpred154_EntityMapping_fragment)))
+				{
+					alt102 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 102, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else if ((LA102_0==FINALLY))
+			{
+				alt102 = 3;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 102, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(102); }
+			switch (alt102)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:606:13: catches 'finally' block
+				{
+				DebugLocation(606, 13);
+				PushFollow(Follow._catches_in_trystatement4763);
+				catches();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(606, 21);
+				Match(input,FINALLY,Follow._FINALLY_in_trystatement4765); if (state.failed) return;
+				DebugLocation(606, 31);
+				PushFollow(Follow._block_in_trystatement4767);
+				block();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:607:13: catches
+				{
+				DebugLocation(607, 13);
+				PushFollow(Follow._catches_in_trystatement4781);
+				catches();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:608:13: 'finally' block
+				{
+				DebugLocation(608, 13);
+				Match(input,FINALLY,Follow._FINALLY_in_trystatement4795); if (state.failed) return;
+				DebugLocation(608, 23);
+				PushFollow(Follow._block_in_trystatement4797);
+				block();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(102); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("trystatement", 62);
+			LeaveRule("trystatement", 62);
+			LeaveRule_trystatement();
+	        if (state.backtracking > 0) { Memoize(input, 62, trystatement_StartIndex); }
+
+	    }
+	 	DebugLocation(610, 5);
+		} finally { DebugExitRule(GrammarFileName, "trystatement"); }
+		return;
+
+	}
+	// $ANTLR end "trystatement"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_catches() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_catches() {}
+
+	// $ANTLR start "catches"
+	// EntityMapping.g:612:1: catches : catchClause ( catchClause )* ;
+	[GrammarRule("catches")]
+	private void catches()
+	{
+		EnterRule_catches();
+		EnterRule("catches", 63);
+		TraceIn("catches", 63);
+	    int catches_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "catches");
+		DebugLocation(612, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 63)) { return; }
+
+			// EntityMapping.g:613:5: ( catchClause ( catchClause )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:613:9: catchClause ( catchClause )*
+			{
+			DebugLocation(613, 9);
+			PushFollow(Follow._catchClause_in_catches4828);
+			catchClause();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(614, 9);
+			// EntityMapping.g:614:9: ( catchClause )*
+			try { DebugEnterSubRule(103);
+			while (true)
+			{
+				int alt103=2;
+				try { DebugEnterDecision(103, decisionCanBacktrack[103]);
+				int LA103_0 = input.LA(1);
+
+				if ((LA103_0==CATCH))
+				{
+					alt103 = 1;
+				}
+
+
+				} finally { DebugExitDecision(103); }
+				switch ( alt103 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:614:10: catchClause
+					{
+					DebugLocation(614, 10);
+					PushFollow(Follow._catchClause_in_catches4839);
+					catchClause();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop103;
+				}
+			}
+
+			loop103:
+				;
+
+			} finally { DebugExitSubRule(103); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("catches", 63);
+			LeaveRule("catches", 63);
+			LeaveRule_catches();
+	        if (state.backtracking > 0) { Memoize(input, 63, catches_StartIndex); }
+
+	    }
+	 	DebugLocation(616, 4);
+		} finally { DebugExitRule(GrammarFileName, "catches"); }
+		return;
+
+	}
+	// $ANTLR end "catches"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_catchClause() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_catchClause() {}
+
+	// $ANTLR start "catchClause"
+	// EntityMapping.g:618:1: catchClause : 'catch' '(' formalParameter ')' block ;
+	[GrammarRule("catchClause")]
+	private void catchClause()
+	{
+		EnterRule_catchClause();
+		EnterRule("catchClause", 64);
+		TraceIn("catchClause", 64);
+	    int catchClause_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "catchClause");
+		DebugLocation(618, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 64)) { return; }
+
+			// EntityMapping.g:619:5: ( 'catch' '(' formalParameter ')' block )
+			DebugEnterAlt(1);
+			// EntityMapping.g:619:9: 'catch' '(' formalParameter ')' block
+			{
+			DebugLocation(619, 9);
+			Match(input,CATCH,Follow._CATCH_in_catchClause4870); if (state.failed) return;
+			DebugLocation(619, 17);
+			Match(input,LPAREN,Follow._LPAREN_in_catchClause4872); if (state.failed) return;
+			DebugLocation(619, 21);
+			PushFollow(Follow._formalParameter_in_catchClause4874);
+			formalParameter();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(620, 9);
+			Match(input,RPAREN,Follow._RPAREN_in_catchClause4884); if (state.failed) return;
+			DebugLocation(620, 13);
+			PushFollow(Follow._block_in_catchClause4886);
+			block();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("catchClause", 64);
+			LeaveRule("catchClause", 64);
+			LeaveRule_catchClause();
+	        if (state.backtracking > 0) { Memoize(input, 64, catchClause_StartIndex); }
+
+	    }
+	 	DebugLocation(621, 4);
+		} finally { DebugExitRule(GrammarFileName, "catchClause"); }
+		return;
+
+	}
+	// $ANTLR end "catchClause"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_formalParameter() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_formalParameter() {}
+
+	// $ANTLR start "formalParameter"
+	// EntityMapping.g:623:1: formalParameter : variableModifiers type IDENTIFIER ( '[' ']' )* ;
+	[GrammarRule("formalParameter")]
+	private void formalParameter()
+	{
+		EnterRule_formalParameter();
+		EnterRule("formalParameter", 65);
+		TraceIn("formalParameter", 65);
+	    int formalParameter_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "formalParameter");
+		DebugLocation(623, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 65)) { return; }
+
+			// EntityMapping.g:624:5: ( variableModifiers type IDENTIFIER ( '[' ']' )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:624:9: variableModifiers type IDENTIFIER ( '[' ']' )*
+			{
+			DebugLocation(624, 9);
+			PushFollow(Follow._variableModifiers_in_formalParameter4907);
+			variableModifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(624, 27);
+			PushFollow(Follow._type_in_formalParameter4909);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(624, 32);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_formalParameter4911); if (state.failed) return;
+			DebugLocation(625, 9);
+			// EntityMapping.g:625:9: ( '[' ']' )*
+			try { DebugEnterSubRule(104);
+			while (true)
+			{
+				int alt104=2;
+				try { DebugEnterDecision(104, decisionCanBacktrack[104]);
+				int LA104_0 = input.LA(1);
+
+				if ((LA104_0==LBRACKET))
+				{
+					alt104 = 1;
+				}
+
+
+				} finally { DebugExitDecision(104); }
+				switch ( alt104 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:625:10: '[' ']'
+					{
+					DebugLocation(625, 10);
+					Match(input,LBRACKET,Follow._LBRACKET_in_formalParameter4922); if (state.failed) return;
+					DebugLocation(625, 14);
+					Match(input,RBRACKET,Follow._RBRACKET_in_formalParameter4924); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop104;
+				}
+			}
+
+			loop104:
+				;
+
+			} finally { DebugExitSubRule(104); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("formalParameter", 65);
+			LeaveRule("formalParameter", 65);
+			LeaveRule_formalParameter();
+	        if (state.backtracking > 0) { Memoize(input, 65, formalParameter_StartIndex); }
+
+	    }
+	 	DebugLocation(627, 4);
+		} finally { DebugExitRule(GrammarFileName, "formalParameter"); }
+		return;
+
+	}
+	// $ANTLR end "formalParameter"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_forstatement() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_forstatement() {}
+
+	// $ANTLR start "forstatement"
+	// EntityMapping.g:629:1: forstatement : ( 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' statement );
+	[GrammarRule("forstatement")]
+	private void forstatement()
+	{
+		EnterRule_forstatement();
+		EnterRule("forstatement", 66);
+		TraceIn("forstatement", 66);
+	    int forstatement_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "forstatement");
+		DebugLocation(629, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 66)) { return; }
+
+			// EntityMapping.g:630:5: ( 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' statement )
+			int alt108=2;
+			try { DebugEnterDecision(108, decisionCanBacktrack[108]);
+			int LA108_0 = input.LA(1);
+
+			if ((LA108_0==FOR))
+			{
+				int LA108_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred157_EntityMapping_fragment)))
+				{
+					alt108 = 1;
+				}
+				else if ((true))
+				{
+					alt108 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 108, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 108, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(108); }
+			switch (alt108)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:632:9: 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement
+				{
+				DebugLocation(632, 9);
+				Match(input,FOR,Follow._FOR_in_forstatement4973); if (state.failed) return;
+				DebugLocation(632, 15);
+				Match(input,LPAREN,Follow._LPAREN_in_forstatement4975); if (state.failed) return;
+				DebugLocation(632, 19);
+				PushFollow(Follow._variableModifiers_in_forstatement4977);
+				variableModifiers();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(632, 37);
+				PushFollow(Follow._type_in_forstatement4979);
+				type();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(632, 42);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_forstatement4981); if (state.failed) return;
+				DebugLocation(632, 53);
+				Match(input,COLON,Follow._COLON_in_forstatement4983); if (state.failed) return;
+				DebugLocation(633, 9);
+				PushFollow(Follow._expression_in_forstatement4994);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(633, 20);
+				Match(input,RPAREN,Follow._RPAREN_in_forstatement4996); if (state.failed) return;
+				DebugLocation(633, 24);
+				PushFollow(Follow._statement_in_forstatement4998);
+				statement();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:636:9: 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' statement
+				{
+				DebugLocation(636, 9);
+				Match(input,FOR,Follow._FOR_in_forstatement5030); if (state.failed) return;
+				DebugLocation(636, 15);
+				Match(input,LPAREN,Follow._LPAREN_in_forstatement5032); if (state.failed) return;
+				DebugLocation(637, 17);
+				// EntityMapping.g:637:17: ( forInit )?
+				int alt105=2;
+				try { DebugEnterSubRule(105);
+				try { DebugEnterDecision(105, decisionCanBacktrack[105]);
+				int LA105_0 = input.LA(1);
+
+				if ((LA105_0==BANG||LA105_0==BOOLEAN||LA105_0==BYTE||(LA105_0>=CHAR && LA105_0<=CHARLITERAL)||(LA105_0>=DOUBLE && LA105_0<=DOUBLELITERAL)||(LA105_0>=FALSE && LA105_0<=FINAL)||(LA105_0>=FLOAT && LA105_0<=FLOATLITERAL)||LA105_0==IDENTIFIER||LA105_0==INT||LA105_0==INTLITERAL||(LA105_0>=LONG && LA105_0<=LPAREN)||LA105_0==MONKEYS_AT||(LA105_0>=NEW && LA105_0<=NULL)||LA105_0==PLUS||LA105_0==PLUSPLUS||LA105_0==SHORT||(LA105_0>=STRINGLITERAL && LA105_0<=SUB)||(LA105_0>=SUBSUB && LA105_0<=SUPER)||LA105_0==THIS||LA105_0==TILDE||LA105_0==TRUE||LA105_0==VOID))
+				{
+					alt105 = 1;
+				}
+				} finally { DebugExitDecision(105); }
+				switch (alt105)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:637:18: forInit
+					{
+					DebugLocation(637, 18);
+					PushFollow(Follow._forInit_in_forstatement5052);
+					forInit();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(105); }
+
+				DebugLocation(638, 20);
+				Match(input,SEMI,Follow._SEMI_in_forstatement5073); if (state.failed) return;
+				DebugLocation(639, 17);
+				// EntityMapping.g:639:17: ( expression )?
+				int alt106=2;
+				try { DebugEnterSubRule(106);
+				try { DebugEnterDecision(106, decisionCanBacktrack[106]);
+				int LA106_0 = input.LA(1);
+
+				if ((LA106_0==BANG||LA106_0==BOOLEAN||LA106_0==BYTE||(LA106_0>=CHAR && LA106_0<=CHARLITERAL)||(LA106_0>=DOUBLE && LA106_0<=DOUBLELITERAL)||LA106_0==FALSE||(LA106_0>=FLOAT && LA106_0<=FLOATLITERAL)||LA106_0==IDENTIFIER||LA106_0==INT||LA106_0==INTLITERAL||(LA106_0>=LONG && LA106_0<=LPAREN)||(LA106_0>=NEW && LA106_0<=NULL)||LA106_0==PLUS||LA106_0==PLUSPLUS||LA106_0==SHORT||(LA106_0>=STRINGLITERAL && LA106_0<=SUB)||(LA106_0>=SUBSUB && LA106_0<=SUPER)||LA106_0==THIS||LA106_0==TILDE||LA106_0==TRUE||LA106_0==VOID))
+				{
+					alt106 = 1;
+				}
+				} finally { DebugExitDecision(106); }
+				switch (alt106)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:639:18: expression
+					{
+					DebugLocation(639, 18);
+					PushFollow(Follow._expression_in_forstatement5093);
+					expression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(106); }
+
+				DebugLocation(640, 20);
+				Match(input,SEMI,Follow._SEMI_in_forstatement5114); if (state.failed) return;
+				DebugLocation(641, 17);
+				// EntityMapping.g:641:17: ( expressionList )?
+				int alt107=2;
+				try { DebugEnterSubRule(107);
+				try { DebugEnterDecision(107, decisionCanBacktrack[107]);
+				int LA107_0 = input.LA(1);
+
+				if ((LA107_0==BANG||LA107_0==BOOLEAN||LA107_0==BYTE||(LA107_0>=CHAR && LA107_0<=CHARLITERAL)||(LA107_0>=DOUBLE && LA107_0<=DOUBLELITERAL)||LA107_0==FALSE||(LA107_0>=FLOAT && LA107_0<=FLOATLITERAL)||LA107_0==IDENTIFIER||LA107_0==INT||LA107_0==INTLITERAL||(LA107_0>=LONG && LA107_0<=LPAREN)||(LA107_0>=NEW && LA107_0<=NULL)||LA107_0==PLUS||LA107_0==PLUSPLUS||LA107_0==SHORT||(LA107_0>=STRINGLITERAL && LA107_0<=SUB)||(LA107_0>=SUBSUB && LA107_0<=SUPER)||LA107_0==THIS||LA107_0==TILDE||LA107_0==TRUE||LA107_0==VOID))
+				{
+					alt107 = 1;
+				}
+				} finally { DebugExitDecision(107); }
+				switch (alt107)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:641:18: expressionList
+					{
+					DebugLocation(641, 18);
+					PushFollow(Follow._expressionList_in_forstatement5134);
+					expressionList();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(107); }
+
+				DebugLocation(642, 20);
+				Match(input,RPAREN,Follow._RPAREN_in_forstatement5155); if (state.failed) return;
+				DebugLocation(642, 24);
+				PushFollow(Follow._statement_in_forstatement5157);
+				statement();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("forstatement", 66);
+			LeaveRule("forstatement", 66);
+			LeaveRule_forstatement();
+	        if (state.backtracking > 0) { Memoize(input, 66, forstatement_StartIndex); }
+
+	    }
+	 	DebugLocation(643, 4);
+		} finally { DebugExitRule(GrammarFileName, "forstatement"); }
+		return;
+
+	}
+	// $ANTLR end "forstatement"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_forInit() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_forInit() {}
+
+	// $ANTLR start "forInit"
+	// EntityMapping.g:645:1: forInit : ( localVariableDeclaration | expressionList );
+	[GrammarRule("forInit")]
+	private void forInit()
+	{
+		EnterRule_forInit();
+		EnterRule("forInit", 67);
+		TraceIn("forInit", 67);
+	    int forInit_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "forInit");
+		DebugLocation(645, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 67)) { return; }
+
+			// EntityMapping.g:646:5: ( localVariableDeclaration | expressionList )
+			int alt109=2;
+			try { DebugEnterDecision(109, decisionCanBacktrack[109]);
+			switch (input.LA(1))
+			{
+			case FINAL:
+			case MONKEYS_AT:
+				{
+				alt109 = 1;
+				}
+				break;
+			case IDENTIFIER:
+				{
+				int LA109_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred161_EntityMapping_fragment)))
+				{
+					alt109 = 1;
+				}
+				else if ((true))
+				{
+					alt109 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 109, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+				{
+				int LA109_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred161_EntityMapping_fragment)))
+				{
+					alt109 = 1;
+				}
+				else if ((true))
+				{
+					alt109 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 109, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BANG:
+			case CHARLITERAL:
+			case DOUBLELITERAL:
+			case FALSE:
+			case FLOATLITERAL:
+			case INTLITERAL:
+			case LONGLITERAL:
+			case LPAREN:
+			case NEW:
+			case NULL:
+			case PLUS:
+			case PLUSPLUS:
+			case STRINGLITERAL:
+			case SUB:
+			case SUBSUB:
+			case SUPER:
+			case THIS:
+			case TILDE:
+			case TRUE:
+			case VOID:
+				{
+				alt109 = 2;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 109, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(109); }
+			switch (alt109)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:646:9: localVariableDeclaration
+				{
+				DebugLocation(646, 9);
+				PushFollow(Follow._localVariableDeclaration_in_forInit5177);
+				localVariableDeclaration();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:647:9: expressionList
+				{
+				DebugLocation(647, 9);
+				PushFollow(Follow._expressionList_in_forInit5187);
+				expressionList();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("forInit", 67);
+			LeaveRule("forInit", 67);
+			LeaveRule_forInit();
+	        if (state.backtracking > 0) { Memoize(input, 67, forInit_StartIndex); }
+
+	    }
+	 	DebugLocation(648, 4);
+		} finally { DebugExitRule(GrammarFileName, "forInit"); }
+		return;
+
+	}
+	// $ANTLR end "forInit"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_parExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_parExpression() {}
+
+	// $ANTLR start "parExpression"
+	// EntityMapping.g:650:1: parExpression : '(' expression ')' ;
+	[GrammarRule("parExpression")]
+	private void parExpression()
+	{
+		EnterRule_parExpression();
+		EnterRule("parExpression", 68);
+		TraceIn("parExpression", 68);
+	    int parExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "parExpression");
+		DebugLocation(650, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 68)) { return; }
+
+			// EntityMapping.g:651:5: ( '(' expression ')' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:651:9: '(' expression ')'
+			{
+			DebugLocation(651, 9);
+			Match(input,LPAREN,Follow._LPAREN_in_parExpression5207); if (state.failed) return;
+			DebugLocation(651, 13);
+			PushFollow(Follow._expression_in_parExpression5209);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(651, 24);
+			Match(input,RPAREN,Follow._RPAREN_in_parExpression5211); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("parExpression", 68);
+			LeaveRule("parExpression", 68);
+			LeaveRule_parExpression();
+	        if (state.backtracking > 0) { Memoize(input, 68, parExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(652, 4);
+		} finally { DebugExitRule(GrammarFileName, "parExpression"); }
+		return;
+
+	}
+	// $ANTLR end "parExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_expressionList() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_expressionList() {}
+
+	// $ANTLR start "expressionList"
+	// EntityMapping.g:654:1: expressionList : expression ( ',' expression )* ;
+	[GrammarRule("expressionList")]
+	private void expressionList()
+	{
+		EnterRule_expressionList();
+		EnterRule("expressionList", 69);
+		TraceIn("expressionList", 69);
+	    int expressionList_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "expressionList");
+		DebugLocation(654, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 69)) { return; }
+
+			// EntityMapping.g:655:5: ( expression ( ',' expression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:655:9: expression ( ',' expression )*
+			{
+			DebugLocation(655, 9);
+			PushFollow(Follow._expression_in_expressionList5231);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(656, 9);
+			// EntityMapping.g:656:9: ( ',' expression )*
+			try { DebugEnterSubRule(110);
+			while (true)
+			{
+				int alt110=2;
+				try { DebugEnterDecision(110, decisionCanBacktrack[110]);
+				int LA110_0 = input.LA(1);
+
+				if ((LA110_0==COMMA))
+				{
+					alt110 = 1;
+				}
+
+
+				} finally { DebugExitDecision(110); }
+				switch ( alt110 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:656:10: ',' expression
+					{
+					DebugLocation(656, 10);
+					Match(input,COMMA,Follow._COMMA_in_expressionList5242); if (state.failed) return;
+					DebugLocation(656, 14);
+					PushFollow(Follow._expression_in_expressionList5244);
+					expression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop110;
+				}
+			}
+
+			loop110:
+				;
+
+			} finally { DebugExitSubRule(110); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("expressionList", 69);
+			LeaveRule("expressionList", 69);
+			LeaveRule_expressionList();
+	        if (state.backtracking > 0) { Memoize(input, 69, expressionList_StartIndex); }
+
+	    }
+	 	DebugLocation(658, 4);
+		} finally { DebugExitRule(GrammarFileName, "expressionList"); }
+		return;
+
+	}
+	// $ANTLR end "expressionList"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_expression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_expression() {}
+
+	// $ANTLR start "expression"
+	// EntityMapping.g:661:1: expression : conditionalExpression ( assignmentOperator expression )? ;
+	[GrammarRule("expression")]
+	private void expression()
+	{
+		EnterRule_expression();
+		EnterRule("expression", 70);
+		TraceIn("expression", 70);
+	    int expression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "expression");
+		DebugLocation(661, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 70)) { return; }
+
+			// EntityMapping.g:662:5: ( conditionalExpression ( assignmentOperator expression )? )
+			DebugEnterAlt(1);
+			// EntityMapping.g:662:9: conditionalExpression ( assignmentOperator expression )?
+			{
+			DebugLocation(662, 9);
+			PushFollow(Follow._conditionalExpression_in_expression5276);
+			conditionalExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(663, 9);
+			// EntityMapping.g:663:9: ( assignmentOperator expression )?
+			int alt111=2;
+			try { DebugEnterSubRule(111);
+			try { DebugEnterDecision(111, decisionCanBacktrack[111]);
+			int LA111_0 = input.LA(1);
+
+			if ((LA111_0==AMPEQ||LA111_0==BAREQ||LA111_0==CARETEQ||LA111_0==EQ||LA111_0==GT||LA111_0==LT||LA111_0==PERCENTEQ||LA111_0==PLUSEQ||LA111_0==SLASHEQ||LA111_0==STAREQ||LA111_0==SUBEQ))
+			{
+				alt111 = 1;
+			}
+			} finally { DebugExitDecision(111); }
+			switch (alt111)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:663:10: assignmentOperator expression
+				{
+				DebugLocation(663, 10);
+				PushFollow(Follow._assignmentOperator_in_expression5287);
+				assignmentOperator();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(663, 29);
+				PushFollow(Follow._expression_in_expression5289);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(111); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("expression", 70);
+			LeaveRule("expression", 70);
+			LeaveRule_expression();
+	        if (state.backtracking > 0) { Memoize(input, 70, expression_StartIndex); }
+
+	    }
+	 	DebugLocation(665, 4);
+		} finally { DebugExitRule(GrammarFileName, "expression"); }
+		return;
+
+	}
+	// $ANTLR end "expression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_assignmentOperator() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_assignmentOperator() {}
+
+	// $ANTLR start "assignmentOperator"
+	// EntityMapping.g:668:1: assignmentOperator : ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' );
+	[GrammarRule("assignmentOperator")]
+	private void assignmentOperator()
+	{
+		EnterRule_assignmentOperator();
+		EnterRule("assignmentOperator", 71);
+		TraceIn("assignmentOperator", 71);
+	    int assignmentOperator_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "assignmentOperator");
+		DebugLocation(668, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 71)) { return; }
+
+			// EntityMapping.g:669:5: ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' )
+			int alt112=12;
+			try { DebugEnterDecision(112, decisionCanBacktrack[112]);
+			switch (input.LA(1))
+			{
+			case EQ:
+				{
+				alt112 = 1;
+				}
+				break;
+			case PLUSEQ:
+				{
+				alt112 = 2;
+				}
+				break;
+			case SUBEQ:
+				{
+				alt112 = 3;
+				}
+				break;
+			case STAREQ:
+				{
+				alt112 = 4;
+				}
+				break;
+			case SLASHEQ:
+				{
+				alt112 = 5;
+				}
+				break;
+			case AMPEQ:
+				{
+				alt112 = 6;
+				}
+				break;
+			case BAREQ:
+				{
+				alt112 = 7;
+				}
+				break;
+			case CARETEQ:
+				{
+				alt112 = 8;
+				}
+				break;
+			case PERCENTEQ:
+				{
+				alt112 = 9;
+				}
+				break;
+			case LT:
+				{
+				alt112 = 10;
+				}
+				break;
+			case GT:
+				{
+				int LA112_11 = input.LA(2);
+
+				if ((LA112_11==GT))
+				{
+					int LA112_12 = input.LA(3);
+
+					if ((LA112_12==GT))
+					{
+						alt112 = 11;
+					}
+					else if ((LA112_12==EQ))
+					{
+						alt112 = 12;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						NoViableAltException nvae = new NoViableAltException("", 112, 12, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 112, 11, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 112, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(112); }
+			switch (alt112)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:669:9: '='
+				{
+				DebugLocation(669, 9);
+				Match(input,EQ,Follow._EQ_in_assignmentOperator5321); if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:670:9: '+='
+				{
+				DebugLocation(670, 9);
+				Match(input,PLUSEQ,Follow._PLUSEQ_in_assignmentOperator5331); if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:671:9: '-='
+				{
+				DebugLocation(671, 9);
+				Match(input,SUBEQ,Follow._SUBEQ_in_assignmentOperator5341); if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:672:9: '*='
+				{
+				DebugLocation(672, 9);
+				Match(input,STAREQ,Follow._STAREQ_in_assignmentOperator5351); if (state.failed) return;
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// EntityMapping.g:673:9: '/='
+				{
+				DebugLocation(673, 9);
+				Match(input,SLASHEQ,Follow._SLASHEQ_in_assignmentOperator5361); if (state.failed) return;
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// EntityMapping.g:674:9: '&='
+				{
+				DebugLocation(674, 9);
+				Match(input,AMPEQ,Follow._AMPEQ_in_assignmentOperator5371); if (state.failed) return;
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// EntityMapping.g:675:9: '|='
+				{
+				DebugLocation(675, 9);
+				Match(input,BAREQ,Follow._BAREQ_in_assignmentOperator5381); if (state.failed) return;
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// EntityMapping.g:676:9: '^='
+				{
+				DebugLocation(676, 9);
+				Match(input,CARETEQ,Follow._CARETEQ_in_assignmentOperator5391); if (state.failed) return;
+
+				}
+				break;
+			case 9:
+				DebugEnterAlt(9);
+				// EntityMapping.g:677:9: '%='
+				{
+				DebugLocation(677, 9);
+				Match(input,PERCENTEQ,Follow._PERCENTEQ_in_assignmentOperator5401); if (state.failed) return;
+
+				}
+				break;
+			case 10:
+				DebugEnterAlt(10);
+				// EntityMapping.g:678:10: '<' '<' '='
+				{
+				DebugLocation(678, 10);
+				Match(input,LT,Follow._LT_in_assignmentOperator5412); if (state.failed) return;
+				DebugLocation(678, 14);
+				Match(input,LT,Follow._LT_in_assignmentOperator5414); if (state.failed) return;
+				DebugLocation(678, 18);
+				Match(input,EQ,Follow._EQ_in_assignmentOperator5416); if (state.failed) return;
+
+				}
+				break;
+			case 11:
+				DebugEnterAlt(11);
+				// EntityMapping.g:679:10: '>' '>' '>' '='
+				{
+				DebugLocation(679, 10);
+				Match(input,GT,Follow._GT_in_assignmentOperator5427); if (state.failed) return;
+				DebugLocation(679, 14);
+				Match(input,GT,Follow._GT_in_assignmentOperator5429); if (state.failed) return;
+				DebugLocation(679, 18);
+				Match(input,GT,Follow._GT_in_assignmentOperator5431); if (state.failed) return;
+				DebugLocation(679, 22);
+				Match(input,EQ,Follow._EQ_in_assignmentOperator5433); if (state.failed) return;
+
+				}
+				break;
+			case 12:
+				DebugEnterAlt(12);
+				// EntityMapping.g:680:10: '>' '>' '='
+				{
+				DebugLocation(680, 10);
+				Match(input,GT,Follow._GT_in_assignmentOperator5444); if (state.failed) return;
+				DebugLocation(680, 14);
+				Match(input,GT,Follow._GT_in_assignmentOperator5446); if (state.failed) return;
+				DebugLocation(680, 18);
+				Match(input,EQ,Follow._EQ_in_assignmentOperator5448); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("assignmentOperator", 71);
+			LeaveRule("assignmentOperator", 71);
+			LeaveRule_assignmentOperator();
+	        if (state.backtracking > 0) { Memoize(input, 71, assignmentOperator_StartIndex); }
+
+	    }
+	 	DebugLocation(681, 4);
+		} finally { DebugExitRule(GrammarFileName, "assignmentOperator"); }
+		return;
+
+	}
+	// $ANTLR end "assignmentOperator"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_conditionalExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_conditionalExpression() {}
+
+	// $ANTLR start "conditionalExpression"
+	// EntityMapping.g:684:1: conditionalExpression : conditionalOrExpression ( '?' expression ':' conditionalExpression )? ;
+	[GrammarRule("conditionalExpression")]
+	private void conditionalExpression()
+	{
+		EnterRule_conditionalExpression();
+		EnterRule("conditionalExpression", 72);
+		TraceIn("conditionalExpression", 72);
+	    int conditionalExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "conditionalExpression");
+		DebugLocation(684, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 72)) { return; }
+
+			// EntityMapping.g:685:5: ( conditionalOrExpression ( '?' expression ':' conditionalExpression )? )
+			DebugEnterAlt(1);
+			// EntityMapping.g:685:9: conditionalOrExpression ( '?' expression ':' conditionalExpression )?
+			{
+			DebugLocation(685, 9);
+			PushFollow(Follow._conditionalOrExpression_in_conditionalExpression5469);
+			conditionalOrExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(686, 9);
+			// EntityMapping.g:686:9: ( '?' expression ':' conditionalExpression )?
+			int alt113=2;
+			try { DebugEnterSubRule(113);
+			try { DebugEnterDecision(113, decisionCanBacktrack[113]);
+			int LA113_0 = input.LA(1);
+
+			if ((LA113_0==QUES))
+			{
+				alt113 = 1;
+			}
+			} finally { DebugExitDecision(113); }
+			switch (alt113)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:686:10: '?' expression ':' conditionalExpression
+				{
+				DebugLocation(686, 10);
+				Match(input,QUES,Follow._QUES_in_conditionalExpression5480); if (state.failed) return;
+				DebugLocation(686, 14);
+				PushFollow(Follow._expression_in_conditionalExpression5482);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(686, 25);
+				Match(input,COLON,Follow._COLON_in_conditionalExpression5484); if (state.failed) return;
+				DebugLocation(686, 29);
+				PushFollow(Follow._conditionalExpression_in_conditionalExpression5486);
+				conditionalExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(113); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("conditionalExpression", 72);
+			LeaveRule("conditionalExpression", 72);
+			LeaveRule_conditionalExpression();
+	        if (state.backtracking > 0) { Memoize(input, 72, conditionalExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(688, 4);
+		} finally { DebugExitRule(GrammarFileName, "conditionalExpression"); }
+		return;
+
+	}
+	// $ANTLR end "conditionalExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_conditionalOrExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_conditionalOrExpression() {}
+
+	// $ANTLR start "conditionalOrExpression"
+	// EntityMapping.g:690:1: conditionalOrExpression : conditionalAndExpression ( '||' conditionalAndExpression )* ;
+	[GrammarRule("conditionalOrExpression")]
+	private void conditionalOrExpression()
+	{
+		EnterRule_conditionalOrExpression();
+		EnterRule("conditionalOrExpression", 73);
+		TraceIn("conditionalOrExpression", 73);
+	    int conditionalOrExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "conditionalOrExpression");
+		DebugLocation(690, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 73)) { return; }
+
+			// EntityMapping.g:691:5: ( conditionalAndExpression ( '||' conditionalAndExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:691:9: conditionalAndExpression ( '||' conditionalAndExpression )*
+			{
+			DebugLocation(691, 9);
+			PushFollow(Follow._conditionalAndExpression_in_conditionalOrExpression5517);
+			conditionalAndExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(692, 9);
+			// EntityMapping.g:692:9: ( '||' conditionalAndExpression )*
+			try { DebugEnterSubRule(114);
+			while (true)
+			{
+				int alt114=2;
+				try { DebugEnterDecision(114, decisionCanBacktrack[114]);
+				int LA114_0 = input.LA(1);
+
+				if ((LA114_0==BARBAR))
+				{
+					alt114 = 1;
+				}
+
+
+				} finally { DebugExitDecision(114); }
+				switch ( alt114 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:692:10: '||' conditionalAndExpression
+					{
+					DebugLocation(692, 10);
+					Match(input,BARBAR,Follow._BARBAR_in_conditionalOrExpression5528); if (state.failed) return;
+					DebugLocation(692, 15);
+					PushFollow(Follow._conditionalAndExpression_in_conditionalOrExpression5530);
+					conditionalAndExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop114;
+				}
+			}
+
+			loop114:
+				;
+
+			} finally { DebugExitSubRule(114); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("conditionalOrExpression", 73);
+			LeaveRule("conditionalOrExpression", 73);
+			LeaveRule_conditionalOrExpression();
+	        if (state.backtracking > 0) { Memoize(input, 73, conditionalOrExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(694, 4);
+		} finally { DebugExitRule(GrammarFileName, "conditionalOrExpression"); }
+		return;
+
+	}
+	// $ANTLR end "conditionalOrExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_conditionalAndExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_conditionalAndExpression() {}
+
+	// $ANTLR start "conditionalAndExpression"
+	// EntityMapping.g:696:1: conditionalAndExpression : inclusiveOrExpression ( '&&' inclusiveOrExpression )* ;
+	[GrammarRule("conditionalAndExpression")]
+	private void conditionalAndExpression()
+	{
+		EnterRule_conditionalAndExpression();
+		EnterRule("conditionalAndExpression", 74);
+		TraceIn("conditionalAndExpression", 74);
+	    int conditionalAndExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "conditionalAndExpression");
+		DebugLocation(696, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 74)) { return; }
+
+			// EntityMapping.g:697:5: ( inclusiveOrExpression ( '&&' inclusiveOrExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:697:9: inclusiveOrExpression ( '&&' inclusiveOrExpression )*
+			{
+			DebugLocation(697, 9);
+			PushFollow(Follow._inclusiveOrExpression_in_conditionalAndExpression5561);
+			inclusiveOrExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(698, 9);
+			// EntityMapping.g:698:9: ( '&&' inclusiveOrExpression )*
+			try { DebugEnterSubRule(115);
+			while (true)
+			{
+				int alt115=2;
+				try { DebugEnterDecision(115, decisionCanBacktrack[115]);
+				int LA115_0 = input.LA(1);
+
+				if ((LA115_0==AMPAMP))
+				{
+					alt115 = 1;
+				}
+
+
+				} finally { DebugExitDecision(115); }
+				switch ( alt115 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:698:10: '&&' inclusiveOrExpression
+					{
+					DebugLocation(698, 10);
+					Match(input,AMPAMP,Follow._AMPAMP_in_conditionalAndExpression5572); if (state.failed) return;
+					DebugLocation(698, 15);
+					PushFollow(Follow._inclusiveOrExpression_in_conditionalAndExpression5574);
+					inclusiveOrExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop115;
+				}
+			}
+
+			loop115:
+				;
+
+			} finally { DebugExitSubRule(115); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("conditionalAndExpression", 74);
+			LeaveRule("conditionalAndExpression", 74);
+			LeaveRule_conditionalAndExpression();
+	        if (state.backtracking > 0) { Memoize(input, 74, conditionalAndExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(700, 4);
+		} finally { DebugExitRule(GrammarFileName, "conditionalAndExpression"); }
+		return;
+
+	}
+	// $ANTLR end "conditionalAndExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_inclusiveOrExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_inclusiveOrExpression() {}
+
+	// $ANTLR start "inclusiveOrExpression"
+	// EntityMapping.g:702:1: inclusiveOrExpression : exclusiveOrExpression ( '|' exclusiveOrExpression )* ;
+	[GrammarRule("inclusiveOrExpression")]
+	private void inclusiveOrExpression()
+	{
+		EnterRule_inclusiveOrExpression();
+		EnterRule("inclusiveOrExpression", 75);
+		TraceIn("inclusiveOrExpression", 75);
+	    int inclusiveOrExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "inclusiveOrExpression");
+		DebugLocation(702, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 75)) { return; }
+
+			// EntityMapping.g:703:5: ( exclusiveOrExpression ( '|' exclusiveOrExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:703:9: exclusiveOrExpression ( '|' exclusiveOrExpression )*
+			{
+			DebugLocation(703, 9);
+			PushFollow(Follow._exclusiveOrExpression_in_inclusiveOrExpression5605);
+			exclusiveOrExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(704, 9);
+			// EntityMapping.g:704:9: ( '|' exclusiveOrExpression )*
+			try { DebugEnterSubRule(116);
+			while (true)
+			{
+				int alt116=2;
+				try { DebugEnterDecision(116, decisionCanBacktrack[116]);
+				int LA116_0 = input.LA(1);
+
+				if ((LA116_0==BAR))
+				{
+					alt116 = 1;
+				}
+
+
+				} finally { DebugExitDecision(116); }
+				switch ( alt116 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:704:10: '|' exclusiveOrExpression
+					{
+					DebugLocation(704, 10);
+					Match(input,BAR,Follow._BAR_in_inclusiveOrExpression5616); if (state.failed) return;
+					DebugLocation(704, 14);
+					PushFollow(Follow._exclusiveOrExpression_in_inclusiveOrExpression5618);
+					exclusiveOrExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop116;
+				}
+			}
+
+			loop116:
+				;
+
+			} finally { DebugExitSubRule(116); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("inclusiveOrExpression", 75);
+			LeaveRule("inclusiveOrExpression", 75);
+			LeaveRule_inclusiveOrExpression();
+	        if (state.backtracking > 0) { Memoize(input, 75, inclusiveOrExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(706, 4);
+		} finally { DebugExitRule(GrammarFileName, "inclusiveOrExpression"); }
+		return;
+
+	}
+	// $ANTLR end "inclusiveOrExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_exclusiveOrExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_exclusiveOrExpression() {}
+
+	// $ANTLR start "exclusiveOrExpression"
+	// EntityMapping.g:708:1: exclusiveOrExpression : andExpression ( '^' andExpression )* ;
+	[GrammarRule("exclusiveOrExpression")]
+	private void exclusiveOrExpression()
+	{
+		EnterRule_exclusiveOrExpression();
+		EnterRule("exclusiveOrExpression", 76);
+		TraceIn("exclusiveOrExpression", 76);
+	    int exclusiveOrExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "exclusiveOrExpression");
+		DebugLocation(708, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 76)) { return; }
+
+			// EntityMapping.g:709:5: ( andExpression ( '^' andExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:709:9: andExpression ( '^' andExpression )*
+			{
+			DebugLocation(709, 9);
+			PushFollow(Follow._andExpression_in_exclusiveOrExpression5649);
+			andExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(710, 9);
+			// EntityMapping.g:710:9: ( '^' andExpression )*
+			try { DebugEnterSubRule(117);
+			while (true)
+			{
+				int alt117=2;
+				try { DebugEnterDecision(117, decisionCanBacktrack[117]);
+				int LA117_0 = input.LA(1);
+
+				if ((LA117_0==CARET))
+				{
+					alt117 = 1;
+				}
+
+
+				} finally { DebugExitDecision(117); }
+				switch ( alt117 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:710:10: '^' andExpression
+					{
+					DebugLocation(710, 10);
+					Match(input,CARET,Follow._CARET_in_exclusiveOrExpression5660); if (state.failed) return;
+					DebugLocation(710, 14);
+					PushFollow(Follow._andExpression_in_exclusiveOrExpression5662);
+					andExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop117;
+				}
+			}
+
+			loop117:
+				;
+
+			} finally { DebugExitSubRule(117); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("exclusiveOrExpression", 76);
+			LeaveRule("exclusiveOrExpression", 76);
+			LeaveRule_exclusiveOrExpression();
+	        if (state.backtracking > 0) { Memoize(input, 76, exclusiveOrExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(712, 4);
+		} finally { DebugExitRule(GrammarFileName, "exclusiveOrExpression"); }
+		return;
+
+	}
+	// $ANTLR end "exclusiveOrExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_andExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_andExpression() {}
+
+	// $ANTLR start "andExpression"
+	// EntityMapping.g:714:1: andExpression : equalityExpression ( '&' equalityExpression )* ;
+	[GrammarRule("andExpression")]
+	private void andExpression()
+	{
+		EnterRule_andExpression();
+		EnterRule("andExpression", 77);
+		TraceIn("andExpression", 77);
+	    int andExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "andExpression");
+		DebugLocation(714, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 77)) { return; }
+
+			// EntityMapping.g:715:5: ( equalityExpression ( '&' equalityExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:715:9: equalityExpression ( '&' equalityExpression )*
+			{
+			DebugLocation(715, 9);
+			PushFollow(Follow._equalityExpression_in_andExpression5693);
+			equalityExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(716, 9);
+			// EntityMapping.g:716:9: ( '&' equalityExpression )*
+			try { DebugEnterSubRule(118);
+			while (true)
+			{
+				int alt118=2;
+				try { DebugEnterDecision(118, decisionCanBacktrack[118]);
+				int LA118_0 = input.LA(1);
+
+				if ((LA118_0==AMP))
+				{
+					alt118 = 1;
+				}
+
+
+				} finally { DebugExitDecision(118); }
+				switch ( alt118 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:716:10: '&' equalityExpression
+					{
+					DebugLocation(716, 10);
+					Match(input,AMP,Follow._AMP_in_andExpression5704); if (state.failed) return;
+					DebugLocation(716, 14);
+					PushFollow(Follow._equalityExpression_in_andExpression5706);
+					equalityExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop118;
+				}
+			}
+
+			loop118:
+				;
+
+			} finally { DebugExitSubRule(118); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("andExpression", 77);
+			LeaveRule("andExpression", 77);
+			LeaveRule_andExpression();
+	        if (state.backtracking > 0) { Memoize(input, 77, andExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(718, 4);
+		} finally { DebugExitRule(GrammarFileName, "andExpression"); }
+		return;
+
+	}
+	// $ANTLR end "andExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_equalityExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_equalityExpression() {}
+
+	// $ANTLR start "equalityExpression"
+	// EntityMapping.g:720:1: equalityExpression : instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* ;
+	[GrammarRule("equalityExpression")]
+	private void equalityExpression()
+	{
+		EnterRule_equalityExpression();
+		EnterRule("equalityExpression", 78);
+		TraceIn("equalityExpression", 78);
+	    int equalityExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "equalityExpression");
+		DebugLocation(720, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 78)) { return; }
+
+			// EntityMapping.g:721:5: ( instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:721:9: instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )*
+			{
+			DebugLocation(721, 9);
+			PushFollow(Follow._instanceOfExpression_in_equalityExpression5737);
+			instanceOfExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(722, 9);
+			// EntityMapping.g:722:9: ( ( '==' | '!=' ) instanceOfExpression )*
+			try { DebugEnterSubRule(119);
+			while (true)
+			{
+				int alt119=2;
+				try { DebugEnterDecision(119, decisionCanBacktrack[119]);
+				int LA119_0 = input.LA(1);
+
+				if ((LA119_0==BANGEQ||LA119_0==EQEQ))
+				{
+					alt119 = 1;
+				}
+
+
+				} finally { DebugExitDecision(119); }
+				switch ( alt119 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:723:13: ( '==' | '!=' ) instanceOfExpression
+					{
+					DebugLocation(723, 13);
+					if (input.LA(1)==BANGEQ||input.LA(1)==EQEQ)
+					{
+						input.Consume();
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(726, 13);
+					PushFollow(Follow._instanceOfExpression_in_equalityExpression5814);
+					instanceOfExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop119;
+				}
+			}
+
+			loop119:
+				;
+
+			} finally { DebugExitSubRule(119); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("equalityExpression", 78);
+			LeaveRule("equalityExpression", 78);
+			LeaveRule_equalityExpression();
+	        if (state.backtracking > 0) { Memoize(input, 78, equalityExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(728, 4);
+		} finally { DebugExitRule(GrammarFileName, "equalityExpression"); }
+		return;
+
+	}
+	// $ANTLR end "equalityExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_instanceOfExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_instanceOfExpression() {}
+
+	// $ANTLR start "instanceOfExpression"
+	// EntityMapping.g:730:1: instanceOfExpression : relationalExpression ( 'instanceof' type )? ;
+	[GrammarRule("instanceOfExpression")]
+	private void instanceOfExpression()
+	{
+		EnterRule_instanceOfExpression();
+		EnterRule("instanceOfExpression", 79);
+		TraceIn("instanceOfExpression", 79);
+	    int instanceOfExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "instanceOfExpression");
+		DebugLocation(730, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 79)) { return; }
+
+			// EntityMapping.g:731:5: ( relationalExpression ( 'instanceof' type )? )
+			DebugEnterAlt(1);
+			// EntityMapping.g:731:9: relationalExpression ( 'instanceof' type )?
+			{
+			DebugLocation(731, 9);
+			PushFollow(Follow._relationalExpression_in_instanceOfExpression5845);
+			relationalExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(732, 9);
+			// EntityMapping.g:732:9: ( 'instanceof' type )?
+			int alt120=2;
+			try { DebugEnterSubRule(120);
+			try { DebugEnterDecision(120, decisionCanBacktrack[120]);
+			int LA120_0 = input.LA(1);
+
+			if ((LA120_0==INSTANCEOF))
+			{
+				alt120 = 1;
+			}
+			} finally { DebugExitDecision(120); }
+			switch (alt120)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:732:10: 'instanceof' type
+				{
+				DebugLocation(732, 10);
+				Match(input,INSTANCEOF,Follow._INSTANCEOF_in_instanceOfExpression5856); if (state.failed) return;
+				DebugLocation(732, 23);
+				PushFollow(Follow._type_in_instanceOfExpression5858);
+				type();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(120); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("instanceOfExpression", 79);
+			LeaveRule("instanceOfExpression", 79);
+			LeaveRule_instanceOfExpression();
+	        if (state.backtracking > 0) { Memoize(input, 79, instanceOfExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(734, 4);
+		} finally { DebugExitRule(GrammarFileName, "instanceOfExpression"); }
+		return;
+
+	}
+	// $ANTLR end "instanceOfExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_relationalExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_relationalExpression() {}
+
+	// $ANTLR start "relationalExpression"
+	// EntityMapping.g:736:1: relationalExpression : shiftExpression ( relationalOp shiftExpression )* ;
+	[GrammarRule("relationalExpression")]
+	private void relationalExpression()
+	{
+		EnterRule_relationalExpression();
+		EnterRule("relationalExpression", 80);
+		TraceIn("relationalExpression", 80);
+	    int relationalExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "relationalExpression");
+		DebugLocation(736, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 80)) { return; }
+
+			// EntityMapping.g:737:5: ( shiftExpression ( relationalOp shiftExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:737:9: shiftExpression ( relationalOp shiftExpression )*
+			{
+			DebugLocation(737, 9);
+			PushFollow(Follow._shiftExpression_in_relationalExpression5889);
+			shiftExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(738, 9);
+			// EntityMapping.g:738:9: ( relationalOp shiftExpression )*
+			try { DebugEnterSubRule(121);
+			while (true)
+			{
+				int alt121=2;
+				try { DebugEnterDecision(121, decisionCanBacktrack[121]);
+				int LA121_0 = input.LA(1);
+
+				if ((LA121_0==LT))
+				{
+					int LA121_2 = input.LA(2);
+
+					if ((LA121_2==BANG||LA121_2==BOOLEAN||LA121_2==BYTE||(LA121_2>=CHAR && LA121_2<=CHARLITERAL)||(LA121_2>=DOUBLE && LA121_2<=DOUBLELITERAL)||LA121_2==EQ||LA121_2==FALSE||(LA121_2>=FLOAT && LA121_2<=FLOATLITERAL)||LA121_2==IDENTIFIER||LA121_2==INT||LA121_2==INTLITERAL||(LA121_2>=LONG && LA121_2<=LPAREN)||(LA121_2>=NEW && LA121_2<=NULL)||LA121_2==PLUS||LA121_2==PLUSPLUS||LA121_2==SHORT||(LA121_2>=STRINGLITERAL && LA121_2<=SUB)||(LA121_2>=SUBSUB && LA121_2<=SUPER)||LA121_2==THIS||LA121_2==TILDE||LA121_2==TRUE||LA121_2==VOID))
+					{
+						alt121 = 1;
+					}
+
+
+				}
+				else if ((LA121_0==GT))
+				{
+					int LA121_3 = input.LA(2);
+
+					if ((LA121_3==BANG||LA121_3==BOOLEAN||LA121_3==BYTE||(LA121_3>=CHAR && LA121_3<=CHARLITERAL)||(LA121_3>=DOUBLE && LA121_3<=DOUBLELITERAL)||LA121_3==EQ||LA121_3==FALSE||(LA121_3>=FLOAT && LA121_3<=FLOATLITERAL)||LA121_3==IDENTIFIER||LA121_3==INT||LA121_3==INTLITERAL||(LA121_3>=LONG && LA121_3<=LPAREN)||(LA121_3>=NEW && LA121_3<=NULL)||LA121_3==PLUS||LA121_3==PLUSPLUS||LA121_3==SHORT||(LA121_3>=STRINGLITERAL && LA121_3<=SUB)||(LA121_3>=SUBSUB && LA121_3<=SUPER)||LA121_3==THIS||LA121_3==TILDE||LA121_3==TRUE||LA121_3==VOID))
+					{
+						alt121 = 1;
+					}
+
+
+				}
+
+
+				} finally { DebugExitDecision(121); }
+				switch ( alt121 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:738:10: relationalOp shiftExpression
+					{
+					DebugLocation(738, 10);
+					PushFollow(Follow._relationalOp_in_relationalExpression5900);
+					relationalOp();
+					PopFollow();
+					if (state.failed) return;
+					DebugLocation(738, 23);
+					PushFollow(Follow._shiftExpression_in_relationalExpression5902);
+					shiftExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop121;
+				}
+			}
+
+			loop121:
+				;
+
+			} finally { DebugExitSubRule(121); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("relationalExpression", 80);
+			LeaveRule("relationalExpression", 80);
+			LeaveRule_relationalExpression();
+	        if (state.backtracking > 0) { Memoize(input, 80, relationalExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(740, 4);
+		} finally { DebugExitRule(GrammarFileName, "relationalExpression"); }
+		return;
+
+	}
+	// $ANTLR end "relationalExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_relationalOp() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_relationalOp() {}
+
+	// $ANTLR start "relationalOp"
+	// EntityMapping.g:742:1: relationalOp : ( '<' '=' | '>' '=' | '<' | '>' );
+	[GrammarRule("relationalOp")]
+	private void relationalOp()
+	{
+		EnterRule_relationalOp();
+		EnterRule("relationalOp", 81);
+		TraceIn("relationalOp", 81);
+	    int relationalOp_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "relationalOp");
+		DebugLocation(742, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 81)) { return; }
+
+			// EntityMapping.g:743:5: ( '<' '=' | '>' '=' | '<' | '>' )
+			int alt122=4;
+			try { DebugEnterDecision(122, decisionCanBacktrack[122]);
+			int LA122_0 = input.LA(1);
+
+			if ((LA122_0==LT))
+			{
+				int LA122_1 = input.LA(2);
+
+				if ((LA122_1==EQ))
+				{
+					alt122 = 1;
+				}
+				else if ((LA122_1==BANG||LA122_1==BOOLEAN||LA122_1==BYTE||(LA122_1>=CHAR && LA122_1<=CHARLITERAL)||(LA122_1>=DOUBLE && LA122_1<=DOUBLELITERAL)||LA122_1==FALSE||(LA122_1>=FLOAT && LA122_1<=FLOATLITERAL)||LA122_1==IDENTIFIER||LA122_1==INT||LA122_1==INTLITERAL||(LA122_1>=LONG && LA122_1<=LPAREN)||(LA122_1>=NEW && LA122_1<=NULL)||LA122_1==PLUS||LA122_1==PLUSPLUS||LA122_1==SHORT||(LA122_1>=STRINGLITERAL && LA122_1<=SUB)||(LA122_1>=SUBSUB && LA122_1<=SUPER)||LA122_1==THIS||LA122_1==TILDE||LA122_1==TRUE||LA122_1==VOID))
+				{
+					alt122 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 122, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else if ((LA122_0==GT))
+			{
+				int LA122_2 = input.LA(2);
+
+				if ((LA122_2==EQ))
+				{
+					alt122 = 2;
+				}
+				else if ((LA122_2==BANG||LA122_2==BOOLEAN||LA122_2==BYTE||(LA122_2>=CHAR && LA122_2<=CHARLITERAL)||(LA122_2>=DOUBLE && LA122_2<=DOUBLELITERAL)||LA122_2==FALSE||(LA122_2>=FLOAT && LA122_2<=FLOATLITERAL)||LA122_2==IDENTIFIER||LA122_2==INT||LA122_2==INTLITERAL||(LA122_2>=LONG && LA122_2<=LPAREN)||(LA122_2>=NEW && LA122_2<=NULL)||LA122_2==PLUS||LA122_2==PLUSPLUS||LA122_2==SHORT||(LA122_2>=STRINGLITERAL && LA122_2<=SUB)||(LA122_2>=SUBSUB && LA122_2<=SUPER)||LA122_2==THIS||LA122_2==TILDE||LA122_2==TRUE||LA122_2==VOID))
+				{
+					alt122 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 122, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 122, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(122); }
+			switch (alt122)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:743:10: '<' '='
+				{
+				DebugLocation(743, 10);
+				Match(input,LT,Follow._LT_in_relationalOp5934); if (state.failed) return;
+				DebugLocation(743, 14);
+				Match(input,EQ,Follow._EQ_in_relationalOp5936); if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:744:10: '>' '='
+				{
+				DebugLocation(744, 10);
+				Match(input,GT,Follow._GT_in_relationalOp5947); if (state.failed) return;
+				DebugLocation(744, 14);
+				Match(input,EQ,Follow._EQ_in_relationalOp5949); if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:745:9: '<'
+				{
+				DebugLocation(745, 9);
+				Match(input,LT,Follow._LT_in_relationalOp5959); if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:746:9: '>'
+				{
+				DebugLocation(746, 9);
+				Match(input,GT,Follow._GT_in_relationalOp5969); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("relationalOp", 81);
+			LeaveRule("relationalOp", 81);
+			LeaveRule_relationalOp();
+	        if (state.backtracking > 0) { Memoize(input, 81, relationalOp_StartIndex); }
+
+	    }
+	 	DebugLocation(747, 4);
+		} finally { DebugExitRule(GrammarFileName, "relationalOp"); }
+		return;
+
+	}
+	// $ANTLR end "relationalOp"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_shiftExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_shiftExpression() {}
+
+	// $ANTLR start "shiftExpression"
+	// EntityMapping.g:749:1: shiftExpression : additiveExpression ( shiftOp additiveExpression )* ;
+	[GrammarRule("shiftExpression")]
+	private void shiftExpression()
+	{
+		EnterRule_shiftExpression();
+		EnterRule("shiftExpression", 82);
+		TraceIn("shiftExpression", 82);
+	    int shiftExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "shiftExpression");
+		DebugLocation(749, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 82)) { return; }
+
+			// EntityMapping.g:750:5: ( additiveExpression ( shiftOp additiveExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:750:9: additiveExpression ( shiftOp additiveExpression )*
+			{
+			DebugLocation(750, 9);
+			PushFollow(Follow._additiveExpression_in_shiftExpression5989);
+			additiveExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(751, 9);
+			// EntityMapping.g:751:9: ( shiftOp additiveExpression )*
+			try { DebugEnterSubRule(123);
+			while (true)
+			{
+				int alt123=2;
+				try { DebugEnterDecision(123, decisionCanBacktrack[123]);
+				int LA123_0 = input.LA(1);
+
+				if ((LA123_0==LT))
+				{
+					int LA123_1 = input.LA(2);
+
+					if ((LA123_1==LT))
+					{
+						int LA123_4 = input.LA(3);
+
+						if ((LA123_4==BANG||LA123_4==BOOLEAN||LA123_4==BYTE||(LA123_4>=CHAR && LA123_4<=CHARLITERAL)||(LA123_4>=DOUBLE && LA123_4<=DOUBLELITERAL)||LA123_4==FALSE||(LA123_4>=FLOAT && LA123_4<=FLOATLITERAL)||LA123_4==IDENTIFIER||LA123_4==INT||LA123_4==INTLITERAL||(LA123_4>=LONG && LA123_4<=LPAREN)||(LA123_4>=NEW && LA123_4<=NULL)||LA123_4==PLUS||LA123_4==PLUSPLUS||LA123_4==SHORT||(LA123_4>=STRINGLITERAL && LA123_4<=SUB)||(LA123_4>=SUBSUB && LA123_4<=SUPER)||LA123_4==THIS||LA123_4==TILDE||LA123_4==TRUE||LA123_4==VOID))
+						{
+							alt123 = 1;
+						}
+
+
+					}
+
+
+				}
+				else if ((LA123_0==GT))
+				{
+					int LA123_2 = input.LA(2);
+
+					if ((LA123_2==GT))
+					{
+						int LA123_5 = input.LA(3);
+
+						if ((LA123_5==GT))
+						{
+							int LA123_7 = input.LA(4);
+
+							if ((LA123_7==BANG||LA123_7==BOOLEAN||LA123_7==BYTE||(LA123_7>=CHAR && LA123_7<=CHARLITERAL)||(LA123_7>=DOUBLE && LA123_7<=DOUBLELITERAL)||LA123_7==FALSE||(LA123_7>=FLOAT && LA123_7<=FLOATLITERAL)||LA123_7==IDENTIFIER||LA123_7==INT||LA123_7==INTLITERAL||(LA123_7>=LONG && LA123_7<=LPAREN)||(LA123_7>=NEW && LA123_7<=NULL)||LA123_7==PLUS||LA123_7==PLUSPLUS||LA123_7==SHORT||(LA123_7>=STRINGLITERAL && LA123_7<=SUB)||(LA123_7>=SUBSUB && LA123_7<=SUPER)||LA123_7==THIS||LA123_7==TILDE||LA123_7==TRUE||LA123_7==VOID))
+							{
+								alt123 = 1;
+							}
+
+
+						}
+						else if ((LA123_5==BANG||LA123_5==BOOLEAN||LA123_5==BYTE||(LA123_5>=CHAR && LA123_5<=CHARLITERAL)||(LA123_5>=DOUBLE && LA123_5<=DOUBLELITERAL)||LA123_5==FALSE||(LA123_5>=FLOAT && LA123_5<=FLOATLITERAL)||LA123_5==IDENTIFIER||LA123_5==INT||LA123_5==INTLITERAL||(LA123_5>=LONG && LA123_5<=LPAREN)||(LA123_5>=NEW && LA123_5<=NULL)||LA123_5==PLUS||LA123_5==PLUSPLUS||LA123_5==SHORT||(LA123_5>=STRINGLITERAL && LA123_5<=SUB)||(LA123_5>=SUBSUB && LA123_5<=SUPER)||LA123_5==THIS||LA123_5==TILDE||LA123_5==TRUE||LA123_5==VOID))
+						{
+							alt123 = 1;
+						}
+
+
+					}
+
+
+				}
+
+
+				} finally { DebugExitDecision(123); }
+				switch ( alt123 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:751:10: shiftOp additiveExpression
+					{
+					DebugLocation(751, 10);
+					PushFollow(Follow._shiftOp_in_shiftExpression6000);
+					shiftOp();
+					PopFollow();
+					if (state.failed) return;
+					DebugLocation(751, 18);
+					PushFollow(Follow._additiveExpression_in_shiftExpression6002);
+					additiveExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop123;
+				}
+			}
+
+			loop123:
+				;
+
+			} finally { DebugExitSubRule(123); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("shiftExpression", 82);
+			LeaveRule("shiftExpression", 82);
+			LeaveRule_shiftExpression();
+	        if (state.backtracking > 0) { Memoize(input, 82, shiftExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(753, 4);
+		} finally { DebugExitRule(GrammarFileName, "shiftExpression"); }
+		return;
+
+	}
+	// $ANTLR end "shiftExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_shiftOp() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_shiftOp() {}
+
+	// $ANTLR start "shiftOp"
+	// EntityMapping.g:756:1: shiftOp : ( '<' '<' | '>' '>' '>' | '>' '>' );
+	[GrammarRule("shiftOp")]
+	private void shiftOp()
+	{
+		EnterRule_shiftOp();
+		EnterRule("shiftOp", 83);
+		TraceIn("shiftOp", 83);
+	    int shiftOp_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "shiftOp");
+		DebugLocation(756, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 83)) { return; }
+
+			// EntityMapping.g:757:5: ( '<' '<' | '>' '>' '>' | '>' '>' )
+			int alt124=3;
+			try { DebugEnterDecision(124, decisionCanBacktrack[124]);
+			int LA124_0 = input.LA(1);
+
+			if ((LA124_0==LT))
+			{
+				alt124 = 1;
+			}
+			else if ((LA124_0==GT))
+			{
+				int LA124_2 = input.LA(2);
+
+				if ((LA124_2==GT))
+				{
+					int LA124_3 = input.LA(3);
+
+					if ((LA124_3==GT))
+					{
+						alt124 = 2;
+					}
+					else if ((LA124_3==BANG||LA124_3==BOOLEAN||LA124_3==BYTE||(LA124_3>=CHAR && LA124_3<=CHARLITERAL)||(LA124_3>=DOUBLE && LA124_3<=DOUBLELITERAL)||LA124_3==FALSE||(LA124_3>=FLOAT && LA124_3<=FLOATLITERAL)||LA124_3==IDENTIFIER||LA124_3==INT||LA124_3==INTLITERAL||(LA124_3>=LONG && LA124_3<=LPAREN)||(LA124_3>=NEW && LA124_3<=NULL)||LA124_3==PLUS||LA124_3==PLUSPLUS||LA124_3==SHORT||(LA124_3>=STRINGLITERAL && LA124_3<=SUB)||(LA124_3>=SUBSUB && LA124_3<=SUPER)||LA124_3==THIS||LA124_3==TILDE||LA124_3==TRUE||LA124_3==VOID))
+					{
+						alt124 = 3;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						NoViableAltException nvae = new NoViableAltException("", 124, 3, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 124, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 124, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(124); }
+			switch (alt124)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:757:10: '<' '<'
+				{
+				DebugLocation(757, 10);
+				Match(input,LT,Follow._LT_in_shiftOp6035); if (state.failed) return;
+				DebugLocation(757, 14);
+				Match(input,LT,Follow._LT_in_shiftOp6037); if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:758:10: '>' '>' '>'
+				{
+				DebugLocation(758, 10);
+				Match(input,GT,Follow._GT_in_shiftOp6048); if (state.failed) return;
+				DebugLocation(758, 14);
+				Match(input,GT,Follow._GT_in_shiftOp6050); if (state.failed) return;
+				DebugLocation(758, 18);
+				Match(input,GT,Follow._GT_in_shiftOp6052); if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:759:10: '>' '>'
+				{
+				DebugLocation(759, 10);
+				Match(input,GT,Follow._GT_in_shiftOp6063); if (state.failed) return;
+				DebugLocation(759, 14);
+				Match(input,GT,Follow._GT_in_shiftOp6065); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("shiftOp", 83);
+			LeaveRule("shiftOp", 83);
+			LeaveRule_shiftOp();
+	        if (state.backtracking > 0) { Memoize(input, 83, shiftOp_StartIndex); }
+
+	    }
+	 	DebugLocation(760, 4);
+		} finally { DebugExitRule(GrammarFileName, "shiftOp"); }
+		return;
+
+	}
+	// $ANTLR end "shiftOp"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_additiveExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_additiveExpression() {}
+
+	// $ANTLR start "additiveExpression"
+	// EntityMapping.g:763:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
+	[GrammarRule("additiveExpression")]
+	private void additiveExpression()
+	{
+		EnterRule_additiveExpression();
+		EnterRule("additiveExpression", 84);
+		TraceIn("additiveExpression", 84);
+	    int additiveExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "additiveExpression");
+		DebugLocation(763, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 84)) { return; }
+
+			// EntityMapping.g:764:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:764:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
+			{
+			DebugLocation(764, 9);
+			PushFollow(Follow._multiplicativeExpression_in_additiveExpression6086);
+			multiplicativeExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(765, 9);
+			// EntityMapping.g:765:9: ( ( '+' | '-' ) multiplicativeExpression )*
+			try { DebugEnterSubRule(125);
+			while (true)
+			{
+				int alt125=2;
+				try { DebugEnterDecision(125, decisionCanBacktrack[125]);
+				int LA125_0 = input.LA(1);
+
+				if ((LA125_0==PLUS||LA125_0==SUB))
+				{
+					alt125 = 1;
+				}
+
+
+				} finally { DebugExitDecision(125); }
+				switch ( alt125 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:766:13: ( '+' | '-' ) multiplicativeExpression
+					{
+					DebugLocation(766, 13);
+					if (input.LA(1)==PLUS||input.LA(1)==SUB)
+					{
+						input.Consume();
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(769, 13);
+					PushFollow(Follow._multiplicativeExpression_in_additiveExpression6163);
+					multiplicativeExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop125;
+				}
+			}
+
+			loop125:
+				;
+
+			} finally { DebugExitSubRule(125); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("additiveExpression", 84);
+			LeaveRule("additiveExpression", 84);
+			LeaveRule_additiveExpression();
+	        if (state.backtracking > 0) { Memoize(input, 84, additiveExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(771, 4);
+		} finally { DebugExitRule(GrammarFileName, "additiveExpression"); }
+		return;
+
+	}
+	// $ANTLR end "additiveExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_multiplicativeExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_multiplicativeExpression() {}
+
+	// $ANTLR start "multiplicativeExpression"
+	// EntityMapping.g:773:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* ;
+	[GrammarRule("multiplicativeExpression")]
+	private void multiplicativeExpression()
+	{
+		EnterRule_multiplicativeExpression();
+		EnterRule("multiplicativeExpression", 85);
+		TraceIn("multiplicativeExpression", 85);
+	    int multiplicativeExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "multiplicativeExpression");
+		DebugLocation(773, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 85)) { return; }
+
+			// EntityMapping.g:774:5: ( unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:775:9: unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )*
+			{
+			DebugLocation(775, 9);
+			PushFollow(Follow._unaryExpression_in_multiplicativeExpression6201);
+			unaryExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(776, 9);
+			// EntityMapping.g:776:9: ( ( '*' | '/' | '%' ) unaryExpression )*
+			try { DebugEnterSubRule(126);
+			while (true)
+			{
+				int alt126=2;
+				try { DebugEnterDecision(126, decisionCanBacktrack[126]);
+				int LA126_0 = input.LA(1);
+
+				if ((LA126_0==PERCENT||LA126_0==SLASH||LA126_0==STAR))
+				{
+					alt126 = 1;
+				}
+
+
+				} finally { DebugExitDecision(126); }
+				switch ( alt126 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:777:13: ( '*' | '/' | '%' ) unaryExpression
+					{
+					DebugLocation(777, 13);
+					if (input.LA(1)==PERCENT||input.LA(1)==SLASH||input.LA(1)==STAR)
+					{
+						input.Consume();
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(781, 13);
+					PushFollow(Follow._unaryExpression_in_multiplicativeExpression6296);
+					unaryExpression();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop126;
+				}
+			}
+
+			loop126:
+				;
+
+			} finally { DebugExitSubRule(126); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("multiplicativeExpression", 85);
+			LeaveRule("multiplicativeExpression", 85);
+			LeaveRule_multiplicativeExpression();
+	        if (state.backtracking > 0) { Memoize(input, 85, multiplicativeExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(783, 4);
+		} finally { DebugExitRule(GrammarFileName, "multiplicativeExpression"); }
+		return;
+
+	}
+	// $ANTLR end "multiplicativeExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_unaryExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_unaryExpression() {}
+
+	// $ANTLR start "unaryExpression"
+	// EntityMapping.g:789:1: unaryExpression : ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus );
+	[GrammarRule("unaryExpression")]
+	private void unaryExpression()
+	{
+		EnterRule_unaryExpression();
+		EnterRule("unaryExpression", 86);
+		TraceIn("unaryExpression", 86);
+	    int unaryExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "unaryExpression");
+		DebugLocation(789, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 86)) { return; }
+
+			// EntityMapping.g:790:5: ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus )
+			int alt127=5;
+			try { DebugEnterDecision(127, decisionCanBacktrack[127]);
+			switch (input.LA(1))
+			{
+			case PLUS:
+				{
+				alt127 = 1;
+				}
+				break;
+			case SUB:
+				{
+				alt127 = 2;
+				}
+				break;
+			case PLUSPLUS:
+				{
+				alt127 = 3;
+				}
+				break;
+			case SUBSUB:
+				{
+				alt127 = 4;
+				}
+				break;
+			case BANG:
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case CHARLITERAL:
+			case DOUBLE:
+			case DOUBLELITERAL:
+			case FALSE:
+			case FLOAT:
+			case FLOATLITERAL:
+			case IDENTIFIER:
+			case INT:
+			case INTLITERAL:
+			case LONG:
+			case LONGLITERAL:
+			case LPAREN:
+			case NEW:
+			case NULL:
+			case SHORT:
+			case STRINGLITERAL:
+			case SUPER:
+			case THIS:
+			case TILDE:
+			case TRUE:
+			case VOID:
+				{
+				alt127 = 5;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 127, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(127); }
+			switch (alt127)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:790:9: '+' unaryExpression
+				{
+				DebugLocation(790, 9);
+				Match(input,PLUS,Follow._PLUS_in_unaryExpression6329); if (state.failed) return;
+				DebugLocation(790, 14);
+				PushFollow(Follow._unaryExpression_in_unaryExpression6332);
+				unaryExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:791:9: '-' unaryExpression
+				{
+				DebugLocation(791, 9);
+				Match(input,SUB,Follow._SUB_in_unaryExpression6342); if (state.failed) return;
+				DebugLocation(791, 13);
+				PushFollow(Follow._unaryExpression_in_unaryExpression6344);
+				unaryExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:792:9: '++' unaryExpression
+				{
+				DebugLocation(792, 9);
+				Match(input,PLUSPLUS,Follow._PLUSPLUS_in_unaryExpression6354); if (state.failed) return;
+				DebugLocation(792, 14);
+				PushFollow(Follow._unaryExpression_in_unaryExpression6356);
+				unaryExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:793:9: '--' unaryExpression
+				{
+				DebugLocation(793, 9);
+				Match(input,SUBSUB,Follow._SUBSUB_in_unaryExpression6366); if (state.failed) return;
+				DebugLocation(793, 14);
+				PushFollow(Follow._unaryExpression_in_unaryExpression6368);
+				unaryExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// EntityMapping.g:794:9: unaryExpressionNotPlusMinus
+				{
+				DebugLocation(794, 9);
+				PushFollow(Follow._unaryExpressionNotPlusMinus_in_unaryExpression6378);
+				unaryExpressionNotPlusMinus();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("unaryExpression", 86);
+			LeaveRule("unaryExpression", 86);
+			LeaveRule_unaryExpression();
+	        if (state.backtracking > 0) { Memoize(input, 86, unaryExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(795, 4);
+		} finally { DebugExitRule(GrammarFileName, "unaryExpression"); }
+		return;
+
+	}
+	// $ANTLR end "unaryExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_unaryExpressionNotPlusMinus() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_unaryExpressionNotPlusMinus() {}
+
+	// $ANTLR start "unaryExpressionNotPlusMinus"
+	// EntityMapping.g:797:1: unaryExpressionNotPlusMinus : ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? );
+	[GrammarRule("unaryExpressionNotPlusMinus")]
+	private void unaryExpressionNotPlusMinus()
+	{
+		EnterRule_unaryExpressionNotPlusMinus();
+		EnterRule("unaryExpressionNotPlusMinus", 87);
+		TraceIn("unaryExpressionNotPlusMinus", 87);
+	    int unaryExpressionNotPlusMinus_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "unaryExpressionNotPlusMinus");
+		DebugLocation(797, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 87)) { return; }
+
+			// EntityMapping.g:798:5: ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? )
+			int alt130=4;
+			try { DebugEnterDecision(130, decisionCanBacktrack[130]);
+			switch (input.LA(1))
+			{
+			case TILDE:
+				{
+				alt130 = 1;
+				}
+				break;
+			case BANG:
+				{
+				alt130 = 2;
+				}
+				break;
+			case LPAREN:
+				{
+				int LA130_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred202_EntityMapping_fragment)))
+				{
+					alt130 = 3;
+				}
+				else if ((true))
+				{
+					alt130 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 130, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case CHARLITERAL:
+			case DOUBLE:
+			case DOUBLELITERAL:
+			case FALSE:
+			case FLOAT:
+			case FLOATLITERAL:
+			case IDENTIFIER:
+			case INT:
+			case INTLITERAL:
+			case LONG:
+			case LONGLITERAL:
+			case NEW:
+			case NULL:
+			case SHORT:
+			case STRINGLITERAL:
+			case SUPER:
+			case THIS:
+			case TRUE:
+			case VOID:
+				{
+				alt130 = 4;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 130, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(130); }
+			switch (alt130)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:798:9: '~' unaryExpression
+				{
+				DebugLocation(798, 9);
+				Match(input,TILDE,Follow._TILDE_in_unaryExpressionNotPlusMinus6398); if (state.failed) return;
+				DebugLocation(798, 13);
+				PushFollow(Follow._unaryExpression_in_unaryExpressionNotPlusMinus6400);
+				unaryExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:799:9: '!' unaryExpression
+				{
+				DebugLocation(799, 9);
+				Match(input,BANG,Follow._BANG_in_unaryExpressionNotPlusMinus6410); if (state.failed) return;
+				DebugLocation(799, 13);
+				PushFollow(Follow._unaryExpression_in_unaryExpressionNotPlusMinus6412);
+				unaryExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:800:9: castExpression
+				{
+				DebugLocation(800, 9);
+				PushFollow(Follow._castExpression_in_unaryExpressionNotPlusMinus6422);
+				castExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:801:9: primary ( selector )* ( '++' | '--' )?
+				{
+				DebugLocation(801, 9);
+				PushFollow(Follow._primary_in_unaryExpressionNotPlusMinus6432);
+				primary();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(802, 9);
+				// EntityMapping.g:802:9: ( selector )*
+				try { DebugEnterSubRule(128);
+				while (true)
+				{
+					int alt128=2;
+					try { DebugEnterDecision(128, decisionCanBacktrack[128]);
+					int LA128_0 = input.LA(1);
+
+					if ((LA128_0==DOT||LA128_0==LBRACKET))
+					{
+						alt128 = 1;
+					}
+
+
+					} finally { DebugExitDecision(128); }
+					switch ( alt128 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:802:10: selector
+						{
+						DebugLocation(802, 10);
+						PushFollow(Follow._selector_in_unaryExpressionNotPlusMinus6443);
+						selector();
+						PopFollow();
+						if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop128;
+					}
+				}
+
+				loop128:
+					;
+
+				} finally { DebugExitSubRule(128); }
+
+				DebugLocation(804, 9);
+				// EntityMapping.g:804:9: ( '++' | '--' )?
+				int alt129=2;
+				try { DebugEnterSubRule(129);
+				try { DebugEnterDecision(129, decisionCanBacktrack[129]);
+				int LA129_0 = input.LA(1);
+
+				if ((LA129_0==PLUSPLUS||LA129_0==SUBSUB))
+				{
+					alt129 = 1;
+				}
+				} finally { DebugExitDecision(129); }
+				switch (alt129)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:
+					{
+					DebugLocation(804, 9);
+					if (input.LA(1)==PLUSPLUS||input.LA(1)==SUBSUB)
+					{
+						input.Consume();
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(129); }
+
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("unaryExpressionNotPlusMinus", 87);
+			LeaveRule("unaryExpressionNotPlusMinus", 87);
+			LeaveRule_unaryExpressionNotPlusMinus();
+	        if (state.backtracking > 0) { Memoize(input, 87, unaryExpressionNotPlusMinus_StartIndex); }
+
+	    }
+	 	DebugLocation(807, 4);
+		} finally { DebugExitRule(GrammarFileName, "unaryExpressionNotPlusMinus"); }
+		return;
+
+	}
+	// $ANTLR end "unaryExpressionNotPlusMinus"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_castExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_castExpression() {}
+
+	// $ANTLR start "castExpression"
+	// EntityMapping.g:809:1: castExpression : ( '(' primitiveType ')' unaryExpression | '(' type ')' unaryExpressionNotPlusMinus );
+	[GrammarRule("castExpression")]
+	private void castExpression()
+	{
+		EnterRule_castExpression();
+		EnterRule("castExpression", 88);
+		TraceIn("castExpression", 88);
+	    int castExpression_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "castExpression");
+		DebugLocation(809, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 88)) { return; }
+
+			// EntityMapping.g:810:5: ( '(' primitiveType ')' unaryExpression | '(' type ')' unaryExpressionNotPlusMinus )
+			int alt131=2;
+			try { DebugEnterDecision(131, decisionCanBacktrack[131]);
+			int LA131_0 = input.LA(1);
+
+			if ((LA131_0==LPAREN))
+			{
+				int LA131_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred206_EntityMapping_fragment)))
+				{
+					alt131 = 1;
+				}
+				else if ((true))
+				{
+					alt131 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 131, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 131, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(131); }
+			switch (alt131)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:810:9: '(' primitiveType ')' unaryExpression
+				{
+				DebugLocation(810, 9);
+				Match(input,LPAREN,Follow._LPAREN_in_castExpression6513); if (state.failed) return;
+				DebugLocation(810, 13);
+				PushFollow(Follow._primitiveType_in_castExpression6515);
+				primitiveType();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(810, 27);
+				Match(input,RPAREN,Follow._RPAREN_in_castExpression6517); if (state.failed) return;
+				DebugLocation(810, 31);
+				PushFollow(Follow._unaryExpression_in_castExpression6519);
+				unaryExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:811:9: '(' type ')' unaryExpressionNotPlusMinus
+				{
+				DebugLocation(811, 9);
+				Match(input,LPAREN,Follow._LPAREN_in_castExpression6529); if (state.failed) return;
+				DebugLocation(811, 13);
+				PushFollow(Follow._type_in_castExpression6531);
+				type();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(811, 18);
+				Match(input,RPAREN,Follow._RPAREN_in_castExpression6533); if (state.failed) return;
+				DebugLocation(811, 22);
+				PushFollow(Follow._unaryExpressionNotPlusMinus_in_castExpression6535);
+				unaryExpressionNotPlusMinus();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("castExpression", 88);
+			LeaveRule("castExpression", 88);
+			LeaveRule_castExpression();
+	        if (state.backtracking > 0) { Memoize(input, 88, castExpression_StartIndex); }
+
+	    }
+	 	DebugLocation(812, 4);
+		} finally { DebugExitRule(GrammarFileName, "castExpression"); }
+		return;
+
+	}
+	// $ANTLR end "castExpression"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_primary() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_primary() {}
+
+	// $ANTLR start "primary"
+	// EntityMapping.g:817:1: primary : ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' );
+	[GrammarRule("primary")]
+	private void primary()
+	{
+		EnterRule_primary();
+		EnterRule("primary", 89);
+		TraceIn("primary", 89);
+	    int primary_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "primary");
+		DebugLocation(817, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 89)) { return; }
+
+			// EntityMapping.g:818:5: ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' )
+			int alt137=8;
+			try { DebugEnterDecision(137, decisionCanBacktrack[137]);
+			switch (input.LA(1))
+			{
+			case LPAREN:
+				{
+				alt137 = 1;
+				}
+				break;
+			case THIS:
+				{
+				alt137 = 2;
+				}
+				break;
+			case IDENTIFIER:
+				{
+				alt137 = 3;
+				}
+				break;
+			case SUPER:
+				{
+				alt137 = 4;
+				}
+				break;
+			case CHARLITERAL:
+			case DOUBLELITERAL:
+			case FALSE:
+			case FLOATLITERAL:
+			case INTLITERAL:
+			case LONGLITERAL:
+			case NULL:
+			case STRINGLITERAL:
+			case TRUE:
+				{
+				alt137 = 5;
+				}
+				break;
+			case NEW:
+				{
+				alt137 = 6;
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+				{
+				alt137 = 7;
+				}
+				break;
+			case VOID:
+				{
+				alt137 = 8;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 137, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(137); }
+			switch (alt137)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:818:9: parExpression
+				{
+				DebugLocation(818, 9);
+				PushFollow(Follow._parExpression_in_primary6557);
+				parExpression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:819:9: 'this' ( '.' IDENTIFIER )* ( identifierSuffix )?
+				{
+				DebugLocation(819, 9);
+				Match(input,THIS,Follow._THIS_in_primary6579); if (state.failed) return;
+				DebugLocation(820, 9);
+				// EntityMapping.g:820:9: ( '.' IDENTIFIER )*
+				try { DebugEnterSubRule(132);
+				while (true)
+				{
+					int alt132=2;
+					try { DebugEnterDecision(132, decisionCanBacktrack[132]);
+					int LA132_0 = input.LA(1);
+
+					if ((LA132_0==DOT))
+					{
+						int LA132_2 = input.LA(2);
+
+						if ((LA132_2==IDENTIFIER))
+						{
+							int LA132_3 = input.LA(3);
+
+							if ((EvaluatePredicate(synpred208_EntityMapping_fragment)))
+							{
+								alt132 = 1;
+							}
+
+
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(132); }
+					switch ( alt132 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:820:10: '.' IDENTIFIER
+						{
+						DebugLocation(820, 10);
+						Match(input,DOT,Follow._DOT_in_primary6590); if (state.failed) return;
+						DebugLocation(820, 14);
+						Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary6592); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop132;
+					}
+				}
+
+				loop132:
+					;
+
+				} finally { DebugExitSubRule(132); }
+
+				DebugLocation(822, 9);
+				// EntityMapping.g:822:9: ( identifierSuffix )?
+				int alt133=2;
+				try { DebugEnterSubRule(133);
+				try { DebugEnterDecision(133, decisionCanBacktrack[133]);
+				switch (input.LA(1))
+				{
+				case LBRACKET:
+					{
+					int LA133_1 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred209_EntityMapping_fragment)))
+					{
+						alt133 = 1;
+					}
+					}
+					break;
+				case LPAREN:
+					{
+					alt133 = 1;
+					}
+					break;
+				case DOT:
+					{
+					int LA133_3 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred209_EntityMapping_fragment)))
+					{
+						alt133 = 1;
+					}
+					}
+					break;
+				}
+
+				} finally { DebugExitDecision(133); }
+				switch (alt133)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:822:10: identifierSuffix
+					{
+					DebugLocation(822, 10);
+					PushFollow(Follow._identifierSuffix_in_primary6614);
+					identifierSuffix();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(133); }
+
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:824:9: IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )?
+				{
+				DebugLocation(824, 9);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary6635); if (state.failed) return;
+				DebugLocation(825, 9);
+				// EntityMapping.g:825:9: ( '.' IDENTIFIER )*
+				try { DebugEnterSubRule(134);
+				while (true)
+				{
+					int alt134=2;
+					try { DebugEnterDecision(134, decisionCanBacktrack[134]);
+					int LA134_0 = input.LA(1);
+
+					if ((LA134_0==DOT))
+					{
+						int LA134_2 = input.LA(2);
+
+						if ((LA134_2==IDENTIFIER))
+						{
+							int LA134_3 = input.LA(3);
+
+							if ((EvaluatePredicate(synpred211_EntityMapping_fragment)))
+							{
+								alt134 = 1;
+							}
+
+
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(134); }
+					switch ( alt134 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:825:10: '.' IDENTIFIER
+						{
+						DebugLocation(825, 10);
+						Match(input,DOT,Follow._DOT_in_primary6646); if (state.failed) return;
+						DebugLocation(825, 14);
+						Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary6648); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop134;
+					}
+				}
+
+				loop134:
+					;
+
+				} finally { DebugExitSubRule(134); }
+
+				DebugLocation(827, 9);
+				// EntityMapping.g:827:9: ( identifierSuffix )?
+				int alt135=2;
+				try { DebugEnterSubRule(135);
+				try { DebugEnterDecision(135, decisionCanBacktrack[135]);
+				switch (input.LA(1))
+				{
+				case LBRACKET:
+					{
+					int LA135_1 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred212_EntityMapping_fragment)))
+					{
+						alt135 = 1;
+					}
+					}
+					break;
+				case LPAREN:
+					{
+					alt135 = 1;
+					}
+					break;
+				case DOT:
+					{
+					int LA135_3 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred212_EntityMapping_fragment)))
+					{
+						alt135 = 1;
+					}
+					}
+					break;
+				}
+
+				} finally { DebugExitDecision(135); }
+				switch (alt135)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:827:10: identifierSuffix
+					{
+					DebugLocation(827, 10);
+					PushFollow(Follow._identifierSuffix_in_primary6670);
+					identifierSuffix();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(135); }
+
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:829:9: 'super' superSuffix
+				{
+				DebugLocation(829, 9);
+				Match(input,SUPER,Follow._SUPER_in_primary6691); if (state.failed) return;
+				DebugLocation(830, 9);
+				PushFollow(Follow._superSuffix_in_primary6701);
+				superSuffix();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// EntityMapping.g:831:9: literal
+				{
+				DebugLocation(831, 9);
+				PushFollow(Follow._literal_in_primary6711);
+				literal();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// EntityMapping.g:832:9: creator
+				{
+				DebugLocation(832, 9);
+				PushFollow(Follow._creator_in_primary6721);
+				creator();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// EntityMapping.g:833:9: primitiveType ( '[' ']' )* '.' 'class'
+				{
+				DebugLocation(833, 9);
+				PushFollow(Follow._primitiveType_in_primary6731);
+				primitiveType();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(834, 9);
+				// EntityMapping.g:834:9: ( '[' ']' )*
+				try { DebugEnterSubRule(136);
+				while (true)
+				{
+					int alt136=2;
+					try { DebugEnterDecision(136, decisionCanBacktrack[136]);
+					int LA136_0 = input.LA(1);
+
+					if ((LA136_0==LBRACKET))
+					{
+						alt136 = 1;
+					}
+
+
+					} finally { DebugExitDecision(136); }
+					switch ( alt136 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:834:10: '[' ']'
+						{
+						DebugLocation(834, 10);
+						Match(input,LBRACKET,Follow._LBRACKET_in_primary6742); if (state.failed) return;
+						DebugLocation(834, 14);
+						Match(input,RBRACKET,Follow._RBRACKET_in_primary6744); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop136;
+					}
+				}
+
+				loop136:
+					;
+
+				} finally { DebugExitSubRule(136); }
+
+				DebugLocation(836, 9);
+				Match(input,DOT,Follow._DOT_in_primary6765); if (state.failed) return;
+				DebugLocation(836, 13);
+				Match(input,CLASS,Follow._CLASS_in_primary6767); if (state.failed) return;
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// EntityMapping.g:837:9: 'void' '.' 'class'
+				{
+				DebugLocation(837, 9);
+				Match(input,VOID,Follow._VOID_in_primary6777); if (state.failed) return;
+				DebugLocation(837, 16);
+				Match(input,DOT,Follow._DOT_in_primary6779); if (state.failed) return;
+				DebugLocation(837, 20);
+				Match(input,CLASS,Follow._CLASS_in_primary6781); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("primary", 89);
+			LeaveRule("primary", 89);
+			LeaveRule_primary();
+	        if (state.backtracking > 0) { Memoize(input, 89, primary_StartIndex); }
+
+	    }
+	 	DebugLocation(838, 4);
+		} finally { DebugExitRule(GrammarFileName, "primary"); }
+		return;
+
+	}
+	// $ANTLR end "primary"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_superSuffix() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_superSuffix() {}
+
+	// $ANTLR start "superSuffix"
+	// EntityMapping.g:841:1: superSuffix : ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? );
+	[GrammarRule("superSuffix")]
+	private void superSuffix()
+	{
+		EnterRule_superSuffix();
+		EnterRule("superSuffix", 90);
+		TraceIn("superSuffix", 90);
+	    int superSuffix_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "superSuffix");
+		DebugLocation(841, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 90)) { return; }
+
+			// EntityMapping.g:842:5: ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? )
+			int alt140=2;
+			try { DebugEnterDecision(140, decisionCanBacktrack[140]);
+			int LA140_0 = input.LA(1);
+
+			if ((LA140_0==LPAREN))
+			{
+				alt140 = 1;
+			}
+			else if ((LA140_0==DOT))
+			{
+				alt140 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 140, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(140); }
+			switch (alt140)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:842:9: arguments
+				{
+				DebugLocation(842, 9);
+				PushFollow(Follow._arguments_in_superSuffix6807);
+				arguments();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:843:9: '.' ( typeArguments )? IDENTIFIER ( arguments )?
+				{
+				DebugLocation(843, 9);
+				Match(input,DOT,Follow._DOT_in_superSuffix6817); if (state.failed) return;
+				DebugLocation(843, 13);
+				// EntityMapping.g:843:13: ( typeArguments )?
+				int alt138=2;
+				try { DebugEnterSubRule(138);
+				try { DebugEnterDecision(138, decisionCanBacktrack[138]);
+				int LA138_0 = input.LA(1);
+
+				if ((LA138_0==LT))
+				{
+					alt138 = 1;
+				}
+				} finally { DebugExitDecision(138); }
+				switch (alt138)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:843:14: typeArguments
+					{
+					DebugLocation(843, 14);
+					PushFollow(Follow._typeArguments_in_superSuffix6820);
+					typeArguments();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(138); }
+
+				DebugLocation(845, 9);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_superSuffix6841); if (state.failed) return;
+				DebugLocation(846, 9);
+				// EntityMapping.g:846:9: ( arguments )?
+				int alt139=2;
+				try { DebugEnterSubRule(139);
+				try { DebugEnterDecision(139, decisionCanBacktrack[139]);
+				int LA139_0 = input.LA(1);
+
+				if ((LA139_0==LPAREN))
+				{
+					alt139 = 1;
+				}
+				} finally { DebugExitDecision(139); }
+				switch (alt139)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:846:10: arguments
+					{
+					DebugLocation(846, 10);
+					PushFollow(Follow._arguments_in_superSuffix6852);
+					arguments();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(139); }
+
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("superSuffix", 90);
+			LeaveRule("superSuffix", 90);
+			LeaveRule_superSuffix();
+	        if (state.backtracking > 0) { Memoize(input, 90, superSuffix_StartIndex); }
+
+	    }
+	 	DebugLocation(848, 4);
+		} finally { DebugExitRule(GrammarFileName, "superSuffix"); }
+		return;
+
+	}
+	// $ANTLR end "superSuffix"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_identifierSuffix() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_identifierSuffix() {}
+
+	// $ANTLR start "identifierSuffix"
+	// EntityMapping.g:851:1: identifierSuffix : ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator );
+	[GrammarRule("identifierSuffix")]
+	private void identifierSuffix()
+	{
+		EnterRule_identifierSuffix();
+		EnterRule("identifierSuffix", 91);
+		TraceIn("identifierSuffix", 91);
+	    int identifierSuffix_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "identifierSuffix");
+		DebugLocation(851, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 91)) { return; }
+
+			// EntityMapping.g:852:5: ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator )
+			int alt143=8;
+			try { DebugEnterDecision(143, decisionCanBacktrack[143]);
+			switch (input.LA(1))
+			{
+			case LBRACKET:
+				{
+				int LA143_1 = input.LA(2);
+
+				if ((LA143_1==RBRACKET))
+				{
+					alt143 = 1;
+				}
+				else if ((LA143_1==BANG||LA143_1==BOOLEAN||LA143_1==BYTE||(LA143_1>=CHAR && LA143_1<=CHARLITERAL)||(LA143_1>=DOUBLE && LA143_1<=DOUBLELITERAL)||LA143_1==FALSE||(LA143_1>=FLOAT && LA143_1<=FLOATLITERAL)||LA143_1==IDENTIFIER||LA143_1==INT||LA143_1==INTLITERAL||(LA143_1>=LONG && LA143_1<=LPAREN)||(LA143_1>=NEW && LA143_1<=NULL)||LA143_1==PLUS||LA143_1==PLUSPLUS||LA143_1==SHORT||(LA143_1>=STRINGLITERAL && LA143_1<=SUB)||(LA143_1>=SUBSUB && LA143_1<=SUPER)||LA143_1==THIS||LA143_1==TILDE||LA143_1==TRUE||LA143_1==VOID))
+				{
+					alt143 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 143, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case LPAREN:
+				{
+				alt143 = 3;
+				}
+				break;
+			case DOT:
+				{
+				switch (input.LA(2))
+				{
+				case CLASS:
+					{
+					alt143 = 4;
+					}
+					break;
+				case THIS:
+					{
+					alt143 = 6;
+					}
+					break;
+				case SUPER:
+					{
+					alt143 = 7;
+					}
+					break;
+				case NEW:
+					{
+					alt143 = 8;
+					}
+					break;
+				case LT:
+					{
+					alt143 = 5;
+					}
+					break;
+				default:
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						NoViableAltException nvae = new NoViableAltException("", 143, 3, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+				}
+
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 143, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(143); }
+			switch (alt143)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:852:9: ( '[' ']' )+ '.' 'class'
+				{
+				DebugLocation(852, 9);
+				// EntityMapping.g:852:9: ( '[' ']' )+
+				int cnt141=0;
+				try { DebugEnterSubRule(141);
+				while (true)
+				{
+					int alt141=2;
+					try { DebugEnterDecision(141, decisionCanBacktrack[141]);
+					int LA141_0 = input.LA(1);
+
+					if ((LA141_0==LBRACKET))
+					{
+						alt141 = 1;
+					}
+
+
+					} finally { DebugExitDecision(141); }
+					switch (alt141)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:852:10: '[' ']'
+						{
+						DebugLocation(852, 10);
+						Match(input,LBRACKET,Follow._LBRACKET_in_identifierSuffix6885); if (state.failed) return;
+						DebugLocation(852, 14);
+						Match(input,RBRACKET,Follow._RBRACKET_in_identifierSuffix6887); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						if (cnt141 >= 1)
+							goto loop141;
+
+						if (state.backtracking>0) {state.failed=true; return;}
+						EarlyExitException eee141 = new EarlyExitException( 141, input );
+						DebugRecognitionException(eee141);
+						throw eee141;
+					}
+					cnt141++;
+				}
+				loop141:
+					;
+
+				} finally { DebugExitSubRule(141); }
+
+				DebugLocation(854, 9);
+				Match(input,DOT,Follow._DOT_in_identifierSuffix6908); if (state.failed) return;
+				DebugLocation(854, 13);
+				Match(input,CLASS,Follow._CLASS_in_identifierSuffix6910); if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:855:9: ( '[' expression ']' )+
+				{
+				DebugLocation(855, 9);
+				// EntityMapping.g:855:9: ( '[' expression ']' )+
+				int cnt142=0;
+				try { DebugEnterSubRule(142);
+				while (true)
+				{
+					int alt142=2;
+					try { DebugEnterDecision(142, decisionCanBacktrack[142]);
+					int LA142_0 = input.LA(1);
+
+					if ((LA142_0==LBRACKET))
+					{
+						int LA142_2 = input.LA(2);
+
+						if ((EvaluatePredicate(synpred224_EntityMapping_fragment)))
+						{
+							alt142 = 1;
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(142); }
+					switch (alt142)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:855:10: '[' expression ']'
+						{
+						DebugLocation(855, 10);
+						Match(input,LBRACKET,Follow._LBRACKET_in_identifierSuffix6921); if (state.failed) return;
+						DebugLocation(855, 14);
+						PushFollow(Follow._expression_in_identifierSuffix6923);
+						expression();
+						PopFollow();
+						if (state.failed) return;
+						DebugLocation(855, 25);
+						Match(input,RBRACKET,Follow._RBRACKET_in_identifierSuffix6925); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						if (cnt142 >= 1)
+							goto loop142;
+
+						if (state.backtracking>0) {state.failed=true; return;}
+						EarlyExitException eee142 = new EarlyExitException( 142, input );
+						DebugRecognitionException(eee142);
+						throw eee142;
+					}
+					cnt142++;
+				}
+				loop142:
+					;
+
+				} finally { DebugExitSubRule(142); }
+
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:857:9: arguments
+				{
+				DebugLocation(857, 9);
+				PushFollow(Follow._arguments_in_identifierSuffix6946);
+				arguments();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:858:9: '.' 'class'
+				{
+				DebugLocation(858, 9);
+				Match(input,DOT,Follow._DOT_in_identifierSuffix6956); if (state.failed) return;
+				DebugLocation(858, 13);
+				Match(input,CLASS,Follow._CLASS_in_identifierSuffix6958); if (state.failed) return;
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// EntityMapping.g:859:9: '.' nonWildcardTypeArguments IDENTIFIER arguments
+				{
+				DebugLocation(859, 9);
+				Match(input,DOT,Follow._DOT_in_identifierSuffix6968); if (state.failed) return;
+				DebugLocation(859, 13);
+				PushFollow(Follow._nonWildcardTypeArguments_in_identifierSuffix6970);
+				nonWildcardTypeArguments();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(859, 38);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_identifierSuffix6972); if (state.failed) return;
+				DebugLocation(859, 49);
+				PushFollow(Follow._arguments_in_identifierSuffix6974);
+				arguments();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// EntityMapping.g:860:9: '.' 'this'
+				{
+				DebugLocation(860, 9);
+				Match(input,DOT,Follow._DOT_in_identifierSuffix6984); if (state.failed) return;
+				DebugLocation(860, 13);
+				Match(input,THIS,Follow._THIS_in_identifierSuffix6986); if (state.failed) return;
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// EntityMapping.g:861:9: '.' 'super' arguments
+				{
+				DebugLocation(861, 9);
+				Match(input,DOT,Follow._DOT_in_identifierSuffix6996); if (state.failed) return;
+				DebugLocation(861, 13);
+				Match(input,SUPER,Follow._SUPER_in_identifierSuffix6998); if (state.failed) return;
+				DebugLocation(861, 21);
+				PushFollow(Follow._arguments_in_identifierSuffix7000);
+				arguments();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// EntityMapping.g:862:9: innerCreator
+				{
+				DebugLocation(862, 9);
+				PushFollow(Follow._innerCreator_in_identifierSuffix7010);
+				innerCreator();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("identifierSuffix", 91);
+			LeaveRule("identifierSuffix", 91);
+			LeaveRule_identifierSuffix();
+	        if (state.backtracking > 0) { Memoize(input, 91, identifierSuffix_StartIndex); }
+
+	    }
+	 	DebugLocation(863, 4);
+		} finally { DebugExitRule(GrammarFileName, "identifierSuffix"); }
+		return;
+
+	}
+	// $ANTLR end "identifierSuffix"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_selector() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_selector() {}
+
+	// $ANTLR start "selector"
+	// EntityMapping.g:866:1: selector : ( '.' IDENTIFIER ( arguments )? | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' );
+	[GrammarRule("selector")]
+	private void selector()
+	{
+		EnterRule_selector();
+		EnterRule("selector", 92);
+		TraceIn("selector", 92);
+	    int selector_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "selector");
+		DebugLocation(866, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 92)) { return; }
+
+			// EntityMapping.g:867:5: ( '.' IDENTIFIER ( arguments )? | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' )
+			int alt145=5;
+			try { DebugEnterDecision(145, decisionCanBacktrack[145]);
+			int LA145_0 = input.LA(1);
+
+			if ((LA145_0==DOT))
+			{
+				switch (input.LA(2))
+				{
+				case IDENTIFIER:
+					{
+					alt145 = 1;
+					}
+					break;
+				case THIS:
+					{
+					alt145 = 2;
+					}
+					break;
+				case SUPER:
+					{
+					alt145 = 3;
+					}
+					break;
+				case NEW:
+					{
+					alt145 = 4;
+					}
+					break;
+				default:
+					{
+						if (state.backtracking>0) {state.failed=true; return;}
+						NoViableAltException nvae = new NoViableAltException("", 145, 1, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+				}
+
+			}
+			else if ((LA145_0==LBRACKET))
+			{
+				alt145 = 5;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 145, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(145); }
+			switch (alt145)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:867:9: '.' IDENTIFIER ( arguments )?
+				{
+				DebugLocation(867, 9);
+				Match(input,DOT,Follow._DOT_in_selector7032); if (state.failed) return;
+				DebugLocation(867, 13);
+				Match(input,IDENTIFIER,Follow._IDENTIFIER_in_selector7034); if (state.failed) return;
+				DebugLocation(868, 9);
+				// EntityMapping.g:868:9: ( arguments )?
+				int alt144=2;
+				try { DebugEnterSubRule(144);
+				try { DebugEnterDecision(144, decisionCanBacktrack[144]);
+				int LA144_0 = input.LA(1);
+
+				if ((LA144_0==LPAREN))
+				{
+					alt144 = 1;
+				}
+				} finally { DebugExitDecision(144); }
+				switch (alt144)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:868:10: arguments
+					{
+					DebugLocation(868, 10);
+					PushFollow(Follow._arguments_in_selector7045);
+					arguments();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(144); }
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:870:9: '.' 'this'
+				{
+				DebugLocation(870, 9);
+				Match(input,DOT,Follow._DOT_in_selector7066); if (state.failed) return;
+				DebugLocation(870, 13);
+				Match(input,THIS,Follow._THIS_in_selector7068); if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:871:9: '.' 'super' superSuffix
+				{
+				DebugLocation(871, 9);
+				Match(input,DOT,Follow._DOT_in_selector7078); if (state.failed) return;
+				DebugLocation(871, 13);
+				Match(input,SUPER,Follow._SUPER_in_selector7080); if (state.failed) return;
+				DebugLocation(872, 9);
+				PushFollow(Follow._superSuffix_in_selector7090);
+				superSuffix();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// EntityMapping.g:873:9: innerCreator
+				{
+				DebugLocation(873, 9);
+				PushFollow(Follow._innerCreator_in_selector7100);
+				innerCreator();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// EntityMapping.g:874:9: '[' expression ']'
+				{
+				DebugLocation(874, 9);
+				Match(input,LBRACKET,Follow._LBRACKET_in_selector7110); if (state.failed) return;
+				DebugLocation(874, 13);
+				PushFollow(Follow._expression_in_selector7112);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(874, 24);
+				Match(input,RBRACKET,Follow._RBRACKET_in_selector7114); if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("selector", 92);
+			LeaveRule("selector", 92);
+			LeaveRule_selector();
+	        if (state.backtracking > 0) { Memoize(input, 92, selector_StartIndex); }
+
+	    }
+	 	DebugLocation(875, 4);
+		} finally { DebugExitRule(GrammarFileName, "selector"); }
+		return;
+
+	}
+	// $ANTLR end "selector"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_creator() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_creator() {}
+
+	// $ANTLR start "creator"
+	// EntityMapping.g:877:1: creator : ( 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest | 'new' classOrInterfaceType classCreatorRest | arrayCreator );
+	[GrammarRule("creator")]
+	private void creator()
+	{
+		EnterRule_creator();
+		EnterRule("creator", 93);
+		TraceIn("creator", 93);
+	    int creator_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "creator");
+		DebugLocation(877, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 93)) { return; }
+
+			// EntityMapping.g:878:5: ( 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest | 'new' classOrInterfaceType classCreatorRest | arrayCreator )
+			int alt146=3;
+			try { DebugEnterDecision(146, decisionCanBacktrack[146]);
+			int LA146_0 = input.LA(1);
+
+			if ((LA146_0==NEW))
+			{
+				int LA146_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred236_EntityMapping_fragment)))
+				{
+					alt146 = 1;
+				}
+				else if ((EvaluatePredicate(synpred237_EntityMapping_fragment)))
+				{
+					alt146 = 2;
+				}
+				else if ((true))
+				{
+					alt146 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 146, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 146, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(146); }
+			switch (alt146)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:878:9: 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest
+				{
+				DebugLocation(878, 9);
+				Match(input,NEW,Follow._NEW_in_creator7134); if (state.failed) return;
+				DebugLocation(878, 15);
+				PushFollow(Follow._nonWildcardTypeArguments_in_creator7136);
+				nonWildcardTypeArguments();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(878, 40);
+				PushFollow(Follow._classOrInterfaceType_in_creator7138);
+				classOrInterfaceType();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(878, 61);
+				PushFollow(Follow._classCreatorRest_in_creator7140);
+				classCreatorRest();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:879:9: 'new' classOrInterfaceType classCreatorRest
+				{
+				DebugLocation(879, 9);
+				Match(input,NEW,Follow._NEW_in_creator7150); if (state.failed) return;
+				DebugLocation(879, 15);
+				PushFollow(Follow._classOrInterfaceType_in_creator7152);
+				classOrInterfaceType();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(879, 36);
+				PushFollow(Follow._classCreatorRest_in_creator7154);
+				classCreatorRest();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:880:9: arrayCreator
+				{
+				DebugLocation(880, 9);
+				PushFollow(Follow._arrayCreator_in_creator7164);
+				arrayCreator();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("creator", 93);
+			LeaveRule("creator", 93);
+			LeaveRule_creator();
+	        if (state.backtracking > 0) { Memoize(input, 93, creator_StartIndex); }
+
+	    }
+	 	DebugLocation(881, 4);
+		} finally { DebugExitRule(GrammarFileName, "creator"); }
+		return;
+
+	}
+	// $ANTLR end "creator"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_arrayCreator() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_arrayCreator() {}
+
+	// $ANTLR start "arrayCreator"
+	// EntityMapping.g:883:1: arrayCreator : ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* );
+	[GrammarRule("arrayCreator")]
+	private void arrayCreator()
+	{
+		EnterRule_arrayCreator();
+		EnterRule("arrayCreator", 94);
+		TraceIn("arrayCreator", 94);
+	    int arrayCreator_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "arrayCreator");
+		DebugLocation(883, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 94)) { return; }
+
+			// EntityMapping.g:884:5: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* )
+			int alt150=2;
+			try { DebugEnterDecision(150, decisionCanBacktrack[150]);
+			int LA150_0 = input.LA(1);
+
+			if ((LA150_0==NEW))
+			{
+				int LA150_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred239_EntityMapping_fragment)))
+				{
+					alt150 = 1;
+				}
+				else if ((true))
+				{
+					alt150 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 150, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 150, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(150); }
+			switch (alt150)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:884:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
+				{
+				DebugLocation(884, 9);
+				Match(input,NEW,Follow._NEW_in_arrayCreator7184); if (state.failed) return;
+				DebugLocation(884, 15);
+				PushFollow(Follow._createdName_in_arrayCreator7186);
+				createdName();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(885, 9);
+				Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7196); if (state.failed) return;
+				DebugLocation(885, 13);
+				Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7198); if (state.failed) return;
+				DebugLocation(886, 9);
+				// EntityMapping.g:886:9: ( '[' ']' )*
+				try { DebugEnterSubRule(147);
+				while (true)
+				{
+					int alt147=2;
+					try { DebugEnterDecision(147, decisionCanBacktrack[147]);
+					int LA147_0 = input.LA(1);
+
+					if ((LA147_0==LBRACKET))
+					{
+						alt147 = 1;
+					}
+
+
+					} finally { DebugExitDecision(147); }
+					switch ( alt147 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:886:10: '[' ']'
+						{
+						DebugLocation(886, 10);
+						Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7209); if (state.failed) return;
+						DebugLocation(886, 14);
+						Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7211); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop147;
+					}
+				}
+
+				loop147:
+					;
+
+				} finally { DebugExitSubRule(147); }
+
+				DebugLocation(888, 9);
+				PushFollow(Follow._arrayInitializer_in_arrayCreator7232);
+				arrayInitializer();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:890:9: 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )*
+				{
+				DebugLocation(890, 9);
+				Match(input,NEW,Follow._NEW_in_arrayCreator7243); if (state.failed) return;
+				DebugLocation(890, 15);
+				PushFollow(Follow._createdName_in_arrayCreator7245);
+				createdName();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(891, 9);
+				Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7255); if (state.failed) return;
+				DebugLocation(891, 13);
+				PushFollow(Follow._expression_in_arrayCreator7257);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(892, 9);
+				Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7267); if (state.failed) return;
+				DebugLocation(893, 9);
+				// EntityMapping.g:893:9: ( '[' expression ']' )*
+				try { DebugEnterSubRule(148);
+				while (true)
+				{
+					int alt148=2;
+					try { DebugEnterDecision(148, decisionCanBacktrack[148]);
+					int LA148_0 = input.LA(1);
+
+					if ((LA148_0==LBRACKET))
+					{
+						int LA148_1 = input.LA(2);
+
+						if ((EvaluatePredicate(synpred240_EntityMapping_fragment)))
+						{
+							alt148 = 1;
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(148); }
+					switch ( alt148 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:893:13: '[' expression ']'
+						{
+						DebugLocation(893, 13);
+						Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7281); if (state.failed) return;
+						DebugLocation(893, 17);
+						PushFollow(Follow._expression_in_arrayCreator7283);
+						expression();
+						PopFollow();
+						if (state.failed) return;
+						DebugLocation(894, 13);
+						Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7297); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop148;
+					}
+				}
+
+				loop148:
+					;
+
+				} finally { DebugExitSubRule(148); }
+
+				DebugLocation(896, 9);
+				// EntityMapping.g:896:9: ( '[' ']' )*
+				try { DebugEnterSubRule(149);
+				while (true)
+				{
+					int alt149=2;
+					try { DebugEnterDecision(149, decisionCanBacktrack[149]);
+					int LA149_0 = input.LA(1);
+
+					if ((LA149_0==LBRACKET))
+					{
+						int LA149_2 = input.LA(2);
+
+						if ((LA149_2==RBRACKET))
+						{
+							alt149 = 1;
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(149); }
+					switch ( alt149 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:896:10: '[' ']'
+						{
+						DebugLocation(896, 10);
+						Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7319); if (state.failed) return;
+						DebugLocation(896, 14);
+						Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7321); if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop149;
+					}
+				}
+
+				loop149:
+					;
+
+				} finally { DebugExitSubRule(149); }
+
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("arrayCreator", 94);
+			LeaveRule("arrayCreator", 94);
+			LeaveRule_arrayCreator();
+	        if (state.backtracking > 0) { Memoize(input, 94, arrayCreator_StartIndex); }
+
+	    }
+	 	DebugLocation(898, 4);
+		} finally { DebugExitRule(GrammarFileName, "arrayCreator"); }
+		return;
+
+	}
+	// $ANTLR end "arrayCreator"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_variableInitializer() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_variableInitializer() {}
+
+	// $ANTLR start "variableInitializer"
+	// EntityMapping.g:900:1: variableInitializer : ( arrayInitializer | expression );
+	[GrammarRule("variableInitializer")]
+	private void variableInitializer()
+	{
+		EnterRule_variableInitializer();
+		EnterRule("variableInitializer", 95);
+		TraceIn("variableInitializer", 95);
+	    int variableInitializer_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "variableInitializer");
+		DebugLocation(900, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 95)) { return; }
+
+			// EntityMapping.g:901:5: ( arrayInitializer | expression )
+			int alt151=2;
+			try { DebugEnterDecision(151, decisionCanBacktrack[151]);
+			int LA151_0 = input.LA(1);
+
+			if ((LA151_0==LBRACE))
+			{
+				alt151 = 1;
+			}
+			else if ((LA151_0==BANG||LA151_0==BOOLEAN||LA151_0==BYTE||(LA151_0>=CHAR && LA151_0<=CHARLITERAL)||(LA151_0>=DOUBLE && LA151_0<=DOUBLELITERAL)||LA151_0==FALSE||(LA151_0>=FLOAT && LA151_0<=FLOATLITERAL)||LA151_0==IDENTIFIER||LA151_0==INT||LA151_0==INTLITERAL||(LA151_0>=LONG && LA151_0<=LPAREN)||(LA151_0>=NEW && LA151_0<=NULL)||LA151_0==PLUS||LA151_0==PLUSPLUS||LA151_0==SHORT||(LA151_0>=STRINGLITERAL && LA151_0<=SUB)||(LA151_0>=SUBSUB && LA151_0<=SUPER)||LA151_0==THIS||LA151_0==TILDE||LA151_0==TRUE||LA151_0==VOID))
+			{
+				alt151 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 151, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(151); }
+			switch (alt151)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:901:9: arrayInitializer
+				{
+				DebugLocation(901, 9);
+				PushFollow(Follow._arrayInitializer_in_variableInitializer7352);
+				arrayInitializer();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:902:9: expression
+				{
+				DebugLocation(902, 9);
+				PushFollow(Follow._expression_in_variableInitializer7362);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("variableInitializer", 95);
+			LeaveRule("variableInitializer", 95);
+			LeaveRule_variableInitializer();
+	        if (state.backtracking > 0) { Memoize(input, 95, variableInitializer_StartIndex); }
+
+	    }
+	 	DebugLocation(903, 4);
+		} finally { DebugExitRule(GrammarFileName, "variableInitializer"); }
+		return;
+
+	}
+	// $ANTLR end "variableInitializer"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_arrayInitializer() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_arrayInitializer() {}
+
+	// $ANTLR start "arrayInitializer"
+	// EntityMapping.g:905:1: arrayInitializer : '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' ;
+	[GrammarRule("arrayInitializer")]
+	private void arrayInitializer()
+	{
+		EnterRule_arrayInitializer();
+		EnterRule("arrayInitializer", 96);
+		TraceIn("arrayInitializer", 96);
+	    int arrayInitializer_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "arrayInitializer");
+		DebugLocation(905, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 96)) { return; }
+
+			// EntityMapping.g:906:5: ( '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:906:9: '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}'
+			{
+			DebugLocation(906, 9);
+			Match(input,LBRACE,Follow._LBRACE_in_arrayInitializer7382); if (state.failed) return;
+			DebugLocation(907, 13);
+			// EntityMapping.g:907:13: ( variableInitializer ( ',' variableInitializer )* )?
+			int alt153=2;
+			try { DebugEnterSubRule(153);
+			try { DebugEnterDecision(153, decisionCanBacktrack[153]);
+			int LA153_0 = input.LA(1);
+
+			if ((LA153_0==BANG||LA153_0==BOOLEAN||LA153_0==BYTE||(LA153_0>=CHAR && LA153_0<=CHARLITERAL)||(LA153_0>=DOUBLE && LA153_0<=DOUBLELITERAL)||LA153_0==FALSE||(LA153_0>=FLOAT && LA153_0<=FLOATLITERAL)||LA153_0==IDENTIFIER||LA153_0==INT||LA153_0==INTLITERAL||LA153_0==LBRACE||(LA153_0>=LONG && LA153_0<=LPAREN)||(LA153_0>=NEW && LA153_0<=NULL)||LA153_0==PLUS||LA153_0==PLUSPLUS||LA153_0==SHORT||(LA153_0>=STRINGLITERAL && LA153_0<=SUB)||(LA153_0>=SUBSUB && LA153_0<=SUPER)||LA153_0==THIS||LA153_0==TILDE||LA153_0==TRUE||LA153_0==VOID))
+			{
+				alt153 = 1;
+			}
+			} finally { DebugExitDecision(153); }
+			switch (alt153)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:907:14: variableInitializer ( ',' variableInitializer )*
+				{
+				DebugLocation(907, 14);
+				PushFollow(Follow._variableInitializer_in_arrayInitializer7398);
+				variableInitializer();
+				PopFollow();
+				if (state.failed) return;
+				DebugLocation(908, 17);
+				// EntityMapping.g:908:17: ( ',' variableInitializer )*
+				try { DebugEnterSubRule(152);
+				while (true)
+				{
+					int alt152=2;
+					try { DebugEnterDecision(152, decisionCanBacktrack[152]);
+					int LA152_0 = input.LA(1);
+
+					if ((LA152_0==COMMA))
+					{
+						int LA152_1 = input.LA(2);
+
+						if ((LA152_1==BANG||LA152_1==BOOLEAN||LA152_1==BYTE||(LA152_1>=CHAR && LA152_1<=CHARLITERAL)||(LA152_1>=DOUBLE && LA152_1<=DOUBLELITERAL)||LA152_1==FALSE||(LA152_1>=FLOAT && LA152_1<=FLOATLITERAL)||LA152_1==IDENTIFIER||LA152_1==INT||LA152_1==INTLITERAL||LA152_1==LBRACE||(LA152_1>=LONG && LA152_1<=LPAREN)||(LA152_1>=NEW && LA152_1<=NULL)||LA152_1==PLUS||LA152_1==PLUSPLUS||LA152_1==SHORT||(LA152_1>=STRINGLITERAL && LA152_1<=SUB)||(LA152_1>=SUBSUB && LA152_1<=SUPER)||LA152_1==THIS||LA152_1==TILDE||LA152_1==TRUE||LA152_1==VOID))
+						{
+							alt152 = 1;
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(152); }
+					switch ( alt152 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// EntityMapping.g:908:18: ',' variableInitializer
+						{
+						DebugLocation(908, 18);
+						Match(input,COMMA,Follow._COMMA_in_arrayInitializer7417); if (state.failed) return;
+						DebugLocation(908, 22);
+						PushFollow(Follow._variableInitializer_in_arrayInitializer7419);
+						variableInitializer();
+						PopFollow();
+						if (state.failed) return;
+
+						}
+						break;
+
+					default:
+						goto loop152;
+					}
+				}
+
+				loop152:
+					;
+
+				} finally { DebugExitSubRule(152); }
+
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(153); }
+
+			DebugLocation(911, 13);
+			// EntityMapping.g:911:13: ( ',' )?
+			int alt154=2;
+			try { DebugEnterSubRule(154);
+			try { DebugEnterDecision(154, decisionCanBacktrack[154]);
+			int LA154_0 = input.LA(1);
+
+			if ((LA154_0==COMMA))
+			{
+				alt154 = 1;
+			}
+			} finally { DebugExitDecision(154); }
+			switch (alt154)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:911:14: ','
+				{
+				DebugLocation(911, 14);
+				Match(input,COMMA,Follow._COMMA_in_arrayInitializer7469); if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(154); }
+
+			DebugLocation(912, 9);
+			Match(input,RBRACE,Follow._RBRACE_in_arrayInitializer7482); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("arrayInitializer", 96);
+			LeaveRule("arrayInitializer", 96);
+			LeaveRule_arrayInitializer();
+	        if (state.backtracking > 0) { Memoize(input, 96, arrayInitializer_StartIndex); }
+
+	    }
+	 	DebugLocation(913, 4);
+		} finally { DebugExitRule(GrammarFileName, "arrayInitializer"); }
+		return;
+
+	}
+	// $ANTLR end "arrayInitializer"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_createdName() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_createdName() {}
+
+	// $ANTLR start "createdName"
+	// EntityMapping.g:916:1: createdName : ( classOrInterfaceType | primitiveType );
+	[GrammarRule("createdName")]
+	private void createdName()
+	{
+		EnterRule_createdName();
+		EnterRule("createdName", 97);
+		TraceIn("createdName", 97);
+	    int createdName_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "createdName");
+		DebugLocation(916, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 97)) { return; }
+
+			// EntityMapping.g:917:5: ( classOrInterfaceType | primitiveType )
+			int alt155=2;
+			try { DebugEnterDecision(155, decisionCanBacktrack[155]);
+			int LA155_0 = input.LA(1);
+
+			if ((LA155_0==IDENTIFIER))
+			{
+				alt155 = 1;
+			}
+			else if ((LA155_0==BOOLEAN||LA155_0==BYTE||LA155_0==CHAR||LA155_0==DOUBLE||LA155_0==FLOAT||LA155_0==INT||LA155_0==LONG||LA155_0==SHORT))
+			{
+				alt155 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae = new NoViableAltException("", 155, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(155); }
+			switch (alt155)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:917:9: classOrInterfaceType
+				{
+				DebugLocation(917, 9);
+				PushFollow(Follow._classOrInterfaceType_in_createdName7516);
+				classOrInterfaceType();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:918:9: primitiveType
+				{
+				DebugLocation(918, 9);
+				PushFollow(Follow._primitiveType_in_createdName7526);
+				primitiveType();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("createdName", 97);
+			LeaveRule("createdName", 97);
+			LeaveRule_createdName();
+	        if (state.backtracking > 0) { Memoize(input, 97, createdName_StartIndex); }
+
+	    }
+	 	DebugLocation(919, 4);
+		} finally { DebugExitRule(GrammarFileName, "createdName"); }
+		return;
+
+	}
+	// $ANTLR end "createdName"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_innerCreator() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_innerCreator() {}
+
+	// $ANTLR start "innerCreator"
+	// EntityMapping.g:921:1: innerCreator : '.' 'new' ( nonWildcardTypeArguments )? IDENTIFIER ( typeArguments )? classCreatorRest ;
+	[GrammarRule("innerCreator")]
+	private void innerCreator()
+	{
+		EnterRule_innerCreator();
+		EnterRule("innerCreator", 98);
+		TraceIn("innerCreator", 98);
+	    int innerCreator_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "innerCreator");
+		DebugLocation(921, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 98)) { return; }
+
+			// EntityMapping.g:922:5: ( '.' 'new' ( nonWildcardTypeArguments )? IDENTIFIER ( typeArguments )? classCreatorRest )
+			DebugEnterAlt(1);
+			// EntityMapping.g:922:9: '.' 'new' ( nonWildcardTypeArguments )? IDENTIFIER ( typeArguments )? classCreatorRest
+			{
+			DebugLocation(922, 9);
+			Match(input,DOT,Follow._DOT_in_innerCreator7547); if (state.failed) return;
+			DebugLocation(922, 13);
+			Match(input,NEW,Follow._NEW_in_innerCreator7549); if (state.failed) return;
+			DebugLocation(923, 9);
+			// EntityMapping.g:923:9: ( nonWildcardTypeArguments )?
+			int alt156=2;
+			try { DebugEnterSubRule(156);
+			try { DebugEnterDecision(156, decisionCanBacktrack[156]);
+			int LA156_0 = input.LA(1);
+
+			if ((LA156_0==LT))
+			{
+				alt156 = 1;
+			}
+			} finally { DebugExitDecision(156); }
+			switch (alt156)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:923:10: nonWildcardTypeArguments
+				{
+				DebugLocation(923, 10);
+				PushFollow(Follow._nonWildcardTypeArguments_in_innerCreator7560);
+				nonWildcardTypeArguments();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(156); }
+
+			DebugLocation(925, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_innerCreator7581); if (state.failed) return;
+			DebugLocation(926, 9);
+			// EntityMapping.g:926:9: ( typeArguments )?
+			int alt157=2;
+			try { DebugEnterSubRule(157);
+			try { DebugEnterDecision(157, decisionCanBacktrack[157]);
+			int LA157_0 = input.LA(1);
+
+			if ((LA157_0==LT))
+			{
+				alt157 = 1;
+			}
+			} finally { DebugExitDecision(157); }
+			switch (alt157)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:926:10: typeArguments
+				{
+				DebugLocation(926, 10);
+				PushFollow(Follow._typeArguments_in_innerCreator7592);
+				typeArguments();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(157); }
+
+			DebugLocation(928, 9);
+			PushFollow(Follow._classCreatorRest_in_innerCreator7613);
+			classCreatorRest();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("innerCreator", 98);
+			LeaveRule("innerCreator", 98);
+			LeaveRule_innerCreator();
+	        if (state.backtracking > 0) { Memoize(input, 98, innerCreator_StartIndex); }
+
+	    }
+	 	DebugLocation(929, 4);
+		} finally { DebugExitRule(GrammarFileName, "innerCreator"); }
+		return;
+
+	}
+	// $ANTLR end "innerCreator"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_classCreatorRest() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_classCreatorRest() {}
+
+	// $ANTLR start "classCreatorRest"
+	// EntityMapping.g:932:1: classCreatorRest : arguments ( classBody )? ;
+	[GrammarRule("classCreatorRest")]
+	private void classCreatorRest()
+	{
+		EnterRule_classCreatorRest();
+		EnterRule("classCreatorRest", 99);
+		TraceIn("classCreatorRest", 99);
+	    int classCreatorRest_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "classCreatorRest");
+		DebugLocation(932, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 99)) { return; }
+
+			// EntityMapping.g:933:5: ( arguments ( classBody )? )
+			DebugEnterAlt(1);
+			// EntityMapping.g:933:9: arguments ( classBody )?
+			{
+			DebugLocation(933, 9);
+			PushFollow(Follow._arguments_in_classCreatorRest7634);
+			arguments();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(934, 9);
+			// EntityMapping.g:934:9: ( classBody )?
+			int alt158=2;
+			try { DebugEnterSubRule(158);
+			try { DebugEnterDecision(158, decisionCanBacktrack[158]);
+			int LA158_0 = input.LA(1);
+
+			if ((LA158_0==LBRACE))
+			{
+				alt158 = 1;
+			}
+			} finally { DebugExitDecision(158); }
+			switch (alt158)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:934:10: classBody
+				{
+				DebugLocation(934, 10);
+				PushFollow(Follow._classBody_in_classCreatorRest7645);
+				classBody();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(158); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("classCreatorRest", 99);
+			LeaveRule("classCreatorRest", 99);
+			LeaveRule_classCreatorRest();
+	        if (state.backtracking > 0) { Memoize(input, 99, classCreatorRest_StartIndex); }
+
+	    }
+	 	DebugLocation(936, 4);
+		} finally { DebugExitRule(GrammarFileName, "classCreatorRest"); }
+		return;
+
+	}
+	// $ANTLR end "classCreatorRest"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_nonWildcardTypeArguments() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_nonWildcardTypeArguments() {}
+
+	// $ANTLR start "nonWildcardTypeArguments"
+	// EntityMapping.g:939:1: nonWildcardTypeArguments : '<' typeList '>' ;
+	[GrammarRule("nonWildcardTypeArguments")]
+	private void nonWildcardTypeArguments()
+	{
+		EnterRule_nonWildcardTypeArguments();
+		EnterRule("nonWildcardTypeArguments", 100);
+		TraceIn("nonWildcardTypeArguments", 100);
+	    int nonWildcardTypeArguments_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "nonWildcardTypeArguments");
+		DebugLocation(939, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 100)) { return; }
+
+			// EntityMapping.g:940:5: ( '<' typeList '>' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:940:9: '<' typeList '>'
+			{
+			DebugLocation(940, 9);
+			Match(input,LT,Follow._LT_in_nonWildcardTypeArguments7677); if (state.failed) return;
+			DebugLocation(940, 13);
+			PushFollow(Follow._typeList_in_nonWildcardTypeArguments7679);
+			typeList();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(941, 9);
+			Match(input,GT,Follow._GT_in_nonWildcardTypeArguments7689); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("nonWildcardTypeArguments", 100);
+			LeaveRule("nonWildcardTypeArguments", 100);
+			LeaveRule_nonWildcardTypeArguments();
+	        if (state.backtracking > 0) { Memoize(input, 100, nonWildcardTypeArguments_StartIndex); }
+
+	    }
+	 	DebugLocation(942, 4);
+		} finally { DebugExitRule(GrammarFileName, "nonWildcardTypeArguments"); }
+		return;
+
+	}
+	// $ANTLR end "nonWildcardTypeArguments"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_arguments() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_arguments() {}
+
+	// $ANTLR start "arguments"
+	// EntityMapping.g:944:1: arguments : '(' ( expressionList )? ')' ;
+	[GrammarRule("arguments")]
+	private void arguments()
+	{
+		EnterRule_arguments();
+		EnterRule("arguments", 101);
+		TraceIn("arguments", 101);
+	    int arguments_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "arguments");
+		DebugLocation(944, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 101)) { return; }
+
+			// EntityMapping.g:945:5: ( '(' ( expressionList )? ')' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:945:9: '(' ( expressionList )? ')'
+			{
+			DebugLocation(945, 9);
+			Match(input,LPAREN,Follow._LPAREN_in_arguments7709); if (state.failed) return;
+			DebugLocation(945, 13);
+			// EntityMapping.g:945:13: ( expressionList )?
+			int alt159=2;
+			try { DebugEnterSubRule(159);
+			try { DebugEnterDecision(159, decisionCanBacktrack[159]);
+			int LA159_0 = input.LA(1);
+
+			if ((LA159_0==BANG||LA159_0==BOOLEAN||LA159_0==BYTE||(LA159_0>=CHAR && LA159_0<=CHARLITERAL)||(LA159_0>=DOUBLE && LA159_0<=DOUBLELITERAL)||LA159_0==FALSE||(LA159_0>=FLOAT && LA159_0<=FLOATLITERAL)||LA159_0==IDENTIFIER||LA159_0==INT||LA159_0==INTLITERAL||(LA159_0>=LONG && LA159_0<=LPAREN)||(LA159_0>=NEW && LA159_0<=NULL)||LA159_0==PLUS||LA159_0==PLUSPLUS||LA159_0==SHORT||(LA159_0>=STRINGLITERAL && LA159_0<=SUB)||(LA159_0>=SUBSUB && LA159_0<=SUPER)||LA159_0==THIS||LA159_0==TILDE||LA159_0==TRUE||LA159_0==VOID))
+			{
+				alt159 = 1;
+			}
+			} finally { DebugExitDecision(159); }
+			switch (alt159)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:945:14: expressionList
+				{
+				DebugLocation(945, 14);
+				PushFollow(Follow._expressionList_in_arguments7712);
+				expressionList();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(159); }
+
+			DebugLocation(946, 12);
+			Match(input,RPAREN,Follow._RPAREN_in_arguments7725); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("arguments", 101);
+			LeaveRule("arguments", 101);
+			LeaveRule_arguments();
+	        if (state.backtracking > 0) { Memoize(input, 101, arguments_StartIndex); }
+
+	    }
+	 	DebugLocation(947, 4);
+		} finally { DebugExitRule(GrammarFileName, "arguments"); }
+		return;
+
+	}
+	// $ANTLR end "arguments"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_literal() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_literal() {}
+
+	// $ANTLR start "literal"
+	// EntityMapping.g:949:1: literal : ( INTLITERAL | LONGLITERAL | FLOATLITERAL | DOUBLELITERAL | CHARLITERAL | STRINGLITERAL | TRUE | FALSE | NULL );
+	[GrammarRule("literal")]
+	private void literal()
+	{
+		EnterRule_literal();
+		EnterRule("literal", 102);
+		TraceIn("literal", 102);
+	    int literal_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "literal");
+		DebugLocation(949, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 102)) { return; }
+
+			// EntityMapping.g:950:5: ( INTLITERAL | LONGLITERAL | FLOATLITERAL | DOUBLELITERAL | CHARLITERAL | STRINGLITERAL | TRUE | FALSE | NULL )
+			DebugEnterAlt(1);
+			// EntityMapping.g:
+			{
+			DebugLocation(950, 5);
+			if (input.LA(1)==CHARLITERAL||input.LA(1)==DOUBLELITERAL||input.LA(1)==FALSE||input.LA(1)==FLOATLITERAL||input.LA(1)==INTLITERAL||input.LA(1)==LONGLITERAL||input.LA(1)==NULL||input.LA(1)==STRINGLITERAL||input.LA(1)==TRUE)
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("literal", 102);
+			LeaveRule("literal", 102);
+			LeaveRule_literal();
+	        if (state.backtracking > 0) { Memoize(input, 102, literal_StartIndex); }
+
+	    }
+	 	DebugLocation(959, 4);
+		} finally { DebugExitRule(GrammarFileName, "literal"); }
+		return;
+
+	}
+	// $ANTLR end "literal"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_classHeader() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_classHeader() {}
+
+	// $ANTLR start "classHeader"
+	// EntityMapping.g:965:1: classHeader : modifiers 'class' IDENTIFIER ;
+	[GrammarRule("classHeader")]
+	private void classHeader()
+	{
+		EnterRule_classHeader();
+		EnterRule("classHeader", 103);
+		TraceIn("classHeader", 103);
+	    int classHeader_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "classHeader");
+		DebugLocation(965, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 103)) { return; }
+
+			// EntityMapping.g:966:5: ( modifiers 'class' IDENTIFIER )
+			DebugEnterAlt(1);
+			// EntityMapping.g:966:9: modifiers 'class' IDENTIFIER
+			{
+			DebugLocation(966, 9);
+			PushFollow(Follow._modifiers_in_classHeader7849);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(966, 19);
+			Match(input,CLASS,Follow._CLASS_in_classHeader7851); if (state.failed) return;
+			DebugLocation(966, 27);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_classHeader7853); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("classHeader", 103);
+			LeaveRule("classHeader", 103);
+			LeaveRule_classHeader();
+	        if (state.backtracking > 0) { Memoize(input, 103, classHeader_StartIndex); }
+
+	    }
+	 	DebugLocation(967, 4);
+		} finally { DebugExitRule(GrammarFileName, "classHeader"); }
+		return;
+
+	}
+	// $ANTLR end "classHeader"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_enumHeader() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_enumHeader() {}
+
+	// $ANTLR start "enumHeader"
+	// EntityMapping.g:969:1: enumHeader : modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER ;
+	[GrammarRule("enumHeader")]
+	private void enumHeader()
+	{
+		EnterRule_enumHeader();
+		EnterRule("enumHeader", 104);
+		TraceIn("enumHeader", 104);
+	    int enumHeader_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "enumHeader");
+		DebugLocation(969, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 104)) { return; }
+
+			// EntityMapping.g:970:5: ( modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER )
+			DebugEnterAlt(1);
+			// EntityMapping.g:970:9: modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER
+			{
+			DebugLocation(970, 9);
+			PushFollow(Follow._modifiers_in_enumHeader7873);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(970, 19);
+			if (input.LA(1)==ENUM||input.LA(1)==IDENTIFIER)
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+			DebugLocation(970, 39);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enumHeader7881); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("enumHeader", 104);
+			LeaveRule("enumHeader", 104);
+			LeaveRule_enumHeader();
+	        if (state.backtracking > 0) { Memoize(input, 104, enumHeader_StartIndex); }
+
+	    }
+	 	DebugLocation(971, 4);
+		} finally { DebugExitRule(GrammarFileName, "enumHeader"); }
+		return;
+
+	}
+	// $ANTLR end "enumHeader"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_interfaceHeader() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_interfaceHeader() {}
+
+	// $ANTLR start "interfaceHeader"
+	// EntityMapping.g:973:1: interfaceHeader : modifiers 'interface' IDENTIFIER ;
+	[GrammarRule("interfaceHeader")]
+	private void interfaceHeader()
+	{
+		EnterRule_interfaceHeader();
+		EnterRule("interfaceHeader", 105);
+		TraceIn("interfaceHeader", 105);
+	    int interfaceHeader_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "interfaceHeader");
+		DebugLocation(973, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 105)) { return; }
+
+			// EntityMapping.g:974:5: ( modifiers 'interface' IDENTIFIER )
+			DebugEnterAlt(1);
+			// EntityMapping.g:974:9: modifiers 'interface' IDENTIFIER
+			{
+			DebugLocation(974, 9);
+			PushFollow(Follow._modifiers_in_interfaceHeader7901);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(974, 19);
+			Match(input,INTERFACE,Follow._INTERFACE_in_interfaceHeader7903); if (state.failed) return;
+			DebugLocation(974, 31);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_interfaceHeader7905); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("interfaceHeader", 105);
+			LeaveRule("interfaceHeader", 105);
+			LeaveRule_interfaceHeader();
+	        if (state.backtracking > 0) { Memoize(input, 105, interfaceHeader_StartIndex); }
+
+	    }
+	 	DebugLocation(975, 4);
+		} finally { DebugExitRule(GrammarFileName, "interfaceHeader"); }
+		return;
+
+	}
+	// $ANTLR end "interfaceHeader"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_annotationHeader() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_annotationHeader() {}
+
+	// $ANTLR start "annotationHeader"
+	// EntityMapping.g:977:1: annotationHeader : modifiers '@' 'interface' IDENTIFIER ;
+	[GrammarRule("annotationHeader")]
+	private void annotationHeader()
+	{
+		EnterRule_annotationHeader();
+		EnterRule("annotationHeader", 106);
+		TraceIn("annotationHeader", 106);
+	    int annotationHeader_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "annotationHeader");
+		DebugLocation(977, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 106)) { return; }
+
+			// EntityMapping.g:978:5: ( modifiers '@' 'interface' IDENTIFIER )
+			DebugEnterAlt(1);
+			// EntityMapping.g:978:9: modifiers '@' 'interface' IDENTIFIER
+			{
+			DebugLocation(978, 9);
+			PushFollow(Follow._modifiers_in_annotationHeader7925);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(978, 19);
+			Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_annotationHeader7927); if (state.failed) return;
+			DebugLocation(978, 23);
+			Match(input,INTERFACE,Follow._INTERFACE_in_annotationHeader7929); if (state.failed) return;
+			DebugLocation(978, 35);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_annotationHeader7931); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("annotationHeader", 106);
+			LeaveRule("annotationHeader", 106);
+			LeaveRule_annotationHeader();
+	        if (state.backtracking > 0) { Memoize(input, 106, annotationHeader_StartIndex); }
+
+	    }
+	 	DebugLocation(979, 4);
+		} finally { DebugExitRule(GrammarFileName, "annotationHeader"); }
+		return;
+
+	}
+	// $ANTLR end "annotationHeader"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_typeHeader() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_typeHeader() {}
+
+	// $ANTLR start "typeHeader"
+	// EntityMapping.g:981:1: typeHeader : modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER ;
+	[GrammarRule("typeHeader")]
+	private void typeHeader()
+	{
+		EnterRule_typeHeader();
+		EnterRule("typeHeader", 107);
+		TraceIn("typeHeader", 107);
+	    int typeHeader_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "typeHeader");
+		DebugLocation(981, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 107)) { return; }
+
+			// EntityMapping.g:982:5: ( modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER )
+			DebugEnterAlt(1);
+			// EntityMapping.g:982:9: modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER
+			{
+			DebugLocation(982, 9);
+			PushFollow(Follow._modifiers_in_typeHeader7951);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(982, 19);
+			// EntityMapping.g:982:19: ( 'class' | 'enum' | ( ( '@' )? 'interface' ) )
+			int alt161=3;
+			try { DebugEnterSubRule(161);
+			try { DebugEnterDecision(161, decisionCanBacktrack[161]);
+			switch (input.LA(1))
+			{
+			case CLASS:
+				{
+				alt161 = 1;
+				}
+				break;
+			case ENUM:
+				{
+				alt161 = 2;
+				}
+				break;
+			case INTERFACE:
+			case MONKEYS_AT:
+				{
+				alt161 = 3;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 161, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(161); }
+			switch (alt161)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:982:20: 'class'
+				{
+				DebugLocation(982, 20);
+				Match(input,CLASS,Follow._CLASS_in_typeHeader7954); if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:982:28: 'enum'
+				{
+				DebugLocation(982, 28);
+				Match(input,ENUM,Follow._ENUM_in_typeHeader7956); if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// EntityMapping.g:982:35: ( ( '@' )? 'interface' )
+				{
+				DebugLocation(982, 35);
+				// EntityMapping.g:982:35: ( ( '@' )? 'interface' )
+				DebugEnterAlt(1);
+				// EntityMapping.g:982:36: ( '@' )? 'interface'
+				{
+				DebugLocation(982, 36);
+				// EntityMapping.g:982:36: ( '@' )?
+				int alt160=2;
+				try { DebugEnterSubRule(160);
+				try { DebugEnterDecision(160, decisionCanBacktrack[160]);
+				int LA160_0 = input.LA(1);
+
+				if ((LA160_0==MONKEYS_AT))
+				{
+					alt160 = 1;
+				}
+				} finally { DebugExitDecision(160); }
+				switch (alt160)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:982:36: '@'
+					{
+					DebugLocation(982, 36);
+					Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_typeHeader7959); if (state.failed) return;
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(160); }
+
+				DebugLocation(982, 42);
+				Match(input,INTERFACE,Follow._INTERFACE_in_typeHeader7963); if (state.failed) return;
+
+				}
+
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(161); }
+
+			DebugLocation(982, 56);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_typeHeader7967); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("typeHeader", 107);
+			LeaveRule("typeHeader", 107);
+			LeaveRule_typeHeader();
+	        if (state.backtracking > 0) { Memoize(input, 107, typeHeader_StartIndex); }
+
+	    }
+	 	DebugLocation(983, 4);
+		} finally { DebugExitRule(GrammarFileName, "typeHeader"); }
+		return;
+
+	}
+	// $ANTLR end "typeHeader"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_methodHeader() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_methodHeader() {}
+
+	// $ANTLR start "methodHeader"
+	// EntityMapping.g:985:1: methodHeader : modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' ;
+	[GrammarRule("methodHeader")]
+	private void methodHeader()
+	{
+		EnterRule_methodHeader();
+		EnterRule("methodHeader", 108);
+		TraceIn("methodHeader", 108);
+	    int methodHeader_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "methodHeader");
+		DebugLocation(985, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 108)) { return; }
+
+			// EntityMapping.g:986:5: ( modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:986:9: modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '('
+			{
+			DebugLocation(986, 9);
+			PushFollow(Follow._modifiers_in_methodHeader7987);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(986, 19);
+			// EntityMapping.g:986:19: ( typeParameters )?
+			int alt162=2;
+			try { DebugEnterSubRule(162);
+			try { DebugEnterDecision(162, decisionCanBacktrack[162]);
+			int LA162_0 = input.LA(1);
+
+			if ((LA162_0==LT))
+			{
+				alt162 = 1;
+			}
+			} finally { DebugExitDecision(162); }
+			switch (alt162)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:986:19: typeParameters
+				{
+				DebugLocation(986, 19);
+				PushFollow(Follow._typeParameters_in_methodHeader7989);
+				typeParameters();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(162); }
+
+			DebugLocation(986, 35);
+			// EntityMapping.g:986:35: ( type | 'void' )?
+			int alt163=3;
+			try { DebugEnterSubRule(163);
+			try { DebugEnterDecision(163, decisionCanBacktrack[163]);
+			switch (input.LA(1))
+			{
+			case IDENTIFIER:
+				{
+				int LA163_1 = input.LA(2);
+
+				if ((LA163_1==DOT||LA163_1==IDENTIFIER||LA163_1==LBRACKET||LA163_1==LT))
+				{
+					alt163 = 1;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+				{
+				alt163 = 1;
+				}
+				break;
+			case VOID:
+				{
+				alt163 = 2;
+				}
+				break;
+			}
+
+			} finally { DebugExitDecision(163); }
+			switch (alt163)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:986:36: type
+				{
+				DebugLocation(986, 36);
+				PushFollow(Follow._type_in_methodHeader7993);
+				type();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// EntityMapping.g:986:41: 'void'
+				{
+				DebugLocation(986, 41);
+				Match(input,VOID,Follow._VOID_in_methodHeader7995); if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(163); }
+
+			DebugLocation(986, 50);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_methodHeader7999); if (state.failed) return;
+			DebugLocation(986, 61);
+			Match(input,LPAREN,Follow._LPAREN_in_methodHeader8001); if (state.failed) return;
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("methodHeader", 108);
+			LeaveRule("methodHeader", 108);
+			LeaveRule_methodHeader();
+	        if (state.backtracking > 0) { Memoize(input, 108, methodHeader_StartIndex); }
+
+	    }
+	 	DebugLocation(987, 4);
+		} finally { DebugExitRule(GrammarFileName, "methodHeader"); }
+		return;
+
+	}
+	// $ANTLR end "methodHeader"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_fieldHeader() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_fieldHeader() {}
+
+	// $ANTLR start "fieldHeader"
+	// EntityMapping.g:989:1: fieldHeader : modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
+	[GrammarRule("fieldHeader")]
+	private void fieldHeader()
+	{
+		EnterRule_fieldHeader();
+		EnterRule("fieldHeader", 109);
+		TraceIn("fieldHeader", 109);
+	    int fieldHeader_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "fieldHeader");
+		DebugLocation(989, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 109)) { return; }
+
+			// EntityMapping.g:990:5: ( modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
+			DebugEnterAlt(1);
+			// EntityMapping.g:990:9: modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
+			{
+			DebugLocation(990, 9);
+			PushFollow(Follow._modifiers_in_fieldHeader8021);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(990, 19);
+			PushFollow(Follow._type_in_fieldHeader8023);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(990, 24);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_fieldHeader8025); if (state.failed) return;
+			DebugLocation(990, 35);
+			// EntityMapping.g:990:35: ( '[' ']' )*
+			try { DebugEnterSubRule(164);
+			while (true)
+			{
+				int alt164=2;
+				try { DebugEnterDecision(164, decisionCanBacktrack[164]);
+				int LA164_0 = input.LA(1);
+
+				if ((LA164_0==LBRACKET))
+				{
+					alt164 = 1;
+				}
+
+
+				} finally { DebugExitDecision(164); }
+				switch ( alt164 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:990:36: '[' ']'
+					{
+					DebugLocation(990, 36);
+					Match(input,LBRACKET,Follow._LBRACKET_in_fieldHeader8028); if (state.failed) return;
+					DebugLocation(990, 39);
+					Match(input,RBRACKET,Follow._RBRACKET_in_fieldHeader8029); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop164;
+				}
+			}
+
+			loop164:
+				;
+
+			} finally { DebugExitSubRule(164); }
+
+			DebugLocation(990, 45);
+			if (input.LA(1)==COMMA||input.LA(1)==EQ||input.LA(1)==SEMI)
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("fieldHeader", 109);
+			LeaveRule("fieldHeader", 109);
+			LeaveRule_fieldHeader();
+	        if (state.backtracking > 0) { Memoize(input, 109, fieldHeader_StartIndex); }
+
+	    }
+	 	DebugLocation(991, 4);
+		} finally { DebugExitRule(GrammarFileName, "fieldHeader"); }
+		return;
+
+	}
+	// $ANTLR end "fieldHeader"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_localVariableHeader() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_localVariableHeader() {}
+
+	// $ANTLR start "localVariableHeader"
+	// EntityMapping.g:993:1: localVariableHeader : variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
+	[GrammarRule("localVariableHeader")]
+	private void localVariableHeader()
+	{
+		EnterRule_localVariableHeader();
+		EnterRule("localVariableHeader", 110);
+		TraceIn("localVariableHeader", 110);
+	    int localVariableHeader_StartIndex = input.Index;
+
+		try { DebugEnterRule(GrammarFileName, "localVariableHeader");
+		DebugLocation(993, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 110)) { return; }
+
+			// EntityMapping.g:994:5: ( variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
+			DebugEnterAlt(1);
+			// EntityMapping.g:994:9: variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
+			{
+			DebugLocation(994, 9);
+			PushFollow(Follow._variableModifiers_in_localVariableHeader8059);
+			variableModifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(994, 27);
+			PushFollow(Follow._type_in_localVariableHeader8061);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(994, 32);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_localVariableHeader8063); if (state.failed) return;
+			DebugLocation(994, 43);
+			// EntityMapping.g:994:43: ( '[' ']' )*
+			try { DebugEnterSubRule(165);
+			while (true)
+			{
+				int alt165=2;
+				try { DebugEnterDecision(165, decisionCanBacktrack[165]);
+				int LA165_0 = input.LA(1);
+
+				if ((LA165_0==LBRACKET))
+				{
+					alt165 = 1;
+				}
+
+
+				} finally { DebugExitDecision(165); }
+				switch ( alt165 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:994:44: '[' ']'
+					{
+					DebugLocation(994, 44);
+					Match(input,LBRACKET,Follow._LBRACKET_in_localVariableHeader8066); if (state.failed) return;
+					DebugLocation(994, 47);
+					Match(input,RBRACKET,Follow._RBRACKET_in_localVariableHeader8067); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop165;
+				}
+			}
+
+			loop165:
+				;
+
+			} finally { DebugExitSubRule(165); }
+
+			DebugLocation(994, 53);
+			if (input.LA(1)==COMMA||input.LA(1)==EQ||input.LA(1)==SEMI)
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("localVariableHeader", 110);
+			LeaveRule("localVariableHeader", 110);
+			LeaveRule_localVariableHeader();
+	        if (state.backtracking > 0) { Memoize(input, 110, localVariableHeader_StartIndex); }
+
+	    }
+	 	DebugLocation(995, 4);
+		} finally { DebugExitRule(GrammarFileName, "localVariableHeader"); }
+		return;
+
+	}
+	// $ANTLR end "localVariableHeader"
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred2_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred2_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred2_EntityMapping
+	public void synpred2_EntityMapping_fragment()
+	{
+		EnterRule_synpred2_EntityMapping_fragment();
+		EnterRule("synpred2_EntityMapping_fragment", 112);
+		TraceIn("synpred2_EntityMapping_fragment", 112);
+		try
+		{
+			// EntityMapping.g:15:13: ( ( annotations )? packageDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:15:13: ( annotations )? packageDeclaration
+			{
+			DebugLocation(15, 13);
+			// EntityMapping.g:15:13: ( annotations )?
+			int alt166=2;
+			try { DebugEnterSubRule(166);
+			try { DebugEnterDecision(166, decisionCanBacktrack[166]);
+			int LA166_0 = input.LA(1);
+
+			if ((LA166_0==MONKEYS_AT))
+			{
+				alt166 = 1;
+			}
+			} finally { DebugExitDecision(166); }
+			switch (alt166)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:15:14: annotations
+				{
+				DebugLocation(15, 14);
+				PushFollow(Follow._annotations_in_synpred2_EntityMapping69);
+				annotations();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(166); }
+
+			DebugLocation(17, 13);
+			PushFollow(Follow._packageDeclaration_in_synpred2_EntityMapping98);
+			packageDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
 
 		}
 		finally
 		{
-			TraceOut("params", 16);
-			LeaveRule("params", 16);
-			LeaveRule_params();
+			TraceOut("synpred2_EntityMapping_fragment", 112);
+			LeaveRule("synpred2_EntityMapping_fragment", 112);
+			LeaveRule_synpred2_EntityMapping_fragment();
 		}
-		DebugLocation(63, 27);
-		} finally { DebugExitRule(GrammarFileName, "params"); }
-		return retval;
-
 	}
-	// $ANTLR end "params"
+	// $ANTLR end synpred2_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred12_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred12_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred12_EntityMapping
+	public void synpred12_EntityMapping_fragment()
+	{
+		EnterRule_synpred12_EntityMapping_fragment();
+		EnterRule("synpred12_EntityMapping_fragment", 122);
+		TraceIn("synpred12_EntityMapping_fragment", 122);
+		try
+		{
+			// EntityMapping.g:59:10: ( classDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:59:10: classDeclaration
+			{
+			DebugLocation(59, 10);
+			PushFollow(Follow._classDeclaration_in_synpred12_EntityMapping456);
+			classDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred12_EntityMapping_fragment", 122);
+			LeaveRule("synpred12_EntityMapping_fragment", 122);
+			LeaveRule_synpred12_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred12_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred27_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred27_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred27_EntityMapping
+	public void synpred27_EntityMapping_fragment()
+	{
+		EnterRule_synpred27_EntityMapping_fragment();
+		EnterRule("synpred27_EntityMapping_fragment", 137);
+		TraceIn("synpred27_EntityMapping_fragment", 137);
+		try
+		{
+			// EntityMapping.g:90:9: ( normalClassDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:90:9: normalClassDeclaration
+			{
+			DebugLocation(90, 9);
+			PushFollow(Follow._normalClassDeclaration_in_synpred27_EntityMapping693);
+			normalClassDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred27_EntityMapping_fragment", 137);
+			LeaveRule("synpred27_EntityMapping_fragment", 137);
+			LeaveRule_synpred27_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred27_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred43_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred43_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred43_EntityMapping
+	public void synpred43_EntityMapping_fragment()
+	{
+		EnterRule_synpred43_EntityMapping_fragment();
+		EnterRule("synpred43_EntityMapping_fragment", 153);
+		TraceIn("synpred43_EntityMapping_fragment", 153);
+		try
+		{
+			// EntityMapping.g:178:9: ( normalInterfaceDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:178:9: normalInterfaceDeclaration
+			{
+			DebugLocation(178, 9);
+			PushFollow(Follow._normalInterfaceDeclaration_in_synpred43_EntityMapping1372);
+			normalInterfaceDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred43_EntityMapping_fragment", 153);
+			LeaveRule("synpred43_EntityMapping_fragment", 153);
+			LeaveRule_synpred43_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred43_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred52_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred52_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred52_EntityMapping
+	public void synpred52_EntityMapping_fragment()
+	{
+		EnterRule_synpred52_EntityMapping_fragment();
+		EnterRule("synpred52_EntityMapping_fragment", 162);
+		TraceIn("synpred52_EntityMapping_fragment", 162);
+		try
+		{
+			// EntityMapping.g:220:10: ( fieldDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:220:10: fieldDeclaration
+			{
+			DebugLocation(220, 10);
+			PushFollow(Follow._fieldDeclaration_in_synpred52_EntityMapping1702);
+			fieldDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred52_EntityMapping_fragment", 162);
+			LeaveRule("synpred52_EntityMapping_fragment", 162);
+			LeaveRule_synpred52_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred52_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred53_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred53_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred53_EntityMapping
+	public void synpred53_EntityMapping_fragment()
+	{
+		EnterRule_synpred53_EntityMapping_fragment();
+		EnterRule("synpred53_EntityMapping_fragment", 163);
+		TraceIn("synpred53_EntityMapping_fragment", 163);
+		try
+		{
+			// EntityMapping.g:221:10: ( methodDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:221:10: methodDeclaration
+			{
+			DebugLocation(221, 10);
+			PushFollow(Follow._methodDeclaration_in_synpred53_EntityMapping1713);
+			methodDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred53_EntityMapping_fragment", 163);
+			LeaveRule("synpred53_EntityMapping_fragment", 163);
+			LeaveRule_synpred53_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred53_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred54_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred54_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred54_EntityMapping
+	public void synpred54_EntityMapping_fragment()
+	{
+		EnterRule_synpred54_EntityMapping_fragment();
+		EnterRule("synpred54_EntityMapping_fragment", 164);
+		TraceIn("synpred54_EntityMapping_fragment", 164);
+		try
+		{
+			// EntityMapping.g:222:10: ( classDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:222:10: classDeclaration
+			{
+			DebugLocation(222, 10);
+			PushFollow(Follow._classDeclaration_in_synpred54_EntityMapping1724);
+			classDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred54_EntityMapping_fragment", 164);
+			LeaveRule("synpred54_EntityMapping_fragment", 164);
+			LeaveRule_synpred54_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred54_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred57_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred57_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred57_EntityMapping
+	public void synpred57_EntityMapping_fragment()
+	{
+		EnterRule_synpred57_EntityMapping_fragment();
+		EnterRule("synpred57_EntityMapping_fragment", 167);
+		TraceIn("synpred57_EntityMapping_fragment", 167);
+		try
+		{
+			// EntityMapping.g:238:10: ( explicitConstructorInvocation )
+			DebugEnterAlt(1);
+			// EntityMapping.g:238:10: explicitConstructorInvocation
+			{
+			DebugLocation(238, 10);
+			PushFollow(Follow._explicitConstructorInvocation_in_synpred57_EntityMapping1861);
+			explicitConstructorInvocation();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred57_EntityMapping_fragment", 167);
+			LeaveRule("synpred57_EntityMapping_fragment", 167);
+			LeaveRule_synpred57_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred57_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred59_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred59_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred59_EntityMapping
+	public void synpred59_EntityMapping_fragment()
+	{
+		EnterRule_synpred59_EntityMapping_fragment();
+		EnterRule("synpred59_EntityMapping_fragment", 169);
+		TraceIn("synpred59_EntityMapping_fragment", 169);
+		try
+		{
+			// EntityMapping.g:230:10: ( modifiers ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:230:10: modifiers ( typeParameters )? IDENTIFIER formalParameters ( 'throws' qualifiedNameList )? '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
+			{
+			DebugLocation(230, 10);
+			PushFollow(Follow._modifiers_in_synpred59_EntityMapping1773);
+			modifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(231, 9);
+			// EntityMapping.g:231:9: ( typeParameters )?
+			int alt169=2;
+			try { DebugEnterSubRule(169);
+			try { DebugEnterDecision(169, decisionCanBacktrack[169]);
+			int LA169_0 = input.LA(1);
+
+			if ((LA169_0==LT))
+			{
+				alt169 = 1;
+			}
+			} finally { DebugExitDecision(169); }
+			switch (alt169)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:231:10: typeParameters
+				{
+				DebugLocation(231, 10);
+				PushFollow(Follow._typeParameters_in_synpred59_EntityMapping1784);
+				typeParameters();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(169); }
+
+			DebugLocation(233, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred59_EntityMapping1805); if (state.failed) return;
+			DebugLocation(234, 9);
+			PushFollow(Follow._formalParameters_in_synpred59_EntityMapping1815);
+			formalParameters();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(235, 9);
+			// EntityMapping.g:235:9: ( 'throws' qualifiedNameList )?
+			int alt170=2;
+			try { DebugEnterSubRule(170);
+			try { DebugEnterDecision(170, decisionCanBacktrack[170]);
+			int LA170_0 = input.LA(1);
+
+			if ((LA170_0==THROWS))
+			{
+				alt170 = 1;
+			}
+			} finally { DebugExitDecision(170); }
+			switch (alt170)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:235:10: 'throws' qualifiedNameList
+				{
+				DebugLocation(235, 10);
+				Match(input,THROWS,Follow._THROWS_in_synpred59_EntityMapping1826); if (state.failed) return;
+				DebugLocation(235, 19);
+				PushFollow(Follow._qualifiedNameList_in_synpred59_EntityMapping1828);
+				qualifiedNameList();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(170); }
+
+			DebugLocation(237, 9);
+			Match(input,LBRACE,Follow._LBRACE_in_synpred59_EntityMapping1849); if (state.failed) return;
+			DebugLocation(238, 9);
+			// EntityMapping.g:238:9: ( explicitConstructorInvocation )?
+			int alt171=2;
+			try { DebugEnterSubRule(171);
+			try { DebugEnterDecision(171, decisionCanBacktrack[171]);
+			switch (input.LA(1))
+			{
+			case LT:
+				{
+				alt171 = 1;
+				}
+				break;
+			case THIS:
+				{
+				int LA171_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+				{
+					alt171 = 1;
+				}
+				}
+				break;
+			case LPAREN:
+				{
+				int LA171_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+				{
+					alt171 = 1;
+				}
+				}
+				break;
+			case SUPER:
+				{
+				int LA171_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+				{
+					alt171 = 1;
+				}
+				}
+				break;
+			case IDENTIFIER:
+				{
+				int LA171_5 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+				{
+					alt171 = 1;
+				}
+				}
+				break;
+			case CHARLITERAL:
+			case DOUBLELITERAL:
+			case FALSE:
+			case FLOATLITERAL:
+			case INTLITERAL:
+			case LONGLITERAL:
+			case NULL:
+			case STRINGLITERAL:
+			case TRUE:
+				{
+				int LA171_6 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+				{
+					alt171 = 1;
+				}
+				}
+				break;
+			case NEW:
+				{
+				int LA171_7 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+				{
+					alt171 = 1;
+				}
+				}
+				break;
+			case BOOLEAN:
+			case BYTE:
+			case CHAR:
+			case DOUBLE:
+			case FLOAT:
+			case INT:
+			case LONG:
+			case SHORT:
+				{
+				int LA171_8 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+				{
+					alt171 = 1;
+				}
+				}
+				break;
+			case VOID:
+				{
+				int LA171_9 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred57_EntityMapping_fragment)))
+				{
+					alt171 = 1;
+				}
+				}
+				break;
+			}
+
+			} finally { DebugExitDecision(171); }
+			switch (alt171)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:238:10: explicitConstructorInvocation
+				{
+				DebugLocation(238, 10);
+				PushFollow(Follow._explicitConstructorInvocation_in_synpred59_EntityMapping1861);
+				explicitConstructorInvocation();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(171); }
+
+			DebugLocation(240, 9);
+			// EntityMapping.g:240:9: ( blockStatement )*
+			try { DebugEnterSubRule(172);
+			while (true)
+			{
+				int alt172=2;
+				try { DebugEnterDecision(172, decisionCanBacktrack[172]);
+				int LA172_0 = input.LA(1);
+
+				if ((LA172_0==ABSTRACT||(LA172_0>=ASSERT && LA172_0<=BANG)||(LA172_0>=BOOLEAN && LA172_0<=BYTE)||(LA172_0>=CHAR && LA172_0<=CLASS)||LA172_0==CONTINUE||LA172_0==DO||(LA172_0>=DOUBLE && LA172_0<=DOUBLELITERAL)||LA172_0==ENUM||(LA172_0>=FALSE && LA172_0<=FINAL)||(LA172_0>=FLOAT && LA172_0<=FOR)||(LA172_0>=IDENTIFIER && LA172_0<=IF)||(LA172_0>=INT && LA172_0<=INTLITERAL)||LA172_0==LBRACE||(LA172_0>=LONG && LA172_0<=LT)||(LA172_0>=MONKEYS_AT && LA172_0<=NULL)||LA172_0==PLUS||(LA172_0>=PLUSPLUS && LA172_0<=PUBLIC)||LA172_0==RETURN||(LA172_0>=SEMI && LA172_0<=SHORT)||(LA172_0>=STATIC && LA172_0<=SUB)||(LA172_0>=SUBSUB && LA172_0<=SYNCHRONIZED)||(LA172_0>=THIS && LA172_0<=THROW)||(LA172_0>=TILDE && LA172_0<=WHILE)))
+				{
+					alt172 = 1;
+				}
+
+
+				} finally { DebugExitDecision(172); }
+				switch ( alt172 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:240:10: blockStatement
+					{
+					DebugLocation(240, 10);
+					PushFollow(Follow._blockStatement_in_synpred59_EntityMapping1883);
+					blockStatement();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop172;
+				}
+			}
+
+			loop172:
+				;
+
+			} finally { DebugExitSubRule(172); }
+
+			DebugLocation(242, 9);
+			Match(input,RBRACE,Follow._RBRACE_in_synpred59_EntityMapping1904); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred59_EntityMapping_fragment", 169);
+			LeaveRule("synpred59_EntityMapping_fragment", 169);
+			LeaveRule_synpred59_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred59_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred68_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred68_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred68_EntityMapping
+	public void synpred68_EntityMapping_fragment()
+	{
+		EnterRule_synpred68_EntityMapping_fragment();
+		EnterRule("synpred68_EntityMapping_fragment", 178);
+		TraceIn("synpred68_EntityMapping_fragment", 178);
+		try
+		{
+			// EntityMapping.g:284:9: ( interfaceFieldDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:284:9: interfaceFieldDeclaration
+			{
+			DebugLocation(284, 9);
+			PushFollow(Follow._interfaceFieldDeclaration_in_synpred68_EntityMapping2279);
+			interfaceFieldDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred68_EntityMapping_fragment", 178);
+			LeaveRule("synpred68_EntityMapping_fragment", 178);
+			LeaveRule_synpred68_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred68_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred69_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred69_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred69_EntityMapping
+	public void synpred69_EntityMapping_fragment()
+	{
+		EnterRule_synpred69_EntityMapping_fragment();
+		EnterRule("synpred69_EntityMapping_fragment", 179);
+		TraceIn("synpred69_EntityMapping_fragment", 179);
+		try
+		{
+			// EntityMapping.g:285:9: ( interfaceMethodDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:285:9: interfaceMethodDeclaration
+			{
+			DebugLocation(285, 9);
+			PushFollow(Follow._interfaceMethodDeclaration_in_synpred69_EntityMapping2289);
+			interfaceMethodDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred69_EntityMapping_fragment", 179);
+			LeaveRule("synpred69_EntityMapping_fragment", 179);
+			LeaveRule_synpred69_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred69_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred70_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred70_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred70_EntityMapping
+	public void synpred70_EntityMapping_fragment()
+	{
+		EnterRule_synpred70_EntityMapping_fragment();
+		EnterRule("synpred70_EntityMapping_fragment", 180);
+		TraceIn("synpred70_EntityMapping_fragment", 180);
+		try
+		{
+			// EntityMapping.g:286:9: ( interfaceDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:286:9: interfaceDeclaration
+			{
+			DebugLocation(286, 9);
+			PushFollow(Follow._interfaceDeclaration_in_synpred70_EntityMapping2299);
+			interfaceDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred70_EntityMapping_fragment", 180);
+			LeaveRule("synpred70_EntityMapping_fragment", 180);
+			LeaveRule_synpred70_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred70_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred71_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred71_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred71_EntityMapping
+	public void synpred71_EntityMapping_fragment()
+	{
+		EnterRule_synpred71_EntityMapping_fragment();
+		EnterRule("synpred71_EntityMapping_fragment", 181);
+		TraceIn("synpred71_EntityMapping_fragment", 181);
+		try
+		{
+			// EntityMapping.g:287:9: ( classDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:287:9: classDeclaration
+			{
+			DebugLocation(287, 9);
+			PushFollow(Follow._classDeclaration_in_synpred71_EntityMapping2309);
+			classDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred71_EntityMapping_fragment", 181);
+			LeaveRule("synpred71_EntityMapping_fragment", 181);
+			LeaveRule_synpred71_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred71_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred96_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred96_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred96_EntityMapping
+	public void synpred96_EntityMapping_fragment()
+	{
+		EnterRule_synpred96_EntityMapping_fragment();
+		EnterRule("synpred96_EntityMapping_fragment", 206);
+		TraceIn("synpred96_EntityMapping_fragment", 206);
+		try
+		{
+			// EntityMapping.g:382:9: ( ellipsisParameterDecl )
+			DebugEnterAlt(1);
+			// EntityMapping.g:382:9: ellipsisParameterDecl
+			{
+			DebugLocation(382, 9);
+			PushFollow(Follow._ellipsisParameterDecl_in_synpred96_EntityMapping3073);
+			ellipsisParameterDecl();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred96_EntityMapping_fragment", 206);
+			LeaveRule("synpred96_EntityMapping_fragment", 206);
+			LeaveRule_synpred96_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred96_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred98_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred98_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred98_EntityMapping
+	public void synpred98_EntityMapping_fragment()
+	{
+		EnterRule_synpred98_EntityMapping_fragment();
+		EnterRule("synpred98_EntityMapping_fragment", 208);
+		TraceIn("synpred98_EntityMapping_fragment", 208);
+		try
+		{
+			// EntityMapping.g:383:9: ( normalParameterDecl ( ',' normalParameterDecl )* )
+			DebugEnterAlt(1);
+			// EntityMapping.g:383:9: normalParameterDecl ( ',' normalParameterDecl )*
+			{
+			DebugLocation(383, 9);
+			PushFollow(Follow._normalParameterDecl_in_synpred98_EntityMapping3083);
+			normalParameterDecl();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(384, 9);
+			// EntityMapping.g:384:9: ( ',' normalParameterDecl )*
+			try { DebugEnterSubRule(175);
+			while (true)
+			{
+				int alt175=2;
+				try { DebugEnterDecision(175, decisionCanBacktrack[175]);
+				int LA175_0 = input.LA(1);
+
+				if ((LA175_0==COMMA))
+				{
+					alt175 = 1;
+				}
+
+
+				} finally { DebugExitDecision(175); }
+				switch ( alt175 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:384:10: ',' normalParameterDecl
+					{
+					DebugLocation(384, 10);
+					Match(input,COMMA,Follow._COMMA_in_synpred98_EntityMapping3094); if (state.failed) return;
+					DebugLocation(384, 14);
+					PushFollow(Follow._normalParameterDecl_in_synpred98_EntityMapping3096);
+					normalParameterDecl();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop175;
+				}
+			}
+
+			loop175:
+				;
+
+			} finally { DebugExitSubRule(175); }
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred98_EntityMapping_fragment", 208);
+			LeaveRule("synpred98_EntityMapping_fragment", 208);
+			LeaveRule_synpred98_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred98_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred99_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred99_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred99_EntityMapping
+	public void synpred99_EntityMapping_fragment()
+	{
+		EnterRule_synpred99_EntityMapping_fragment();
+		EnterRule("synpred99_EntityMapping_fragment", 209);
+		TraceIn("synpred99_EntityMapping_fragment", 209);
+		try
+		{
+			// EntityMapping.g:386:10: ( normalParameterDecl ',' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:386:10: normalParameterDecl ','
+			{
+			DebugLocation(386, 10);
+			PushFollow(Follow._normalParameterDecl_in_synpred99_EntityMapping3118);
+			normalParameterDecl();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(387, 9);
+			Match(input,COMMA,Follow._COMMA_in_synpred99_EntityMapping3128); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred99_EntityMapping_fragment", 209);
+			LeaveRule("synpred99_EntityMapping_fragment", 209);
+			LeaveRule_synpred99_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred99_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred103_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred103_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred103_EntityMapping
+	public void synpred103_EntityMapping_fragment()
+	{
+		EnterRule_synpred103_EntityMapping_fragment();
+		EnterRule("synpred103_EntityMapping_fragment", 213);
+		TraceIn("synpred103_EntityMapping_fragment", 213);
+		try
+		{
+			// EntityMapping.g:406:9: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:406:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
+			{
+			DebugLocation(406, 9);
+			// EntityMapping.g:406:9: ( nonWildcardTypeArguments )?
+			int alt176=2;
+			try { DebugEnterSubRule(176);
+			try { DebugEnterDecision(176, decisionCanBacktrack[176]);
+			int LA176_0 = input.LA(1);
+
+			if ((LA176_0==LT))
+			{
+				alt176 = 1;
+			}
+			} finally { DebugExitDecision(176); }
+			switch (alt176)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:406:10: nonWildcardTypeArguments
+				{
+				DebugLocation(406, 10);
+				PushFollow(Follow._nonWildcardTypeArguments_in_synpred103_EntityMapping3263);
+				nonWildcardTypeArguments();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(176); }
+
+			DebugLocation(408, 9);
+			if (input.LA(1)==SUPER||input.LA(1)==THIS)
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+			DebugLocation(411, 9);
+			PushFollow(Follow._arguments_in_synpred103_EntityMapping3321);
+			arguments();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(411, 19);
+			Match(input,SEMI,Follow._SEMI_in_synpred103_EntityMapping3323); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred103_EntityMapping_fragment", 213);
+			LeaveRule("synpred103_EntityMapping_fragment", 213);
+			LeaveRule_synpred103_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred103_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred117_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred117_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred117_EntityMapping
+	public void synpred117_EntityMapping_fragment()
+	{
+		EnterRule_synpred117_EntityMapping_fragment();
+		EnterRule("synpred117_EntityMapping_fragment", 227);
+		TraceIn("synpred117_EntityMapping_fragment", 227);
+		try
+		{
+			// EntityMapping.g:493:9: ( annotationMethodDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:493:9: annotationMethodDeclaration
+			{
+			DebugLocation(493, 9);
+			PushFollow(Follow._annotationMethodDeclaration_in_synpred117_EntityMapping3922);
+			annotationMethodDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred117_EntityMapping_fragment", 227);
+			LeaveRule("synpred117_EntityMapping_fragment", 227);
+			LeaveRule_synpred117_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred117_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred118_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred118_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred118_EntityMapping
+	public void synpred118_EntityMapping_fragment()
+	{
+		EnterRule_synpred118_EntityMapping_fragment();
+		EnterRule("synpred118_EntityMapping_fragment", 228);
+		TraceIn("synpred118_EntityMapping_fragment", 228);
+		try
+		{
+			// EntityMapping.g:494:9: ( interfaceFieldDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:494:9: interfaceFieldDeclaration
+			{
+			DebugLocation(494, 9);
+			PushFollow(Follow._interfaceFieldDeclaration_in_synpred118_EntityMapping3932);
+			interfaceFieldDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred118_EntityMapping_fragment", 228);
+			LeaveRule("synpred118_EntityMapping_fragment", 228);
+			LeaveRule_synpred118_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred118_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred119_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred119_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred119_EntityMapping
+	public void synpred119_EntityMapping_fragment()
+	{
+		EnterRule_synpred119_EntityMapping_fragment();
+		EnterRule("synpred119_EntityMapping_fragment", 229);
+		TraceIn("synpred119_EntityMapping_fragment", 229);
+		try
+		{
+			// EntityMapping.g:495:9: ( normalClassDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:495:9: normalClassDeclaration
+			{
+			DebugLocation(495, 9);
+			PushFollow(Follow._normalClassDeclaration_in_synpred119_EntityMapping3942);
+			normalClassDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred119_EntityMapping_fragment", 229);
+			LeaveRule("synpred119_EntityMapping_fragment", 229);
+			LeaveRule_synpred119_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred119_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred120_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred120_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred120_EntityMapping
+	public void synpred120_EntityMapping_fragment()
+	{
+		EnterRule_synpred120_EntityMapping_fragment();
+		EnterRule("synpred120_EntityMapping_fragment", 230);
+		TraceIn("synpred120_EntityMapping_fragment", 230);
+		try
+		{
+			// EntityMapping.g:496:9: ( normalInterfaceDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:496:9: normalInterfaceDeclaration
+			{
+			DebugLocation(496, 9);
+			PushFollow(Follow._normalInterfaceDeclaration_in_synpred120_EntityMapping3952);
+			normalInterfaceDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred120_EntityMapping_fragment", 230);
+			LeaveRule("synpred120_EntityMapping_fragment", 230);
+			LeaveRule_synpred120_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred120_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred121_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred121_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred121_EntityMapping
+	public void synpred121_EntityMapping_fragment()
+	{
+		EnterRule_synpred121_EntityMapping_fragment();
+		EnterRule("synpred121_EntityMapping_fragment", 231);
+		TraceIn("synpred121_EntityMapping_fragment", 231);
+		try
+		{
+			// EntityMapping.g:497:9: ( enumDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:497:9: enumDeclaration
+			{
+			DebugLocation(497, 9);
+			PushFollow(Follow._enumDeclaration_in_synpred121_EntityMapping3962);
+			enumDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred121_EntityMapping_fragment", 231);
+			LeaveRule("synpred121_EntityMapping_fragment", 231);
+			LeaveRule_synpred121_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred121_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred122_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred122_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred122_EntityMapping
+	public void synpred122_EntityMapping_fragment()
+	{
+		EnterRule_synpred122_EntityMapping_fragment();
+		EnterRule("synpred122_EntityMapping_fragment", 232);
+		TraceIn("synpred122_EntityMapping_fragment", 232);
+		try
+		{
+			// EntityMapping.g:498:9: ( annotationTypeDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:498:9: annotationTypeDeclaration
+			{
+			DebugLocation(498, 9);
+			PushFollow(Follow._annotationTypeDeclaration_in_synpred122_EntityMapping3972);
+			annotationTypeDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred122_EntityMapping_fragment", 232);
+			LeaveRule("synpred122_EntityMapping_fragment", 232);
+			LeaveRule_synpred122_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred122_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred125_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred125_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred125_EntityMapping
+	public void synpred125_EntityMapping_fragment()
+	{
+		EnterRule_synpred125_EntityMapping_fragment();
+		EnterRule("synpred125_EntityMapping_fragment", 235);
+		TraceIn("synpred125_EntityMapping_fragment", 235);
+		try
+		{
+			// EntityMapping.g:541:9: ( localVariableDeclarationStatement )
+			DebugEnterAlt(1);
+			// EntityMapping.g:541:9: localVariableDeclarationStatement
+			{
+			DebugLocation(541, 9);
+			PushFollow(Follow._localVariableDeclarationStatement_in_synpred125_EntityMapping4130);
+			localVariableDeclarationStatement();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred125_EntityMapping_fragment", 235);
+			LeaveRule("synpred125_EntityMapping_fragment", 235);
+			LeaveRule_synpred125_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred125_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred126_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred126_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred126_EntityMapping
+	public void synpred126_EntityMapping_fragment()
+	{
+		EnterRule_synpred126_EntityMapping_fragment();
+		EnterRule("synpred126_EntityMapping_fragment", 236);
+		TraceIn("synpred126_EntityMapping_fragment", 236);
+		try
+		{
+			// EntityMapping.g:542:9: ( classOrInterfaceDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:542:9: classOrInterfaceDeclaration
+			{
+			DebugLocation(542, 9);
+			PushFollow(Follow._classOrInterfaceDeclaration_in_synpred126_EntityMapping4140);
+			classOrInterfaceDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred126_EntityMapping_fragment", 236);
+			LeaveRule("synpred126_EntityMapping_fragment", 236);
+			LeaveRule_synpred126_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred126_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred130_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred130_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred130_EntityMapping
+	public void synpred130_EntityMapping_fragment()
+	{
+		EnterRule_synpred130_EntityMapping_fragment();
+		EnterRule("synpred130_EntityMapping_fragment", 240);
+		TraceIn("synpred130_EntityMapping_fragment", 240);
+		try
+		{
+			// EntityMapping.g:562:9: ( ( 'assert' ) expression ( ':' expression )? ';' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:562:9: ( 'assert' ) expression ( ':' expression )? ';'
+			{
+			DebugLocation(562, 9);
+			// EntityMapping.g:562:9: ( 'assert' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:562:10: 'assert'
+			{
+			DebugLocation(562, 10);
+			Match(input,ASSERT,Follow._ASSERT_in_synpred130_EntityMapping4281); if (state.failed) return;
+
+			}
+
+			DebugLocation(564, 9);
+			PushFollow(Follow._expression_in_synpred130_EntityMapping4301);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(564, 20);
+			// EntityMapping.g:564:20: ( ':' expression )?
+			int alt179=2;
+			try { DebugEnterSubRule(179);
+			try { DebugEnterDecision(179, decisionCanBacktrack[179]);
+			int LA179_0 = input.LA(1);
+
+			if ((LA179_0==COLON))
+			{
+				alt179 = 1;
+			}
+			} finally { DebugExitDecision(179); }
+			switch (alt179)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:564:21: ':' expression
+				{
+				DebugLocation(564, 21);
+				Match(input,COLON,Follow._COLON_in_synpred130_EntityMapping4304); if (state.failed) return;
+				DebugLocation(564, 25);
+				PushFollow(Follow._expression_in_synpred130_EntityMapping4306);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(179); }
+
+			DebugLocation(564, 38);
+			Match(input,SEMI,Follow._SEMI_in_synpred130_EntityMapping4310); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred130_EntityMapping_fragment", 240);
+			LeaveRule("synpred130_EntityMapping_fragment", 240);
+			LeaveRule_synpred130_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred130_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred132_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred132_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred132_EntityMapping
+	public void synpred132_EntityMapping_fragment()
+	{
+		EnterRule_synpred132_EntityMapping_fragment();
+		EnterRule("synpred132_EntityMapping_fragment", 242);
+		TraceIn("synpred132_EntityMapping_fragment", 242);
+		try
+		{
+			// EntityMapping.g:565:9: ( 'assert' expression ( ':' expression )? ';' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:565:9: 'assert' expression ( ':' expression )? ';'
+			{
+			DebugLocation(565, 9);
+			Match(input,ASSERT,Follow._ASSERT_in_synpred132_EntityMapping4320); if (state.failed) return;
+			DebugLocation(565, 19);
+			PushFollow(Follow._expression_in_synpred132_EntityMapping4323);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(565, 30);
+			// EntityMapping.g:565:30: ( ':' expression )?
+			int alt180=2;
+			try { DebugEnterSubRule(180);
+			try { DebugEnterDecision(180, decisionCanBacktrack[180]);
+			int LA180_0 = input.LA(1);
+
+			if ((LA180_0==COLON))
+			{
+				alt180 = 1;
+			}
+			} finally { DebugExitDecision(180); }
+			switch (alt180)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// EntityMapping.g:565:31: ':' expression
+				{
+				DebugLocation(565, 31);
+				Match(input,COLON,Follow._COLON_in_synpred132_EntityMapping4326); if (state.failed) return;
+				DebugLocation(565, 35);
+				PushFollow(Follow._expression_in_synpred132_EntityMapping4328);
+				expression();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(180); }
+
+			DebugLocation(565, 48);
+			Match(input,SEMI,Follow._SEMI_in_synpred132_EntityMapping4332); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred132_EntityMapping_fragment", 242);
+			LeaveRule("synpred132_EntityMapping_fragment", 242);
+			LeaveRule_synpred132_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred132_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred133_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred133_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred133_EntityMapping
+	public void synpred133_EntityMapping_fragment()
+	{
+		EnterRule_synpred133_EntityMapping_fragment();
+		EnterRule("synpred133_EntityMapping_fragment", 243);
+		TraceIn("synpred133_EntityMapping_fragment", 243);
+		try
+		{
+			// EntityMapping.g:566:39: ( 'else' statement )
+			DebugEnterAlt(1);
+			// EntityMapping.g:566:39: 'else' statement
+			{
+			DebugLocation(566, 39);
+			Match(input,ELSE,Follow._ELSE_in_synpred133_EntityMapping4361); if (state.failed) return;
+			DebugLocation(566, 46);
+			PushFollow(Follow._statement_in_synpred133_EntityMapping4363);
+			statement();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred133_EntityMapping_fragment", 243);
+			LeaveRule("synpred133_EntityMapping_fragment", 243);
+			LeaveRule_synpred133_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred133_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred148_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred148_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred148_EntityMapping
+	public void synpred148_EntityMapping_fragment()
+	{
+		EnterRule_synpred148_EntityMapping_fragment();
+		EnterRule("synpred148_EntityMapping_fragment", 258);
+		TraceIn("synpred148_EntityMapping_fragment", 258);
+		try
+		{
+			// EntityMapping.g:581:9: ( expression ';' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:581:9: expression ';'
+			{
+			DebugLocation(581, 9);
+			PushFollow(Follow._expression_in_synpred148_EntityMapping4585);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(581, 21);
+			Match(input,SEMI,Follow._SEMI_in_synpred148_EntityMapping4588); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred148_EntityMapping_fragment", 258);
+			LeaveRule("synpred148_EntityMapping_fragment", 258);
+			LeaveRule_synpred148_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred148_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred149_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred149_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred149_EntityMapping
+	public void synpred149_EntityMapping_fragment()
+	{
+		EnterRule_synpred149_EntityMapping_fragment();
+		EnterRule("synpred149_EntityMapping_fragment", 259);
+		TraceIn("synpred149_EntityMapping_fragment", 259);
+		try
+		{
+			// EntityMapping.g:582:9: ( IDENTIFIER ':' statement )
+			DebugEnterAlt(1);
+			// EntityMapping.g:582:9: IDENTIFIER ':' statement
+			{
+			DebugLocation(582, 9);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred149_EntityMapping4603); if (state.failed) return;
+			DebugLocation(582, 20);
+			Match(input,COLON,Follow._COLON_in_synpred149_EntityMapping4605); if (state.failed) return;
+			DebugLocation(582, 24);
+			PushFollow(Follow._statement_in_synpred149_EntityMapping4607);
+			statement();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred149_EntityMapping_fragment", 259);
+			LeaveRule("synpred149_EntityMapping_fragment", 259);
+			LeaveRule_synpred149_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred149_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred153_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred153_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred153_EntityMapping
+	public void synpred153_EntityMapping_fragment()
+	{
+		EnterRule_synpred153_EntityMapping_fragment();
+		EnterRule("synpred153_EntityMapping_fragment", 263);
+		TraceIn("synpred153_EntityMapping_fragment", 263);
+		try
+		{
+			// EntityMapping.g:606:13: ( catches 'finally' block )
+			DebugEnterAlt(1);
+			// EntityMapping.g:606:13: catches 'finally' block
+			{
+			DebugLocation(606, 13);
+			PushFollow(Follow._catches_in_synpred153_EntityMapping4763);
+			catches();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(606, 21);
+			Match(input,FINALLY,Follow._FINALLY_in_synpred153_EntityMapping4765); if (state.failed) return;
+			DebugLocation(606, 31);
+			PushFollow(Follow._block_in_synpred153_EntityMapping4767);
+			block();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred153_EntityMapping_fragment", 263);
+			LeaveRule("synpred153_EntityMapping_fragment", 263);
+			LeaveRule_synpred153_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred153_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred154_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred154_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred154_EntityMapping
+	public void synpred154_EntityMapping_fragment()
+	{
+		EnterRule_synpred154_EntityMapping_fragment();
+		EnterRule("synpred154_EntityMapping_fragment", 264);
+		TraceIn("synpred154_EntityMapping_fragment", 264);
+		try
+		{
+			// EntityMapping.g:607:13: ( catches )
+			DebugEnterAlt(1);
+			// EntityMapping.g:607:13: catches
+			{
+			DebugLocation(607, 13);
+			PushFollow(Follow._catches_in_synpred154_EntityMapping4781);
+			catches();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred154_EntityMapping_fragment", 264);
+			LeaveRule("synpred154_EntityMapping_fragment", 264);
+			LeaveRule_synpred154_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred154_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred157_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred157_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred157_EntityMapping
+	public void synpred157_EntityMapping_fragment()
+	{
+		EnterRule_synpred157_EntityMapping_fragment();
+		EnterRule("synpred157_EntityMapping_fragment", 267);
+		TraceIn("synpred157_EntityMapping_fragment", 267);
+		try
+		{
+			// EntityMapping.g:632:9: ( 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement )
+			DebugEnterAlt(1);
+			// EntityMapping.g:632:9: 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement
+			{
+			DebugLocation(632, 9);
+			Match(input,FOR,Follow._FOR_in_synpred157_EntityMapping4973); if (state.failed) return;
+			DebugLocation(632, 15);
+			Match(input,LPAREN,Follow._LPAREN_in_synpred157_EntityMapping4975); if (state.failed) return;
+			DebugLocation(632, 19);
+			PushFollow(Follow._variableModifiers_in_synpred157_EntityMapping4977);
+			variableModifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(632, 37);
+			PushFollow(Follow._type_in_synpred157_EntityMapping4979);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(632, 42);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred157_EntityMapping4981); if (state.failed) return;
+			DebugLocation(632, 53);
+			Match(input,COLON,Follow._COLON_in_synpred157_EntityMapping4983); if (state.failed) return;
+			DebugLocation(633, 9);
+			PushFollow(Follow._expression_in_synpred157_EntityMapping4994);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(633, 20);
+			Match(input,RPAREN,Follow._RPAREN_in_synpred157_EntityMapping4996); if (state.failed) return;
+			DebugLocation(633, 24);
+			PushFollow(Follow._statement_in_synpred157_EntityMapping4998);
+			statement();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred157_EntityMapping_fragment", 267);
+			LeaveRule("synpred157_EntityMapping_fragment", 267);
+			LeaveRule_synpred157_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred157_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred161_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred161_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred161_EntityMapping
+	public void synpred161_EntityMapping_fragment()
+	{
+		EnterRule_synpred161_EntityMapping_fragment();
+		EnterRule("synpred161_EntityMapping_fragment", 271);
+		TraceIn("synpred161_EntityMapping_fragment", 271);
+		try
+		{
+			// EntityMapping.g:646:9: ( localVariableDeclaration )
+			DebugEnterAlt(1);
+			// EntityMapping.g:646:9: localVariableDeclaration
+			{
+			DebugLocation(646, 9);
+			PushFollow(Follow._localVariableDeclaration_in_synpred161_EntityMapping5177);
+			localVariableDeclaration();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred161_EntityMapping_fragment", 271);
+			LeaveRule("synpred161_EntityMapping_fragment", 271);
+			LeaveRule_synpred161_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred161_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred202_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred202_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred202_EntityMapping
+	public void synpred202_EntityMapping_fragment()
+	{
+		EnterRule_synpred202_EntityMapping_fragment();
+		EnterRule("synpred202_EntityMapping_fragment", 312);
+		TraceIn("synpred202_EntityMapping_fragment", 312);
+		try
+		{
+			// EntityMapping.g:800:9: ( castExpression )
+			DebugEnterAlt(1);
+			// EntityMapping.g:800:9: castExpression
+			{
+			DebugLocation(800, 9);
+			PushFollow(Follow._castExpression_in_synpred202_EntityMapping6422);
+			castExpression();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred202_EntityMapping_fragment", 312);
+			LeaveRule("synpred202_EntityMapping_fragment", 312);
+			LeaveRule_synpred202_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred202_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred206_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred206_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred206_EntityMapping
+	public void synpred206_EntityMapping_fragment()
+	{
+		EnterRule_synpred206_EntityMapping_fragment();
+		EnterRule("synpred206_EntityMapping_fragment", 316);
+		TraceIn("synpred206_EntityMapping_fragment", 316);
+		try
+		{
+			// EntityMapping.g:810:9: ( '(' primitiveType ')' unaryExpression )
+			DebugEnterAlt(1);
+			// EntityMapping.g:810:9: '(' primitiveType ')' unaryExpression
+			{
+			DebugLocation(810, 9);
+			Match(input,LPAREN,Follow._LPAREN_in_synpred206_EntityMapping6513); if (state.failed) return;
+			DebugLocation(810, 13);
+			PushFollow(Follow._primitiveType_in_synpred206_EntityMapping6515);
+			primitiveType();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(810, 27);
+			Match(input,RPAREN,Follow._RPAREN_in_synpred206_EntityMapping6517); if (state.failed) return;
+			DebugLocation(810, 31);
+			PushFollow(Follow._unaryExpression_in_synpred206_EntityMapping6519);
+			unaryExpression();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred206_EntityMapping_fragment", 316);
+			LeaveRule("synpred206_EntityMapping_fragment", 316);
+			LeaveRule_synpred206_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred206_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred208_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred208_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred208_EntityMapping
+	public void synpred208_EntityMapping_fragment()
+	{
+		EnterRule_synpred208_EntityMapping_fragment();
+		EnterRule("synpred208_EntityMapping_fragment", 318);
+		TraceIn("synpred208_EntityMapping_fragment", 318);
+		try
+		{
+			// EntityMapping.g:820:10: ( '.' IDENTIFIER )
+			DebugEnterAlt(1);
+			// EntityMapping.g:820:10: '.' IDENTIFIER
+			{
+			DebugLocation(820, 10);
+			Match(input,DOT,Follow._DOT_in_synpred208_EntityMapping6590); if (state.failed) return;
+			DebugLocation(820, 14);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred208_EntityMapping6592); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred208_EntityMapping_fragment", 318);
+			LeaveRule("synpred208_EntityMapping_fragment", 318);
+			LeaveRule_synpred208_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred208_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred209_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred209_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred209_EntityMapping
+	public void synpred209_EntityMapping_fragment()
+	{
+		EnterRule_synpred209_EntityMapping_fragment();
+		EnterRule("synpred209_EntityMapping_fragment", 319);
+		TraceIn("synpred209_EntityMapping_fragment", 319);
+		try
+		{
+			// EntityMapping.g:822:10: ( identifierSuffix )
+			DebugEnterAlt(1);
+			// EntityMapping.g:822:10: identifierSuffix
+			{
+			DebugLocation(822, 10);
+			PushFollow(Follow._identifierSuffix_in_synpred209_EntityMapping6614);
+			identifierSuffix();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred209_EntityMapping_fragment", 319);
+			LeaveRule("synpred209_EntityMapping_fragment", 319);
+			LeaveRule_synpred209_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred209_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred211_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred211_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred211_EntityMapping
+	public void synpred211_EntityMapping_fragment()
+	{
+		EnterRule_synpred211_EntityMapping_fragment();
+		EnterRule("synpred211_EntityMapping_fragment", 321);
+		TraceIn("synpred211_EntityMapping_fragment", 321);
+		try
+		{
+			// EntityMapping.g:825:10: ( '.' IDENTIFIER )
+			DebugEnterAlt(1);
+			// EntityMapping.g:825:10: '.' IDENTIFIER
+			{
+			DebugLocation(825, 10);
+			Match(input,DOT,Follow._DOT_in_synpred211_EntityMapping6646); if (state.failed) return;
+			DebugLocation(825, 14);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred211_EntityMapping6648); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred211_EntityMapping_fragment", 321);
+			LeaveRule("synpred211_EntityMapping_fragment", 321);
+			LeaveRule_synpred211_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred211_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred212_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred212_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred212_EntityMapping
+	public void synpred212_EntityMapping_fragment()
+	{
+		EnterRule_synpred212_EntityMapping_fragment();
+		EnterRule("synpred212_EntityMapping_fragment", 322);
+		TraceIn("synpred212_EntityMapping_fragment", 322);
+		try
+		{
+			// EntityMapping.g:827:10: ( identifierSuffix )
+			DebugEnterAlt(1);
+			// EntityMapping.g:827:10: identifierSuffix
+			{
+			DebugLocation(827, 10);
+			PushFollow(Follow._identifierSuffix_in_synpred212_EntityMapping6670);
+			identifierSuffix();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred212_EntityMapping_fragment", 322);
+			LeaveRule("synpred212_EntityMapping_fragment", 322);
+			LeaveRule_synpred212_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred212_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred224_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred224_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred224_EntityMapping
+	public void synpred224_EntityMapping_fragment()
+	{
+		EnterRule_synpred224_EntityMapping_fragment();
+		EnterRule("synpred224_EntityMapping_fragment", 334);
+		TraceIn("synpred224_EntityMapping_fragment", 334);
+		try
+		{
+			// EntityMapping.g:855:10: ( '[' expression ']' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:855:10: '[' expression ']'
+			{
+			DebugLocation(855, 10);
+			Match(input,LBRACKET,Follow._LBRACKET_in_synpred224_EntityMapping6921); if (state.failed) return;
+			DebugLocation(855, 14);
+			PushFollow(Follow._expression_in_synpred224_EntityMapping6923);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(855, 25);
+			Match(input,RBRACKET,Follow._RBRACKET_in_synpred224_EntityMapping6925); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred224_EntityMapping_fragment", 334);
+			LeaveRule("synpred224_EntityMapping_fragment", 334);
+			LeaveRule_synpred224_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred224_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred236_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred236_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred236_EntityMapping
+	public void synpred236_EntityMapping_fragment()
+	{
+		EnterRule_synpred236_EntityMapping_fragment();
+		EnterRule("synpred236_EntityMapping_fragment", 346);
+		TraceIn("synpred236_EntityMapping_fragment", 346);
+		try
+		{
+			// EntityMapping.g:878:9: ( 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest )
+			DebugEnterAlt(1);
+			// EntityMapping.g:878:9: 'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest
+			{
+			DebugLocation(878, 9);
+			Match(input,NEW,Follow._NEW_in_synpred236_EntityMapping7134); if (state.failed) return;
+			DebugLocation(878, 15);
+			PushFollow(Follow._nonWildcardTypeArguments_in_synpred236_EntityMapping7136);
+			nonWildcardTypeArguments();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(878, 40);
+			PushFollow(Follow._classOrInterfaceType_in_synpred236_EntityMapping7138);
+			classOrInterfaceType();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(878, 61);
+			PushFollow(Follow._classCreatorRest_in_synpred236_EntityMapping7140);
+			classCreatorRest();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred236_EntityMapping_fragment", 346);
+			LeaveRule("synpred236_EntityMapping_fragment", 346);
+			LeaveRule_synpred236_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred236_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred237_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred237_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred237_EntityMapping
+	public void synpred237_EntityMapping_fragment()
+	{
+		EnterRule_synpred237_EntityMapping_fragment();
+		EnterRule("synpred237_EntityMapping_fragment", 347);
+		TraceIn("synpred237_EntityMapping_fragment", 347);
+		try
+		{
+			// EntityMapping.g:879:9: ( 'new' classOrInterfaceType classCreatorRest )
+			DebugEnterAlt(1);
+			// EntityMapping.g:879:9: 'new' classOrInterfaceType classCreatorRest
+			{
+			DebugLocation(879, 9);
+			Match(input,NEW,Follow._NEW_in_synpred237_EntityMapping7150); if (state.failed) return;
+			DebugLocation(879, 15);
+			PushFollow(Follow._classOrInterfaceType_in_synpred237_EntityMapping7152);
+			classOrInterfaceType();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(879, 36);
+			PushFollow(Follow._classCreatorRest_in_synpred237_EntityMapping7154);
+			classCreatorRest();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred237_EntityMapping_fragment", 347);
+			LeaveRule("synpred237_EntityMapping_fragment", 347);
+			LeaveRule_synpred237_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred237_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred239_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred239_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred239_EntityMapping
+	public void synpred239_EntityMapping_fragment()
+	{
+		EnterRule_synpred239_EntityMapping_fragment();
+		EnterRule("synpred239_EntityMapping_fragment", 349);
+		TraceIn("synpred239_EntityMapping_fragment", 349);
+		try
+		{
+			// EntityMapping.g:884:9: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer )
+			DebugEnterAlt(1);
+			// EntityMapping.g:884:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
+			{
+			DebugLocation(884, 9);
+			Match(input,NEW,Follow._NEW_in_synpred239_EntityMapping7184); if (state.failed) return;
+			DebugLocation(884, 15);
+			PushFollow(Follow._createdName_in_synpred239_EntityMapping7186);
+			createdName();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(885, 9);
+			Match(input,LBRACKET,Follow._LBRACKET_in_synpred239_EntityMapping7196); if (state.failed) return;
+			DebugLocation(885, 13);
+			Match(input,RBRACKET,Follow._RBRACKET_in_synpred239_EntityMapping7198); if (state.failed) return;
+			DebugLocation(886, 9);
+			// EntityMapping.g:886:9: ( '[' ']' )*
+			try { DebugEnterSubRule(193);
+			while (true)
+			{
+				int alt193=2;
+				try { DebugEnterDecision(193, decisionCanBacktrack[193]);
+				int LA193_0 = input.LA(1);
+
+				if ((LA193_0==LBRACKET))
+				{
+					alt193 = 1;
+				}
+
+
+				} finally { DebugExitDecision(193); }
+				switch ( alt193 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// EntityMapping.g:886:10: '[' ']'
+					{
+					DebugLocation(886, 10);
+					Match(input,LBRACKET,Follow._LBRACKET_in_synpred239_EntityMapping7209); if (state.failed) return;
+					DebugLocation(886, 14);
+					Match(input,RBRACKET,Follow._RBRACKET_in_synpred239_EntityMapping7211); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop193;
+				}
+			}
+
+			loop193:
+				;
+
+			} finally { DebugExitSubRule(193); }
+
+			DebugLocation(888, 9);
+			PushFollow(Follow._arrayInitializer_in_synpred239_EntityMapping7232);
+			arrayInitializer();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred239_EntityMapping_fragment", 349);
+			LeaveRule("synpred239_EntityMapping_fragment", 349);
+			LeaveRule_synpred239_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred239_EntityMapping
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_synpred240_EntityMapping_fragment() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_synpred240_EntityMapping_fragment() {}
+
+	// $ANTLR start synpred240_EntityMapping
+	public void synpred240_EntityMapping_fragment()
+	{
+		EnterRule_synpred240_EntityMapping_fragment();
+		EnterRule("synpred240_EntityMapping_fragment", 350);
+		TraceIn("synpred240_EntityMapping_fragment", 350);
+		try
+		{
+			// EntityMapping.g:893:13: ( '[' expression ']' )
+			DebugEnterAlt(1);
+			// EntityMapping.g:893:13: '[' expression ']'
+			{
+			DebugLocation(893, 13);
+			Match(input,LBRACKET,Follow._LBRACKET_in_synpred240_EntityMapping7281); if (state.failed) return;
+			DebugLocation(893, 17);
+			PushFollow(Follow._expression_in_synpred240_EntityMapping7283);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(894, 13);
+			Match(input,RBRACKET,Follow._RBRACKET_in_synpred240_EntityMapping7297); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred240_EntityMapping_fragment", 350);
+			LeaveRule("synpred240_EntityMapping_fragment", 350);
+			LeaveRule_synpred240_EntityMapping_fragment();
+		}
+	}
+	// $ANTLR end synpred240_EntityMapping
 	#endregion Rules
+
+	#region Synpreds
+	private bool EvaluatePredicate(System.Action fragment)
+	{
+		bool success = false;
+		state.backtracking++;
+		try { DebugBeginBacktrack(state.backtracking);
+		int start = input.Mark();
+		try
+		{
+			fragment();
+		}
+		catch ( RecognitionException re )
+		{
+			System.Console.Error.WriteLine("impossible: "+re);
+		}
+		success = !state.failed;
+		input.Rewind(start);
+		} finally { DebugEndBacktrack(state.backtracking, success); }
+		state.backtracking--;
+		state.failed=false;
+		return success;
+	}
+	#endregion Synpreds
 
 
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _mapDeclaration_in_prog108 = new BitSet(new ulong[]{0x200002UL});
-		public static readonly BitSet _stat_in_prog110 = new BitSet(new ulong[]{0x200002UL});
-		public static readonly BitSet _ID_in_mapDeclaration137 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_mapDeclaration139 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _ID_in_mapDeclaration141 = new BitSet(new ulong[]{0x100000000000UL});
-		public static readonly BitSet _44_in_mapDeclaration143 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_stat162 = new BitSet(new ulong[]{0x400000000000UL});
-		public static readonly BitSet _46_in_stat164 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _expr_in_stat166 = new BitSet(new ulong[]{0x100000000000UL});
-		public static readonly BitSet _44_in_stat168 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _boolAndExpr_in_expr186 = new BitSet(new ulong[]{0x400000002UL});
-		public static readonly BitSet _OR_in_expr189 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _boolAndExpr_in_expr192 = new BitSet(new ulong[]{0x400000002UL});
-		public static readonly BitSet _equalityExpr_in_boolAndExpr202 = new BitSet(new ulong[]{0x12UL});
-		public static readonly BitSet _AND_in_boolAndExpr205 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _equalityExpr_in_boolAndExpr208 = new BitSet(new ulong[]{0x12UL});
-		public static readonly BitSet _relationalExpr_in_equalityExpr218 = new BitSet(new ulong[]{0x100002002UL});
-		public static readonly BitSet _EQUALS_in_equalityExpr222 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _NOTEQUALS_in_equalityExpr225 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _relationalExpr_in_equalityExpr228 = new BitSet(new ulong[]{0x100002002UL});
-		public static readonly BitSet _additiveExpr_in_relationalExpr238 = new BitSet(new ulong[]{0x30C0002UL});
-		public static readonly BitSet _LT_in_relationalExpr242 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _LTEQ_in_relationalExpr245 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _GT_in_relationalExpr248 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _GTEQ_in_relationalExpr251 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _additiveExpr_in_relationalExpr254 = new BitSet(new ulong[]{0x30C0002UL});
-		public static readonly BitSet _multiExpr_in_additiveExpr265 = new BitSet(new ulong[]{0x810000002UL});
-		public static readonly BitSet _PLUS_in_additiveExpr270 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _MINUS_in_additiveExpr273 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _multiExpr_in_additiveExpr277 = new BitSet(new ulong[]{0x810000002UL});
-		public static readonly BitSet _unaryExpr_in_multiExpr288 = new BitSet(new ulong[]{0x60000802UL});
-		public static readonly BitSet _MULT_in_multiExpr293 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _DIV_in_multiExpr296 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _MOD_in_multiExpr299 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _unaryExpr_in_multiExpr303 = new BitSet(new ulong[]{0x60000802UL});
-		public static readonly BitSet _NOT_in_unaryExpr314 = new BitSet(new ulong[]{0x811000A10080UL});
-		public static readonly BitSet _INC_in_unaryExpr317 = new BitSet(new ulong[]{0x811000A10080UL});
-		public static readonly BitSet _DEC_in_unaryExpr320 = new BitSet(new ulong[]{0x811000A10080UL});
-		public static readonly BitSet _atom_in_unaryExpr325 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _value_in_atom334 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_atom339 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _functionCall_in_atom344 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ifExpr_in_atom349 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _memberAccess_in_atom355 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _40_in_atom361 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _expr_in_atom363 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _41_in_atom365 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_memberAccess393 = new BitSet(new ulong[]{0x80000000000UL});
-		public static readonly BitSet _43_in_memberAccess395 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _ID_in_memberAccess397 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _47_in_ifExpr416 = new BitSet(new ulong[]{0x10000000000UL});
-		public static readonly BitSet _40_in_ifExpr417 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _expr_in_ifExpr421 = new BitSet(new ulong[]{0x40000000000UL});
-		public static readonly BitSet _42_in_ifExpr423 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _expr_in_ifExpr427 = new BitSet(new ulong[]{0x40000000000UL});
-		public static readonly BitSet _42_in_ifExpr429 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _expr_in_ifExpr433 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _41_in_ifExpr435 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_functionCall466 = new BitSet(new ulong[]{0x10000000000UL});
-		public static readonly BitSet _40_in_functionCall468 = new BitSet(new ulong[]{0x831080E10480UL});
-		public static readonly BitSet _params_in_functionCall471 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _41_in_functionCall475 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_params496 = new BitSet(new ulong[]{0x40000000002UL});
-		public static readonly BitSet _42_in_params499 = new BitSet(new ulong[]{0x811080E10480UL});
-		public static readonly BitSet _expr_in_params501 = new BitSet(new ulong[]{0x40000000002UL});
+		public static readonly BitSet _annotations_in_compilationUnit69 = new BitSet(new ulong[]{0x0UL,0x4000UL});
+		public static readonly BitSet _packageDeclaration_in_compilationUnit98 = new BitSet(new ulong[]{0x1200102000800012UL,0x11040C10700600UL});
+		public static readonly BitSet _importDeclaration_in_compilationUnit120 = new BitSet(new ulong[]{0x1200102000800012UL,0x11040C10700600UL});
+		public static readonly BitSet _typeDeclaration_in_compilationUnit142 = new BitSet(new ulong[]{0x1000102000800012UL,0x11040C10700600UL});
+		public static readonly BitSet _PACKAGE_in_packageDeclaration173 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _qualifiedName_in_packageDeclaration175 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_packageDeclaration185 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IMPORT_in_importDeclaration206 = new BitSet(new ulong[]{0x40000000000000UL,0x400000000UL});
+		public static readonly BitSet _STATIC_in_importDeclaration218 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_importDeclaration239 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _DOT_in_importDeclaration241 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _STAR_in_importDeclaration243 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_importDeclaration253 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IMPORT_in_importDeclaration270 = new BitSet(new ulong[]{0x40000000000000UL,0x400000000UL});
+		public static readonly BitSet _STATIC_in_importDeclaration282 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_importDeclaration303 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _DOT_in_importDeclaration314 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_importDeclaration316 = new BitSet(new ulong[]{0x80000000UL,0x10000000UL});
+		public static readonly BitSet _DOT_in_importDeclaration338 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _STAR_in_importDeclaration340 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_importDeclaration361 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_qualifiedImportName381 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _DOT_in_qualifiedImportName392 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_qualifiedImportName394 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _classOrInterfaceDeclaration_in_typeDeclaration425 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SEMI_in_typeDeclaration435 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classDeclaration_in_classOrInterfaceDeclaration456 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceDeclaration_in_classOrInterfaceDeclaration466 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _annotation_in_modifiers501 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _PUBLIC_in_modifiers511 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _PROTECTED_in_modifiers521 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _PRIVATE_in_modifiers531 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _STATIC_in_modifiers541 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _ABSTRACT_in_modifiers551 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _FINAL_in_modifiers561 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _NATIVE_in_modifiers571 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _SYNCHRONIZED_in_modifiers581 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _TRANSIENT_in_modifiers591 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _VOLATILE_in_modifiers601 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _STRICTFP_in_modifiers611 = new BitSet(new ulong[]{0x100000000012UL,0x11040C00700600UL});
+		public static readonly BitSet _FINAL_in_variableModifiers643 = new BitSet(new ulong[]{0x100000000002UL,0x200UL});
+		public static readonly BitSet _annotation_in_variableModifiers657 = new BitSet(new ulong[]{0x100000000002UL,0x200UL});
+		public static readonly BitSet _normalClassDeclaration_in_classDeclaration693 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _enumDeclaration_in_classDeclaration703 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_normalClassDeclaration723 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _CLASS_in_normalClassDeclaration726 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_normalClassDeclaration728 = new BitSet(new ulong[]{0x100010000000000UL,0x82UL});
+		public static readonly BitSet _typeParameters_in_normalClassDeclaration739 = new BitSet(new ulong[]{0x100010000000000UL,0x2UL});
+		public static readonly BitSet _EXTENDS_in_normalClassDeclaration761 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_normalClassDeclaration763 = new BitSet(new ulong[]{0x100000000000000UL,0x2UL});
+		public static readonly BitSet _IMPLEMENTS_in_normalClassDeclaration785 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _typeList_in_normalClassDeclaration787 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _classBody_in_normalClassDeclaration820 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_typeParameters841 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _typeParameter_in_typeParameters855 = new BitSet(new ulong[]{0x8000002000000UL});
+		public static readonly BitSet _COMMA_in_typeParameters870 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _typeParameter_in_typeParameters872 = new BitSet(new ulong[]{0x8000002000000UL});
+		public static readonly BitSet _GT_in_typeParameters897 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_typeParameter917 = new BitSet(new ulong[]{0x10000000002UL});
+		public static readonly BitSet _EXTENDS_in_typeParameter928 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _typeBound_in_typeParameter930 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_in_typeBound962 = new BitSet(new ulong[]{0x22UL});
+		public static readonly BitSet _AMP_in_typeBound973 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_typeBound975 = new BitSet(new ulong[]{0x22UL});
+		public static readonly BitSet _modifiers_in_enumDeclaration1007 = new BitSet(new ulong[]{0x2000000000UL});
+		public static readonly BitSet _ENUM_in_enumDeclaration1019 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_enumDeclaration1040 = new BitSet(new ulong[]{0x100000000000000UL,0x2UL});
+		public static readonly BitSet _IMPLEMENTS_in_enumDeclaration1051 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _typeList_in_enumDeclaration1053 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _enumBody_in_enumDeclaration1074 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACE_in_enumBody1099 = new BitSet(new ulong[]{0x40000002000000UL,0x11000200UL});
+		public static readonly BitSet _enumConstants_in_enumBody1110 = new BitSet(new ulong[]{0x2000000UL,0x11000000UL});
+		public static readonly BitSet _COMMA_in_enumBody1132 = new BitSet(new ulong[]{0x0UL,0x11000000UL});
+		public static readonly BitSet _enumBodyDeclarations_in_enumBody1145 = new BitSet(new ulong[]{0x0UL,0x1000000UL});
+		public static readonly BitSet _RBRACE_in_enumBody1167 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _enumConstant_in_enumConstants1187 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _COMMA_in_enumConstants1198 = new BitSet(new ulong[]{0x40000000000000UL,0x200UL});
+		public static readonly BitSet _enumConstant_in_enumConstants1200 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _annotations_in_enumConstant1234 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_enumConstant1255 = new BitSet(new ulong[]{0x2UL,0x42UL});
+		public static readonly BitSet _arguments_in_enumConstant1266 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _classBody_in_enumConstant1288 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SEMI_in_enumBodyDeclarations1329 = new BitSet(new ulong[]{0x1840502100A14012UL,0x19040C30700692UL});
+		public static readonly BitSet _classBodyDeclaration_in_enumBodyDeclarations1341 = new BitSet(new ulong[]{0x1840502100A14012UL,0x19040C30700692UL});
+		public static readonly BitSet _normalInterfaceDeclaration_in_interfaceDeclaration1372 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _annotationTypeDeclaration_in_interfaceDeclaration1382 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_normalInterfaceDeclaration1406 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _INTERFACE_in_normalInterfaceDeclaration1408 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_normalInterfaceDeclaration1410 = new BitSet(new ulong[]{0x10000000000UL,0x82UL});
+		public static readonly BitSet _typeParameters_in_normalInterfaceDeclaration1421 = new BitSet(new ulong[]{0x10000000000UL,0x2UL});
+		public static readonly BitSet _EXTENDS_in_normalInterfaceDeclaration1443 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _typeList_in_normalInterfaceDeclaration1445 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _interfaceBody_in_normalInterfaceDeclaration1466 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_in_typeList1486 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _COMMA_in_typeList1497 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_typeList1499 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _LBRACE_in_classBody1530 = new BitSet(new ulong[]{0x1840502100A14010UL,0x19040C31700692UL});
+		public static readonly BitSet _classBodyDeclaration_in_classBody1542 = new BitSet(new ulong[]{0x1840502100A14010UL,0x19040C31700692UL});
+		public static readonly BitSet _RBRACE_in_classBody1564 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACE_in_interfaceBody1584 = new BitSet(new ulong[]{0x1840502100A14010UL,0x19040C31700690UL});
+		public static readonly BitSet _interfaceBodyDeclaration_in_interfaceBody1596 = new BitSet(new ulong[]{0x1840502100A14010UL,0x19040C31700690UL});
+		public static readonly BitSet _RBRACE_in_interfaceBody1618 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SEMI_in_classBodyDeclaration1638 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _STATIC_in_classBodyDeclaration1649 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _block_in_classBodyDeclaration1671 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _memberDecl_in_classBodyDeclaration1681 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _fieldDeclaration_in_memberDecl1702 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _methodDeclaration_in_memberDecl1713 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classDeclaration_in_memberDecl1724 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceDeclaration_in_memberDecl1735 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_methodDeclaration1773 = new BitSet(new ulong[]{0x40000000000000UL,0x80UL});
+		public static readonly BitSet _typeParameters_in_methodDeclaration1784 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_methodDeclaration1805 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _formalParameters_in_methodDeclaration1815 = new BitSet(new ulong[]{0x0UL,0x400000000002UL});
+		public static readonly BitSet _THROWS_in_methodDeclaration1826 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _qualifiedNameList_in_methodDeclaration1828 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _LBRACE_in_methodDeclaration1849 = new BitSet(new ulong[]{0x38C1D82350E1C310UL,0x3FB7BC357A1EF2UL});
+		public static readonly BitSet _explicitConstructorInvocation_in_methodDeclaration1861 = new BitSet(new ulong[]{0x38C1D82350E1C310UL,0x3FB7BC357A1E72UL});
+		public static readonly BitSet _blockStatement_in_methodDeclaration1883 = new BitSet(new ulong[]{0x38C1D82350E1C310UL,0x3FB7BC357A1E72UL});
+		public static readonly BitSet _RBRACE_in_methodDeclaration1904 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_methodDeclaration1914 = new BitSet(new ulong[]{0x840400100214000UL,0x8000020000090UL});
+		public static readonly BitSet _typeParameters_in_methodDeclaration1925 = new BitSet(new ulong[]{0x840400100214000UL,0x8000020000010UL});
+		public static readonly BitSet _type_in_methodDeclaration1947 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _VOID_in_methodDeclaration1961 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_methodDeclaration1981 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _formalParameters_in_methodDeclaration1991 = new BitSet(new ulong[]{0x0UL,0x400010000006UL});
+		public static readonly BitSet _LBRACKET_in_methodDeclaration2002 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_methodDeclaration2004 = new BitSet(new ulong[]{0x0UL,0x400010000006UL});
+		public static readonly BitSet _THROWS_in_methodDeclaration2026 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _qualifiedNameList_in_methodDeclaration2028 = new BitSet(new ulong[]{0x0UL,0x10000002UL});
+		public static readonly BitSet _block_in_methodDeclaration2083 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SEMI_in_methodDeclaration2097 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_fieldDeclaration2129 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_fieldDeclaration2139 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _variableDeclarator_in_fieldDeclaration2149 = new BitSet(new ulong[]{0x2000000UL,0x10000000UL});
+		public static readonly BitSet _COMMA_in_fieldDeclaration2160 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _variableDeclarator_in_fieldDeclaration2162 = new BitSet(new ulong[]{0x2000000UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_fieldDeclaration2183 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_variableDeclarator2203 = new BitSet(new ulong[]{0x4000000002UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_variableDeclarator2214 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_variableDeclarator2216 = new BitSet(new ulong[]{0x4000000002UL,0x4UL});
+		public static readonly BitSet _EQ_in_variableDeclarator2238 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1872UL});
+		public static readonly BitSet _variableInitializer_in_variableDeclarator2240 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceFieldDeclaration_in_interfaceBodyDeclaration2279 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceMethodDeclaration_in_interfaceBodyDeclaration2289 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceDeclaration_in_interfaceBodyDeclaration2299 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classDeclaration_in_interfaceBodyDeclaration2309 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SEMI_in_interfaceBodyDeclaration2319 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_interfaceMethodDeclaration2339 = new BitSet(new ulong[]{0x840400100214000UL,0x8000020000090UL});
+		public static readonly BitSet _typeParameters_in_interfaceMethodDeclaration2350 = new BitSet(new ulong[]{0x840400100214000UL,0x8000020000010UL});
+		public static readonly BitSet _type_in_interfaceMethodDeclaration2372 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _VOID_in_interfaceMethodDeclaration2383 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_interfaceMethodDeclaration2403 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _formalParameters_in_interfaceMethodDeclaration2413 = new BitSet(new ulong[]{0x0UL,0x400010000004UL});
+		public static readonly BitSet _LBRACKET_in_interfaceMethodDeclaration2424 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_interfaceMethodDeclaration2426 = new BitSet(new ulong[]{0x0UL,0x400010000004UL});
+		public static readonly BitSet _THROWS_in_interfaceMethodDeclaration2448 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _qualifiedNameList_in_interfaceMethodDeclaration2450 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_interfaceMethodDeclaration2463 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_interfaceFieldDeclaration2485 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_interfaceFieldDeclaration2487 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _variableDeclarator_in_interfaceFieldDeclaration2489 = new BitSet(new ulong[]{0x2000000UL,0x10000000UL});
+		public static readonly BitSet _COMMA_in_interfaceFieldDeclaration2500 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _variableDeclarator_in_interfaceFieldDeclaration2502 = new BitSet(new ulong[]{0x2000000UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_interfaceFieldDeclaration2523 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classOrInterfaceType_in_type2544 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_type2555 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_type2557 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _primitiveType_in_type2578 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_type2589 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_type2591 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceType2623 = new BitSet(new ulong[]{0x80000002UL,0x80UL});
+		public static readonly BitSet _typeArguments_in_classOrInterfaceType2634 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _DOT_in_classOrInterfaceType2656 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceType2658 = new BitSet(new ulong[]{0x80000002UL,0x80UL});
+		public static readonly BitSet _typeArguments_in_classOrInterfaceType2673 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _LT_in_typeArguments2810 = new BitSet(new ulong[]{0x840400100214000UL,0x20800010UL});
+		public static readonly BitSet _typeArgument_in_typeArguments2812 = new BitSet(new ulong[]{0x8000002000000UL});
+		public static readonly BitSet _COMMA_in_typeArguments2823 = new BitSet(new ulong[]{0x840400100214000UL,0x20800010UL});
+		public static readonly BitSet _typeArgument_in_typeArguments2825 = new BitSet(new ulong[]{0x8000002000000UL});
+		public static readonly BitSet _GT_in_typeArguments2847 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_in_typeArgument2867 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _QUES_in_typeArgument2877 = new BitSet(new ulong[]{0x10000000002UL,0x10000000000UL});
+		public static readonly BitSet _set_in_typeArgument2901 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_typeArgument2945 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _qualifiedName_in_qualifiedNameList2976 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _COMMA_in_qualifiedNameList2987 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _qualifiedName_in_qualifiedNameList2989 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _LPAREN_in_formalParameters3020 = new BitSet(new ulong[]{0x840500100214000UL,0x28000210UL});
+		public static readonly BitSet _formalParameterDecls_in_formalParameters3031 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_formalParameters3053 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ellipsisParameterDecl_in_formalParameterDecls3073 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _normalParameterDecl_in_formalParameterDecls3083 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _COMMA_in_formalParameterDecls3094 = new BitSet(new ulong[]{0x840500100214000UL,0x20000210UL});
+		public static readonly BitSet _normalParameterDecl_in_formalParameterDecls3096 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _normalParameterDecl_in_formalParameterDecls3118 = new BitSet(new ulong[]{0x2000000UL});
+		public static readonly BitSet _COMMA_in_formalParameterDecls3128 = new BitSet(new ulong[]{0x840500100214000UL,0x20000210UL});
+		public static readonly BitSet _ellipsisParameterDecl_in_formalParameterDecls3150 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _variableModifiers_in_normalParameterDecl3170 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_normalParameterDecl3172 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_normalParameterDecl3174 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_normalParameterDecl3185 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_normalParameterDecl3187 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _variableModifiers_in_ellipsisParameterDecl3218 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_ellipsisParameterDecl3228 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _ELLIPSIS_in_ellipsisParameterDecl3231 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_ellipsisParameterDecl3241 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_explicitConstructorInvocation3263 = new BitSet(new ulong[]{0x0UL,0x110000000000UL});
+		public static readonly BitSet _set_in_explicitConstructorInvocation3289 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _arguments_in_explicitConstructorInvocation3321 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_explicitConstructorInvocation3323 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primary_in_explicitConstructorInvocation3334 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _DOT_in_explicitConstructorInvocation3344 = new BitSet(new ulong[]{0x0UL,0x10000000080UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_explicitConstructorInvocation3355 = new BitSet(new ulong[]{0x0UL,0x10000000000UL});
+		public static readonly BitSet _SUPER_in_explicitConstructorInvocation3376 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _arguments_in_explicitConstructorInvocation3386 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_explicitConstructorInvocation3388 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_qualifiedName3408 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _DOT_in_qualifiedName3419 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_qualifiedName3421 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _annotation_in_annotations3453 = new BitSet(new ulong[]{0x2UL,0x200UL});
+		public static readonly BitSet _MONKEYS_AT_in_annotation3486 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _qualifiedName_in_annotation3488 = new BitSet(new ulong[]{0x2UL,0x40UL});
+		public static readonly BitSet _LPAREN_in_annotation3502 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0280A1A72UL});
+		public static readonly BitSet _elementValuePairs_in_annotation3529 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _elementValue_in_annotation3553 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_annotation3589 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _elementValuePair_in_elementValuePairs3621 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _COMMA_in_elementValuePairs3632 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _elementValuePair_in_elementValuePairs3634 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _IDENTIFIER_in_elementValuePair3665 = new BitSet(new ulong[]{0x4000000000UL});
+		public static readonly BitSet _EQ_in_elementValuePair3667 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1A72UL});
+		public static readonly BitSet _elementValue_in_elementValuePair3669 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _conditionalExpression_in_elementValue3689 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _annotation_in_elementValue3699 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _elementValueArrayInitializer_in_elementValue3709 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACE_in_elementValueArrayInitializer3729 = new BitSet(new ulong[]{0x2840C80302614200UL,0xA91B0210A1A72UL});
+		public static readonly BitSet _elementValue_in_elementValueArrayInitializer3740 = new BitSet(new ulong[]{0x2000000UL,0x1000000UL});
+		public static readonly BitSet _COMMA_in_elementValueArrayInitializer3755 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1A72UL});
+		public static readonly BitSet _elementValue_in_elementValueArrayInitializer3757 = new BitSet(new ulong[]{0x2000000UL,0x1000000UL});
+		public static readonly BitSet _COMMA_in_elementValueArrayInitializer3786 = new BitSet(new ulong[]{0x0UL,0x1000000UL});
+		public static readonly BitSet _RBRACE_in_elementValueArrayInitializer3790 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_annotationTypeDeclaration3813 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _MONKEYS_AT_in_annotationTypeDeclaration3815 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _INTERFACE_in_annotationTypeDeclaration3825 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_annotationTypeDeclaration3835 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _annotationTypeBody_in_annotationTypeDeclaration3845 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACE_in_annotationTypeBody3866 = new BitSet(new ulong[]{0x1840502100A14010UL,0x11040C31700610UL});
+		public static readonly BitSet _annotationTypeElementDeclaration_in_annotationTypeBody3878 = new BitSet(new ulong[]{0x1840502100A14010UL,0x11040C31700610UL});
+		public static readonly BitSet _RBRACE_in_annotationTypeBody3900 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _annotationMethodDeclaration_in_annotationTypeElementDeclaration3922 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceFieldDeclaration_in_annotationTypeElementDeclaration3932 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _normalClassDeclaration_in_annotationTypeElementDeclaration3942 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _normalInterfaceDeclaration_in_annotationTypeElementDeclaration3952 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _enumDeclaration_in_annotationTypeElementDeclaration3962 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _annotationTypeDeclaration_in_annotationTypeElementDeclaration3972 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SEMI_in_annotationTypeElementDeclaration3982 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_annotationMethodDeclaration4002 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_annotationMethodDeclaration4004 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_annotationMethodDeclaration4006 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _LPAREN_in_annotationMethodDeclaration4016 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_annotationMethodDeclaration4018 = new BitSet(new ulong[]{0x20000000UL,0x10000000UL});
+		public static readonly BitSet _DEFAULT_in_annotationMethodDeclaration4021 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1A72UL});
+		public static readonly BitSet _elementValue_in_annotationMethodDeclaration4023 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_annotationMethodDeclaration4052 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACE_in_block4076 = new BitSet(new ulong[]{0x38C1D82350E1C310UL,0x3FB7BC357A1E72UL});
+		public static readonly BitSet _blockStatement_in_block4087 = new BitSet(new ulong[]{0x38C1D82350E1C310UL,0x3FB7BC357A1E72UL});
+		public static readonly BitSet _RBRACE_in_block4108 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _localVariableDeclarationStatement_in_blockStatement4130 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classOrInterfaceDeclaration_in_blockStatement4140 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_in_blockStatement4150 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _localVariableDeclaration_in_localVariableDeclarationStatement4171 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_localVariableDeclarationStatement4181 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _variableModifiers_in_localVariableDeclaration4201 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_localVariableDeclaration4203 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _variableDeclarator_in_localVariableDeclaration4213 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _COMMA_in_localVariableDeclaration4224 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _variableDeclarator_in_localVariableDeclaration4226 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _block_in_statement4257 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ASSERT_in_statement4281 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_statement4301 = new BitSet(new ulong[]{0x1000000UL,0x10000000UL});
+		public static readonly BitSet _COLON_in_statement4304 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_statement4306 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_statement4310 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ASSERT_in_statement4320 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_statement4323 = new BitSet(new ulong[]{0x1000000UL,0x10000000UL});
+		public static readonly BitSet _COLON_in_statement4326 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_statement4328 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_statement4332 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IF_in_statement4354 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _parExpression_in_statement4356 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_statement4358 = new BitSet(new ulong[]{0x1000000002UL});
+		public static readonly BitSet _ELSE_in_statement4361 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_statement4363 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _forstatement_in_statement4385 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _WHILE_in_statement4395 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _parExpression_in_statement4397 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_statement4399 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DO_in_statement4409 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_statement4411 = new BitSet(new ulong[]{0x0UL,0x20000000000000UL});
+		public static readonly BitSet _WHILE_in_statement4413 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _parExpression_in_statement4415 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_statement4417 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _trystatement_in_statement4427 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SWITCH_in_statement4437 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _parExpression_in_statement4439 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _LBRACE_in_statement4441 = new BitSet(new ulong[]{0x20080000UL,0x1000000UL});
+		public static readonly BitSet _switchBlockStatementGroups_in_statement4443 = new BitSet(new ulong[]{0x0UL,0x1000000UL});
+		public static readonly BitSet _RBRACE_in_statement4445 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SYNCHRONIZED_in_statement4455 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _parExpression_in_statement4457 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _block_in_statement4459 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _RETURN_in_statement4469 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0300A1870UL});
+		public static readonly BitSet _expression_in_statement4472 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_statement4477 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _THROW_in_statement4487 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_statement4489 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_statement4491 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _BREAK_in_statement4501 = new BitSet(new ulong[]{0x40000000000000UL,0x10000000UL});
+		public static readonly BitSet _IDENTIFIER_in_statement4516 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_statement4533 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _CONTINUE_in_statement4543 = new BitSet(new ulong[]{0x40000000000000UL,0x10000000UL});
+		public static readonly BitSet _IDENTIFIER_in_statement4558 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_statement4575 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_statement4585 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_statement4588 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_statement4603 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _COLON_in_statement4605 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_statement4607 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SEMI_in_statement4617 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _switchBlockStatementGroup_in_switchBlockStatementGroups4639 = new BitSet(new ulong[]{0x20080002UL});
+		public static readonly BitSet _switchLabel_in_switchBlockStatementGroup4668 = new BitSet(new ulong[]{0x38C1D82350E1C312UL,0x3FB7BC347A1E72UL});
+		public static readonly BitSet _blockStatement_in_switchBlockStatementGroup4679 = new BitSet(new ulong[]{0x38C1D82350E1C312UL,0x3FB7BC347A1E72UL});
+		public static readonly BitSet _CASE_in_switchLabel4710 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_switchLabel4712 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _COLON_in_switchLabel4714 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DEFAULT_in_switchLabel4724 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _COLON_in_switchLabel4726 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _TRY_in_trystatement4747 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _block_in_trystatement4749 = new BitSet(new ulong[]{0x200000100000UL});
+		public static readonly BitSet _catches_in_trystatement4763 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _FINALLY_in_trystatement4765 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _block_in_trystatement4767 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _catches_in_trystatement4781 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FINALLY_in_trystatement4795 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _block_in_trystatement4797 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _catchClause_in_catches4828 = new BitSet(new ulong[]{0x100002UL});
+		public static readonly BitSet _catchClause_in_catches4839 = new BitSet(new ulong[]{0x100002UL});
+		public static readonly BitSet _CATCH_in_catchClause4870 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _LPAREN_in_catchClause4872 = new BitSet(new ulong[]{0x840500100214000UL,0x20000210UL});
+		public static readonly BitSet _formalParameter_in_catchClause4874 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_catchClause4884 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _block_in_catchClause4886 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _variableModifiers_in_formalParameter4907 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_formalParameter4909 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_formalParameter4911 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_formalParameter4922 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_formalParameter4924 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _FOR_in_forstatement4973 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _LPAREN_in_forstatement4975 = new BitSet(new ulong[]{0x840500100214000UL,0x20000210UL});
+		public static readonly BitSet _variableModifiers_in_forstatement4977 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_forstatement4979 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_forstatement4981 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _COLON_in_forstatement4983 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_forstatement4994 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_forstatement4996 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_forstatement4998 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FOR_in_forstatement5030 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _LPAREN_in_forstatement5032 = new BitSet(new ulong[]{0x2840D80300614200UL,0xA91B0300A1A70UL});
+		public static readonly BitSet _forInit_in_forstatement5052 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_forstatement5073 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0300A1870UL});
+		public static readonly BitSet _expression_in_forstatement5093 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_forstatement5114 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0280A1870UL});
+		public static readonly BitSet _expressionList_in_forstatement5134 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_forstatement5155 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_forstatement5157 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _localVariableDeclaration_in_forInit5177 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expressionList_in_forInit5187 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_parExpression5207 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_parExpression5209 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_parExpression5211 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_expressionList5231 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _COMMA_in_expressionList5242 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_expressionList5244 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _conditionalExpression_in_expression5276 = new BitSet(new ulong[]{0x8004000042082UL,0x4280050080UL});
+		public static readonly BitSet _assignmentOperator_in_expression5287 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_expression5289 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _EQ_in_assignmentOperator5321 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _PLUSEQ_in_assignmentOperator5331 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SUBEQ_in_assignmentOperator5341 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _STAREQ_in_assignmentOperator5351 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SLASHEQ_in_assignmentOperator5361 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _AMPEQ_in_assignmentOperator5371 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _BAREQ_in_assignmentOperator5381 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _CARETEQ_in_assignmentOperator5391 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _PERCENTEQ_in_assignmentOperator5401 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_assignmentOperator5412 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _LT_in_assignmentOperator5414 = new BitSet(new ulong[]{0x4000000000UL});
+		public static readonly BitSet _EQ_in_assignmentOperator5416 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_assignmentOperator5427 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5429 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5431 = new BitSet(new ulong[]{0x4000000000UL});
+		public static readonly BitSet _EQ_in_assignmentOperator5433 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_assignmentOperator5444 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5446 = new BitSet(new ulong[]{0x4000000000UL});
+		public static readonly BitSet _EQ_in_assignmentOperator5448 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _conditionalOrExpression_in_conditionalExpression5469 = new BitSet(new ulong[]{0x2UL,0x800000UL});
+		public static readonly BitSet _QUES_in_conditionalExpression5480 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_conditionalExpression5482 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _COLON_in_conditionalExpression5484 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _conditionalExpression_in_conditionalExpression5486 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _conditionalAndExpression_in_conditionalOrExpression5517 = new BitSet(new ulong[]{0x1002UL});
+		public static readonly BitSet _BARBAR_in_conditionalOrExpression5528 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _conditionalAndExpression_in_conditionalOrExpression5530 = new BitSet(new ulong[]{0x1002UL});
+		public static readonly BitSet _inclusiveOrExpression_in_conditionalAndExpression5561 = new BitSet(new ulong[]{0x42UL});
+		public static readonly BitSet _AMPAMP_in_conditionalAndExpression5572 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _inclusiveOrExpression_in_conditionalAndExpression5574 = new BitSet(new ulong[]{0x42UL});
+		public static readonly BitSet _exclusiveOrExpression_in_inclusiveOrExpression5605 = new BitSet(new ulong[]{0x802UL});
+		public static readonly BitSet _BAR_in_inclusiveOrExpression5616 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _exclusiveOrExpression_in_inclusiveOrExpression5618 = new BitSet(new ulong[]{0x802UL});
+		public static readonly BitSet _andExpression_in_exclusiveOrExpression5649 = new BitSet(new ulong[]{0x20002UL});
+		public static readonly BitSet _CARET_in_exclusiveOrExpression5660 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _andExpression_in_exclusiveOrExpression5662 = new BitSet(new ulong[]{0x20002UL});
+		public static readonly BitSet _equalityExpression_in_andExpression5693 = new BitSet(new ulong[]{0x22UL});
+		public static readonly BitSet _AMP_in_andExpression5704 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _equalityExpression_in_andExpression5706 = new BitSet(new ulong[]{0x22UL});
+		public static readonly BitSet _instanceOfExpression_in_equalityExpression5737 = new BitSet(new ulong[]{0x8000000402UL});
+		public static readonly BitSet _set_in_equalityExpression5764 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _instanceOfExpression_in_equalityExpression5814 = new BitSet(new ulong[]{0x8000000402UL});
+		public static readonly BitSet _relationalExpression_in_instanceOfExpression5845 = new BitSet(new ulong[]{0x400000000000002UL});
+		public static readonly BitSet _INSTANCEOF_in_instanceOfExpression5856 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_instanceOfExpression5858 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _shiftExpression_in_relationalExpression5889 = new BitSet(new ulong[]{0x8000000000002UL,0x80UL});
+		public static readonly BitSet _relationalOp_in_relationalExpression5900 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _shiftExpression_in_relationalExpression5902 = new BitSet(new ulong[]{0x8000000000002UL,0x80UL});
+		public static readonly BitSet _LT_in_relationalOp5934 = new BitSet(new ulong[]{0x4000000000UL});
+		public static readonly BitSet _EQ_in_relationalOp5936 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_relationalOp5947 = new BitSet(new ulong[]{0x4000000000UL});
+		public static readonly BitSet _EQ_in_relationalOp5949 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_relationalOp5959 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_relationalOp5969 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _additiveExpression_in_shiftExpression5989 = new BitSet(new ulong[]{0x8000000000002UL,0x80UL});
+		public static readonly BitSet _shiftOp_in_shiftExpression6000 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _additiveExpression_in_shiftExpression6002 = new BitSet(new ulong[]{0x8000000000002UL,0x80UL});
+		public static readonly BitSet _LT_in_shiftOp6035 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _LT_in_shiftOp6037 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_shiftOp6048 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _GT_in_shiftOp6050 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _GT_in_shiftOp6052 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_shiftOp6063 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _GT_in_shiftOp6065 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6086 = new BitSet(new ulong[]{0x2UL,0x2000020000UL});
+		public static readonly BitSet _set_in_additiveExpression6113 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6163 = new BitSet(new ulong[]{0x2UL,0x2000020000UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6201 = new BitSet(new ulong[]{0x2UL,0x140008000UL});
+		public static readonly BitSet _set_in_multiplicativeExpression6228 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6296 = new BitSet(new ulong[]{0x2UL,0x140008000UL});
+		public static readonly BitSet _PLUS_in_unaryExpression6329 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpression6332 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SUB_in_unaryExpression6342 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpression6344 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _PLUSPLUS_in_unaryExpression6354 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpression6356 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SUBSUB_in_unaryExpression6366 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpression6368 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _unaryExpressionNotPlusMinus_in_unaryExpression6378 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _TILDE_in_unaryExpressionNotPlusMinus6398 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpressionNotPlusMinus6400 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _BANG_in_unaryExpressionNotPlusMinus6410 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpressionNotPlusMinus6412 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _castExpression_in_unaryExpressionNotPlusMinus6422 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primary_in_unaryExpressionNotPlusMinus6432 = new BitSet(new ulong[]{0x80000002UL,0x8000080004UL});
+		public static readonly BitSet _selector_in_unaryExpressionNotPlusMinus6443 = new BitSet(new ulong[]{0x80000002UL,0x8000080004UL});
+		public static readonly BitSet _LPAREN_in_castExpression6513 = new BitSet(new ulong[]{0x800400100214000UL,0x20000010UL});
+		public static readonly BitSet _primitiveType_in_castExpression6515 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_castExpression6517 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _unaryExpression_in_castExpression6519 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_castExpression6529 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_castExpression6531 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_castExpression6533 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA911020001870UL});
+		public static readonly BitSet _unaryExpressionNotPlusMinus_in_castExpression6535 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _parExpression_in_primary6557 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _THIS_in_primary6579 = new BitSet(new ulong[]{0x80000002UL,0x44UL});
+		public static readonly BitSet _DOT_in_primary6590 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_primary6592 = new BitSet(new ulong[]{0x80000002UL,0x44UL});
+		public static readonly BitSet _identifierSuffix_in_primary6614 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_primary6635 = new BitSet(new ulong[]{0x80000002UL,0x44UL});
+		public static readonly BitSet _DOT_in_primary6646 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_primary6648 = new BitSet(new ulong[]{0x80000002UL,0x44UL});
+		public static readonly BitSet _identifierSuffix_in_primary6670 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SUPER_in_primary6691 = new BitSet(new ulong[]{0x80000000UL,0x40UL});
+		public static readonly BitSet _superSuffix_in_primary6701 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _literal_in_primary6711 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _creator_in_primary6721 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primitiveType_in_primary6731 = new BitSet(new ulong[]{0x80000000UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_primary6742 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_primary6744 = new BitSet(new ulong[]{0x80000000UL,0x4UL});
+		public static readonly BitSet _DOT_in_primary6765 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _CLASS_in_primary6767 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _VOID_in_primary6777 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _DOT_in_primary6779 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _CLASS_in_primary6781 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _arguments_in_superSuffix6807 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_superSuffix6817 = new BitSet(new ulong[]{0x40000000000000UL,0x80UL});
+		public static readonly BitSet _typeArguments_in_superSuffix6820 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_superSuffix6841 = new BitSet(new ulong[]{0x2UL,0x40UL});
+		public static readonly BitSet _arguments_in_superSuffix6852 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_identifierSuffix6885 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_identifierSuffix6887 = new BitSet(new ulong[]{0x80000000UL,0x4UL});
+		public static readonly BitSet _DOT_in_identifierSuffix6908 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _CLASS_in_identifierSuffix6910 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_identifierSuffix6921 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_identifierSuffix6923 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_identifierSuffix6925 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _arguments_in_identifierSuffix6946 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_identifierSuffix6956 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _CLASS_in_identifierSuffix6958 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_identifierSuffix6968 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_identifierSuffix6970 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_identifierSuffix6972 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _arguments_in_identifierSuffix6974 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_identifierSuffix6984 = new BitSet(new ulong[]{0x0UL,0x100000000000UL});
+		public static readonly BitSet _THIS_in_identifierSuffix6986 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_identifierSuffix6996 = new BitSet(new ulong[]{0x0UL,0x10000000000UL});
+		public static readonly BitSet _SUPER_in_identifierSuffix6998 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _arguments_in_identifierSuffix7000 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _innerCreator_in_identifierSuffix7010 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_selector7032 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_selector7034 = new BitSet(new ulong[]{0x2UL,0x40UL});
+		public static readonly BitSet _arguments_in_selector7045 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_selector7066 = new BitSet(new ulong[]{0x0UL,0x100000000000UL});
+		public static readonly BitSet _THIS_in_selector7068 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_selector7078 = new BitSet(new ulong[]{0x0UL,0x10000000000UL});
+		public static readonly BitSet _SUPER_in_selector7080 = new BitSet(new ulong[]{0x80000000UL,0x40UL});
+		public static readonly BitSet _superSuffix_in_selector7090 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _innerCreator_in_selector7100 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_selector7110 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_selector7112 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_selector7114 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_creator7134 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_creator7136 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _classOrInterfaceType_in_creator7138 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _classCreatorRest_in_creator7140 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_creator7150 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _classOrInterfaceType_in_creator7152 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _classCreatorRest_in_creator7154 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _arrayCreator_in_creator7164 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_arrayCreator7184 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _createdName_in_arrayCreator7186 = new BitSet(new ulong[]{0x0UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7196 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7198 = new BitSet(new ulong[]{0x0UL,0x6UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7209 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7211 = new BitSet(new ulong[]{0x0UL,0x6UL});
+		public static readonly BitSet _arrayInitializer_in_arrayCreator7232 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_arrayCreator7243 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _createdName_in_arrayCreator7245 = new BitSet(new ulong[]{0x0UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7255 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_arrayCreator7257 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7267 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7281 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_arrayCreator7283 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7297 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7319 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7321 = new BitSet(new ulong[]{0x2UL,0x4UL});
+		public static readonly BitSet _arrayInitializer_in_variableInitializer7352 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_variableInitializer7362 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACE_in_arrayInitializer7382 = new BitSet(new ulong[]{0x2840C80302614200UL,0xA91B0210A1872UL});
+		public static readonly BitSet _variableInitializer_in_arrayInitializer7398 = new BitSet(new ulong[]{0x2000000UL,0x1000000UL});
+		public static readonly BitSet _COMMA_in_arrayInitializer7417 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1872UL});
+		public static readonly BitSet _variableInitializer_in_arrayInitializer7419 = new BitSet(new ulong[]{0x2000000UL,0x1000000UL});
+		public static readonly BitSet _COMMA_in_arrayInitializer7469 = new BitSet(new ulong[]{0x0UL,0x1000000UL});
+		public static readonly BitSet _RBRACE_in_arrayInitializer7482 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classOrInterfaceType_in_createdName7516 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primitiveType_in_createdName7526 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_innerCreator7547 = new BitSet(new ulong[]{0x0UL,0x800UL});
+		public static readonly BitSet _NEW_in_innerCreator7549 = new BitSet(new ulong[]{0x40000000000000UL,0x80UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_innerCreator7560 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_innerCreator7581 = new BitSet(new ulong[]{0x0UL,0xC0UL});
+		public static readonly BitSet _typeArguments_in_innerCreator7592 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _classCreatorRest_in_innerCreator7613 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _arguments_in_classCreatorRest7634 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _classBody_in_classCreatorRest7645 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_nonWildcardTypeArguments7677 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _typeList_in_nonWildcardTypeArguments7679 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _GT_in_nonWildcardTypeArguments7689 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_arguments7709 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0280A1870UL});
+		public static readonly BitSet _expressionList_in_arguments7712 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_arguments7725 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_classHeader7849 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _CLASS_in_classHeader7851 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_classHeader7853 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_enumHeader7873 = new BitSet(new ulong[]{0x40002000000000UL});
+		public static readonly BitSet _set_in_enumHeader7875 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_enumHeader7881 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_interfaceHeader7901 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _INTERFACE_in_interfaceHeader7903 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_interfaceHeader7905 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_annotationHeader7925 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _MONKEYS_AT_in_annotationHeader7927 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _INTERFACE_in_annotationHeader7929 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_annotationHeader7931 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_typeHeader7951 = new BitSet(new ulong[]{0x1000002000800000UL,0x200UL});
+		public static readonly BitSet _CLASS_in_typeHeader7954 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _ENUM_in_typeHeader7956 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _MONKEYS_AT_in_typeHeader7959 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _INTERFACE_in_typeHeader7963 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_typeHeader7967 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_methodHeader7987 = new BitSet(new ulong[]{0x840400100214000UL,0x8000020000090UL});
+		public static readonly BitSet _typeParameters_in_methodHeader7989 = new BitSet(new ulong[]{0x840400100214000UL,0x8000020000010UL});
+		public static readonly BitSet _type_in_methodHeader7993 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _VOID_in_methodHeader7995 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_methodHeader7999 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _LPAREN_in_methodHeader8001 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_fieldHeader8021 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_fieldHeader8023 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_fieldHeader8025 = new BitSet(new ulong[]{0x4002000000UL,0x10000004UL});
+		public static readonly BitSet _LBRACKET_in_fieldHeader8028 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_fieldHeader8029 = new BitSet(new ulong[]{0x4002000000UL,0x10000004UL});
+		public static readonly BitSet _set_in_fieldHeader8033 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _variableModifiers_in_localVariableHeader8059 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_localVariableHeader8061 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_localVariableHeader8063 = new BitSet(new ulong[]{0x4002000000UL,0x10000004UL});
+		public static readonly BitSet _LBRACKET_in_localVariableHeader8066 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_localVariableHeader8067 = new BitSet(new ulong[]{0x4002000000UL,0x10000004UL});
+		public static readonly BitSet _set_in_localVariableHeader8071 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _annotations_in_synpred2_EntityMapping69 = new BitSet(new ulong[]{0x0UL,0x4000UL});
+		public static readonly BitSet _packageDeclaration_in_synpred2_EntityMapping98 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classDeclaration_in_synpred12_EntityMapping456 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _normalClassDeclaration_in_synpred27_EntityMapping693 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _normalInterfaceDeclaration_in_synpred43_EntityMapping1372 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _fieldDeclaration_in_synpred52_EntityMapping1702 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _methodDeclaration_in_synpred53_EntityMapping1713 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classDeclaration_in_synpred54_EntityMapping1724 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _explicitConstructorInvocation_in_synpred57_EntityMapping1861 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_synpred59_EntityMapping1773 = new BitSet(new ulong[]{0x40000000000000UL,0x80UL});
+		public static readonly BitSet _typeParameters_in_synpred59_EntityMapping1784 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred59_EntityMapping1805 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _formalParameters_in_synpred59_EntityMapping1815 = new BitSet(new ulong[]{0x0UL,0x400000000002UL});
+		public static readonly BitSet _THROWS_in_synpred59_EntityMapping1826 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _qualifiedNameList_in_synpred59_EntityMapping1828 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _LBRACE_in_synpred59_EntityMapping1849 = new BitSet(new ulong[]{0x38C1D82350E1C310UL,0x3FB7BC357A1EF2UL});
+		public static readonly BitSet _explicitConstructorInvocation_in_synpred59_EntityMapping1861 = new BitSet(new ulong[]{0x38C1D82350E1C310UL,0x3FB7BC357A1E72UL});
+		public static readonly BitSet _blockStatement_in_synpred59_EntityMapping1883 = new BitSet(new ulong[]{0x38C1D82350E1C310UL,0x3FB7BC357A1E72UL});
+		public static readonly BitSet _RBRACE_in_synpred59_EntityMapping1904 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceFieldDeclaration_in_synpred68_EntityMapping2279 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceMethodDeclaration_in_synpred69_EntityMapping2289 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceDeclaration_in_synpred70_EntityMapping2299 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classDeclaration_in_synpred71_EntityMapping2309 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ellipsisParameterDecl_in_synpred96_EntityMapping3073 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _normalParameterDecl_in_synpred98_EntityMapping3083 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _COMMA_in_synpred98_EntityMapping3094 = new BitSet(new ulong[]{0x840500100214000UL,0x20000210UL});
+		public static readonly BitSet _normalParameterDecl_in_synpred98_EntityMapping3096 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _normalParameterDecl_in_synpred99_EntityMapping3118 = new BitSet(new ulong[]{0x2000000UL});
+		public static readonly BitSet _COMMA_in_synpred99_EntityMapping3128 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_synpred103_EntityMapping3263 = new BitSet(new ulong[]{0x0UL,0x110000000000UL});
+		public static readonly BitSet _set_in_synpred103_EntityMapping3289 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _arguments_in_synpred103_EntityMapping3321 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_synpred103_EntityMapping3323 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _annotationMethodDeclaration_in_synpred117_EntityMapping3922 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interfaceFieldDeclaration_in_synpred118_EntityMapping3932 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _normalClassDeclaration_in_synpred119_EntityMapping3942 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _normalInterfaceDeclaration_in_synpred120_EntityMapping3952 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _enumDeclaration_in_synpred121_EntityMapping3962 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _annotationTypeDeclaration_in_synpred122_EntityMapping3972 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _localVariableDeclarationStatement_in_synpred125_EntityMapping4130 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classOrInterfaceDeclaration_in_synpred126_EntityMapping4140 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ASSERT_in_synpred130_EntityMapping4281 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_synpred130_EntityMapping4301 = new BitSet(new ulong[]{0x1000000UL,0x10000000UL});
+		public static readonly BitSet _COLON_in_synpred130_EntityMapping4304 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_synpred130_EntityMapping4306 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_synpred130_EntityMapping4310 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ASSERT_in_synpred132_EntityMapping4320 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_synpred132_EntityMapping4323 = new BitSet(new ulong[]{0x1000000UL,0x10000000UL});
+		public static readonly BitSet _COLON_in_synpred132_EntityMapping4326 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_synpred132_EntityMapping4328 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_synpred132_EntityMapping4332 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ELSE_in_synpred133_EntityMapping4361 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_synpred133_EntityMapping4363 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_synpred148_EntityMapping4585 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _SEMI_in_synpred148_EntityMapping4588 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred149_EntityMapping4603 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _COLON_in_synpred149_EntityMapping4605 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_synpred149_EntityMapping4607 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _catches_in_synpred153_EntityMapping4763 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _FINALLY_in_synpred153_EntityMapping4765 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _block_in_synpred153_EntityMapping4767 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _catches_in_synpred154_EntityMapping4781 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FOR_in_synpred157_EntityMapping4973 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _LPAREN_in_synpred157_EntityMapping4975 = new BitSet(new ulong[]{0x840500100214000UL,0x20000210UL});
+		public static readonly BitSet _variableModifiers_in_synpred157_EntityMapping4977 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _type_in_synpred157_EntityMapping4979 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred157_EntityMapping4981 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _COLON_in_synpred157_EntityMapping4983 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_synpred157_EntityMapping4994 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_synpred157_EntityMapping4996 = new BitSet(new ulong[]{0x28C1C8035061C300UL,0x2EB7B0340A1872UL});
+		public static readonly BitSet _statement_in_synpred157_EntityMapping4998 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _localVariableDeclaration_in_synpred161_EntityMapping5177 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _castExpression_in_synpred202_EntityMapping6422 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_synpred206_EntityMapping6513 = new BitSet(new ulong[]{0x800400100214000UL,0x20000010UL});
+		public static readonly BitSet _primitiveType_in_synpred206_EntityMapping6515 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
+		public static readonly BitSet _RPAREN_in_synpred206_EntityMapping6517 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _unaryExpression_in_synpred206_EntityMapping6519 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_synpred208_EntityMapping6590 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred208_EntityMapping6592 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifierSuffix_in_synpred209_EntityMapping6614 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_synpred211_EntityMapping6646 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred211_EntityMapping6648 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifierSuffix_in_synpred212_EntityMapping6670 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_synpred224_EntityMapping6921 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_synpred224_EntityMapping6923 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred224_EntityMapping6925 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_synpred236_EntityMapping7134 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_synpred236_EntityMapping7136 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _classOrInterfaceType_in_synpred236_EntityMapping7138 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _classCreatorRest_in_synpred236_EntityMapping7140 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_synpred237_EntityMapping7150 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _classOrInterfaceType_in_synpred237_EntityMapping7152 = new BitSet(new ulong[]{0x0UL,0x40UL});
+		public static readonly BitSet _classCreatorRest_in_synpred237_EntityMapping7154 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_synpred239_EntityMapping7184 = new BitSet(new ulong[]{0x840400100214000UL,0x20000010UL});
+		public static readonly BitSet _createdName_in_synpred239_EntityMapping7186 = new BitSet(new ulong[]{0x0UL,0x4UL});
+		public static readonly BitSet _LBRACKET_in_synpred239_EntityMapping7196 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred239_EntityMapping7198 = new BitSet(new ulong[]{0x0UL,0x6UL});
+		public static readonly BitSet _LBRACKET_in_synpred239_EntityMapping7209 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred239_EntityMapping7211 = new BitSet(new ulong[]{0x0UL,0x6UL});
+		public static readonly BitSet _arrayInitializer_in_synpred239_EntityMapping7232 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_synpred240_EntityMapping7281 = new BitSet(new ulong[]{0x2840C80300614200UL,0xA91B0200A1870UL});
+		public static readonly BitSet _expression_in_synpred240_EntityMapping7283 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred240_EntityMapping7297 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }
-
-} // namespace  EntMapping 
